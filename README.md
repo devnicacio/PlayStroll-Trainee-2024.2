@@ -1,8 +1,8 @@
 # **Trainee 2024.2**
 
-# **Nome do seu blog**
+# **Play Stroll**
 
-## **Projeto Trainee, Code Jr, Grupo 000, 2024.2**
+## **Projeto Trainee, Code Jr, Grupo 005, 2024.2**
 
 | **Sumário** |
 |-------------|
@@ -13,22 +13,21 @@
 
 #### Desenvolvedores:
 
-* Trainee 1
-* Trainee 2
-* Trainee 3
-* Trainee 4
-* Trainee 5
+* Diego Pereira Betti
+* Gabriel dos Reis Cunha
+* João Paulo Mendes Filho
+* Vitor Assunção
 
 
-#### Scrum Master:
+#### Scrum Master: 
 
 * [Nome do Scrum](coloque o link do github, se quiser).
 
-#### Links Úteis:
+#### Links Úteis: João Victor Nicácio
 
-* [Trello]()
+* [Trello](https://trello.com/b/BRC5728z/play-stroll)
 
-* [Drive com ID Visual]()
+* [Drive com ID Visual](https://drive.google.com/drive/folders/1UjIC0WY6widiXCokuZiVPTkGD01GdloB?usp=sharing)
 
 
 
@@ -85,7 +84,7 @@ git config --global user.email email@codejr.com.br
 
 
 
-### Quando estiver tudo prontinho *(com autorização do SCRUM Master)*
+### Quando estiver tudo pronto *(com autorização do SCRUM Master)*
 
 * Volte para a main: `git checkout main`
 

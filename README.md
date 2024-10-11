@@ -21,9 +21,9 @@
 
 #### Scrum Master: 
 
-* [Nome do Scrum](coloque o link do github, se quiser).
+* [João Victor Nicácio](https://www.linkedin.com/in/jo%C3%A3o-victor-nic%C3%A1cio-silva-73702a199?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app).
 
-#### Links Úteis: João Victor Nicácio
+#### Links Úteis:
 
 * [Trello](https://trello.com/b/BRC5728z/play-stroll)
 

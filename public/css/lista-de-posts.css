@@ -13,6 +13,7 @@ html, body{
 .barra-de-pesquisa {
     text-align: right;
     margin-top: 120px;
+    margin-bottom: 120px;
 }
 
 .pesquisa{
@@ -31,4 +32,76 @@ html, body{
 
 .busca p{
    font-size: 20px;
+}
+
+.inicialização-dos-posts H4{
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.inicialização-dos-posts{
+    margin-top: 0px;
+    margin-left: 178px;
+}
+
+.barra1{
+    height: 1px;
+    width: 1084px;
+    background-color: black;
+}
+
+.primeiro-post img{
+    width: 160px;
+    height: 200px;
+    margin-right: 50px;
+}
+.primeiro-post{
+    margin-left: 178px;
+    margin-top: 52px;
+}
+
+.titulo1 h3{
+    font-size: 32px;
+    color: #0b0b3c;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+.primeiro-post div{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.perfil1 img{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+}
+
+
+.texto div{
+    display: block;
+}
+
+.user1 p{
+    font-size: 10px;
+}
+
+.dados div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.dados p{
+    margin-left: 0px;
+}
+
+.conteúdo p{
+    font-size: 20px;
+}
+
+.conteúdo{
+    width: 868px;
 }

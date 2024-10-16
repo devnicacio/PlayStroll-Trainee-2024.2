@@ -13,30 +13,30 @@ body {
 
 }
 
-/* h1 {
-    margin: 0;
-} */
-
 .login{
     color: white;
-    width: 300px;
+    width: 280px;
     margin: 0 auto;
     border-radius: 20px;
+}
+
+h3 {
+    margin: 0;
+    padding: 10px 0;
 }
 
 .parte-de-cima{
     background-image: linear-gradient(to right, #237ECD,#080B3C);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    display: flex;
+    text-align: center;
 }
 
 .parte-de-baixo{
-    background-color: rgba(82, 141, 209, 0.5);
+    background-color: rgba(82, 128, 180, 0.5);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding-top: 25px;
-
+    padding-top: 25px; 
 }
 
 button{
@@ -57,16 +57,21 @@ button{
 }
 
 input{
-    border-radius: 20px;
-    
+    border-radius: 5px;
+    border: #11518a;
+    max-width: 180px;
+    width: 100%;   
+    padding: 3px; 
 }
 
-.parte-email{
-    text-align: center;
+h4 {
+    margin: 0 140px 0 0;    
 }
 
-.parte-senha{
+.sessao-login{     
     margin-bottom: 40px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    row-gap: 6px;
 }
- 

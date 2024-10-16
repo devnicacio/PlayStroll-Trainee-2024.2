@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;   
-
+    font-family: 'Satoshi', sans-serif;
 }
 
 .login{
@@ -33,7 +33,7 @@ h3 {
 }
 
 .parte-de-baixo{
-    background-color: rgba(82, 128, 180, 0.5);
+    background-color: rgba(102, 149, 202, 0.5);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     padding-top: 25px; 

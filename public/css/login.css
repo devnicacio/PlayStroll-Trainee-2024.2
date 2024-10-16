@@ -1,3 +1,15 @@
-body{
-    background: linear-gradient(to bottom, #080B3C, #237ECD, #080B3C);
+html, body{
+    background: linear-gradient(#080B3C, #237ECD, #080B3C);
+    height: 100%;
+    margin: 0;
 }
+
+.login{
+    color: white;
+}
+
+.login{
+    text-align: center;
+}
+
+ 

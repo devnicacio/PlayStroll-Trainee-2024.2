@@ -42,7 +42,11 @@ button{
     color: white;
     cursor: pointer;
     border-radius: 50px;
-    
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: #237ECD;
 }
 
 .botao-login{

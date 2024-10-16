@@ -19,7 +19,7 @@ body {
 
 .login{
     color: white;
-    width: 363px;
+    width: 300px;
     margin: 0 auto;
     border-radius: 20px;
 }
@@ -35,6 +35,8 @@ body {
     background-color: rgba(82, 141, 209, 0.5);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    padding-top: 25px;
+
 }
 
 button{
@@ -51,12 +53,20 @@ button{
 
 .botao-login{
     text-align: center;
+    padding-bottom: 22px;
 }
 
 input{
     border-radius: 20px;
+    
 }
 
+.parte-email{
+    text-align: center;
+}
 
-
+.parte-senha{
+    margin-bottom: 40px;
+    text-align: center;
+}
  

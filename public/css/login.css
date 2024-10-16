@@ -33,7 +33,8 @@ h3 {
 }
 
 .parte-de-baixo{
-    background-color: rgba(102, 149, 202, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     padding-top: 25px; 

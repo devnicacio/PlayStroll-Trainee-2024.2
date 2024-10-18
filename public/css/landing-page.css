@@ -1,0 +1,14 @@
+body{
+    font-family: 'Satoshi', sans-serif;    
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+        to bottom, 
+        #080B3C,  
+        #237ECD,   
+        #FFFFFF,   
+        #080B3C    
+    );
+    background-size: cover;
+    color: #333;
+}

@@ -38,7 +38,9 @@ h3 {
     backdrop-filter: blur(10px);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding-top: 25px; 
+    padding-top: 25px;
+    display: flex; 
+    flex-direction: column;
 }
 
 button{
@@ -67,14 +69,16 @@ input{
     outline: none;
 }
 
-h4 {
+label {
     margin: 0 140px 0 0;    
+    padding: 0;
 }
 
 .sessao-login{     
     margin-bottom: 40px;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;   
+    width: 100%;
     align-items: center;
     row-gap: 6px;
 }

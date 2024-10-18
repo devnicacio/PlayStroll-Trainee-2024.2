@@ -6,9 +6,112 @@ body{
         to bottom, 
         #080B3C,  
         #237ECD,   
-        #FFFFFF,   
+        #237ECD,
         #080B3C    
     );
-    background-size: cover;
-    color: #333;
+    padding-top: 100px;
+}
+
+.sessao-introducao{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    ;
+}
+
+.botao-veja-ultimos
+{
+    
+    background-color: #00AEA0; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.imagem-introducao img {
+
+    width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.comunidade{
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.ultimas-postagens{
+    text-align:center;
+    color: #FFFFFF;
+}
+.posts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.post-individual{
+    width:18%;
+    background-color: #B8B8B8 ;
+    border-radius: 4%;
+    padding: 15px;
+
+    
+}
+.capa-jogo{
+    width: 280px;
+}
+
+.nota{
+    
+}
+
+.botao-veja-mais{
+    
+    background-color: #FFC736; 
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.imagem-sobre{
+    width: 400px;
+    border-radius: 100%;
+    float:left;
+    shape-outside: circle();
+    clip-path: circle();
+    margin-right: 100px;
+}
+
+.sobre-playstroll{
+    text-align: center;
+    color: #fff;
+    padding: 150px 100px 0px 100px;
+}
+
+.div-sobre{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: start; */
+    position: relative;
+}
+
+.proposito{
+    font-size: 35px;
+    margin-bottom: 100px;
+}
+
+.texto-sobre{
+    text-align: left;
+    font-size: 30px;
 }

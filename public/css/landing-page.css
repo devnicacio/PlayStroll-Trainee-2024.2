@@ -12,6 +12,14 @@ body{
     padding-top: 100px;
 }
 
+.texto-introducao{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height:10% ;
+    font-size: 20px;
+}
+
 .sessao-introducao{
     display: flex;
     align-items: center;
@@ -26,10 +34,11 @@ body{
     color: white;
     border: none;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 10px;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 60px;
     border-radius: 15px;
+    
 }
 
 .imagem-introducao img {

@@ -37,10 +37,44 @@ body{
     max-width: 998px;
     width: 100%;
     margin: 0 auto;
+    padding-bottom: 20px;
 }
 
 .avaliation-line{
     margin-top: 160px;
     display: flex;      
     align-items: center;  
+}
+
+/* .icon1 {
+    position: relative;
+}
+
+.icon2 {
+    position: absolute;
+    justify-content: center;
+} */
+
+/* h2 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+} */
+
+h1 {
+    text-align: center;
+    color: #00AEA0;
+}
+
+.display2 {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+}
+
+.image2 {
+    width: 30%;
+    height: 30%;
 }

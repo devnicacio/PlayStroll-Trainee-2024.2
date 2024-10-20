@@ -10,10 +10,6 @@ body{
     position: relative;
 }
 
-.site {
-    
-}
-
 .linha-preta {
     background-color: #000000;
     width: 100%;    
@@ -35,5 +31,16 @@ body{
     height: 100%;
 }
 
+.section-description {    
+    position: relative;
+    z-index: 1;
+    max-width: 998px;
+    width: 100%;
+    margin: 0 auto;
+}
 
-
+.avaliation-line{
+    margin-top: 160px;
+    display: flex;      
+    align-items: center;  
+}

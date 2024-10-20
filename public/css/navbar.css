@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Satoshi, sans-serif;
+}
+
+#navbar{
+    width: auto;
+    height: 25%;
+    background-color: #080B1E;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFFFFF;
+}
+
+#navbar a,
+#navbar a:link,
+#navbar a:visited,
+#navbar a:hover,
+#navbar a:active{
+    text-decoration: none;
+}
+
+#navbar img{
+    width: 8.05%;
+    height: 72%;
+}
+
+#navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+}

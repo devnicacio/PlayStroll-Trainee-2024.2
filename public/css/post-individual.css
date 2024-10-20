@@ -44,24 +44,26 @@ body{
     margin-top: 160px;
     display: flex;      
     align-items: center;  
+    gap: 15px;
 }
 
-/* .icon1 {
+.icon1 {
     position: relative;
 }
 
 .icon2 {
     position: absolute;
     justify-content: center;
-} */
+    transform: translate(50%, -10%);
+} 
 
-/* h2 {
+h2 {
     margin: 0;
 }
 
 h3 {
     margin: 0;
-} */
+}
 
 h1 {
     text-align: center;

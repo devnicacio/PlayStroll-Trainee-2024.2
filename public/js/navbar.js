@@ -28,3 +28,4 @@ $logoPlayStroll.src = '/public/assets/logo-escura-sem-fundo.png';
 $logoPlayStroll.alt = 'Logo da PlayStroll';
 
 $home.appendChild($logoPlayStroll);
+/* Animação de passando o mouse em cima */

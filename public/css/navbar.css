@@ -6,7 +6,7 @@
 
 #navbar{
     width: auto;
-    height: 25%;
+    height: 30vh;
     background-color: #080B1E;
     display: flex;
     flex-direction: row;
@@ -24,18 +24,41 @@
 }
 
 #navbar img{
-    width: 8.05%;
-    height: 72%;
+    width: 70.59%;/* ~180px/255px*/
+    height: 69.79%; /* ~115.49px/165.49px*/
 }
 
 #navbar ul{
+    width: 500px;
+    height: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
 }
+#navbar li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vw;
+
+}
+
+#navbar li a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: #FFFFFF;
+}
 
 #home{
+    width: 255px;/* ~ 255px/1440px*/
+    height: 165.49px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-left: 2rem;
+    font-size: 36px;
 }
+

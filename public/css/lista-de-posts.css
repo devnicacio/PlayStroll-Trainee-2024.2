@@ -226,7 +226,135 @@ html, body{
     width: 868px;
 }
 
+.quarto-post img{
+    width: 160px;
+    height: 200px;
+    margin-right: 50px;
+}
+.quarto-post{
+    margin-left: 178px;
+    margin-top: 52px;
+}
+
+.titulo4 h3{
+    font-size: 32px;
+    color: #0b0b3c;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+.quarto-post div{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.perfil4 img{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+}
+
+
+.texto4 div{
+    display: block;
+}
+
+.user4 p{
+    font-size: 10px;
+}
+
+.dados4 div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.dados4 p{
+    margin-left: 0px;
+}
+
+.conteúdo4 p{
+    font-size: 20px;
+}
+
+.conteúdo4{
+    width: 868px;
+}
+
 .barra4{
+    height: 2px;
+    width: 1084px;
+    background-color: black;
+    margin-bottom: 44px;
+    margin-left: 178px;
+}
+
+.quinto-post img{
+    width: 160px;
+    height: 200px;
+    margin-right: 50px;
+}
+.quinto-post{
+    margin-left: 178px;
+    margin-top: 52px;
+}
+
+.titulo5 h3{
+    font-size: 32px;
+    color: #0b0b3c;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+.quinto-post div{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.perfil5 img{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+}
+
+
+.texto5 div{
+    display: block;
+}
+
+.user5 p{
+    font-size: 10px;
+}
+
+.dados5 div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.dados5 p{
+    margin-left: 0px;
+}
+
+.conteúdo5 p{
+    font-size: 20px;
+}
+
+.conteúdo5{
+    width: 868px;
+}
+
+.barra5{
+    height: 2px;
+    width: 1084px;
+    background-color: black;
+    margin-bottom: 44px;
+    margin-left: 178px;
+}
+
+.barra6{
     height: 2px;
     width: 1084px;
     background-color: black;

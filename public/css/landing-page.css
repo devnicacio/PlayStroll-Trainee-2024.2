@@ -9,7 +9,7 @@ body{
         #237ECD,
         #080B3C    
     );
-    padding-top: 100px;
+    padding-top: 5%;
 }
 
 .texto-introducao{
@@ -17,7 +17,7 @@ body{
     flex-direction: column;
     text-align: center;
     line-height:10% ;
-    font-size: 20px;
+    font-size: 100%;
 }
 
 .sessao-introducao{
@@ -34,10 +34,10 @@ body{
     color: white;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 4%;
     font-size: 20px;
-    margin-top: 60px;
-    border-radius: 15px;
+    margin-top: 15%;
+    border-radius: 5px;
     
 }
 
@@ -61,15 +61,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 1%;
+    padding: 1%;
 }
 
 .post-individual{
     width:18%;
     background-color: #B8B8B8 ;
     border-radius: 4%;
-    padding: 15px;
+    padding: 1%;
 
     
 }
@@ -89,8 +89,8 @@ body{
     cursor: pointer;
     padding: 10px 20px;
     font-size: 20px;
-    margin-top: 20px;
-    border-radius: 15px;
+    margin-top: 1%;
+    border-radius: 5px;
 }
 
 .imagem-sobre{
@@ -98,7 +98,7 @@ body{
     border-radius: 100%;
     float:left;
     shape-outside: circle();
-    clip-path: circle();
+    clip-path: circle();    
     margin-right: 100px;
 }
 

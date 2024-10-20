@@ -170,6 +170,14 @@ html, body{
     width: 868px;
 }
 
+.barra3{
+    height: 2px;
+    width: 1084px;
+    background-color: black;
+    margin-bottom: 44px;
+    margin-left: 178px;
+}
+
 .terceiro-post img{
     width: 160px;
     height: 200px;
@@ -224,6 +232,14 @@ html, body{
 
 .conteúdo3{
     width: 868px;
+}
+
+.barra4{
+    height: 2px;
+    width: 1084px;
+    background-color: black;
+    margin-bottom: 44px;
+    margin-left: 178px;
 }
 
 .quarto-post img{
@@ -282,7 +298,7 @@ html, body{
     width: 868px;
 }
 
-.barra4{
+.barra5{
     height: 2px;
     width: 1084px;
     background-color: black;
@@ -346,22 +362,39 @@ html, body{
     width: 868px;
 }
 
-.barra5{
-    height: 2px;
-    width: 1084px;
-    background-color: black;
-    margin-bottom: 44px;
-    margin-left: 178px;
-}
+
 
 .barra6{
     height: 2px;
     width: 1084px;
     background-color: black;
-    margin-bottom: 44px;
+    margin-bottom: 83px;
     margin-left: 178px;
 }
 
+.navegação div{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    background-color: #237ECD;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navegação{
+    margin-left: 39%;
+    margin-right: 39%;
+    margin-bottom: 113px;
+}
+
+.navegação h5{
+    font-size: 24px;
+}
+
+.navegação, .navegação h5{
+    vertical-align: middle;
+}
 
 .footer{
     width: 100%;
@@ -371,11 +404,5 @@ html, body{
 
 
 
-.barra3{
-    height: 2px;
-    width: 1084px;
-    background-color: black;
-    margin-bottom: 44px;
-    margin-left: 178px;
-}
+
 

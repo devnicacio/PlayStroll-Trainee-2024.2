@@ -1,36 +1,33 @@
-body{
-    font-family: 'Satoshi', sans-serif;    
+body {
+    font-family: 'Satoshi', sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(
-        to bottom, 
-        #080B3C,  
-        #237ECD,   
+        to bottom,
+        #080B3C,
         #237ECD,
-        #080B3C    
+        #237ECD,
+        #080B3C
     );
     padding-top: 5%;
 }
 
-.texto-introducao{
+.texto-introducao {
     display: flex;
     flex-direction: column;
     text-align: center;
-    line-height:10% ;
-    font-size: 100%;
+    line-height: 10%;
+    font-size: 20px;
 }
 
-.sessao-introducao{
+.sessao-introducao {
     display: flex;
     align-items: center;
-    justify-content:space-around;
-    ;
+    justify-content: space-around;
 }
 
-.botao-veja-ultimos
-{
-    
-    background-color: #00AEA0; 
+.botao-veja-ultimos {
+    background-color: #00AEA0;
     color: white;
     border: none;
     cursor: pointer;
@@ -38,89 +35,179 @@ body{
     font-size: 20px;
     margin-top: 15%;
     border-radius: 5px;
-    
+    font-size: 25px;
 }
 
 .imagem-introducao img {
-
     width: 600px;
     height: auto;
     border-radius: 8px;
 }
 
-.comunidade{
+.comunidade {
     text-align: center;
     color: #FFFFFF;
+    font-size: 50px;
 }
 
-.ultimas-postagens{
-    text-align:center;
+.ultimas-postagens {
+    text-align: center;
     color: #FFFFFF;
+    padding: 20px;
+    font-size: 20px;
 }
+
 .posts {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1%;
-    padding: 1%;
+    justify-content: space-between; 
+    align-items: flex-start;
+    padding: 2%;
+    gap: 20px; 
 }
 
-.post-individual{
-    width:18%;
-    background-color: #B8B8B8 ;
+.post-individual {
+    flex: 1; 
+    max-width: 300px; 
+    background-color: #B8B8B8;
     border-radius: 4%;
     padding: 1%;
-
-    
-}
-.capa-jogo{
-    width: 280px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.nota{
-    
+.capa-jogo {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-.botao-veja-mais{
-    
-    background-color: #FFC736; 
+.nota {
+    margin-top: 10px;
+}
+
+.botao-veja-mais {
+    background-color: #FFC736;
     color: #000000;
     border: none;
     cursor: pointer;
     padding: 10px 20px;
     font-size: 20px;
-    margin-top: 1%;
+    margin-top: 15px;
     border-radius: 5px;
 }
 
-.imagem-sobre{
+.imagem-sobre {
     width: 400px;
     border-radius: 100%;
-    float:left;
+    float: left;
     shape-outside: circle();
-    clip-path: circle();    
+    clip-path: circle();
     margin-right: 100px;
 }
 
-.sobre-playstroll{
+.sobre-playstroll {
     text-align: center;
     color: #fff;
     padding: 150px 100px 0px 100px;
 }
 
-.div-sobre{
-    /* display: flex;
-    flex-direction: row;
-    justify-content: start; */
+.div-sobre {
     position: relative;
 }
 
-.proposito{
+.proposito {
     font-size: 35px;
     margin-bottom: 100px;
 }
 
-.texto-sobre{
+.texto-sobre {
     text-align: left;
     font-size: 30px;
+}
+
+@media (max-width: 1024px) {
+    .sessao-introducao {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .imagem-introducao img {
+        width: 100%;
+        height: auto;
+    
+    }
+
+    .botao-veja-ultimos {
+        margin-bottom: 40px;
+    }
+
+    .comunidade {
+        font-size: 40px;
+    }
+
+    .posts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        justify-content: center;
+        gap: 20px; 
+        padding: 0 10%; 
+    }
+
+    .post-individual {
+        width: 100%; 
+    }
+
+    .imagem-sobre {
+        width: 200px;
+        margin-right: 20px;
+    }
+
+    .texto-sobre {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .texto-introducao {
+        font-size: 16px;
+    }
+
+    .botao-veja-ultimos {
+        margin-bottom: 30px; 
+    }
+
+    .comunidade {
+        font-size: 30px;
+    }
+
+    .posts {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        gap: 20px;
+        padding: 0 5%; 
+    }
+
+    .post-individual {
+        width: 100%; 
+        max-width: 90%; 
+    }
+
+    .imagem-sobre {
+        width: 150px;
+        margin-right: 10px;
+    }
+
+    .texto-sobre {
+        font-size: 18px;
+    }
+
+    .botao-veja-ultimos {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .botao-veja-mais {
+        font-size: 16px;
+    }
 }

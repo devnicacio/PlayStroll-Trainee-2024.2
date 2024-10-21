@@ -3,14 +3,17 @@
     padding: 0;
     font-family: Satoshi, sans-serif;
 }
+body{
+    width: 100vw;
+    height: 100vh;
+}
 
 #navbar{
     width: auto;
-    height: 30vh;
+    height: 250px;/* Não queremos que a navbar diminui. */
     background-color: #080B1E;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
     color: #FFFFFF;
 }
@@ -23,10 +26,6 @@
     text-decoration: none;
 }
 
-#navbar img{
-    width: 70.59%;/* ~180px/255px*/
-    height: 69.79%; /* ~115.49px/165.49px*/
-}
 
 #navbar ul{
     width: 500px;
@@ -34,6 +33,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-self: center;
     list-style: none;
 }
 #navbar li{
@@ -48,17 +48,22 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 2vw;
     color: #FFFFFF;
 }
 
 #home{
-    width: 255px;/* ~ 255px/1440px*/
-    height: 165.49px;
+    width: 255px;
+    height: 165px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 2rem;
-    font-size: 36px;
+    margin-left: 3.48vw;
+    margin-top: 3.81vh;
+    font-size: 36px;;
 }
 
+#home img{
+    width: 180px;
+    align-self: center;
+}

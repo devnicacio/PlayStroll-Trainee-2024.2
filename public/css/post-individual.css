@@ -122,12 +122,37 @@ h1 {
     }
 
     .display2{
+        flex-direction: column;
         align-items: center;
     }
 
     .image2{
         height: 60%;
-        width: 60%;
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .icon1 {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon2 {
+        width: 30px;
+        height: 30px;
+        transform: translate(45%, -10%);
+
     }
 
 }

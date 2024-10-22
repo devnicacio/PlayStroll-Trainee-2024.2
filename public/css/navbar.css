@@ -1,3 +1,9 @@
+/* To-do:
+1 - Definir a responsividade final do navbar com um hamburguer icon
+2 - Corrigir alguns espaçamentos 
+3 - Colocar um hover mais smooth
+
+*/
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +16,7 @@ body{
 
 #navbar{
     width: auto;
-    height: 250px;/* Não queremos que a navbar diminui. */
+    height: calc(250px - 1vw);
     background-color: #080B1E;
     display: flex;
     flex-direction: row;
@@ -28,28 +34,38 @@ body{
 
 
 #navbar ul{
-    width: 500px;
+    width: auto;
     height: 70px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 5.5vw;
     align-self: center;
     list-style: none;
+    padding-right: 30px;
+    font-size: calc(30px - 0.8vw);
 }
 #navbar li{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2vw;
+    gap: 1.5vw;
+    /*transition: 10ms;*/
+}
 
+#navbar li:hover{
+    color: #237ECD;
 }
 
 #navbar li a{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2vw;
+    gap: 1.5vw;
     color: #FFFFFF;
+}
+
+#navbar li a:hover{
+    color: #237ECD;
 }
 
 #home{
@@ -67,3 +83,10 @@ body{
     width: 180px;
     align-self: center;
 }
+
+.bi{
+    width:35px;
+    height:35px;
+}
+
+/* Responsividade */

@@ -1,3 +1,7 @@
+html{
+    width: 100%;
+}
+
 html, body{
     background-color: #d5d6e3;
     margin: 0;
@@ -7,13 +11,9 @@ html, body{
 
 body{
     font-family: 'Satoshi', sans-serif;
+    width: 100%;
 }
 
-.navbar{
-    height: 220px;
-    width: 100%;
-    background-color: #0b0b3c;
-}
 
 .barra-de-pesquisa {
     text-align: right;
@@ -63,7 +63,8 @@ body{
 
 .posts{
     width: 100%;
-    height: 1830px;
+    height: 1900px;
+    margin-bottom: 80px;
     justify-content: center;
 }
 
@@ -76,6 +77,7 @@ body{
 .primeiro-post{
     width: 75%;
     margin-left: 12.5%;
+    margin-right: 12.5%;
 }
 
 .titulo1 h3{
@@ -83,7 +85,20 @@ body{
     color: #0b0b3c;
     margin-top: 0px;
     margin-left: 0px;
+    margin-right: 10px;
     margin-bottom: 0px;
+}
+
+.titulo1 span{
+    color: yellow;
+}
+
+.titulo1 h4{
+    font-size: 32px;
+}
+
+.titulo1 h3, .titulo1 h4{
+    display: inline;
 }
 
 .primeiro-post div{
@@ -97,6 +112,10 @@ body{
     border-radius: 20px;
     margin-right: 20px;
     margin-top: 0px;
+}
+
+.texto{
+    width: 80%;
 }
 
 
@@ -120,16 +139,14 @@ body{
     font-size: 20px;
 }
 
-.conteúdo{
-    width: 868px;
-}
-
 .barra2{
-    height: 1px;
-    width: 1084px;
-    background-color: black;
+    height: 2px;
+    width: 75%px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    justify-content: center;
     margin-bottom: 44px;
-    margin-left: 178px;
+    background-color: black;
 }
 
 .segundo-post img{
@@ -138,8 +155,9 @@ body{
     margin-right: 50px;
 }
 .segundo-post{
-    margin-left: 178px;
-    margin-top: 52px;
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
 }
 
 .titulo2 h3{
@@ -150,6 +168,17 @@ body{
     margin-bottom: 0px;
 }
 
+.titulo2 span{
+    color: yellow;
+}
+
+.titulo2 h4{
+    font-size: 32px;
+}
+
+.titulo2 h3, .titulo2 h4{
+    display: inline;
+}
 .segundo-post div{
     display: inline-block;
     vertical-align: top;
@@ -163,6 +192,9 @@ body{
     margin-top: 0px;
 }
 
+.texto2{
+    width: 80%;
+}
 
 .texto2 div{
     display: block;
@@ -184,16 +216,15 @@ body{
     font-size: 20px;
 }
 
-.conteúdo2{
-    width: 868px;
-}
 
 .barra3{
     height: 2px;
-    width: 1084px;
-    background-color: black;
+    width: 75%px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    justify-content: center;
     margin-bottom: 44px;
-    margin-left: 178px;
+    background-color: black;
 }
 
 .terceiro-post img{
@@ -202,8 +233,9 @@ body{
     margin-right: 50px;
 }
 .terceiro-post{
-    margin-left: 178px;
-    margin-top: 52px;
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
 }
 
 .titulo3 h3{
@@ -212,6 +244,18 @@ body{
     margin-top: 0px;
     margin-left: 0px;
     margin-bottom: 0px;
+}
+
+.titulo3 span{
+    color: yellow;
+}
+
+.titulo3 h4{
+    font-size: 32px;
+}
+
+.titulo3 h3, .titulo3 h4{
+    display: inline;
 }
 
 .terceiro-post div{
@@ -227,6 +271,9 @@ body{
     margin-top: 0px;
 }
 
+.texto3{
+    width: 80%;
+}
 
 .texto3 div{
     display: block;
@@ -248,16 +295,16 @@ body{
     font-size: 20px;
 }
 
-.conteúdo3{
-    width: 868px;
-}
+
 
 .barra4{
     height: 2px;
-    width: 1084px;
-    background-color: black;
+    width: 75%px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    justify-content: center;
     margin-bottom: 44px;
-    margin-left: 178px;
+    background-color: black;
 }
 
 .quarto-post img{
@@ -266,8 +313,9 @@ body{
     margin-right: 50px;
 }
 .quarto-post{
-    margin-left: 178px;
-    margin-top: 52px;
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
 }
 
 .titulo4 h3{
@@ -276,6 +324,18 @@ body{
     margin-top: 0px;
     margin-left: 0px;
     margin-bottom: 0px;
+}
+
+.titulo4 span{
+    color: yellow;
+}
+
+.titulo4 h4{
+    font-size: 32px;
+}
+
+.titulo4 h3, .titulo4 h4{
+    display: inline;
 }
 
 .quarto-post div{
@@ -291,6 +351,9 @@ body{
     margin-top: 0px;
 }
 
+.texto4{
+    width: 80%;
+}
 
 .texto4 div{
     display: block;
@@ -312,16 +375,14 @@ body{
     font-size: 20px;
 }
 
-.conteúdo4{
-    width: 868px;
-}
-
 .barra5{
     height: 2px;
-    width: 1084px;
-    background-color: black;
+    width: 75%px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    justify-content: center;
     margin-bottom: 44px;
-    margin-left: 178px;
+    background-color: black;
 }
 
 .quinto-post img{
@@ -330,8 +391,9 @@ body{
     margin-right: 50px;
 }
 .quinto-post{
-    margin-left: 178px;
-    margin-top: 52px;
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
 }
 
 .titulo5 h3{
@@ -340,6 +402,18 @@ body{
     margin-top: 0px;
     margin-left: 0px;
     margin-bottom: 0px;
+}
+
+.titulo5 span{
+    color: yellow;
+}
+
+.titulo5 h4{
+    font-size: 32px;
+}
+
+.titulo5 h3, .titulo5 h4{
+    display: inline;
 }
 
 .quinto-post div{
@@ -355,6 +429,9 @@ body{
     margin-top: 0px;
 }
 
+.texto5{
+    width: 80%;
+}
 
 .texto5 div{
     display: block;
@@ -376,18 +453,17 @@ body{
     font-size: 20px;
 }
 
-.conteúdo5{
-    width: 868px;
-}
 
 
 
 .barra6{
     height: 2px;
-    width: 1084px;
+    width: 75%px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    justify-content: center;
+    margin-bottom: 44px;
     background-color: black;
-    margin-bottom: 83px;
-    margin-left: 178px;
 }
 
 .navegação{
@@ -412,9 +488,69 @@ body{
     background-color: #0b0b3c;
 }
 
+@media only screen and (max-width: 1024px)
+{
+    .posts{
+        height: 3300px;
+    }
+}
 
-.footer{
-    width: 100%;
-    height: 250px;
-    background-color: #0b0b3c;
+@media only screen and (max-width: 769px)
+{
+    .posts{
+        height: 2500px;
+    }
+    
+    .conteúdo p, .conteúdo2 p, .conteúdo3 p, .conteúdo4 p, .conteúdo5 p{
+        font-size: 12px;
+    }
+}
+
+
+@media only screen and (max-width: 426px)
+{
+    .posts{
+        height: 3070px;
+    }
+    .titulo1 h3, .titulo2 h3, .titulo3 h3, .titulo4 h3, .titulo5 h3{
+        font-size: 24px;
+    }
+    .titulo1 h4, .titulo2 h4, .titulo3 h4, .titulo4 h4, .titulo5 h4{
+        font-size: 24px;
+    }
+    .titulo1 h3, titulo1 h4{
+        display: block
+    }
+    .titulo2 h3, titulo2 h4{
+        display: block
+    }
+    .titulo3 h3, titulo3 h4{
+        display: block
+    }
+    .titulo4 h3, titulo4 h4{
+        display: block
+    }
+    .titulo4 h3, titulo4 h4{
+        display: block
+    }
+}
+
+@media only screen and (max-width: 376px)
+{
+    .posts{
+        height: 3330px;
+    }
+}
+
+@media only screen and (max-width: 321px)
+{
+    .posts{
+        height: 3700px;
+    }
+
+    .navegação button{
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+    }
 }

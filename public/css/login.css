@@ -63,14 +63,13 @@ button{
 input{
     border-radius: 5px;
     border: #11518a;
-    max-width: 230px;
-    width: 100%;   
+    width: 65%;   
     padding: 3px; 
     outline: none;
 }
 
 label {
-    margin: 0 190px 0 0;    
+    margin: 0 52% 0 0;    
     padding: 0;
 }
 

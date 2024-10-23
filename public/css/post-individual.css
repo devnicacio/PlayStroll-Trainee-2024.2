@@ -24,9 +24,9 @@ body{
     z-index: 10;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40vh);
     width: 70%;
-    height: 60%;
+    height: 30vw;
 }
 
 .section-description {    
@@ -88,13 +88,13 @@ h1 {
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .linha-preta {  
-        height: 30%;
+        height: 30vw;
     }
 
     .image1 {
-        height: 30%;
+        height: 30vw;
         width: 65%;
-        transform: translate(-50%, -125%);
+        transform: translate(-50%, -40vh);
 
     }
 

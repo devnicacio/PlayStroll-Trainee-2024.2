@@ -5,8 +5,13 @@ html, body{
     font-size: 0;
 }
 
+body{
+    font-family: 'Satoshi', sans-serif;
+}
+
 .navbar{
     height: 220px;
+    width: 100%;
     background-color: #0b0b3c;
 }
 
@@ -20,7 +25,7 @@ html, body{
     width: 200px;
     height: 36px;
     background-color: #9E9C9C;
-    margin-right: 109px;
+    margin-right: 5%;
     margin-left: 13px;
     border-radius: 20px;
 }
@@ -37,18 +42,31 @@ html, body{
 .inicialização-dos-posts H4{
     font-size: 24px;
     margin-bottom: 0;
+    margin-left: 12.5%;
 }
 
 .inicialização-dos-posts{
     margin-top: 0px;
-    margin-left: 178px;
+    margin-left: 0;
+    width: 100%;
 }
 
 .barra1{
-    height: 1px;
-    width: 1084px;
+    height: 2px;
+    width: 75%px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    justify-content: center;
+    margin-bottom: 44px;
     background-color: black;
 }
+
+.posts{
+    width: 100%;
+    height: 1830px;
+    justify-content: center;
+}
+
 
 .primeiro-post img{
     width: 160px;
@@ -56,8 +74,8 @@ html, body{
     margin-right: 50px;
 }
 .primeiro-post{
-    margin-left: 178px;
-    margin-top: 52px;
+    width: 75%;
+    margin-left: 12.5%;
 }
 
 .titulo1 h3{
@@ -372,37 +390,31 @@ html, body{
     margin-left: 178px;
 }
 
-.navegação div{
-    display: inline-block;
+.navegação{
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.navegação button{
+    display: inline;
     width: 36px;
     height: 36px;
     border-radius: 12px;
-    background-color: #237ECD;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.navegação{
-    margin-left: 39%;
-    margin-right: 39%;
-    margin-bottom: 113px;
-}
-
-.navegação h5{
     font-size: 24px;
+    margin-right: 10px;
+    color: white;
+    background-color: #237ECD;
+    border: 1px solid black;
 }
 
-.navegação, .navegação h5{
-    vertical-align: middle;
+.navegação .nav4 {
+    background-color: #0b0b3c;
 }
+
 
 .footer{
     width: 100%;
     height: 250px;
     background-color: #0b0b3c;
 }
-
-
-
-
-

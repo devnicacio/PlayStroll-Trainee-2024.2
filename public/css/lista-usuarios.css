@@ -11,21 +11,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .lista {
     background-color: rgba(8, 11, 60, 0.8);
     max-width: 800px;
     width: 100%;
-    border: #080b3c;
+    color: white;
+    border-collapse: collapse; /* Faz as bordas compartilhadas de células se unirem */
 }
 
 .dados {
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    border: red;
-    border-width: 62px;
 }
 
 .id {

@@ -4,17 +4,30 @@ body {
     font-family: 'Satoshi', sans-serif;
 }
 
-.lista {
+.gradient {
     height: 100vh;
     background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    margin: 0 auto;
+}
+
+.lista {
+    background-color: rgba(8, 11, 60, 0.8);
+    max-width: 800px;
+    width: 100%;
+    border: #080b3c;
 }
 
 .dados {
     display: flex;
+    justify-content: center;
     flex-direction: row;
+    border: red;
+    border-width: 62px;
+}
+
+.id {
+    
 }

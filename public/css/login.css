@@ -6,7 +6,7 @@ body {
 
 .gradient{
     height: 100vh;
-    background-image: linear-gradient(#080B3C, #237ECD,#080B3C); 
+    background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
     display: flex;
     justify-content: center;
     align-items: center;   
@@ -14,11 +14,11 @@ body {
 }
 
 .login{
-    color: white;
     max-width: 400px;
     width: 100%;
     margin: 0 auto;
     border-radius: 20px;
+    color: white;
 }
 
 h3 {
@@ -27,24 +27,30 @@ h3 {
 }
 
 .parte-de-cima{
-    background-image: linear-gradient(to right, #237ECD,#080B3C);
+    /* background-image: linear-gradient(to right, #237ECD,#080B3C);  */
+    background-color: #080B3C;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     text-align: center;
 }
 
 .parte-de-baixo{
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    /* background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); */
+    background-color: rgba(8, 11, 60, 0.8);
+    
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     padding-top: 25px;
     display: flex; 
     flex-direction: column;
+    position: relative;
 }
 
 button{
-    background-color: #237ECD;
+    background-color: #080B3C;
+    position: relative;
+    z-index: 10;
     color: white;
     cursor: pointer;
     border-radius: 50px;

@@ -37,8 +37,7 @@ h3 {
 .parte-de-baixo{
     /* background-color: rgba(255, 255, 255, 0.2); 
     backdrop-filter: blur(10px); */
-    background-color: rgba(8, 11, 60, 0.8);
-    
+    background-color: rgba(8, 11, 60, 0.8);  
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     padding-top: 25px;
@@ -80,9 +79,9 @@ label {
 }
 
 .sessao-login{     
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;  
     width: 100%;
     align-items: center;
     row-gap: 6px;

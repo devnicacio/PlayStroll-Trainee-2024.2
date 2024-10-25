@@ -18,8 +18,10 @@ body {
     max-width: 700px;
     width: 100%;
     color: white;
+    /* display: table; */
+    /* border-collapse: collapse; */
     border-radius: 20px;
-    border-collapse: collapse; /* Faz as bordas compartilhadas de células se unirem */
+    /* border-collapse: collapse;  */
     border: 5px solid #080b3c;
 }
 
@@ -27,11 +29,40 @@ body {
     text-align: center;
 }
 
-.dados {
-    
-}
+/* .dados {
+    display: table-row;
+} */
 
 .informacoes, .a, .b, .c, .d, .e{
-    display: flex;    
+    display: flex;   
+    gap: 55px;
+    width: 100%;
 }
 
+.informacoes {
+    border-top: 5px solid #080b3c;
+}
+
+.a {
+    border-top: 5px solid #080b3c;
+}
+
+.b {
+    border-top: 5px solid #080b3c;
+
+}
+
+.c {
+    border-top: 5px solid #080b3c;
+
+}
+
+.d {
+    border-top: 5px solid #080b3c;
+
+}
+
+.e {
+    border-top: 5px solid #080b3c;
+    border-bottom: 5px solid #080b3c;
+}

@@ -66,3 +66,10 @@ body {
     border-top: 5px solid #080b3c;
     border-bottom: 5px solid #080b3c;
 }
+
+button {
+    border-radius: 20px;
+    background-color: #080b3c;
+    color: white;
+    cursor: pointer;
+}

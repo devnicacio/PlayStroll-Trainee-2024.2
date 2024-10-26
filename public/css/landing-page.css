@@ -6,12 +6,12 @@ body {
     padding-top: 5%;
 }
 
-.texto-introducao {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    line-height: 10%;
-    font-size: 20px;
+.imagem-introducao {
+    position: relative;
+    width: 60%; 
+    margin: 0 auto; 
+    padding-bottom: 0;
+    overflow: hidden; 
 }
 
 .sessao-introducao {

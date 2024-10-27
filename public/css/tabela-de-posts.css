@@ -38,4 +38,16 @@ body {
     font-weight: bold;
 }
 
-
+.btn-criar-post {
+    background-color: #080B3C;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

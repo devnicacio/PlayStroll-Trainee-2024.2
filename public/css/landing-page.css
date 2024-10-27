@@ -208,7 +208,6 @@ body {
     right: 250px; 
 }
 
-
 .imagem-sobre {
     width: 400px;
     border-radius: 100%;
@@ -220,8 +219,8 @@ body {
 
 .sobre-playstroll {
     text-align: center;
-    color: #fff;
-    padding: 150px 100px 0px 100px;
+    color: #000;
+    padding: 40px 100px 0px 100px;
 }
 
 .div-sobre {
@@ -236,6 +235,7 @@ body {
 .texto-sobre {
     text-align: left;
     font-size: 30px;
+    color: #000;
 }
 
 @media (max-width: 1024px) {

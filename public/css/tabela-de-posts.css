@@ -13,4 +13,29 @@ body {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(0, 174, 160, 0.5));
 }
 
+.container {
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.caixa-titulo {
+    background-color: #080B3C;
+    padding: 5px 30px;
+    border-radius: 8px;
+}
+
+.titulo-tabela {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
 

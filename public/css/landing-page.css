@@ -190,16 +190,24 @@ body {
     font-size: 20px;
 }
 
-.botao-veja-mais {
-    background-color: #FFC736;
-    color: #000000;
-    border: none;
+.ante, .prox {
+    position: absolute;
+    color: #080B3C;
     cursor: pointer;
-    border-radius: 50px;
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: 20px;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
 }
+
+.ante {
+    left: 250px; 
+}
+
+.prox {
+    right: 250px; 
+}
+
 
 .imagem-sobre {
     width: 400px;

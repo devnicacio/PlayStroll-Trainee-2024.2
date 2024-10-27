@@ -104,10 +104,19 @@ body {
 }
 
 .comunidade {
-    text-align: center;
-    color: #FFFFFF;
-    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size:28px;
+    border: none;
+    background: rgba(255, 255, 255, 0.4);
+    width: 70%;
+    margin: 30px auto;
+    border-radius: 50px;
+    height: 90px;
 }
+
 
 .ultimas-postagens {
     text-align: center;

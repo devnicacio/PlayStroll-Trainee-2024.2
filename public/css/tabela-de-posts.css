@@ -100,3 +100,25 @@ body {
 .btn-excluir {
     background-color: #C70E3C; 
 }
+
+.navegacao {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navegacao button {
+    display: inline;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    font-size: 24px;
+    margin-right: 10px;
+    color: white;
+    background-color: #237ECD;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.navegacao .nav2 {
+    background-color: #080B3C;
+}

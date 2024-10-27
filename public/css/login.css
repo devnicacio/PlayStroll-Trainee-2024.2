@@ -86,7 +86,7 @@ input:hover {
     position: relative;
 }
 
-.bi-eye-slash {
+.bi-eye-slash, .bi-eye {
     color: #080B3C;
     cursor: pointer;
     position: absolute;

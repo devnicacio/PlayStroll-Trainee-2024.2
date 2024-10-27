@@ -68,25 +68,35 @@ body {
 }
 
 .informacoes {
-
+    display: flex;
 }
 
+.a, .b, .c, .d, .e {
+    margin-left: 20px;
+}
 .a {
+    display: flex;
+    align-items: center;
 }
 
 .b {
-
+    display: flex;
+    align-items: center;
 }
 
 .c {
-
+    display: flex;
+    align-items: center;
 }
 
 .d {
-
+    display: flex;
+    align-items: center;
 }
 
 .e {
+    display: flex;
+    align-items: center;
 }
 
 button {

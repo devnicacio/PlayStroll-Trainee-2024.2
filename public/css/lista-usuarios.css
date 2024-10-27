@@ -18,9 +18,10 @@ body {
     background-color: rgba(8, 11, 60, 0.8);
     max-width: 700px;
     width: 100%;
-    height: 70%;
+    height:350px;
     color: white;
     display: flex;
+    margin-bottom: 1%;
     /* display: table; */
     /* border-collapse: collapse; */
     border-radius: 20px;
@@ -54,9 +55,11 @@ body {
     border: 1px solid #080b3c;
 }
 
-/* .dados {
-    display: table-row;
-} */
+.dados {
+    /* display: table-row; */
+    height: 100%;
+    width: 100%;
+}
 
 .informacoes, .a, .b, .c, .d, .e{
     display: flex;   
@@ -69,27 +72,21 @@ body {
 }
 
 .a {
-    border-top: 5px solid #080b3c;
 }
 
 .b {
-    border-top: 5px solid #080b3c;
 
 }
 
 .c {
-    border-top: 5px solid #080b3c;
 
 }
 
 .d {
-    border-top: 5px solid #080b3c;
 
 }
 
 .e {
-    border-top: 5px solid #080b3c;
-    border-bottom: 5px solid #080b3c;
 }
 
 button {
@@ -107,4 +104,5 @@ button {
     width: 100%;
     display: flex;
     justify-content: end;
+    gap: 1%;
 }

@@ -74,3 +74,29 @@ body {
 .tabela-posts tbody {
     background-color: #080B3C;
 }
+
+.btn-acao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+}
+
+.btn-visualizar {
+    background-color: #00AEA0; 
+}
+
+.btn-editar {
+    background-color: #FFC739; 
+    color: #000;
+}
+
+.btn-excluir {
+    background-color: #C70E3C; 
+}

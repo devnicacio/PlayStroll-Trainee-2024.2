@@ -51,3 +51,26 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.tabela-posts {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #080B3C;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabela-posts th, .tabela-posts td {
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+.tabela-posts th {
+    background-color: #237ECD;
+    font-weight: bold;
+}
+
+.tabela-posts tbody {
+    background-color: #080B3C;
+}

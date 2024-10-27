@@ -60,22 +60,47 @@ body {
     margin: 10px 0px 10px; 
 }
 
-.botao-veja-ultimos {
-    background-color: #00AEA0;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 4%;
-    font-size: 20px;
-    margin-top: 15%;
-    border-radius: 5px;
-    font-size: 25px;
+.nome-do-jogo-fade{
+    padding: -50px;
+    font-weight: bold;
+    font-size: 50px;
 }
 
-.imagem-introducao img {
-    width: 600px;
-    height: auto;
-    border-radius: 8px;
+.botao-veja-mais-fade {
+    margin-top: 40px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    height: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+}
+
+.imagem-introducao:hover .fade {
+    opacity: 1;
+}
+
+.anterior, .proximo {
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    top: 44%;
+    transform: translateY(-50%);
+}
+
+.anterior {
+    left: 390px; 
+}
+
+.proximo {
+    right: 390px;
 }
 
 .comunidade {

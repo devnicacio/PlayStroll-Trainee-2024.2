@@ -55,20 +55,12 @@ body {
     border: 1px solid #080b3c;
 }
 
-.dados {
-    /* display: table-row; */
-    height: 100%;
-    width: 100%;
-}
 
-.informacoes, .a, .b, .c, .d, .e{
+
+.a, .b, .c, .d, .e{
     display: flex;   
     gap: 55px;
     width: 100%;
-}
-
-.informacoes {
-    display: flex;
 }
 
 .a, .b, .c, .d, .e {

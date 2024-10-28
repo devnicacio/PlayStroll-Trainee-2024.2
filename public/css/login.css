@@ -43,13 +43,14 @@ h3 {
     padding-top: 25px;
     display: flex; 
     flex-direction: column;
+    align-items: center;
 }
 
 button{
-    background-color: #080B3C;
+    background-color: #ffc739;
     position: relative;
     z-index: 10;
-    color: white;
+    color: #080B3C;
     cursor: pointer;
     border-radius: 50px;
     padding-left: 80px;
@@ -60,7 +61,7 @@ button{
 }
 
 button:hover {
-    color: #237ECD;
+    color: #050735;
 }
 
 .botao-login{
@@ -71,7 +72,8 @@ button:hover {
 input{
     border-radius: 5px;
     border: #11518a;
-    width: 65%;   
+    width: 100%;   
+    box-sizing: border-box;
     padding: 3px; 
     outline: none;
 }
@@ -94,7 +96,6 @@ input:hover {
 }
 
 label {
-    margin: 0 54% 0 0;    
     padding: 0;
 }
 
@@ -102,8 +103,8 @@ label {
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;  
-    width: 100%;
-    align-items: center;
+    width: 65%;
+    align-items: start;
     row-gap: 6px;
 }
 

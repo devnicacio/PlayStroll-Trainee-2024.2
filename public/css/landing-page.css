@@ -431,11 +431,19 @@ body {
 
 
 @media (max-width: 480px) {
+
+    .comunidade {
+        width: auto; 
+        padding: 5px 10px; 
+        text-align: center;
+    }
+
     .posts {
         flex-direction: row;
         justify-content: center; 
         align-items: center;
     }
+
 
     .descricao{
         font-size: 15px;

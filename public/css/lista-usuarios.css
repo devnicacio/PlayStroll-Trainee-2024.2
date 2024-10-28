@@ -7,7 +7,7 @@ body {
 .gradient {
     height: 100vh;
     background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,8 +55,8 @@ button {
 .lista {
     max-width: 700px;
     width: 100%;
-    color: white;
     overflow: hidden;
+    color: white;    
     border-radius: 10px;
     border-collapse: collapse;
 }
@@ -65,8 +65,8 @@ thead{
     background-color: #237ecd;
 }
 
-.lista th, .lista td {
-    text-align: center;
+th, td {
+    text-align: center;    
     padding: 13px 15px;
 }
 
@@ -102,4 +102,26 @@ tbody {
 
 .pag1 {
     background-color: #080b3c;
+}
+
+@media (max-width: 767px){
+
+    .parte-de-cima {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .table-container {
+        overflow-x: auto;
+        width: 100%;        
+    }
+
+    .lista {        
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;    
+                           
+    }
 }

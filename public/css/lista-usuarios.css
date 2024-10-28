@@ -57,24 +57,25 @@ button {
     color: white;
     display: flex;
     flex-direction: column;
-    margin-bottom: 1%;
     overflow: hidden;
     border-radius: 10px;
 }
 
 thead{
     background-color: #237ecd;
-    padding: 15px;
 }
 
-th, td {
+.lista th, .lista td {
     text-align: center;
     padding: 15px;
 }
 
+.lista th {
+    font-weight: bold;
+}
+
 tbody {
     background-color: #080b3c;
-    padding: 15px;
 }
 
 .verificar {

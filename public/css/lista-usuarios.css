@@ -67,6 +67,11 @@ thead{
     padding: 15px;
 }
 
+th, td {
+    text-align: center;
+    padding: 15px;
+}
+
 tbody {
     background-color: #080b3c;
     padding: 15px;

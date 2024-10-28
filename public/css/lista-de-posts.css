@@ -1,9 +1,11 @@
+lista de posts.css
+
 html{
     width: 100%;
 }
 
 html, body{
-    background-color: #d5d6e3;
+    background: linear-gradient(to right, rgba(213, 214, 227, 1.0), rgba(0, 174, 160, 0.5));
     margin: 0;
     padding: 0;
     font-size: 0;
@@ -14,29 +16,28 @@ body{
     width: 100%;
 }
 
+.navbar{
+    width: 100%;
+    height: 250px;
+    background-color: rgba(8, 11, 60, 1.0);
+}
 
 .barra-de-pesquisa {
-    text-align: right;
     margin-top: 120px;
-    margin-bottom: 120px;
+    margin-bottom: 50px;
 }
 
 .pesquisa{
     width: 200px;
     height: 36px;
-    background-color: #9E9C9C;
-    margin-right: 5%;
-    margin-left: 13px;
+    background-color: green;
+    margin-left: 12.5%;
     border-radius: 20px;
 }
 
 .barra-de-pesquisa div{
     display: inline-block;
     vertical-align: middle;
-}
-
-.busca p{
-   font-size: 20px;
 }
 
 .inicialização-dos-posts H4{
@@ -57,13 +58,12 @@ body{
     margin-left: 12.5%;
     margin-right: 12.5%;
     justify-content: center;
-    margin-bottom: 44px;
-    background-color: black;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, rgba(0, 174, 160, 0.5), rgba(213, 214, 227, 0.5));
 }
 
 .posts{
     width: 100%;
-    height: 1900px;
     margin-bottom: 80px;
     justify-content: center;
 }
@@ -78,27 +78,27 @@ body{
     width: 75%;
     margin-left: 12.5%;
     margin-right: 12.5%;
+    margin-bottom: 10px;
 }
 
 .titulo1 h3{
-    font-size: 32px;
+    font-size: 24px;
     color: #0b0b3c;
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 10px;
-    margin-bottom: 0px;
+    margin: 0;
 }
 
-.titulo1 span{
+.nota{
+    margin: 0;
+}
+
+.nota span{
     color: yellow;
 }
 
-.titulo1 h4{
-    font-size: 32px;
-}
-
-.titulo1 h3, .titulo1 h4{
-    display: inline;
+.nota h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 0;
 }
 
 .primeiro-post div{
@@ -106,12 +106,15 @@ body{
     vertical-align: top;
 }
 
+.perfil1{
+    margin-right: 10px;
+}
+
 .perfil1 img{
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    margin-right: 20px;
-    margin-top: 0px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin: 0;
 }
 
 .texto{
@@ -124,7 +127,12 @@ body{
 }
 
 .user1 p{
-    font-size: 10px;
+    font-size: 14px;
+    margin: 0;
+}
+
+.dados{
+    margin-bottom: 10px;
 }
 
 .dados div{
@@ -137,6 +145,8 @@ body{
 
 .conteúdo p{
     font-size: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .barra2{
@@ -145,8 +155,8 @@ body{
     margin-left: 12.5%;
     margin-right: 12.5%;
     justify-content: center;
-    margin-bottom: 44px;
-    background-color: black;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, rgba(0, 174, 160, 0.5), rgba(213, 214, 227, 0.5));
 }
 
 .segundo-post img{
@@ -158,38 +168,42 @@ body{
     width: 75%;
     margin-left: 12.5%;
     margin-right: 12.5%;
+    margin-bottom: 10px;
 }
 
 .titulo2 h3{
-    font-size: 32px;
+    font-size: 24px;
     color: #0b0b3c;
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-bottom: 0px;
+    margin: 0;
 }
 
-.titulo2 span{
+.nota2{
+    margin: 0;
+}
+
+.nota2 span{
     color: yellow;
 }
 
-.titulo2 h4{
-    font-size: 32px;
-}
-
-.titulo2 h3, .titulo2 h4{
-    display: inline;
+.nota2 h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 0;
 }
 .segundo-post div{
     display: inline-block;
     vertical-align: top;
 }
 
+.perfil2{
+    margin-right: 10px;
+}
+
 .perfil2 img{
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    margin-right: 20px;
-    margin-top: 0px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin: 0;
 }
 
 .texto2{
@@ -201,7 +215,8 @@ body{
 }
 
 .user2 p{
-    font-size: 10px;
+    font-size: 14px;
+    margin: 0;
 }
 
 .dados2 div{
@@ -224,7 +239,7 @@ body{
     margin-right: 12.5%;
     justify-content: center;
     margin-bottom: 44px;
-    background-color: black;
+    background: linear-gradient(to right, rgba(0, 174, 160, 0.5), rgba(213, 214, 227, 0.5));
 }
 
 .terceiro-post img{
@@ -295,8 +310,6 @@ body{
     font-size: 20px;
 }
 
-
-
 .barra4{
     height: 2px;
     width: 75%px;
@@ -304,7 +317,7 @@ body{
     margin-right: 12.5%;
     justify-content: center;
     margin-bottom: 44px;
-    background-color: black;
+    background: linear-gradient(to right, rgba(0, 174, 160, 0.5), rgba(213, 214, 227, 0.5));
 }
 
 .quarto-post img{
@@ -312,6 +325,7 @@ body{
     height: 200px;
     margin-right: 50px;
 }
+
 .quarto-post{
     width: 75%;
     margin-left: 12.5%;
@@ -382,7 +396,7 @@ body{
     margin-right: 12.5%;
     justify-content: center;
     margin-bottom: 44px;
-    background-color: black;
+    background: linear-gradient(to right, rgba(0, 174, 160, 0.5), rgba(213, 214, 227, 0.5));
 }
 
 .quinto-post img{
@@ -453,9 +467,6 @@ body{
     font-size: 20px;
 }
 
-
-
-
 .barra6{
     height: 2px;
     width: 75%px;
@@ -463,7 +474,7 @@ body{
     margin-right: 12.5%;
     justify-content: center;
     margin-bottom: 44px;
-    background-color: black;
+    background: linear-gradient(to right, rgba(0, 174, 160, 0.5), rgba(213, 214, 227, 0.5));
 }
 
 .navegação{
@@ -488,30 +499,18 @@ body{
     background-color: #0b0b3c;
 }
 
-@media only screen and (max-width: 1024px)
-{
-    .posts{
-        height: 3300px;
-    }
-}
+
 
 @media only screen and (max-width: 769px)
 {
-    .posts{
-        height: 2500px;
-    }
-    
     .conteúdo p, .conteúdo2 p, .conteúdo3 p, .conteúdo4 p, .conteúdo5 p{
-        font-size: 12px;
+    font-size: 12px;
     }
 }
 
 
 @media only screen and (max-width: 426px)
 {
-    .posts{
-        height: 3070px;
-    }
     .titulo1 h3, .titulo2 h3, .titulo3 h3, .titulo4 h3, .titulo5 h3{
         font-size: 24px;
     }
@@ -535,19 +534,8 @@ body{
     }
 }
 
-@media only screen and (max-width: 376px)
-{
-    .posts{
-        height: 3330px;
-    }
-}
-
 @media only screen and (max-width: 321px)
 {
-    .posts{
-        height: 3700px;
-    }
-
     .navegação button{
         width: 30px;
         height: 30px;

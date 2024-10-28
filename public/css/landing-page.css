@@ -91,17 +91,16 @@ body {
     border: none;
     background-color: transparent;
     font-size: 30px;
-    top: 44%;
+    top: 50%; 
     transform: translateY(-50%);
 }
 
 .anterior {
-    left: 390px; 
+    left: 20px; 
 }
 
 .proximo {
-    right: 390px;
-}
+    right: 20px; 
 
 .comunidade {
     display: flex;
@@ -239,88 +238,70 @@ body {
 }
 
 @media (max-width: 1024px) {
-    .sessao-introducao {
-        flex-direction: column;
+    .imagem-introducao {
+        width: 80%; 
+    }
+
+    .fade-text {
         padding: 20px;
     }
 
-    .imagem-introducao img {
-        width: 100%;
-        height: auto;
-    
-    }
-
-    .botao-veja-ultimos {
-        margin-bottom: 40px;
-    }
-
     .comunidade {
-        font-size: 40px;
+        width: 80%;
+        font-size: 18px;
+        padding: 15px;
     }
 
+    .ultimas-postagens h1 {
+        font-size: 24px;
+    }
+
+    /* Carrossel de posts - Mostrar apenas um por vez */
     .posts {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-        justify-content: center;
-        gap: 20px; 
-        padding: 0 10%; 
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
     }
 
     .post-individual {
-        width: 100%; 
+        max-width: 100%;
+        margin: 0 auto;
     }
 
-    .imagem-sobre {
-        width: 200px;
-        margin-right: 20px;
-    }
-
-    .texto-sobre {
-        font-size: 20px;
+    .ante, .prox {
+        left: 5%;
+        right: 5%;
     }
 }
 
 @media (max-width: 768px) {
-    .texto-introducao {
-        font-size: 16px;
-    }
-
-    .botao-veja-ultimos {
-        margin-bottom: 30px; 
+    /* Ajustes para Celulares */
+    .imagem-introducao {
+        width: 100%;
     }
 
     .comunidade {
-        font-size: 30px;
-    }
-
-    .posts {
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        gap: 20px;
-        padding: 0 5%; 
+        width: 90%;
+        font-size: 16px;
     }
 
     .post-individual {
-        width: 100%; 
-        max-width: 90%; 
+        margin: 0 auto;
+        width: 90%;
     }
 
-    .imagem-sobre {
-        width: 150px;
-        margin-right: 10px;
+    /* Alinhamento de Texto da seção "Sobre" */
+    .sobre-playstroll {
+        padding: 20px;
     }
 
     .texto-sobre {
         font-size: 18px;
+        text-align: justify;
     }
 
-    .botao-veja-ultimos {
-        font-size: 18px;
-        padding: 10px;
-    }
-
-    .botao-veja-mais {
-        font-size: 16px;
+    .imagem-sobre {
+        width: 100px;
+        margin-right: 20px;
     }
 }

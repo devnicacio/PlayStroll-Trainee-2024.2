@@ -62,6 +62,19 @@ button {
     text-align: center;
 }
 
+.verificar {
+    background-color: #00aea0;
+}
+
+.editar {
+    background-color: #ffc739;
+    color: black;
+}
+
+.excluir {
+    background-color: #c70e3c;
+}
+
 .paginas {
     max-width: 700px;
     width: 100%;

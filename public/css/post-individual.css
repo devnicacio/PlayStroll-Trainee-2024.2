@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #D5D6E3;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(0, 174, 160, 0.5));
     font-family: 'Satoshi', sans-serif;
 }
 

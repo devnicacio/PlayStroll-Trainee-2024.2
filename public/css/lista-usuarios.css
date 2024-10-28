@@ -55,10 +55,9 @@ button {
     max-width: 700px;
     width: 100%;
     color: white;
-    display: flex;
-    flex-direction: column;
     overflow: hidden;
     border-radius: 10px;
+    border-collapse: collapse;
 }
 
 thead{
@@ -97,6 +96,7 @@ tbody {
     display: flex;
     justify-content: center;
     gap: 1%;
+    margin-top: 20px;
 }
 
 .pag1 {

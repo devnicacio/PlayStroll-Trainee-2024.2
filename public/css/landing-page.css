@@ -8,10 +8,9 @@ body {
 
 .imagem-introducao {
     position: relative;
-    width: 60%; 
-    margin: 0 auto; 
-    padding-bottom: 0;
-    overflow: hidden; 
+    width: 60%;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .imagem-introducao img {
@@ -91,16 +90,17 @@ body {
     border: none;
     background-color: transparent;
     font-size: 30px;
-    top: 50%; 
+    top: 50%;
     transform: translateY(-50%);
 }
 
 .anterior {
-    left: 20px; 
+    left: 15px;
 }
 
 .proximo {
-    right: 20px; 
+    right: 15px; 
+}
 
 .comunidade {
     display: flex;

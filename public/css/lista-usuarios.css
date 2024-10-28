@@ -21,12 +21,9 @@ body {
     height:350px;
     color: white;
     display: flex;
+    flex-direction: column;
     margin-bottom: 1%;
-    /* display: table; */
-    /* border-collapse: collapse; */
     border-radius: 20px;
-    /* border-collapse: collapse;  */
-    border: 5px solid #080b3c;
 }
 
 .parte-de-cima {
@@ -53,42 +50,6 @@ body {
     align-items: center;
     background-color: rgba(8, 11, 60, 0.8);
     border: 1px solid #080b3c;
-}
-
-
-
-.a, .b, .c, .d, .e{
-    display: flex;   
-    gap: 55px;
-    width: 100%;
-}
-
-.a, .b, .c, .d, .e {
-    margin-left: 20px;
-}
-.a {
-    display: flex;
-    align-items: center;
-}
-
-.b {
-    display: flex;
-    align-items: center;
-}
-
-.c {
-    display: flex;
-    align-items: center;
-}
-
-.d {
-    display: flex;
-    align-items: center;
-}
-
-.e {
-    display: flex;
-    align-items: center;
 }
 
 button {

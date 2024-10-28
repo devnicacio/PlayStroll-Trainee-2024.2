@@ -90,17 +90,18 @@ body {
     border: none;
     background-color: transparent;
     font-size: 30px;
-    top: 50%;
+    top: 50%; /
     transform: translateY(-50%);
+    z-index: 10; 
 }
 
 .anterior {
-    left: 15px;
+    left: 10px; 
 }
 
 .proximo {
-    right: 15px; 
-}
+    right: 10px; 
+} 
 
 .comunidade {
     display: flex;
@@ -191,20 +192,23 @@ body {
 
 .ante, .prox {
     position: absolute;
-    color: #080B3C;
+    color: #000; 
     cursor: pointer;
     padding: 10px;
     border: none;
     background-color: transparent;
     font-size: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
 }
 
 .ante {
-    left: 250px; 
+    left: 10%; 
 }
 
 .prox {
-    right: 250px; 
+    right: 15%; 
 }
 
 .imagem-sobre {
@@ -236,3 +240,4 @@ body {
     font-size: 30px;
     color: #000;
 }
+

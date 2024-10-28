@@ -26,22 +26,23 @@ body {
     text-align: end;
     color: white;
     background-color: #080b3c;
-    padding: 2% 10%;
+    padding: 1% 10%;
     border-radius: 20px;
 }
 
 .more {
-    padding: 5%;
+    padding: 4%;
     font-size: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #080b3c;
+    border-radius: 20px;
     border: 1px solid #080b3c;
 }
 
 button {
-    border-radius: 20px;
+    border-radius: 12px;
     background-color: #237ecd;
     border: 1px solid black;
     color: white;
@@ -66,7 +67,7 @@ thead{
 
 .lista th, .lista td {
     text-align: center;
-    padding: 15px;
+    padding: 13px 15px;
 }
 
 .lista th {

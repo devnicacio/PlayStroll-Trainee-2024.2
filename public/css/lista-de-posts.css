@@ -52,7 +52,7 @@ body{
     width: 100%;
 }
 
-.barra1{
+.barra{
     height: 2px;
     width: 75%px;
     margin-left: 12.5%;
@@ -69,19 +69,19 @@ body{
 }
 
 
-.primeiro-post img{
+.post img{
     width: 160px;
     height: 200px;
     margin-right: 50px;
 }
-.primeiro-post{
+.post{
     width: 75%;
     margin-left: 12.5%;
     margin-right: 12.5%;
     margin-bottom: 10px;
 }
 
-.titulo1 h3{
+.titulo h3{
     font-size: 24px;
     color: #0b0b3c;
     margin: 0;
@@ -101,16 +101,16 @@ body{
     margin-top: 0;
 }
 
-.primeiro-post div{
+.post div{
     display: inline-block;
     vertical-align: top;
 }
 
-.perfil1{
+.perfil{
     margin-right: 10px;
 }
 
-.perfil1 img{
+.perfil img{
     width: 30px;
     height: 30px;
     border-radius: 30px;
@@ -126,7 +126,7 @@ body{
     display: block;
 }
 
-.user1 p{
+.user p{
     font-size: 14px;
     margin: 0;
 }
@@ -149,331 +149,13 @@ body{
     margin-top: 0;
 }
 
-.barra2{
+.barra{
     height: 2px;
     width: 75%px;
     margin-left: 12.5%;
     margin-right: 12.5%;
     justify-content: center;
     margin-bottom: 10px;
-    background: linear-gradient(to right, rgba(0, 174, 160, 0.5), rgba(213, 214, 227, 0.5));
-}
-
-.segundo-post img{
-    width: 160px;
-    height: 200px;
-    margin-right: 50px;
-}
-.segundo-post{
-    width: 75%;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
-    margin-bottom: 10px;
-}
-
-.titulo2 h3{
-    font-size: 24px;
-    color: #0b0b3c;
-    margin: 0;
-}
-
-.nota2{
-    margin: 0;
-}
-
-.nota2 span{
-    color: yellow;
-}
-
-.nota2 h4{
-    font-size: 20px;
-    margin-bottom: 10px;
-    margin-top: 0;
-}
-.segundo-post div{
-    display: inline-block;
-    vertical-align: top;
-}
-
-.perfil2{
-    margin-right: 10px;
-}
-
-.perfil2 img{
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
-    margin: 0;
-}
-
-.texto2{
-    width: 80%;
-}
-
-.texto2 div{
-    display: block;
-}
-
-.user2 p{
-    font-size: 14px;
-    margin: 0;
-}
-
-.dados2 div{
-    display: inline-block;
-    vertical-align: middle;
-}
-.dados2 p{
-    margin-left: 0px;
-}
-
-.conteúdo2 p{
-    font-size: 20px;
-}
-
-
-.barra3{
-    height: 2px;
-    width: 75%px;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
-    justify-content: center;
-    margin-bottom: 44px;
-    background: linear-gradient(to right, rgba(0, 174, 160, 0.5), rgba(213, 214, 227, 0.5));
-}
-
-.terceiro-post img{
-    width: 160px;
-    height: 200px;
-    margin-right: 50px;
-}
-.terceiro-post{
-    width: 75%;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
-}
-
-.titulo3 h3{
-    font-size: 32px;
-    color: #0b0b3c;
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-bottom: 0px;
-}
-
-.titulo3 span{
-    color: yellow;
-}
-
-.titulo3 h4{
-    font-size: 32px;
-}
-
-.titulo3 h3, .titulo3 h4{
-    display: inline;
-}
-
-.terceiro-post div{
-    display: inline-block;
-    vertical-align: top;
-}
-
-.perfil3 img{
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    margin-right: 20px;
-    margin-top: 0px;
-}
-
-.texto3{
-    width: 80%;
-}
-
-.texto3 div{
-    display: block;
-}
-
-.user3 p{
-    font-size: 10px;
-}
-
-.dados3 div{
-    display: inline-block;
-    vertical-align: middle;
-}
-.dados3 p{
-    margin-left: 0px;
-}
-
-.conteúdo3 p{
-    font-size: 20px;
-}
-
-.barra4{
-    height: 2px;
-    width: 75%px;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
-    justify-content: center;
-    margin-bottom: 44px;
-    background: linear-gradient(to right, rgba(0, 174, 160, 0.5), rgba(213, 214, 227, 0.5));
-}
-
-.quarto-post img{
-    width: 160px;
-    height: 200px;
-    margin-right: 50px;
-}
-
-.quarto-post{
-    width: 75%;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
-}
-
-.titulo4 h3{
-    font-size: 32px;
-    color: #0b0b3c;
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-bottom: 0px;
-}
-
-.titulo4 span{
-    color: yellow;
-}
-
-.titulo4 h4{
-    font-size: 32px;
-}
-
-.titulo4 h3, .titulo4 h4{
-    display: inline;
-}
-
-.quarto-post div{
-    display: inline-block;
-    vertical-align: top;
-}
-
-.perfil4 img{
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    margin-right: 20px;
-    margin-top: 0px;
-}
-
-.texto4{
-    width: 80%;
-}
-
-.texto4 div{
-    display: block;
-}
-
-.user4 p{
-    font-size: 10px;
-}
-
-.dados4 div{
-    display: inline-block;
-    vertical-align: middle;
-}
-.dados4 p{
-    margin-left: 0px;
-}
-
-.conteúdo4 p{
-    font-size: 20px;
-}
-
-.barra5{
-    height: 2px;
-    width: 75%px;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
-    justify-content: center;
-    margin-bottom: 44px;
-    background: linear-gradient(to right, rgba(0, 174, 160, 0.5), rgba(213, 214, 227, 0.5));
-}
-
-.quinto-post img{
-    width: 160px;
-    height: 200px;
-    margin-right: 50px;
-}
-.quinto-post{
-    width: 75%;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
-}
-
-.titulo5 h3{
-    font-size: 32px;
-    color: #0b0b3c;
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-bottom: 0px;
-}
-
-.titulo5 span{
-    color: yellow;
-}
-
-.titulo5 h4{
-    font-size: 32px;
-}
-
-.titulo5 h3, .titulo5 h4{
-    display: inline;
-}
-
-.quinto-post div{
-    display: inline-block;
-    vertical-align: top;
-}
-
-.perfil5 img{
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    margin-right: 20px;
-    margin-top: 0px;
-}
-
-.texto5{
-    width: 80%;
-}
-
-.texto5 div{
-    display: block;
-}
-
-.user5 p{
-    font-size: 10px;
-}
-
-.dados5 div{
-    display: inline-block;
-    vertical-align: middle;
-}
-.dados5 p{
-    margin-left: 0px;
-}
-
-.conteúdo5 p{
-    font-size: 20px;
-}
-
-.barra6{
-    height: 2px;
-    width: 75%px;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
-    justify-content: center;
-    margin-bottom: 44px;
     background: linear-gradient(to right, rgba(0, 174, 160, 0.5), rgba(213, 214, 227, 0.5));
 }
 

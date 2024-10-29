@@ -23,7 +23,6 @@ body {
 }
 
 .titulo {
-    text-align: end;
     color: white;
     background-color: #080b3c;
     padding: 1% 10%;
@@ -111,17 +110,24 @@ tbody {
         width: 100%;
     }
 
+    .titulo {
+        padding: 8px 25px;
+        font-size: 20px;
+    }
+
     .table-container {
         overflow-x: auto;
         width: 100%;        
     }
 
     .lista {        
-        width: 100%;
+        margin-left: 30px;
+        margin-right: 30px;
+        font-size: 12px;
     }
 
     th, td {
-        text-align: center;    
-                           
+        text-align: center; 
+        padding: 1px 5px;
     }
 }

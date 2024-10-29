@@ -1,78 +1,89 @@
-* {
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Satoshi', sans-serif;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(0, 174, 160, 0.5));
-}
-
 .container {
-    width: 80%;
-    max-width: 900px;
-    text-align: center;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
 }
 
 .cabecalho {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    max-width: 850px;
+    width: 100%;
+    margin-right: 10%;
 }
 
-.caixa-titulo {
-    background-color: #080B3C;
-    padding: 5px 30px;
-    border-radius: 8px;
+.table-container {
+    margin-right: 10%;
 }
 
-.titulo-tabela {
-    font-size: 20px;
-    color: #fff;
-    font-weight: bold;
+.titulo {
+    color: white;
+    background-color: #080b3c;
+    padding: 1% 10%;
+    border-radius: 20px;
 }
 
-.btn-criar-post {
-    background-color: #080B3C;
-    color: #fff;
-    border: none;
-    font-size: 18px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
+.more {
+    padding: 4%;
+    font-size: 50px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    background-color: #080b3c;
+    border-radius: 20px;
+    border: 1px solid #080b3c;
+}
+
+button {
+    border-radius: 12px;
+    background-color: #237ecd;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+}
+
+.table-container {
+    max-width: 850px;
+    width: 100%;
 }
 
 .tabela-posts {
     width: 100%;
-    border-collapse: collapse;
-    background-color: #080B3C;
-    border-radius: 10px;
     overflow: hidden;
+    color: white;    
+    border-radius: 10px;
+    border-collapse: collapse;
 }
 
-.tabela-posts th, .tabela-posts td {
-    padding: 15px;
-    color: #fff;
-    text-align: center;
+thead{
+    background-color: #237ecd;
 }
 
-.tabela-posts th {
-    background-color: #237ECD;
-    font-weight: bold;
+th, td {
+    text-align: center;    
+    padding: 13px 15px;
 }
 
-.tabela-posts tbody {
-    background-color: #080B3C;
+.th {
+     font-weight: bold;
+}
+
+tbody {
+    background-color: #080b3c;
 }
 
 .btn-acao {
@@ -102,23 +113,99 @@ body {
 }
 
 .navegacao {
-    text-align: center;
+    max-width: 850px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1%;
     margin-top: 20px;
-}
-
-.navegacao button {
-    display: inline;
-    width: 36px;
-    height: 36px;
-    border-radius: 12px;
-    font-size: 24px;
-    margin-right: 10px;
-    color: white;
-    background-color: #237ECD;
-    border: 1px solid black;
-    cursor: pointer;
+    margin-right: 10%;
 }
 
 .navegacao .nav2 {
     background-color: #080B3C;
+}
+
+@media (max-width: 1023px) {
+    .cabecalho {
+        width: 70%;
+    }
+
+    .titulo {
+        padding: 8px 25px;
+        font-size: 20px;
+    }
+
+    .more {
+        padding: 20px;
+        font-size: 45px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+        width: 70%;  
+    }
+
+    .tabela-posts {        
+        margin-right: 30px;
+        font-size: 18px;
+    }
+
+    th, td {
+        text-align: center; 
+        padding: 1px 8px;
+    }
+
+    .navegacao {
+        width: 70%;
+        margin-right: 30px;
+    }
+
+    .navegacao button {
+        height: 25px;
+        width: 25px;
+    }
+}
+
+
+@media (max-width: 768px){
+
+    .cabecalho {
+        width: 70%;
+    }
+
+    .titulo {
+        padding: 8px 25px;
+        font-size: 17px;
+    }
+
+    .more {
+        padding: 20px;
+        font-size: 45px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+        width: 70%;  
+    }
+
+
+    .tabela-posts {        
+        margin-right: 30px;
+        font-size: 12px;
+    }
+
+    th, td {
+        text-align: center; 
+        padding: 1px 8px;
+    }
+
+    .navegacao{
+        width: 70%;
+    }
+
+    .navegacao button {
+        height: 25px;
+        width: 25px;
+    }
 }

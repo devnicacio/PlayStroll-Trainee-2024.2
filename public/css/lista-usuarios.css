@@ -115,6 +115,11 @@ tbody {
         font-size: 20px;
     }
 
+    .more {
+        padding: 20px;
+        font-size: 45px;
+    }
+
     .table-container {
         overflow-x: auto;
         width: 100%;        
@@ -128,6 +133,11 @@ tbody {
 
     th, td {
         text-align: center; 
-        padding: 1px 5px;
+        padding: 1px 8px;
+    }
+
+    .paginas button {
+        height: 25px;
+        width: 25px;
     }
 }

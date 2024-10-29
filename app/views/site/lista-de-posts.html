@@ -8,12 +8,16 @@ lista de posts.html
     <title>lista de posts</title>
     <link rel="stylesheet" href="/public/css/lista-de-posts.css">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <div class="navbar"></div>
-    <div class="barra-de-pesquisa">
-        <div class="pesquisa"></div>
-    </div>
+        <div class="pesquisa">
+            <div class="pesquisa-input" onclick="inputFocus('busca')">
+                <i class="bi bi-search"></i>
+                <input type="text" name="" id="busca"  class="caixa" placeholder="ENCONTRE UM JOGO">
+            </div>
+        </div>
     <div class="inicialização-dos-posts">
         <h4>MAIS RECENTES</h4>
         <div class="barra"></div>
@@ -135,4 +139,5 @@ lista de posts.html
     </div>
     <i class="bi bi-search"></i>
 </body>
+<script src="/public/js/lista-de-posts.js"></script>
 </html>

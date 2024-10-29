@@ -11,15 +11,20 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: end;
 }
 
 .parte-de-cima {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 700px;
+    max-width: 850px;
     width: 100%;
+    margin-right: 10%;
+}
+
+.table-container {
+    margin-right: 10%;
 }
 
 .titulo {
@@ -51,8 +56,12 @@ button {
     text-align: center;
 }
 
+.table-container {
+    max-width: 850px;
+    width: 100%;
+}
+
 .lista {
-    max-width: 700px;
     width: 100%;
     overflow: hidden;
     color: white;    
@@ -91,12 +100,13 @@ tbody {
 }
 
 .paginas {
-    max-width: 700px;
+    max-width: 850px;
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 1%;
     margin-top: 20px;
+    margin-right: 10%;
 }
 
 .pag1 {
@@ -106,13 +116,12 @@ tbody {
 @media (max-width: 767px){
 
     .parte-de-cima {
-        max-width: 350px;
-        width: 100%;
+        width: 70%;
     }
 
     .titulo {
         padding: 8px 25px;
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .more {
@@ -122,11 +131,10 @@ tbody {
 
     .table-container {
         overflow-x: auto;
-        width: 100%;        
+        width: 70%;        
     }
 
     .lista {        
-        margin-left: 30px;
         margin-right: 30px;
         font-size: 12px;
     }
@@ -134,6 +142,10 @@ tbody {
     th, td {
         text-align: center; 
         padding: 1px 8px;
+    }
+
+    .paginas {
+        width: 70%;
     }
 
     .paginas button {

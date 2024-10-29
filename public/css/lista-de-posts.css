@@ -16,18 +16,11 @@ body{
     width: 100%;
 }
 
-.navbar{
-    width: 100%;
-    height: 250px;
-    background-color: rgba(8, 11, 60, 1.0);
-    margin-bottom: 20px;
-}
-
 .pesquisa-input{
-    width: 15%;
+    width: 230px;
     height: 36px;
     margin-left: 12.5%;
-    background-color: #237ecd;
+    background-color: #00aea0;
     border-radius: 20px;
     border: 2px #0b0b0b;
     display: flex;
@@ -41,6 +34,7 @@ body{
 }
 
 .pesquisa{
+    margin-top: 20px;
     width: 100%;
 }
 
@@ -95,6 +89,11 @@ body{
     height: 200px;
     margin-right: 50px;
 }
+
+.imagem-mobile img{
+    display: none;
+}
+
 .post{
     width: 75%;
     margin-left: 12.5%;
@@ -214,26 +213,21 @@ body{
 
 @media only screen and (max-width: 426px)
 {
-    .titulo1 h3, .titulo2 h3, .titulo3 h3, .titulo4 h3, .titulo5 h3{
-        font-size: 24px;
+    .titulo h3{
+        font-size: 20px;
     }
-    .titulo1 h4, .titulo2 h4, .titulo3 h4, .titulo4 h4, .titulo5 h4{
-        font-size: 24px;
+    .nota h4{
+        font-size: 14px;
     }
-    .titulo1 h3, titulo1 h4{
-        display: block
+
+    .imagem img{
+        display: none;
     }
-    .titulo2 h3, titulo2 h4{
-        display: block
-    }
-    .titulo3 h3, titulo3 h4{
-        display: block
-    }
-    .titulo4 h3, titulo4 h4{
-        display: block
-    }
-    .titulo4 h3, titulo4 h4{
-        display: block
+    .imagem-mobile img{
+        display: block;
+        width: 100%;
+        height: 150px;
+        margin-right: 50px;
     }
 }
 

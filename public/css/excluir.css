@@ -40,15 +40,35 @@ tbody {
     background-color: #080b3c;
 }
 
-button {
+.excluir {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     border: none;
     color: white;
     cursor: pointer;
-}
-
-.excluir {
     background-color: #c70e3c;
 }
+
+.modalc {
+    background-color: #c70e3c;
+    color: white;
+    width: 25%;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    position: absolute;
+    top: 45%;
+    left: 40%;
+}
+
+.modalc button {
+    color: white;
+    background-color: black;
+    padding: 8px 20px;
+    border-radius: 10px;
+}
+

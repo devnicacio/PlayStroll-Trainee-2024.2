@@ -53,7 +53,9 @@ button {
     cursor: pointer;
     height: 30px;
     width: 30px;
+    border-radius: 50%;
     text-align: center;
+    font-size: 16px;
 }
 
 .table-container {
@@ -143,12 +145,12 @@ tbody {
         padding: 1px 18px;
     }
 
-    .navegacao {
-        width: 70%;
+    .paginas {
+        width: 77%;
         margin-right: 30px;
     }
 
-    .navegacao button {
+    .paginas button {
         height: 25px;
         width: 25px;
     }

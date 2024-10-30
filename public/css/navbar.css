@@ -8,7 +8,10 @@
     --azul-escuro: #080B1E;
     --azul-claro: #237ECD;
     --branco: #F5F5F5;
+    --vermelho: #C70E37;
+    --amarelo: #FFC739;
 }
+/* Padronizações da página*/
 *{
     margin: 0;
     padding: 0;
@@ -18,59 +21,32 @@ body{
     width: 100vw;
     height: 100vh;
 }
-#navbar{
+a,
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+}
+input[type="search"], 
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration{    
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+#navigationBar{
     width: auto;
-    height: 30%;
-    background-color: var(--azul-escuro);
+    height: 28vh;
+    background: var(--azul-escuro);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     color: var(--branco);
-}
-#navbar a,
-#navbar a:link,
-#navbar a:visited,
-#navbar a:hover,
-#navbar a:active{
-    text-decoration: none;
-}
-.itensNavbar{
-    width: auto;
-    height: 70px;
-    display: flex;
-    flex-direction: row;
-    gap: 5vw;
-    align-self: center;
-    list-style: none;
-    padding-right: 30px;
-    font-size: calc(30px - 0.8vw);
-}
-.itensNavbar li{
-    width: 150px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    gap: 1.5vw;
-    transition: color 0.4s ease;
-}
-.itensNavbar li a{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1.5vw;
-    color: #FFFFFF;
-    transition: color 0.4s ease;
-}
-.itensNavbar li a:hover{
-    color: var(--azul-claro);
-}
-.itensNavbar a,
-.itensNavbar a:link,
-.itensNavbar a:visited,
-.itensNavbar a:hover,
-.itensNavbar a:active{
-    text-decoration: none;
 }
 #home{
     width: 255px;
@@ -87,9 +63,48 @@ body{
     width: 140px;
     align-self: center;
 }
+#home p:first-child{
+    background-image: linear-gradient(to right, var(--azul-claro),var(--amarelo),var(--vermelho));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--branco);
+}
+.itensNavbar{
+    width: auto;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    gap: 5.5vw;
+    align-self: center;
+    list-style: none;
+    padding-right: 30px;
+    font-size: 1.2rem;
+}
+.itensNavbar li{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5vw;
+    transition: color 0.4s ease;
+}
+.itensNavbar li a{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5vw;
+    color: var(--branco);
+    transition: color 0.4s ease;
+}
+.itensNavbar li a:hover{
+    color: var(--azul-claro);
+}
 #search-form {
+    width: 150px;
     height: auto;
-    background: none;
+    background: var(--branco);
     padding: 10px;
     border-radius: 40px;
     display: flex;
@@ -97,19 +112,21 @@ body{
     align-items: center;
 }
 #search-form input{
-    width: 0;
+    width: 100px;
     border: none;
-    background: none;
+    background: transparent;
     outline: none;
     padding-right: 0;
-    color: #ffffff;
+    color: var(--azul-escuro);
     font-size: 16px;
     line-height: 40px;
     transition: width 0.8s ease ;
 }
+#search-form ::placeholder,
+#search-form ::-webkit-input-placeholder{
+    color:var(--azul-escuro);
+}
 #search-form button{
-    width: 40px;
-    height: 40px;
     background: none;
     border: none;
     border-radius: 50%;
@@ -117,11 +134,13 @@ body{
     justify-content: center;
     align-items: center;
 }
-#search-form+p{
-    width: auto;
-    transition: opacity 0.4s ease ;
+#search-form button[type="reset"]{
+    display: none;
 }
-.bi{
+#search-form button[type="button"] svg{
+    fill: var(--azul-escuro);
+}
+.icons{
     width:30px;
     height:30px;
 }
@@ -172,10 +191,10 @@ body{
 }
 /* Responsividade */
 @media screen and (max-width: 576px) {
-    #navbar{
+    #navigationBar{
         height: 22%;
     }
-    #navbar ul{
+    #navigationBar ul{
         display: none;
     }
     #home{
@@ -193,15 +212,18 @@ body{
     }
 }
 @media screen and (min-width: 577px) and (max-width: 768px) {
-    #navbar{
+    #navigationBar{
         height: 22%;
     }
-    #navbar ul{
+    #navigationBar ul{
         display: none;
     }
     #home img{
         width: 120px;
+    }    #navbar ul{
+
     }
+
     #menuIcon{
         display: block;
         align-self: center;
@@ -209,11 +231,21 @@ body{
     }
 }
 @media screen and (min-width: 769px) and (max-width: 992px) {
-    #navbar{
+    #navigationBar{
         height: 26%;
     }
-    #navbar ul{
+    #navigationBar ul{
         font-size: 20px;
         gap: 1.25vw;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1009px){
+    #navigationBar{
+        height: 38%;
+        display: flex;
+        flex-direction: column;
+    }
+    #home{
+        align-self: start;
     }
 }

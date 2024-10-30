@@ -9,19 +9,16 @@
     <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap"> 
 </head>
 <body>
-    <nav id="navbar">
+    <nav id="navigationBar">
         <a id ="home" href="/app/views/site/index.html">
-            <span>
-                <span style="color: #237ECD;">P</span><span style="color: #FFC739;">L</span><span style="color: #C70E37;">A</span><span style="color: #237ECD;">Y</span>
-                <span style="color: #FFC739;">S</span><span style="color: #C70E37;">T</span><span style="color: #237ECD;">R</span><span style="color: #FFC739;">O</span><span style="color: #C70E37;">L</span><span style="color: #237ECD;">L</span>
-            </span>
+            <p>PLAY STROLL</p>
             <img src="/public/assets/logo-escura-sem-fundo.png" alt="Logo da Playstroll">
         </a>
             
         <ul class="itensNavbar">
             <li>
                 <a href="posts.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chat-left-fill" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icons bi-chat-left-fill" viewBox="0 0 16 16">
                         <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                     </svg>
                     <p>Posts</p>
@@ -29,18 +26,18 @@
             </li>
             <li>
                 <form id="search-form" action="/app/views/site/index.html" method="get">
+                    <input type="search" name="buscarPublicacoes" title="Buscar" placeholder="Buscar" autocomplete="off" autosave>
+                    <button type="reset">X</button>
                     <button type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="bi bi-search" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icons bi-search" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                         </svg>
                     </button>
-                    <input type="text" placeholder="Buscar">
                 </form>
-                <p>Buscar</p>
             </li>
             <li>
                 <a href="login.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-unlock-fill" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icons bi-unlock-fill" viewBox="0 0 16 16">
                         <path d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2"/>
                     </svg>
                     <p>Login</p>
@@ -58,7 +55,7 @@
             <li>
                 <form id="search-form" action="/app/views/site/index.html" method="get">
                      <button type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="bi bi-search" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="icons bi-search" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                         </svg>
                     </button>
@@ -67,13 +64,13 @@
             </li>
             <li>
                 <a href="posts.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chat-left-fill" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icons bi-chat-left-fill" viewBox="0 0 16 16">
                         <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                     </svg>
                     <p>Posts</p>
                 </a>
                 <a href="login.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-unlock-fill" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icons bi-unlock-fill" viewBox="0 0 16 16">
                         <path d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2"/>
                     </svg>
                     <p>Login</p>

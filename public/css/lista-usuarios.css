@@ -113,6 +113,47 @@ tbody {
     background-color: #080b3c;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+    .parte-de-cima {
+        width: 70%;
+    }
+
+    .titulo {
+        padding: 8px 25px;
+        font-size: 20px;
+    }
+
+    .more {
+        padding: 20px;
+        font-size: 45px;
+    }
+
+    .table-container {
+        overflow: auto;
+        width: 70%;
+    }
+
+    .lista {
+        margin-right: 30px;
+        font-size: 14px;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 1px 18px;
+    }
+
+    .navegacao {
+        width: 70%;
+        margin-right: 30px;
+    }
+
+    .navegacao button {
+        height: 25px;
+        width: 25px;
+    }
+}
+
 @media (max-width: 767px){
 
     .parte-de-cima {

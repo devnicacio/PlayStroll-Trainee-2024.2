@@ -8,7 +8,7 @@ body {
 
 .imagem-introducao {
     position: relative;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -135,7 +135,7 @@ body {
 
 .post-individual1, .post-individual2, .post-individual3 {
     flex: 1;
-    max-width: 300px;
+    max-width: 400px;
     background-color: rgba(0, 174, 160, 0.5);
     border-radius: 10px;
     padding: 1%;
@@ -154,8 +154,7 @@ body {
 .capa-jogo {
     width: auto;
     height: auto;
-    max-height: 200px;
-    aspect-ratio: 3/4; 
+    max-height: 300px;
     border-radius: 8px;
     object-fit: cover; 
 }
@@ -280,6 +279,14 @@ body {
         display: none; 
     }
 
+    .capa-jogo {
+        width: auto;
+        height: auto;
+        max-height: 200px;
+        border-radius: 8px;
+        object-fit: cover; 
+    }
+
     .descricao{
         font-size: 19px;
     }
@@ -367,6 +374,14 @@ body {
         align-items: center;
     }
 
+    .capa-jogo {
+        width: auto;
+        height: auto;
+        max-height: 250px;
+        border-radius: 8px;
+        object-fit: cover; 
+    }
+
     .descricao{
         font-size: 15px;
     }
@@ -444,6 +459,13 @@ body {
         align-items: center;
     }
 
+    .capa-jogo {
+        width: auto;
+        height: 200px;
+        max-height: 300px;
+        border-radius: 8px;
+        object-fit: cover; 
+    }
 
     .descricao{
         font-size: 15px;
@@ -496,15 +518,10 @@ body {
 
     
     .anterior, .proximo {
-        font-size: 20px; 
+        display: block;
+        display: none;
     }
 
-    
-    .ante, .prox { 
-        font-size: 20px; 
-        color: #000;
-        padding: 20px;
-    }
 }
 
 @media (max-width: 320px) {
@@ -566,13 +583,7 @@ body {
 
     
     .anterior, .proximo {
-        font-size: 20px; 
-    }
-
-    
-    .ante, .prox { 
-        font-size: 20px; 
-        color: #000;
-        padding: 0px;
+        display: block;
+        display: none;
     }
 }

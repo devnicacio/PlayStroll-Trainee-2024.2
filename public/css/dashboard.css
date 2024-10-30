@@ -1,0 +1,81 @@
+body{
+    background: linear-gradient(to right, rgba(213, 214, 227, 1.0), rgba(0, 174, 160, 0.5));
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.Dashboard{
+    width: 40%;
+    height: 300px;
+    background-color: rgba(8, 11, 60, 0.8);
+    border-radius: 30px;
+}
+
+.container{
+    justify-content: center;
+    align-items: center;
+}
+
+.Dashboard div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.links{
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+.links div{
+    display: block;
+}
+
+.bot{
+    height: 60px;
+    width: 150px;
+    font-size: 24px;
+    background-color: #237ecd;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    color: #f5f5f5;
+    margin-left: 30px;
+    border: 2px solid black;
+}
+
+.imagem img{
+    width: 350px;
+}
+
+.Dashboard .logo{
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+@media only screen and (max-width: 1400px)
+{
+    .links{
+        margin-top: 10px;
+        margin-right: 50px;
+    }
+    .Dashboard{
+        width: 25%;
+        height: 150px;
+    }
+    .imagem img{
+        width: 175px;
+    }
+    .bot{
+        height: 30px;
+        width: 75px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+}

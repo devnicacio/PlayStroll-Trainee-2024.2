@@ -1,9 +1,9 @@
 :root{
-    --azul-escuro: #080B1E;
-    --azul-claro: #237ECD;
-    --branco: #F5F5F5;
-    --vermelho: #C70E37;
-    --amarelo: #FFC739;
+    --firstBlue: #080B1E;
+    --secoundBlue: #237ECD;
+    --white: #F5F5F5;
+    --red: #C70E37;
+    --yellow: #FFC739;
 }
 /*//////////////////////// CONFIGURAÇÕES DE RESET ////////////////////////*/
 *{
@@ -30,12 +30,12 @@ input[type="search"]::-webkit-search-decoration{
 #navigationBar{
     width: auto;
     height: 28vh;
-    background: var(--azul-escuro);
+    background: var(--firstBlue);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 3.65vw;
-    color: var(--branco);
+    color: var(--white);
 }
 /*//////////////////////// FILHOS DIRETOS DA NAVIGATION BAR ////////////////////////*/
 #home{
@@ -60,11 +60,11 @@ input[type="search"]::-webkit-search-decoration{
 }
 /*//////////////////////// FILHOS INDIRETOS DA NAVIGATION BAR ////////////////////////*/
 #home p{
-    background-image: linear-gradient(to right, var(--azul-claro),var(--amarelo),var(--vermelho));
+    background-image: linear-gradient(to right, var(--secoundBlue),var(--yellow),var(--red));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: var(--branco);
+    color: var(--white);
 }
 #home img{
     width: 140px;
@@ -80,16 +80,16 @@ input[type="search"]::-webkit-search-decoration{
     transition: color 0.4s ease;
 }
 .itensNavbar li a{
-    color: var(--branco);
+    color: var(--white);
 }
 .itensNavbar li a:hover{
-    color: var(--azul-claro);
+    color: var(--secoundBlue);
 }
 /*//////////////////////// FORMULÁRIO DE BUSCA DA NAVIGATION BAR ////////////////////////*/
 #search-form {
     width: 18vw;
     height: auto;
-    background: var(--branco);
+    background: var(--white);
     padding: 10px 20px;
     border-radius: 40px;
     display: flex;
@@ -102,14 +102,14 @@ input[type="search"]::-webkit-search-decoration{
     background: transparent;
     outline: none;
     padding-right: 10px;
-    color: var(--azul-escuro);
+    color: var(--firstBlue);
     font-size: 16px;
     line-height: 40px;
     transition: width 0.8s ease ;
 }
 #search-form ::placeholder,
 #search-form ::-webkit-input-placeholder{
-    color:var(--azul-escuro);
+    color:var(--firstBlue);
 }
 #search-form button{
     background: none;
@@ -123,7 +123,7 @@ input[type="search"]::-webkit-search-decoration{
 }
 #search-form button[type="submit"] svg{
     cursor: pointer;
-    fill: var(--azul-escuro);
+    fill: var(--firstBlue);
 }
 /*//////////////////////// ÍCONES DA NAVIGATION BAR ////////////////////////*/
 .icons{
@@ -137,7 +137,7 @@ input[type="search"]::-webkit-search-decoration{
 #menuIcon div{
     width: 25px;
     height: 1px;
-    background: var(--branco);
+    background: var(--white);
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -216,5 +216,17 @@ input[type="search"]::-webkit-search-decoration{
 @media screen and (min-width: 769px) and (max-width: 992px) {
     #navigationBar{
         height: 26%;
+    }
+}
+@media screen and (min-width: 1440px) and (max-width: 2559px){
+    #navigationBar{
+        height: 25%;
+    }
+    .itensNavbar{
+        font-size: 1.5rem;
+    }
+    #search-form ::placeholder,
+    #search-form ::-webkit-input-placeholder{
+        font-size: 1.25rem;
     }
 }

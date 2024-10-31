@@ -18,7 +18,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 850px;
+    max-width: 73%;
     width: 100%;
     margin-right: 10%;
 }
@@ -57,18 +57,25 @@ button {
 }
 
 .table-container {
-    max-width: 850px;
+    max-width: 73%;
     width: 100%;
 }
 
 .tabela-posts {
-    width: 100%;
-    overflow: hidden;
-    color: white;    
-    border-radius: 10px;
-    border-collapse: collapse;
+        width: 100%;
+        overflow: hidden;
+        color: white;    
+        border-radius: 10px;
+        border-collapse: collapse;
+    
 }
-
+    
+.titulo-post, .autor-post {
+    max-width: 70px; /* Defina um limite máximo */
+    overflow: hidden; /* Adicione overflow hidden */
+    white-space: nowrap; /* Impede quebras de linha */
+    text-overflow: ellipsis; /* Exibe reticências quando o texto é longo */
+}
 thead{
     background-color: #237ecd;
 }
@@ -126,7 +133,16 @@ tbody {
     background-color: #080B3C;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
+
+    .tabela-posts tbody td {
+        padding: 10px 5px;
+    }
+
+    .titulo-post, .autor-post {
+        max-width: 100px;
+    }
+
     .cabecalho {
         width: 70%;
     }
@@ -169,6 +185,14 @@ tbody {
 
 
 @media (max-width: 768px){
+
+    .tabela-posts tbody td {
+        padding: 8px 1px; 
+    }
+
+    .tabela-posts tbody tr {
+        border-bottom: 8px ; 
+    }
 
     .cabecalho {
         width: 70%;

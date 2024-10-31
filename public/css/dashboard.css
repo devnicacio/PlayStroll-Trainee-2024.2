@@ -13,10 +13,12 @@ body{
 }
 
 .Dashboard{
-    width: 40%;
+    width: 50%;
     height: 300px;
     background-color: rgba(8, 11, 60, 0.8);
     border-radius: 30px;
+    display: flex;
+    padding: 10px;
 }
 
 .container{
@@ -24,58 +26,104 @@ body{
     align-items: center;
 }
 
-.Dashboard div{
-    display: inline-block;
-    vertical-align: middle;
+.buttons{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
 
-.links{
-    margin-top: 20px;
-    margin-right: 50px;
+.posts{
+    width: 80%;
+    height: 50px;
+    background-color: #2373cd;
+    border-radius: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
 }
 
-.links div{
-    display: block;
+.poststxt{
+    font-size: 30px;
 }
 
-.bot{
-    height: 60px;
-    width: 150px;
+.quadrado{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    width: 100%;
+    height: 75px;
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+.bi{
+    color: blue;
     font-size: 24px;
-    background-color: #237ecd;
-    border-radius: 12px;
-    margin-bottom: 40px;
-    color: #f5f5f5;
-    margin-left: 30px;
-    border: 2px solid black;
+}
+
+.square{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.imagem{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
 }
 
 .imagem img{
-    width: 350px;
+    width: 80%;
+    margin: 0;
+    object-fit: contain;
 }
 
-.Dashboard .logo{
-    margin-top: 20px;
-    margin-left: 80px;
+
+
+@media only screen and (max-width: 1150px){
+    .poststxt{
+        font-size: 24px;
+    }
 }
 
-@media only screen and (max-width: 1400px)
+@media only screen and (max-width: 1000px)
 {
-    .links{
-        margin-top: 10px;
-        margin-right: 50px;
+    .Dashboard{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .poststxt{
+        font-size: 20px;
     }
     .Dashboard{
-        width: 25%;
-        height: 150px;
+        flex-direction: column;
     }
-    .imagem img{
-        width: 175px;
+    .buttons{
+        width: 100%;
+        flex-direction: row;
     }
-    .bot{
-        height: 30px;
-        width: 75px;
-        font-size: 12px;
-        margin-bottom: 20px;
+    .buttons div{
+        width: 100%;
+    }
+    .posts{
+        width: 80%;
+    }
+    .quadrado{
+        width: 40px;
     }
 }

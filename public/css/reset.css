@@ -1,0 +1,13 @@
+:root{
+    --principal-font: 'Satoshi';
+}
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: var(--principal-font), 'sans-serif';
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}

@@ -151,3 +151,42 @@ img  {
     }
 }
 
+@media (max-width: 767px) {
+    .container {
+        padding: 5px;
+    }
+
+    .table-container {
+        max-width: 90%;
+    }
+
+    .tabela-posts {
+        max-width: 100%;
+    }
+
+    .modalc {
+        padding: 10px;
+    }
+
+    img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .button-modal {
+        width: 60px;
+        padding: 6px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    .modal-buttons {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 10px;
+    }
+}

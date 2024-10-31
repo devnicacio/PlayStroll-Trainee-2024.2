@@ -35,7 +35,7 @@ body {
 }
 
 .more {
-    padding: 4%;
+    padding: 3%;
     font-size: 50px;
     display: flex;
     justify-content: center;
@@ -71,10 +71,10 @@ button {
 }
     
 .titulo-post, .autor-post {
-    max-width: 70px; /* Defina um limite máximo */
-    overflow: hidden; /* Adicione overflow hidden */
-    white-space: nowrap; /* Impede quebras de linha */
-    text-overflow: ellipsis; /* Exibe reticências quando o texto é longo */
+    max-width: 70px; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
 }
 thead{
     background-color: #237ecd;

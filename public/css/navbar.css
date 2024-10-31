@@ -40,12 +40,12 @@ input[type="search"]::-webkit-search-decoration{
 /*//////////////////////// FILHOS DIRETOS DA NAVIGATION BAR ////////////////////////*/
 #home{
     width: auto;
-    height: 165px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-self: center;
-    margin-top: 3.81vh;
+    margin-bottom: 0.9vw;
     font-size: 30px;
 }
 .itensNavbar{
@@ -65,9 +65,10 @@ input[type="search"]::-webkit-search-decoration{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: var(--white);
+    font-size: calc(1.8rem + 0.3vw);
 }
 #home img{
-    width: 140px;
+    width: 125px;
     align-self: center;
 }
 .itensNavbar li,
@@ -153,10 +154,10 @@ input[type="search"]::-webkit-search-decoration{
 }
 #tabletAndMobileSubSection{
     width: auto;
-    height: 22%;
+    height: calc(300px - 0.2vw);
     display: none;
     justify-content: center;
-    background-color: var(--azul-escuro);
+    background-color: var(--firstBlue);
 }
 #tabletAndMobileSubSection ul{
     width: auto;
@@ -170,10 +171,13 @@ input[type="search"]::-webkit-search-decoration{
 }
 #tabletAndMobileSubSection li{
     width: auto;
-    gap: 3vw;
+    gap: 1vw;
+}
+#tabletAndMobileSubSection #search-form {
+    width: 250px;
 }
 #tabletAndMobileSubSection #search-form input{
-    width: 110px;
+    width: auto;
 }
 /*//////////////////////// RESPONSIVIDADE ////////////////////////*/
 @media screen and (max-width: 576px) {
@@ -188,45 +192,107 @@ input[type="search"]::-webkit-search-decoration{
         font-size: 24px;
         margin-left: 5vw;
     }
+    #home p{
+        font-size: 1.2rem;
+    }
     #home img{
-        width: 110px;
+        width: 90px;
     }
     #menuIcon{
         display: block;
         align-self: center;
         margin-right: 30px;
+    }
+
+    .itensNavbar li{
+        font-size: 16px;
+    }
+    #tabletAndMobileSubSection #search-form {
+        width: 240px;
+    }
+    #tabletAndMobileSubSection #search-form input{
+        width: auto;
     }
 }
 @media screen and (min-width: 577px) and (max-width: 768px) {
     #navigationBar{
         height: 22%;
     }
+    #home p{
+        font-size: 1.5rem;
+    }
     #navigationBar ul{
         display: none;
     }
     #home img{
-        width: 120px;
+        width: 90px;
     }
     #menuIcon{
         display: block;
         align-self: center;
         margin-right: 30px;
     }
+    .itensNavbar li{
+        font-size: 16px;
+    }
+    
 }
 @media screen and (min-width: 769px) and (max-width: 992px) {
     #navigationBar{
         height: 26%;
     }
+    #tabletAndMobileSubSection{
+        display: none !important;
+    }
+}
+@media screen and (min-width: 993px) and (max-width: 1439px){
+    #tabletAndMobileSubSection{
+        display: none !important;
+    }
 }
 @media screen and (min-width: 1440px) and (max-width: 2559px){
     #navigationBar{
-        height: 25%;
+        height: 22%;
+    }
+    #home p{
+        font-size: calc(1.5rem + 0.6vw);
+    }
+    #home img{
+        width: 10vw;
     }
     .itensNavbar{
-        font-size: 1.5rem;
+        font-size: calc(1.2rem + 0.7vw);
     }
     #search-form ::placeholder,
     #search-form ::-webkit-input-placeholder{
-        font-size: 1.25rem;
+        font-size: calc(1.2rem + 0.5vw);
+    }
+    #tabletAndMobileSubSection{
+        display: none !important;
+    }
+}
+@media screen and (min-width: 2560px){
+    #navigationBar{
+        height: 22%;
+    }
+    #home p{
+        font-size: calc(1.5rem + 0.6vw);
+    }
+    #home img{
+        width: 10vw;
+    }
+    .itensNavbar{
+        font-size: calc(1.2rem + 0.7vw);
+    }
+    #search-form ::placeholder,
+    #search-form ::-webkit-input-placeholder{
+        font-size: calc(1.2rem + 0.5vw);
+    }
+    .icons{
+        width: 50px;
+        height: 50px;
+    }
+    #tabletAndMobileSubSection{
+        display: none !important;
     }
 }

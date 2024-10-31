@@ -18,7 +18,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 850px;
+    max-width: 73%;
     width: 100%;
     margin-right: 10%;
 }
@@ -59,7 +59,7 @@ button {
 }
 
 .table-container {
-    max-width: 850px;
+    max-width: 73%;
     width: 100%;
 }
 
@@ -69,6 +69,13 @@ button {
     color: white;    
     border-radius: 10px;
     border-collapse: collapse;
+}
+
+.autor-post, .email-post {
+    max-width: 70px;
+    overflow: hidden;
+    white-space: hidden;
+    text-overflow: ellipsis;
 }
 
 thead{
@@ -116,6 +123,15 @@ tbody {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+
+    .lista tbody td {
+        padding: 10px 5px;
+    }
+
+    .autor-post, .email-post {
+        max-width: 100px;
+    }
+
     .parte-de-cima {
         width: 70%;
     }
@@ -137,7 +153,7 @@ tbody {
 
     .lista {
         margin-right: 30px;
-        font-size: 14px;
+        font-size: 18px;
     }
 
     th, td {
@@ -146,7 +162,7 @@ tbody {
     }
 
     .paginas {
-        width: 77%;
+        width: 70%;
         margin-right: 30px;
     }
 
@@ -157,6 +173,14 @@ tbody {
 }
 
 @media (max-width: 767px){
+
+    .lista tbody td {
+        padding: 8px 1px;
+    }
+
+    .lista tbody tr {
+        border-bottom: 8px;
+    }    
 
     .parte-de-cima {
         width: 70%;

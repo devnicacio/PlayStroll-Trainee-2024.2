@@ -1,80 +1,230 @@
+:root{
+    --firstBlue: #080B1E;
+    --secoundBlue: #237ECD;
+    --white: #F5F5F5;
+    --red: #C70E37;
+    --yellow: #FFC739;
+}
+/*//////////////////////// CONFIGURAÇÕES DE RESET ////////////////////////*/
 *{
     margin: 0;
     padding: 0;
     font-family: Satoshi, sans-serif;
 }
-#rodape{
-    width: auto;
-    height: 60vh; /* ~250px/1024px */
-    background-color: #080B1E;
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 37px 0 28px 0;
-    gap: 2vw;
+body{
+    width: 100vw;
+    height: 100vh;
 }
-
-#rodape div:last-child img{
-    width: 22.71vw; /* ~ 327px/1440px */
-}
-
-#rodape a,
-#rodape a:link,
-#rodape a:visited,
-#rodape a:hover,
-#rodape a:active{
+a,
+a:link,
+a:visited,
+a:hover,
+a:active{
     text-decoration: none;
 }
-
-.informacoesDeRodape{
-    width: 25vw; /* ~160px/1440px */
-    height: 74%; /* 185/250px */
+/*//////////////////////// RODAPE ////////////////////////*/
+#rodape{
+    width: auto;
+    height: 45vh;
+    background-color: var(--firstBlue);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 37px 30px 25px;
+}
+/*//////////////////////// FILHOS DIRETOS DO RODAPE ////////////////////////*/
+#rodape--informacoesDeRodape{
+    width: 55vw;
+    height: fit-content;
+    display: flex;
+    justify-items: center;
+}
+#rodape--midias{
+    margin-top: 10vh;
+    width: fit-content;
+    height: 15vh;
     display: flex;
     flex-direction: column;
-}
-.informacoesDeRodape h4{
-    font-size: 14px;
-    align-self: center;
-}
-.informacoesDeRodape p{
-    font-size: 13px;    
-    height: auto;
-}
-.informacoesDeRodape:last-child p{
-    align-items: center;
-}
-
-#rodape img:first-child{
-    width: 175px; height: 125px;
-    align-self: center;
-}
-
-#midias{
-    display: flex;
-    flex-direction: column;
-}
-
-#midias a{
-    color: #FFFFFF;
-}
-#container--informacoesDeRodape{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-#footerDoRodape{
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
-#footerDoRodape div:last-child{
+#rodape--logos{
+    width: 20vw;
+    height: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    font-size: 1.45vw;
+}
+/*//////////////////////// FILHOS INDIRETOS DO RODAPE ////////////////////////*/
+#rodape--informacoesDeRodape div{
+    width: 20vw;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    flex-wrap: wrap;
+}
+#rodape--informacoesDeRodape div:has(span){
+    width: 13vw;
+}
+#rodape--informacoesDeRodape h4{
+    font-size: 1rem;
+    align-self: start;
+}
+#rodape--informacoesDeRodape p{
+    font-size: 1.35vw;
+    width: auto;
+    height: auto;
+    align-self: center;
+}
+#rodape--informacoesDeRodape p{
+    align-self: start;
+    word-wrap: break-word;
+}
+#rodape--informacoesDeRodape hr{
+    height: 40vh;
+    margin: 0 3vw;
+}
+#rodape--informacoesDeRodape hr:last-child{
+    margin: 0;
+}
+#rodape--midias a{
+    color: var(--white);
+    font-size: 1.35vw;
+    transition: 0.3s;
+}
+#rodape--midias a:hover{
+    color: var(--secoundBlue);
+}
+#rodape div:last-child img[alt="Logo da PlayStrool"]{
+    width: 12vw;
+    padding-bottom: 3.5vw;
+}
+#rodape--logoParaPequenasTelas{
+    display: none;
+    width: 14vw;
+    height: 12vw;
 }
 #codeLogo{
-    width: 200px !important;
-    height: 50px !important;
+    width: 17vw !important;
+    height: 9vh !important;
+}
+/*//////////////////////// RESPONSIVIDADE ////////////////////////*/
+@media screen and (max-width: 576px) {
+    #rodape{
+        height: 130vh;
+        flex-direction: column;
+    }
+    #rodape--logoParaPequenasTelas{
+        display: block !important;
+        align-self: center;
+        padding-bottom: 6vh;
+        width: 25vw;
+        height: auto;
+    } 
+    #rodape--informacoesDeRodape{
+        align-items: center;
+        align-self: center;
+        flex-direction: column;
+    }
+    #rodape--informacoesDeRodape hr{
+        display: none;
+    }
+    #rodape--informacoesDeRodape div{
+        width: auto;
+        height: 28vh;
+    }
+    #rodape--informacoesDeRodape div:has(span){
+        width: auto;
+        height: 30vh;
+        align-self: first baseline;
+    }
+    #rodape div:last-child img[alt="Logo da PlayStrool"]{
+        display: none !important;
+    }
+    #rodape--midias{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        align-self: center;
+        gap: 2.5vw;
+    }
+    #rodape--logos{
+        margin-top: 2rem;
+        align-self: center;
+    }
+    #codeLogo{
+        width: 200px !important;
+        height: 10vh !important;
+    }
+    #rodape--informacoesDeRodape p{
+        font-size: 0.65rem;
+    }
+    #rodape--midias a{
+        font-size: 0.60rem;
+    }
+    #rodape--logos p{
+        font-size: 0.60rem;
+    }
+}
+@media screen and (min-width: 577px) and (max-width: 768px){
+    #rodape{
+        height: 80vh;
+        flex-direction: column;
+    }
+    #rodape--logoParaPequenasTelas{
+        display: block !important;
+        align-self: center;
+        padding-bottom: 6vh;
+    }
+    #rodape--informacoesDeRodape{
+        align-self: center;
+    }
+    #rodape--informacoesDeRodape hr:last-child{
+        display: none;
+    }
+    #rodape div:last-child img[alt="Logo da PlayStrool"]{
+        display: none !important;
+    }
+    #rodape--midias{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        align-self: center;
+        gap: 2.5vw;
+    }
+    #rodape--logos{
+        margin-top: 2vh;
+        align-self: center;
+    }
+    #codeLogo{
+        width: 150px !important;
+    }
+    #rodape--informacoesDeRodape p{
+        font-size: 1.55vw;
+    }
+    #rodape--logos p{
+        font-size: 1.55vw;
+    }
+}
+@media screen and (min-width: 1440px) and (max-width: 2559px){
+    #rodape--informacoesDeRodape h4{
+        font-size: 1.4rem;
+    }
+    .midias--icons{
+        width: 20px;
+        height: 20px;
+    }
+}
+@media screen and (min-width: 2560px){
+    #rodape--informacoesDeRodape h4{
+        font-size: 2.5rem;
+    }
+    .midias--icons{
+        width: 30px;
+        height: 30px;
+    }
+    #rodape{
+        padding: 2vw 2.4vw 0.6vw;
+    }
 }

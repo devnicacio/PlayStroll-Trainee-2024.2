@@ -58,3 +58,13 @@ h1 {
     display: flex;
     flex-direction: column;
 }
+
+.image-capa, .image-retrato {
+    max-width: 60%;
+    width: 100%;
+}
+
+.avaliacao {
+    max-width: 15%;
+    width: 100%;
+}

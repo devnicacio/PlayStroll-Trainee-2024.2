@@ -23,7 +23,9 @@
                 <input type="file" class="image-retrato">            
             </div>
             <input type="number" class="avaliacao" step="0.5" placeholder="Avaliacao">
-            <div id="summernote"></div>
+            <div class="diminuir-word">
+                <div id="summernote"></div>
+            </div>
             <div class="modal-buttons">                    
                 <button class="button-cancelar" onclick="fecharModal('editar')">Cancelar</button>
                 <button class="button-postar">Postar</button>                   
@@ -45,7 +47,7 @@
             ['color', ['color']],
             ['para', ['ul', 'ol', 'paragraph']],
             ['table', ['table']],
-            ['insert', ['link', 'picture', 'video']]
+            ['insert', ['link', 'picture']]
           ]
         });
       </script>

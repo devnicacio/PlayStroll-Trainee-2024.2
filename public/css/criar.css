@@ -59,6 +59,10 @@ h1 {
     flex-direction: column;
 }
 
+.imagens {
+    display: flex;
+}
+
 .image-capa, .image-retrato {
     max-width: 60%;
     width: 100%;
@@ -67,4 +71,20 @@ h1 {
 .avaliacao {
     max-width: 15%;
     width: 100%;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content:space-evenly;
+    margin-bottom: 20px;
+}
+
+.button-modal {
+    color: white;
+    width: 100px;
+    background-color: #237ecd;
+    border: none;
+    border-radius: 10px;
+    padding: 11px;
+    cursor: pointer;
 }

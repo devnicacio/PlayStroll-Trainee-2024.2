@@ -12,12 +12,12 @@
 </head>
 <body>
     <nav id="navigationBar">
-        <a id="home" title="Home" href="/app/views/site/index.html">
+        <a id="navigationBar--home" title="Home" href="/app/views/site/index.html">
             <p>PLAY STROLL</p>
             <img src="/public/assets/logo-escura-sem-fundo.png" alt="Logo da Playstroll">
         </a>
             
-        <ul class="itensNavbar">
+        <ul class="navigationBar--links">
             <li>
                 <a href="posts.html">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icons bi-chat-left-fill" viewBox="0 0 16 16">
@@ -27,7 +27,7 @@
                 </a>
             </li>
             <li>
-                <form id="search-form" action="/app/views/site/index.html" method="get">
+                <form id="links--searchPosts" action="/app/views/site/index.html" method="get" enctype="application/x-www-form-urlencoded">
                     <input type="search" name="buscarPublicacoes" title="Buscar" placeholder="Buscar" autocomplete="off" autosave required>
                     <button type="submit">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icons bi-search" viewBox="0 0 16 16">
@@ -45,14 +45,14 @@
                 </a>
             </li>
         </ul>
-        <div id="menuIcon" onclick="movimentacaoMenuIcon(this)">
+        <div id="navigationBar--menuIcon" onclick="movimentacaoMenuIcon()">
             <div></div>
             <div></div>
             <div></div>
         </div>
     </nav>
     <div id="tabletAndMobileSubSection">
-        <ul class="itensNavbar">
+        <ul class="navigationBar--links">
             <li>
                 <a href="posts.html">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icons bi-chat-left-fill" viewBox="0 0 16 16">
@@ -62,7 +62,7 @@
                 </a>
             </li>
             <li>
-                <form id="search-form" action="/app/views/site/index.html" method="get">
+                <form id="links--searchPosts" action="/app/views/site/index.html" method="get" enctype="application/x-www-form-urlencoded">
                     <input type="search" name="buscarPublicacoes" title="Buscar" placeholder="Buscar" autocomplete="off" autosave required>
                     <button type="submit">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icons bi-search" viewBox="0 0 16 16">
@@ -79,6 +79,8 @@
                     <p>Login</p>
                 </a>
             </li>
+        </ul>
     </div>
+
 </body>
 </html>

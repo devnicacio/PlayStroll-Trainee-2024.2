@@ -38,7 +38,7 @@ input[type="search"]::-webkit-search-decoration{
     color: var(--white);
 }
 /*//////////////////////// FILHOS DIRETOS DA NAVIGATION BAR ////////////////////////*/
-#home{
+#navigationBar--home{
     width: auto;
     height: fit-content;
     display: flex;
@@ -48,7 +48,7 @@ input[type="search"]::-webkit-search-decoration{
     margin-bottom: 0.9vw;
     font-size: 30px;
 }
-.itensNavbar{
+.navigationBar--links{
     width: auto;
     height: 70px;
     display: flex;
@@ -59,7 +59,7 @@ input[type="search"]::-webkit-search-decoration{
     font-size: 1.2rem;
 }
 /*//////////////////////// FILHOS INDIRETOS DA NAVIGATION BAR ////////////////////////*/
-#home p{
+#navigationBar--home p{
     background-image: linear-gradient(to right, var(--secoundBlue),var(--yellow),var(--red));
     background-clip: text;
     -webkit-background-clip: text;
@@ -67,12 +67,12 @@ input[type="search"]::-webkit-search-decoration{
     color: var(--white);
     font-size: calc(1.8rem + 0.3vw);
 }
-#home img{
+#navigationBar--home img{
     width: 125px;
     align-self: center;
 }
-.itensNavbar li,
-.itensNavbar li a{
+.navigationBar--links li,
+.navigationBar--links li a{
     width: auto;
     display: flex;
     flex-direction: row;
@@ -80,14 +80,14 @@ input[type="search"]::-webkit-search-decoration{
     gap: 1.5vw;
     transition: color 0.4s ease;
 }
-.itensNavbar li a{
+.navigationBar--links li a{
     color: var(--white);
 }
-.itensNavbar li a:hover{
+.navigationBar--links li a:hover{
     color: var(--secoundBlue);
 }
 /*//////////////////////// FORMULÁRIO DE BUSCA DA NAVIGATION BAR ////////////////////////*/
-#search-form {
+#links--searchPosts {
     width: 18vw;
     height: auto;
     background: var(--white);
@@ -97,7 +97,7 @@ input[type="search"]::-webkit-search-decoration{
     justify-content: space-between;
     align-items: center;
 }
-#search-form input{
+#links--searchPosts input{
     width: 15vw;
     border: none;
     background: transparent;
@@ -108,21 +108,21 @@ input[type="search"]::-webkit-search-decoration{
     line-height: 40px;
     transition: width 0.8s ease ;
 }
-#search-form ::placeholder,
-#search-form ::-webkit-input-placeholder{
+#links--searchPosts ::placeholder,
+#links--searchPosts ::-webkit-input-placeholder{
     color:var(--firstBlue);
 }
-#search-form button{
+#links--searchPosts button{
     background: none;
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#search-form button[type="reset"]{
+#links--searchPosts button[type="reset"]{
     display: none;
 }
-#search-form button[type="submit"] svg{
+#links--searchPosts button[type="submit"] svg{
     cursor: pointer;
     fill: var(--firstBlue);
 }
@@ -131,18 +131,18 @@ input[type="search"]::-webkit-search-decoration{
     width:30px;
     height:30px;
 }
-#menuIcon{
+#navigationBar--menuIcon{
     display: none;
     cursor: pointer;
 }
-#menuIcon div{
+#navigationBar--menuIcon div{
     width: 25px;
     height: 1px;
     background: var(--white);
     margin: 6px 0;
     transition: 0.4s;
 }
-/* Deve-se alterar tal código, pois depender duma classe para realizar uma animação não é a melhor.*/
+/*//////////////////////// ANIMAÇÕES ////////////////////////*/
 .muda div:first-child{
     transform: translate(0, 7px) rotate(-45deg);
 }
@@ -173,10 +173,10 @@ input[type="search"]::-webkit-search-decoration{
     width: auto;
     gap: 1vw;
 }
-#tabletAndMobileSubSection #search-form {
+#tabletAndMobileSubSection #links--searchPosts {
     width: 250px;
 }
-#tabletAndMobileSubSection #search-form input{
+#tabletAndMobileSubSection #links--searchPosts input{
     width: auto;
 }
 /*//////////////////////// RESPONSIVIDADE ////////////////////////*/
@@ -187,30 +187,29 @@ input[type="search"]::-webkit-search-decoration{
     #navigationBar ul{
         display: none;
     }
-    #home{
+    #navigationBar--home{
         width: auto;
         font-size: 24px;
         margin-left: 5vw;
     }
-    #home p{
+    #navigationBar--home p{
         font-size: 1.2rem;
     }
-    #home img{
+    #navigationBar--home img{
         width: 90px;
     }
-    #menuIcon{
+    #navigationBar--menuIcon{
         display: block;
         align-self: center;
         margin-right: 30px;
     }
-
-    .itensNavbar li{
+    .navigationBar--links li{
         font-size: 16px;
     }
-    #tabletAndMobileSubSection #search-form {
+    #tabletAndMobileSubSection #links--searchPosts {
         width: 240px;
     }
-    #tabletAndMobileSubSection #search-form input{
+    #tabletAndMobileSubSection #links--searchPosts input{
         width: auto;
     }
 }
@@ -218,21 +217,21 @@ input[type="search"]::-webkit-search-decoration{
     #navigationBar{
         height: 22%;
     }
-    #home p{
-        font-size: 1.5rem;
-    }
     #navigationBar ul{
         display: none;
     }
-    #home img{
+    #navigationBar--home p{
+        font-size: 1.5rem;
+    }
+    #navigationBar--home img{
         width: 90px;
     }
-    #menuIcon{
+    #navigationBar--menuIcon{
         display: block;
         align-self: center;
         margin-right: 30px;
     }
-    .itensNavbar li{
+    .navigationBar--links li{
         font-size: 16px;
     }
     
@@ -254,17 +253,17 @@ input[type="search"]::-webkit-search-decoration{
     #navigationBar{
         height: 22%;
     }
-    #home p{
+    #navigationBar--home p{
         font-size: calc(1.5rem + 0.6vw);
     }
-    #home img{
+    #navigationBar--home img{
         width: 10vw;
     }
-    .itensNavbar{
+    .navigationBar--links{
         font-size: calc(1.2rem + 0.7vw);
     }
-    #search-form ::placeholder,
-    #search-form ::-webkit-input-placeholder{
+    #links--searchPosts ::placeholder,
+    #links--searchPosts ::-webkit-input-placeholder{
         font-size: calc(1.2rem + 0.5vw);
     }
     #tabletAndMobileSubSection{
@@ -275,17 +274,17 @@ input[type="search"]::-webkit-search-decoration{
     #navigationBar{
         height: 22%;
     }
-    #home p{
+    #navigationBar--home p{
         font-size: calc(1.5rem + 0.6vw);
     }
-    #home img{
+    #navigationBar--home img{
         width: 10vw;
     }
-    .itensNavbar{
+    .navigationBar--links{
         font-size: calc(1.2rem + 0.7vw);
     }
-    #search-form ::placeholder,
-    #search-form ::-webkit-input-placeholder{
+    #links--searchPosts ::placeholder,
+    #links--searchPosts ::-webkit-input-placeholder{
         font-size: calc(1.2rem + 0.5vw);
     }
     .icons{

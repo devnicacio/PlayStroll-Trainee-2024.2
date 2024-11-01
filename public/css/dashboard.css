@@ -95,7 +95,21 @@ body{
     object-fit: contain;
 }
 
+.bi-triangle{
+    color: #49D249;
+}
 
+.bi-square{
+    color: #E25B9F;
+}
+
+.bi-x-lg{
+    color: #2A4AD7;
+}
+
+.bi-circle{
+    color: #FA2828;
+}
 
 @media only screen and (max-width: 1150px){
     .poststxt{

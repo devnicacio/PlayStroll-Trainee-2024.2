@@ -11,23 +11,46 @@
 </head>
 <body>
     <div class="container">
-        <table class="tabela-posts">
-            <thead>
-                <th>Visualizar</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <button class="btn-acao btn-visualizar" onclick="abrirModal('visualizar')"><i class="fa-regular fa-eye"></i></button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        <div class="tabela-container">
+            <table class="tabela-posts">
+                <thead>
+                    <th>Visualizar</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <button class="btn-acao btn-visualizar" onclick="abrirModal('visualizar')"><i class="fa-regular fa-eye"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <div class="modalc" id="visualizar">
-            
+            <div class="modal-header">
+                <h3>Visualizar o post</h3>
+                <button type="button" onclick="fecharModal('visualizar')">X</button>
+            </div>
+            <div class="modal-container">
+                <img src="/public/assets/banner.jfif" alt="Banner do Post" id="bannerPost">
+                
+                <div id="modalPost--user">
+                    <img src="/public/assets/avatar.jfif" alt="Avatar do user">
+                    <span>Aang</span>
+                </div>
+                <div id="modalPost--stars">
+                    
+                </div>
+
+                <label for="">Título: </label>
+                <input type="text" name="tituloPost" id="tituloPost">
+                <label for="dataDeCricaoPost">Data de criação: </label>
+                <input type="date" name="dataDeCricaoPost" id="dataDeCricaoPost">
+                <label for="conteudoPost">Conteúdo</label>
+                <textarea name="conteudoPost" id="conteudoPost"></textarea>
+            </div>
         </div>
         <div class="tela"></div>
     </div>
 </body>
+<script src="/public/js/modals.js"></script>
 </html>

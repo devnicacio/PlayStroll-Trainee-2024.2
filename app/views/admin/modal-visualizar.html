@@ -8,7 +8,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="visualisar">
+        <div class="botview" id="botao"   onclick="abrirModal('ver', 'botao')">VIEW</div>
+        <div class="visualisar" id="ver">
             <div class="titulo">Visualização</div>
             <div class="caixa">
                 <div class="imagem"><img src="/app/views/admin/arquivos/perfil.jpg" alt=""></div>
@@ -31,10 +32,11 @@
                     </div>
                 </div>
                 <div class="sair">
-                    <div class="botsair"><p>FECHAR</p></div>
+                    <div class="botsair" onclick="fecharModal('ver', 'botao')"><p>FECHAR</p></div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script src="/public/js/modal-visualizar.js"></script>
 </html>

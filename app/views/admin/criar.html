@@ -19,10 +19,21 @@
         <h1>Crie seu post</h1>
         <div class="modal-container">
             <div class="imagens">
-                <input type="file" class="image-capa">
-                <input type="file" class="image-retrato">            
+                <div class="capa">
+                    <label class="custom-file-label" for="file">Escolha uma imagem</label>
+                    <input type="file" class="image-capa" id="file" onchange="updateFileName()">
+                    <span class="file-name" id="file-name">Nenhuma capa selecionada</span>
+                </div>
+                <div class="retrato">
+                    <label class="custom-file-label" for="file">Escolha uma imagem</label>
+                    <input type="file" class="image-retrato">
+                    <span class="file-name" id="file-name">Nenhum retrato selecionado</span>            
+                </div>
             </div>
-            <input type="number" class="avaliacao" step="0.5" placeholder="Avaliacao">
+            <div class="placeholders">
+                <input type="number" class="avaliacao" step="0.5" min="0" max="5" placeholder="Avaliacao">
+                <input type="text" class="titulo" placeholder="Coloque seu título">
+            </div>
             <div class="diminuir-word">
                 <div id="summernote"></div>
             </div>
@@ -35,6 +46,13 @@
     <div class="tela" id="tela"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.9.0/lang/summernote-pt-BR.min.js"></script>
+    <script>
+        function updateFileName() {
+            const input = document.getElementById('file');
+            const fileName = document.getElementById('file-name');
+            fileName.textContent = input.files.length > 0 ? input.files[0].name : 'No file chosen';
+        }
+    </script>
     <script>
         $('#summernote').summernote({
           placeholder: 'Crie a sua descrição',

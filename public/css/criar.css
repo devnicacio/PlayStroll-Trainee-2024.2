@@ -93,6 +93,16 @@ h1 {
     padding: 30px 0px;
 }
 
+.image-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: none; 
+}
+
 .image-capa, .image-retrato {
     max-width: 60%;
     width: 100%;

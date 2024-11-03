@@ -21,17 +21,15 @@
             <div class="imagens">
                 <div class="capa">
                     <img id="file-name-capa" class="image-preview" alt="Preview da Capa">
-                    <label for="label">Foto modo paisagem</label>
-                    <label class="custom-file-label" for="file">Escolha uma imagem</label>
-                    <input type="file" class="image-capa" id="file" onchange="updateFileName()">
-                    <span class="file-name" id="file-name">Nenhuma capa selecionada</span>
+                    <label for="file">Foto modo paisagem</label>
+                    <label class="custom-file-label" for="file-capa">Escolha uma imagem</label>
+                    <input type="file" class="image-capa" id="file-capa" onchange="previewImage('file-capa', 'file-name-capa')">
                 </div>
                 <div class="retrato">
                     <img id="file-name-retrato" class="image-preview" alt="Preview do Retrato">
-                    <label for="label">Foto modo retrato</label>
-                    <label class="custom-file-label" for="file">Escolha uma imagem</label>
-                    <input type="file" class="image-retrato">
-                    <span class="file-name" id="file-name">Nenhum retrato selecionado</span>            
+                    <label for="file">Foto modo retrato</label>
+                    <label class="custom-file-label" for="file-retrato">Escolha uma imagem</label>
+                    <input type="file" class="image-retrato" id="file-retrato" onchange="previewImage('file-retrato', 'file-name-retrato')">
                 </div>
             </div>
             <div class="placeholders">

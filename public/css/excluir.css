@@ -134,6 +134,8 @@ img  {
 
     .modalc {
         padding: 15px;
+        max-width: 260px;
+        width: 100%;
     }
 
     img {
@@ -174,7 +176,8 @@ img  {
     }
 
     .button-modal {
-        width: 60px;
+        max-width: 100px;
+        width: 100%;
         padding: 6px;
         text-align: center;
         font-size: 12px;
@@ -185,7 +188,6 @@ img  {
     }
 
     .modal-buttons {
-        flex-direction: column-reverse;
         align-items: center;
         gap: 10px;
     }

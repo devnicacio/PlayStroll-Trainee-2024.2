@@ -57,6 +57,7 @@ tbody {
     display: none;
     flex-direction: column;
     color: var(--white);
+    z-index: 3;
 }
 .modal-header{
     display: flex;
@@ -79,7 +80,7 @@ tbody {
     cursor: pointer;
 } 
 .modal-container {
-    background-color: #080b3c;
+    background-color: var(--firstBlue);
     width: 95%;
     height: 80%;
     border-radius: 10px;
@@ -96,4 +97,12 @@ tbody {
     height: 60px;
     object-fit: cover;
     border: 50px;
+}
+#tela{
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: var(--black);
+    opacity: 0; 
+    transition: opacity 0.5s;
 }

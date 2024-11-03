@@ -20,19 +20,29 @@
         <div class="modal-container">
             <div class="imagens">
                 <div class="capa">
+                    <img id="file-name-capa" class="image-preview" alt="Preview da Capa">
+                    <label for="label">Foto modo paisagem</label>
                     <label class="custom-file-label" for="file">Escolha uma imagem</label>
                     <input type="file" class="image-capa" id="file" onchange="updateFileName()">
                     <span class="file-name" id="file-name">Nenhuma capa selecionada</span>
                 </div>
                 <div class="retrato">
+                    <img id="file-name-retrato" class="image-preview" alt="Preview do Retrato">
+                    <label for="label">Foto modo retrato</label>
                     <label class="custom-file-label" for="file">Escolha uma imagem</label>
                     <input type="file" class="image-retrato">
                     <span class="file-name" id="file-name">Nenhum retrato selecionado</span>            
                 </div>
             </div>
             <div class="placeholders">
-                <input type="number" class="avaliacao" step="0.5" min="0" max="5" placeholder="Avaliacao">
-                <input type="text" class="titulo" placeholder="Coloque seu título">
+                <div class="parte-avaliacao">
+                    <label for="number">Avaliação</label>
+                    <input type="number" class="avaliacao" step="0.5" min="0" max="5" placeholder="Digite uma nota de 0.0 a 5.0">
+                </div>
+                <div class="parte-titulo">
+                    <label for="text">Título</label>
+                    <input type="text" class="titulo" placeholder="Coloque seu título">
+                </div>
             </div>
             <div class="diminuir-word">
                 <div id="summernote"></div>

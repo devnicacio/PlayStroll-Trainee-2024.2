@@ -32,7 +32,7 @@ body {
     background-color: #237ecd;
     color: white;
     width: 50%;
-    height: 80%;
+    height: 95%;
     border-radius: 10px;
     padding: 10px;
     display: none;
@@ -58,7 +58,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
 }
 
 .custom-file-label {
@@ -103,21 +103,34 @@ h1 {
 
 .placeholders {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between;
     max-width: 458px;
     width: 100%;
+    text-align: start;
+}
+
+.parte-titulo {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.parte-avaliacao {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
 }
 
 .avaliacao {
-    width: 20%;
+    width: 100%;
     outline: none;
 }
 
 .titulo {
     color: #00aea0;
     outline: none;
-    width: 80%;
+    width: 97%;
 }
 
 .diminuir-modal {

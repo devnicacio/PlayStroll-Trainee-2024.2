@@ -29,28 +29,42 @@
         <div class="modalc" id="visualizar">
             <div class="modal-header">
                 <h3>Visualizar o post</h3>
-                <button type="button" onclick="fecharModal('visualizar')">X</button>
             </div>
             <div class="modal-container">
-                <img src="/public/assets/banner.jfif" alt="Banner do Post" id="bannerPost">
-                
-                <div id="modalPost--user">
-                    <img src="/public/assets/avatar.jfif" alt="Avatar do user">
-                    <span>Aang</span>
+                <div id="modalPost--container--header"> 
+                    <div id="modalPost--user">
+                        <img src="/public/assets/avatar.jfif" alt="Avatar do user">
+                        <span>Aang</span>
+                    </div>
+                    <span id="dataDeCricaoPost">11 de Setembro de 2001</span>
                 </div>
                 <div id="modalPost--stars">
-
+                    <!-- Necessito pegar as estrelas da lista de posts -->
                 </div>
 
-                <label for="">Título: </label>
-                <input type="text" name="tituloPost" id="tituloPost">
-                <label for="dataDeCricaoPost">Data de criação: </label>
-                <input type="date" name="dataDeCricaoPost" id="dataDeCricaoPost">
-                <label for="conteudoPost">Conteúdo</label>
-                <textarea name="conteudoPost" id="conteudoPost"></textarea>
+                <div id="modalPost--photos">
+                    <figcaption>
+                        <img src="/public/assets/banner.jfif" alt="Banner do Post" id="bannerPost">
+                        <caption>Foto da capa</caption>
+                    </figcaption>
+                    <figcaption>
+                        <img src="" alt="Retrato do Post" id="retratoPost">
+                        <caption>Foto de retrato</caption>
+                    </figcaption>
+                </div>
+                <form action="#" method="get">
+                    <label for="">Título: </label>
+                    <input type="text" name="tituloPost" id="tituloPost">
+                    <label for="conteudoPost">Conteúdo</label>
+                    <textarea name="conteudoPost" id="conteudoPost"></textarea>
+                </form>
+                <div class="modal-buttons"><!-- Elementos com classes com nomes bem semelhantes. Mudança necessária.-->             
+                    <!-- O uso duma classe button-modals é recomendada para padronizar todos os botãos de todos os modais.-->
+                    <button class="button-modals button-calcelar" onclick="fecharModal('visualizar')">Cancelar</button>
+                </div>
             </div>
         </div>
-        <div id="tela"></div>
+        <div class="tela"></div>
     </div>
 </body>
 <script src="/public/js/modals.js"></script>

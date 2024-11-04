@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
 }
@@ -20,7 +20,6 @@
     width: 100%;
     color: var(--white);
     border-radius: 10px;
-    border-collapse: collapse;
     overflow: hidden;
 }
 thead {
@@ -92,17 +91,45 @@ tbody {
     object-fit: cover;
     border-radius: 10px;
 }
+#modalPost--container--header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 3rem;
+}
 #modalPost--user img{
     width: 60px;
     height: 60px;
     object-fit: cover;
     border: 50px;
 }
-#tela{
+#modalPost--user{
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+.tela{
     width: 100vw;
     height: 100vh;
-    z-index: 2;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: var(--black);
-    opacity: 0; 
+    opacity: 0.5;
+    z-index: 2;
     transition: opacity 0.5s;
+}
+.button-modals{
+    width: 100px;
+    padding: 11px;
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    cursor: pointer;
+}
+.button-calcelar{
+    background-color: var(--red);
 }

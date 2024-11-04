@@ -57,7 +57,9 @@ tbody {
     flex-direction: column;
     color: var(--white);
     z-index: 3;
-}
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;}
 .modal-header{
     display: flex;
     justify-content: center;
@@ -81,9 +83,12 @@ tbody {
 .modal-container {
     background-color: var(--firstBlue);
     width: 95%;
-    height: 80%;
+    height: 87%;
     border-radius: 10px;
     align-self: center;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 .modal-container img:first-child {
     width: 150px;
@@ -96,8 +101,8 @@ tbody {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
-    gap: 3rem;
+    margin: 2rem 0 3.5rem 0;
+    gap: 4rem;
 }
 #modalPost--user img{
     width: 60px;
@@ -108,7 +113,7 @@ tbody {
 #modalPost--user{
     display: flex;
     align-items: center;
-    gap: 1.4rem;
+    gap: 1.2rem;
 }
 .tela{
     width: 100vw;
@@ -132,4 +137,22 @@ tbody {
 }
 .button-calcelar{
     background-color: var(--red);
+}
+#modalPost--photos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+}
+#retratoPost{
+    width: 300px;
+    object-fit: cover;
+}
+textarea{
+    resize: none;
+}
+form{
+    display: flex;
+    margin: 4rem 0;
+    justify-content: center;
 }

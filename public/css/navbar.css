@@ -1,0 +1,297 @@
+:root{
+    --firstBlue: #080B1E;
+    --secoundBlue: #237ECD;
+    --white: #F5F5F5;
+    --red: #C70E37;
+    --yellow: #FFC739;
+}
+/*//////////////////////// CONFIGURAÇÕES DE RESET ////////////////////////*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Satoshi, sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration{
+    display: none;
+}
+/*//////////////////////// NAVIGATION BAR ////////////////////////*/
+#navigationBar{
+    width: auto;
+    height: 28vh;
+    background: var(--firstBlue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3.65vw;
+    color: var(--white);
+}
+/*//////////////////////// FILHOS DIRETOS DA NAVIGATION BAR ////////////////////////*/
+#navigationBar--home{
+    width: auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    margin-bottom: 0.9vw;
+    font-size: 30px;
+}
+.navigationBar--links{
+    width: auto;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    gap: 5.5vw;
+    align-self: center;
+    list-style: none;
+    font-size: 1.2rem;
+}
+/*//////////////////////// FILHOS INDIRETOS DA NAVIGATION BAR ////////////////////////*/
+#navigationBar--home p{
+    background-image: linear-gradient(to right, var(--secoundBlue),var(--yellow),var(--red));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--white);
+    font-size: calc(1.8rem + 0.3vw);
+}
+#navigationBar--home img{
+    width: 125px;
+    align-self: center;
+}
+.navigationBar--links li,
+.navigationBar--links li a{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5vw;
+    transition: color 0.4s ease;
+}
+.navigationBar--links li a{
+    color: var(--white);
+}
+.navigationBar--links li a:hover{
+    color: var(--secoundBlue);
+}
+/*//////////////////////// FORMULÁRIO DE BUSCA DA NAVIGATION BAR ////////////////////////*/
+#links--searchPosts {
+    width: 18vw;
+    height: auto;
+    background: var(--white);
+    padding: 10px 20px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#links--searchPosts input{
+    width: 15vw;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding-right: 10px;
+    color: var(--firstBlue);
+    font-size: 16px;
+    line-height: 40px;
+    transition: width 0.8s ease ;
+}
+#links--searchPosts ::placeholder,
+#links--searchPosts ::-webkit-input-placeholder{
+    color:var(--firstBlue);
+}
+#links--searchPosts button{
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#links--searchPosts button[type="reset"]{
+    display: none;
+}
+#links--searchPosts button[type="submit"] svg{
+    cursor: pointer;
+    fill: var(--firstBlue);
+}
+/*//////////////////////// ÍCONES DA NAVIGATION BAR ////////////////////////*/
+.icons{
+    width:30px;
+    height:30px;
+}
+#navigationBar--menuIcon{
+    display: none;
+    cursor: pointer;
+}
+#navigationBar--menuIcon div{
+    width: 25px;
+    height: 1px;
+    background: var(--white);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+/*//////////////////////// ANIMAÇÕES ////////////////////////*/
+.muda div:first-child{
+    transform: translate(0, 7px) rotate(-45deg);
+}
+.muda div:nth-of-type(even){
+    opacity: 0;
+}
+.muda div:last-child{
+    transform: translate(0, -7px) rotate(45deg);
+}
+#tabletAndMobileSubSection{
+    width: auto;
+    height: calc(300px - 0.2vw);
+    display: none;
+    justify-content: center;
+    background-color: var(--firstBlue);
+}
+#tabletAndMobileSubSection ul{
+    width: auto;
+    height: auto;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+#tabletAndMobileSubSection li{
+    width: auto;
+    gap: 1vw;
+}
+#tabletAndMobileSubSection #links--searchPosts {
+    width: 250px;
+}
+#tabletAndMobileSubSection #links--searchPosts input{
+    width: auto;
+}
+/*//////////////////////// RESPONSIVIDADE ////////////////////////*/
+@media screen and (max-width: 576px) {
+    #navigationBar{
+        height: 22%;
+    }
+    #navigationBar ul{
+        display: none;
+    }
+    #navigationBar--home{
+        width: auto;
+        font-size: 24px;
+        margin-left: 5vw;
+    }
+    #navigationBar--home p{
+        font-size: 1.2rem;
+    }
+    #navigationBar--home img{
+        width: 90px;
+    }
+    #navigationBar--menuIcon{
+        display: block;
+        align-self: center;
+        margin-right: 30px;
+    }
+    .navigationBar--links li{
+        font-size: 16px;
+    }
+    #tabletAndMobileSubSection #links--searchPosts {
+        width: 240px;
+    }
+    #tabletAndMobileSubSection #links--searchPosts input{
+        width: auto;
+    }
+}
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    #navigationBar{
+        height: 22%;
+    }
+    #navigationBar ul{
+        display: none;
+    }
+    #navigationBar--home p{
+        font-size: 1.5rem;
+    }
+    #navigationBar--home img{
+        width: 90px;
+    }
+    #navigationBar--menuIcon{
+        display: block;
+        align-self: center;
+        margin-right: 30px;
+    }
+    .navigationBar--links li{
+        font-size: 16px;
+    }
+    
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    #navigationBar{
+        height: 26%;
+    }
+    #tabletAndMobileSubSection{
+        display: none !important;
+    }
+}
+@media screen and (min-width: 993px) and (max-width: 1439px){
+    #tabletAndMobileSubSection{
+        display: none !important;
+    }
+}
+@media screen and (min-width: 1440px) and (max-width: 2559px){
+    #navigationBar{
+        height: 22%;
+    }
+    #navigationBar--home p{
+        font-size: calc(1.5rem + 0.6vw);
+    }
+    #navigationBar--home img{
+        width: 10vw;
+    }
+    .navigationBar--links{
+        font-size: calc(1.2rem + 0.7vw);
+    }
+    #links--searchPosts ::placeholder,
+    #links--searchPosts ::-webkit-input-placeholder{
+        font-size: calc(1.2rem + 0.5vw);
+    }
+    #tabletAndMobileSubSection{
+        display: none !important;
+    }
+}
+@media screen and (min-width: 2560px){
+    #navigationBar{
+        height: 22%;
+    }
+    #navigationBar--home p{
+        font-size: calc(1.5rem + 0.6vw);
+    }
+    #navigationBar--home img{
+        width: 10vw;
+    }
+    .navigationBar--links{
+        font-size: calc(1.2rem + 0.7vw);
+    }
+    #links--searchPosts ::placeholder,
+    #links--searchPosts ::-webkit-input-placeholder{
+        font-size: calc(1.2rem + 0.5vw);
+    }
+    .icons{
+        width: 50px;
+        height: 50px;
+    }
+    #tabletAndMobileSubSection{
+        display: none !important;
+    }
+}

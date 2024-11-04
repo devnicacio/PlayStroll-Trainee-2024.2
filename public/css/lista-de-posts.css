@@ -1,0 +1,313 @@
+lista de posts.css
+
+html{
+    width: 100%;
+}
+
+html, body{
+    background: linear-gradient(to right, rgba(213, 214, 227, 1.0), rgba(0, 174, 160, 0.5));
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+body{
+    font-family: 'Satoshi', sans-serif;
+    width: 100%;
+}
+
+.pesquisa-input{
+    width: 230px;
+    height: 36px;
+    margin-left: 12.5%;
+    background-color: #00aea0;
+    border-radius: 20px;
+    border: 2px #0b0b0b;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    cursor: text;
+}
+
+.caixa:focus{
+    outline: none;
+}
+
+.pesquisa{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.caixa{
+    background: none;
+    border: none;
+    margin-left: 5px;
+}
+
+.caixa::placeholder{
+    color: black;
+    opacity: 0.7;
+}
+
+.bi{
+    font-size: 14px;
+    cursor: default;
+    margin-left: 5px;
+}
+
+.inicialização-dos-posts H4{
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-left: 12.5%;
+}
+
+.inicialização-dos-posts{
+    margin-top: 0px;
+    margin-left: 0;
+    width: 100%;
+}
+
+.barra{
+    height: 2px;
+    width: 75%px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    justify-content: center;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, rgba(0, 174, 160, 0.5), rgba(213, 214, 227, 0.5));
+}
+
+.posts{
+    width: 100%;
+    margin-bottom: 80px;
+    justify-content: center;
+}
+
+
+.post img{
+    width: 160px;
+    height: 200px;
+    margin-right: 50px;
+}
+
+.imagem-mobile img{
+    display: none;
+}
+
+.post{
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-bottom: 10px;
+}
+
+.titulo h3{
+    font-size: 24px;
+    color: #0b0b3c;
+    margin: 0;
+}
+
+.nota{
+    margin: 0;
+}
+
+.nota span{
+    color: yellow;
+}
+
+.nota h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.post div{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.perfil{
+    margin-right: 10px;
+}
+
+.perfil img{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin: 0;
+}
+
+.texto{
+    width: 80%;
+}
+
+
+.texto div{
+    display: block;
+}
+
+.user p{
+    font-size: 14px;
+    margin: 0;
+}
+
+.dados{
+    margin-bottom: 10px;
+}
+
+.dados div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.dados p{
+    margin-left: 0px;
+}
+
+.conteúdo p{
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.barra{
+    height: 2px;
+    width: 75%px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    justify-content: center;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, rgba(0, 174, 160, 0.5), rgba(213, 214, 227, 0.5));
+}
+
+.navegação{
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.navegação button{
+    display: inline;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    font-size: 24px;
+    margin-right: 10px;
+    color: white;
+    background-color: #237ECD;
+    border: 1px solid black;
+}
+
+.navegação .nav4 {
+    background-color: #0b0b3c;
+}
+
+@media only screen and (max-width:1300px){
+    .conteúdo p{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .conteúdo p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 820px){
+    .conteúdo p{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 769px)
+{
+    .conteúdo p, .conteúdo2 p, .conteúdo3 p, .conteúdo4 p, .conteúdo5 p{
+    font-size: 12px;
+    }
+
+    .pesquisa-input{
+        width: 75%;
+    }
+    
+    .conteúdo{
+        width: 100%;
+    }
+    .conteúdo p{
+        width: 100%;
+    }
+    .texto{
+        width: 100%;
+    }
+    .posts{
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .conteúdo p{
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 590px)
+{
+    .conteúdo p{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 427px) and (max-width: 1401px){
+    .post{
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 426px)
+{
+    .titulo h3{
+        font-size: 20px;
+    }
+    .nota h4{
+        font-size: 14px;
+    }
+
+    .post img{
+        height: fit-content;
+    }
+
+    .imagem img{
+        display: none;
+    }
+    .imagem-mobile{
+        width: 100%;
+        height: fit-content;
+    }
+    .imagem-mobile img{
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 5px;
+        object-fit: contain;
+    }
+    .conteúdo{
+        width: 100%;
+    }
+    .conteúdo p{
+        width: 100%;
+        font-size: 12px;
+    }
+    .texto{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 321px)
+{
+    .navegação button{
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+    }
+}

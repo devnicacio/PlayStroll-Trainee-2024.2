@@ -1,0 +1,60 @@
+@import "reset.css";
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
+}
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.tabela-posts {
+    width: 100%;
+    color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+thead {
+    background-color: var(--secoundBlue);
+}
+th, td {
+    text-align: center;
+    padding: 15px;
+}
+tbody {
+    background-color: var(--firstBlue);
+}
+.btn-acao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 16px;
+}
+.btn-editar{
+    background-color: var(--yellow);
+}
+.modalc{
+    background-color: var(--cyan);
+    width: 50%;
+    height: 80%;
+    border-radius: 10px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    color: var(--white);
+    z-index: 3;
+}

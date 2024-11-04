@@ -1,0 +1,29 @@
+:root{
+    --principalFont: 'Satoshi';
+    /* Paleta da PlayStrool*/
+    --firstBlue: #080B3C;
+    --secoundBlue:  #00AEA0;
+    --red: #C70E3C;
+    --yellow: #FFC739;
+    --cyan: #00AEA0;
+    --gray: #D5D6E3;
+    --white: #F5F5F5;
+    --black: #0B0B0B;
+}
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: var(--principalFont), 'sans-serif';
+}
+body{
+    line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+/* Pode ser retirado futuralmente, caso atrapalhe a estilização alheia. */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}

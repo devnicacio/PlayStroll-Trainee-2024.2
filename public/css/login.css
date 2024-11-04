@@ -1,0 +1,129 @@
+/* faz o fundo nao ficar branco nos cantos e preenche tudo com degradê */
+body { 
+    padding: 0;
+    margin: 0;        
+}
+
+.gradient{
+    height: 100vh;
+    background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    font-family: 'Satoshi', sans-serif;
+}
+
+.login{
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 20px;
+    color: white;
+}
+
+h3 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.parte-de-cima{
+    /* background-image: linear-gradient(to right, #237ECD,#080B3C);  */
+    background-color: #080B3C;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+}
+
+.parte-de-baixo{
+    /* background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); */
+    background-color: rgba(8, 11, 60, 0.8);  
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 25px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+button{
+    background-color: #ffc739;
+    position: relative;
+    z-index: 10;
+    color: #080B3C;
+    cursor: pointer;
+    border-radius: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: #237ECD;
+}
+
+button:hover {
+    color: #050735;
+}
+
+.botao-login{
+    text-align: center;
+    padding-bottom: 22px;   
+}
+
+input{
+    border-radius: 5px;
+    border: #11518a;
+    width: 100%;   
+    box-sizing: border-box;
+    padding: 3px; 
+    outline: none;
+}
+
+input:hover {
+    color: #080B3C;
+}
+
+.visualizacao {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.bi-eye-slash, .bi-eye {
+    color: #080B3C;
+    cursor: pointer;
+    position: absolute;
+    transform: translate(-140%, 10%);
+}
+
+label {
+    padding: 0;
+}
+
+.sessao-login{     
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;  
+    width: 65%;
+    align-items: start;
+    row-gap: 6px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .login {        
+        width: 100%;
+        max-height: 400px;
+        height: 100%;
+    }    
+}
+
+@media (max-width: 767px) {
+    .login {
+        width: 80%; 
+        max-height: 350px; 
+    }
+
+    .botao-login button {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}

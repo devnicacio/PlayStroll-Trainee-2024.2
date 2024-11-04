@@ -39,12 +39,41 @@ body{
 .posts{
     width: 80%;
     height: 50px;
-    background-color: #2373cd;
+    background-color: #237ecd;
     border-radius: 30px;
     display: flex;
     justify-content: start;
     align-items: center;
 
+}
+
+.posts:hover{
+    background-color: #0F5897;
+    animation-name: postmalone;
+    animation-duration: 0.5s;
+    .bi-triangle{
+        animation-name: trianglin;
+        animation-duration: 0.5s;
+        color: #3AD4C7;
+    }
+
+    .bi-square{
+        animation-name: quadradin;
+        animation-duration: 0.5s;
+        color: #CE2379
+    }
+
+    .bi-circle{
+        animation-name: circulin;
+        animation-duration: 0.5s;
+        color: #F21515;
+    }
+
+    .bi-x-lg{
+        animation-name: xizin;
+        animation-duration: 0.5s;
+        color: #1837BF;
+    }
 }
 
 .poststxt{
@@ -96,7 +125,7 @@ body{
 }
 
 .bi-triangle{
-    color: #49D249;
+    color: #00aea0;
 }
 
 .bi-square{
@@ -108,7 +137,7 @@ body{
 }
 
 .bi-circle{
-    color: #FA2828;
+    color: #c70e3c;
 }
 
 @media only screen and (max-width: 1150px){
@@ -179,4 +208,29 @@ body{
         align-items: center;
         margin: 0;
     }
+}
+
+@keyframes postmalone{
+    0% {background-color: #237ecd;}
+    100% {background-color: #0F5897;}
+}
+
+@keyframes trianglin{
+    0% {color: #00aea0;}
+    100% {color: #3AD4C7}
+}
+
+@keyframes quadradin{
+    0% {color: #E25B9F}
+    100% {color: #CE2379}
+}
+
+@keyframes circulin{
+    0% {color: #c70e3c;}
+    100% {color: #F21515}
+}
+
+@keyframes xizin{
+    0% {color: #2A4AD7;}
+    100% {color: #1837BF}
 }

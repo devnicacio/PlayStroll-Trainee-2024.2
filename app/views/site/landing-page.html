@@ -5,26 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/landing-page.css">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Play Stroll</title>
 </head>
 <body>
     <main>
-        <div class="sessao-introducao">            
-            <div class="imagem-introducao">
-                <img src="/public/assets/god-of-war.png" alt="Stardew Valley">                
-                <div class="fade">
-                    <div class="fade-text">
-                        <p class="nome-do-jogo-fade">Nome do Jogo</p>
-                        <p><span style="color: #FFC739;"> ★★★★☆</span> 4,5</p>
-                        <p class="autor"> <img src="/public/assets/usuario.png" alt="usuario">NomeDeUsuário</p>
-                        <p class="descricao"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante... </p>
-                        <button class="botao-veja-mais-fade">Veja mais</button>
-                    </div>
+        <div class="swiper" id="swiper-principal">
+
+            <div class="swiper-wrapper" id="wrapper-principal">
+
+             <div class="swiper-slide" id="slide-principal">
+                <div class="fade-swipper">
+                        <p class="nome-swipper">Nome do Jogo</p>
+                        <p class="nota-swipper"><span style="color: #FFC739;"> ★★★★☆</span> 4,0</p>
+                        <p class="autor-swipper"> <img src="/public/assets/usuario.png" alt="usuario">NomeDeUsuário</p>
+                        <p class="descricao-swipper"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante... </p>
+                        <button class="botao-swipper">Veja mais</button>
                 </div>
-                <button class="anterior" onclick="changeImage(-1)">&#10094;</button>
-                <button class="proximo" onclick="changeImage(1)">&#10095;</button>
+                <img src="/public/assets/god-of-war.png" alt="imagem">
+             </div>
+             <div class="swiper-slide" id="slide-principal">
+                <div class="fade-swipper">
+                    <p class="nome-swipper">Nome do Jogo</p>
+                    <p class="nota-swipper"><span style="color: #FFC739;"> ★★★★☆</span> 4,0</p>
+                    <p class="autor-swipper"> <img src="/public/assets/usuario.png" alt="usuario" class="imagem-usuario">NomeDeUsuário</p>
+                    <p class="descricao-swipper"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante... </p>
+                    <button class="botao-swipper">Veja mais</button>
             </div>
-            </div>    
+                <img src="/public/assets/stardew-valley.png" alt="imagem">
+             </div>
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+  </div>
 
             <div class="comunidade">
                 <h2>Comunidade<span style="color: #C70E37;"> engajada</span> e <span style="color: #C70E37;">diversificada</span> em diferentes tipos de jogos</h2>
@@ -33,50 +48,87 @@
 
     <section class="ultimas-postagens">
         <h1>Últimas publicações</h1>
-        <div class="posts">
-            <button class="ante" onclick="changeImage(-1)">&#10094;</button>
-            <div class="post-individual1">
-                <img class="capa-jogo" src="/public/assets/banner.png" alt="Capa do post 1">
-                <h3><span style="color: #000000;">Nome Do Jogo</span></h3>
-                <div class="nota">
-                    <span style="color: #FFC739;"> ★★★★☆</span> <span style="color: #080B3C;">4,5</span>
-                </div>
-                <p class="autor"> <img src="/public/assets/usuario.png" alt="usuario"> <span style="color: #0B0B0B;">NomeDeUsuário</span></p>
-                <p class="descricao"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante. 
-                Nam fringilla ipsum vitae tempus euismod. In hac habitasse platea dictumst... </p>
-                <button class="botao-veja-mais">Veja mais</button>
-            </div>
+    </section>
 
-            <div class="post-individual2">
-                <img class="capa-jogo" src="/public/assets/banner.png" alt="Capa do post 2">
-                <h3><span style="color: #000000;">Nome Do Jogo</span></h3>
-                <div class="nota">
-                    <span style="color: #FFC739;"> ★★★★☆</span> <span style="color: #080B3C;">4,5</span>
+    <div class="swiper" id="swiper-secundario">
+        <div class="swiper-wrapper" id="wrapper-secundario">
+            <!-- Slides aqui -->
+            <div class="swiper-slide" id="slide-secundario">
+                <div class="post-individual3">
+                    <img class="capa-jogo" src="/public/assets/banner.png" alt="Capa do post 3">
+                    <h3><span style="color: #000000;">Nome Do Jogo</span></h3>
+                    <div class="nota">
+                        <span style="color: #FFC739;"> ★★★★☆</span> <span style="color: #080B3C;">4,0</span>
+                    </div>
+                    <p class="autor"> <img src="/public/assets/usuario.png" alt="usuario"> <span style="color: #0B0B0B;">NomeDeUsuário</span></p>
+                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante. 
+                        Nam fringilla ipsum vitae tempus euismod. In hac habitasse platea dictumst... </p>
+                    <button class="botao-veja-mais">Veja mais</button>
                 </div>
-                <p class="autor"> <img src="/public/assets/usuario.png" alt="usuario"> <span style="color: #0B0B0B;">NomeDeUsuário</span></p>
-                <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante. 
-                    Nam fringilla ipsum vitae tempus euismod. In hac habitasse platea dictumst... </p>
-                <button class="botao-veja-mais">Veja mais</button>
             </div>
-
-            <div class="post-individual3">
-                <img class="capa-jogo" src="/public/assets/banner.png" alt="Capa do post 3">
-                <h3><span style="color: #000000;">Nome Do Jogo</span></h3>
-                <div class="nota">
-                    <span style="color: #FFC739;"> ★★★★☆</span> <span style="color: #080B3C;">4,5</span>
+            <div class="swiper-slide" id="slide-secundario">
+                <div class="post-individual3">
+                    <img class="capa-jogo" src="/public/assets/banner.png" alt="Capa do post 3">
+                    <h3><span style="color: #000000;">Nome Do Jogo</span></h3>
+                    <div class="nota">
+                        <span style="color: #FFC739;"> ★★★★☆</span> <span style="color: #080B3C;">4,0</span>
+                    </div>
+                    <p class="autor"> <img src="/public/assets/usuario.png" alt="usuario"> <span style="color: #0B0B0B;">NomeDeUsuário</span></p>
+                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante. 
+                        Nam fringilla ipsum vitae tempus euismod. In hac habitasse platea dictumst... </p>
+                    <button class="botao-veja-mais">Veja mais</button>
                 </div>
-                <p class="autor"> <img src="/public/assets/usuario.png" alt="usuario"> <span style="color: #0B0B0B;">NomeDeUsuário</span></p>
-                <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante. 
-                    Nam fringilla ipsum vitae tempus euismod. In hac habitasse platea dictumst... </p>
-                <button class="botao-veja-mais">Veja mais</button>
             </div>
-        
-            <button class="prox" onclick="changeImage(1)">&#10095;</button>
+            <div class="swiper-slide" id="slide-secundario">
+                <div class="post-individual3">
+                    <img class="capa-jogo" src="/public/assets/banner.png" alt="Capa do post 3">
+                    <h3><span style="color: #000000;">Nome Do Jogo</span></h3>
+                    <div class="nota">
+                        <span style="color: #FFC739;"> ★★★★☆</span> <span style="color: #080B3C;">4,0</span>
+                    </div>
+                    <p class="autor"> <img src="/public/assets/usuario.png" alt="usuario"> <span style="color: #0B0B0B;">NomeDeUsuário</span></p>
+                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante. 
+                        Nam fringilla ipsum vitae tempus euismod. In hac habitasse platea dictumst... </p>
+                    <button class="botao-veja-mais">Veja mais</button>
+                </div>
+            </div>
+            <div class="swiper-slide" id="slide-secundario">
+                <div class="post-individual3">
+                    <img class="capa-jogo" src="/public/assets/banner.png" alt="Capa do post 3">
+                    <h3><span style="color: #000000;">Nome Do Jogo</span></h3>
+                    <div class="nota">
+                        <span style="color: #FFC739;"> ★★★★☆</span> <span style="color: #080B3C;">4,0</span>
+                    </div>
+                    <p class="autor"> <img src="/public/assets/usuario.png" alt="usuario"> <span style="color: #0B0B0B;">NomeDeUsuário</span></p>
+                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante. 
+                        Nam fringilla ipsum vitae tempus euismod. In hac habitasse platea dictumst... </p>
+                    <button class="botao-veja-mais">Veja mais</button>
+                </div>
+            </div>
+            <div class="swiper-slide" id="slide-secundario">
+                <div class="post-individual3">
+                    <img class="capa-jogo" src="/public/assets/banner.png" alt="Capa do post 3">
+                    <h3><span style="color: #000000;">Nome Do Jogo</span></h3>
+                    <div class="nota">
+                        <span style="color: #FFC739;"> ★★★★☆</span> <span style="color: #080B3C;">4,0</span>
+                    </div>
+                    <p class="autor"> <img src="/public/assets/usuario.png" alt="usuario"> <span style="color: #0B0B0B;">NomeDeUsuário</span></p>
+                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante. 
+                        Nam fringilla ipsum vitae tempus euismod. In hac habitasse platea dictumst... </p>
+                    <button class="botao-veja-mais">Veja mais</button>
+                </div>
+            </div>
         </div>
-     
+        <!-- Botões de navegação fora da wrapper -->
+        <div class="swiper-button-prev" id="segundo-prev"></div>
+        <div class="swiper-button-next" id="segundo-next"></div>
+    </div>  
+        
         </section>
             <div class="sobre-playstroll">
                 <p class="proposito">Sobre o próposito da PlayStroll</p>
@@ -88,5 +140,10 @@
                 </div>
             </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/public/js/landing-page.js"></script>
+
 </body>
 </html>

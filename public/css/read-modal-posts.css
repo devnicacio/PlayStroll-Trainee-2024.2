@@ -59,7 +59,8 @@ tbody {
     z-index: 3;
     overflow: hidden;
     overflow-x: hidden;
-    overflow-y: hidden;}
+    overflow-y: hidden;
+}
 .modal-header{
     display: flex;
     justify-content: center;

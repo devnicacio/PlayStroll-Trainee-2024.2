@@ -4,6 +4,16 @@ body{
     background: linear-gradient(to right, rgba(213, 214, 227, 1.0), rgba(0, 174, 160, 0.5));
 }
 
+.tela{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display:none;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 2;
+}
+
 .container{
     width: 100%;
     height: 100vh;
@@ -23,8 +33,8 @@ body{
 }
 
 .visualisar{
-    width: 25%;
-    height: 700px;
+    width: 400px;
+    height: 650px;
     border-radius: 20px;
     background-color: #237ecd;
     display: flex;
@@ -44,31 +54,32 @@ body{
 
 .caixa{
     width: 90%;
-    height: 600px;
+    height: 550px;
     border-radius: 20px;
     margin-bottom: 20px;
     background-color: #0b0b3c;
     display: flex;
     flex-direction: column;
+    z-index: 3;
 }
 
 .imagem{
     width: 100%;
-    height: 170px;
+    height: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .imagem img{
-    width: 150px;
-    height: 150px;
-    border-radius: 150px;
+    width: 140px;
+    height: 140px;
+    border-radius: 140px;
 }
 
 .id{
     width: 100%;
-    height: 90px;
+    height: 80px;
 }
 
 .tit{
@@ -113,12 +124,39 @@ body{
 }
 
 .botsair{
-    width: 80%;
-    height: 100px;
-    border-radius: 40px;
+    width: 40%;
+    height: 40px;
     background-color: #c70e3c;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 50px;
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 769px)
+{
+    .tela{
+        height: 120%;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .visualisar{
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 380px)
+{
+    .visualisar{
+        width: 320px;
+    }
+}
+
+@media only screen and (max-width: 360px)
+{
+    .visualisar{
+        width: 300px;
+    }
 }

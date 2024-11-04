@@ -83,6 +83,7 @@ h1 {
 .capa, .retrato {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .imagens {
@@ -90,7 +91,27 @@ h1 {
     max-width: 500px;
     width: 100%;
     justify-content: space-around;
-    padding: 30px 0px;
+    padding: 20px 0px;
+}
+
+.capa-preview {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0px;
+    display: none; 
+}
+
+.retrato-preview {
+    width: 75px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0px;
+    display: none; 
 }
 
 .image-capa, .image-retrato {
@@ -107,19 +128,20 @@ h1 {
     justify-content: space-between;
     max-width: 458px;
     width: 100%;
+    margin-bottom: 10px;
     text-align: start;
 }
 
 .parte-titulo {
     display: flex;
     flex-direction: column;
-    width: 55%;
+    width: 43%;
 }
 
 .parte-avaliacao {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 41%;
 }
 
 .avaliacao {
@@ -147,8 +169,7 @@ h1 {
 }
 
 .modal-buttons {
-    
-    margin: 20px;    
+    margin-bottom: 10px;    
 }
 
 .button-cancelar, .button-postar {

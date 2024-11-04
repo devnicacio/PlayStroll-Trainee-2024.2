@@ -200,3 +200,8 @@ h1 {
     display: none;
     z-index: 2;
 }
+
+.note-modal-backdrop {
+    z-index: 5;
+    position: relative;
+}

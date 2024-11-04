@@ -94,8 +94,18 @@ h1 {
     padding: 20px 0px;
 }
 
-.image-preview {
-    width: 100px;
+.capa-preview {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0px;
+    display: none; 
+}
+
+.retrato-preview {
+    width: 75px;
     height: 100px;
     object-fit: cover;
     border: 2px solid #ddd;

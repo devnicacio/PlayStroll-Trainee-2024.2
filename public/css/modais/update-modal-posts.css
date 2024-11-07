@@ -1,11 +1,2 @@
-.modalu{
-    background-color: rgb(var(--cyan));
-    width: 50%;
-    height: 80%;
-    border-radius: 10px;
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    color: rgb(var(--white));
-    z-index: 3;
-}
+@import "base-modal.css";
+

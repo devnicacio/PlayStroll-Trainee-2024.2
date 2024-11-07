@@ -41,8 +41,8 @@
                     <td class="titulo-post">Exemplo de Post 1</td>
                     <td class="autor-post">Nome</td>
                     <td>25/10/2024</td>
-                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('visualizar')"><i class="fa-regular fa-eye"></i></button></td>
-                    <td><button class="btn-acao btn-editar" onclick="abrirModal('editar')"><i class="fas fa-edit"></i></button></td>
+                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
+                    <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
                     <td><button class="btn-acao btn-excluir"><i class="fas fa-trash"></i></button></td>
                 </tr>
                 <tr>
@@ -50,8 +50,8 @@
                     <td class="titulo-post">Exemplo de Post 2</td>
                     <td class="autor-post">Nome</td>
                     <td>26/10/2024</td>
-                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('visualizar')"><i class="fa-regular fa-eye"></i></button></td>
-                    <td><button class="btn-acao btn-editar" onclick="abrirModal('editar')"><i class="fas fa-edit"></i></button></td>
+                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
+                    <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
                     <td><button class="btn-acao btn-excluir"><i class="fas fa-trash"></i></button></td>
                 </tr>
                 <tr>
@@ -59,8 +59,8 @@
                     <td class="titulo-post">Exemplo de Post 3</td>
                     <td class="autor-post">Nome</td>
                     <td>27/10/2024</td>
-                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('visualizar')"><i class="fa-regular fa-eye"></i></button></td>
-                    <td><button class="btn-acao btn-editar" onclick="abrirModal('editar')"><i class="fas fa-edit"></i></button></td>
+                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
+                    <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
                     <td><button class="btn-acao btn-excluir"><i class="fas fa-trash"></i></button></td>
                 </tr>
                 <tr>
@@ -68,8 +68,8 @@
                     <td class="titulo-post">Exemplo de Post 4</td>
                     <td class="autor-post">Nome</td>
                     <td>28/10/2024</td>
-                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('visualizar')"><i class="fa-regular fa-eye"></i></button></td>
-                    <td><button class="btn-acao btn-editar" onclick="abrirModal('editar')"><i class="fas fa-edit"></i></button></td>
+                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
+                    <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
                     <td><button class="btn-acao btn-excluir"><i class="fas fa-trash"></i></button></td>
                 </tr>
                 <tr>
@@ -77,8 +77,8 @@
                     <td class="titulo-post">Exemplo de Post 5</td>
                     <td class="autor-post">Nome</td>
                     <td>29/10/2024</td>
-                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('visualizar')"><i class="fa-regular fa-eye"></i></button></td>
-                    <td><button class="btn-acao btn-editar" onclick="abrirModal('editar')"><i class="fas fa-edit"></i></button></td>
+                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
+                    <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
                     <td><button class="btn-acao btn-excluir"><i class="fas fa-trash"></i></button></td>
                 </tr>
             </tbody>

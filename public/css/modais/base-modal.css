@@ -1,0 +1,25 @@
+.modal{
+    background-color: rgb(var(--cyan));
+    color: rgb(var(--white));
+    width: 50%;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+    z-index: 3;
+}
+.modal--header{
+    display: flex;
+    justify-content: center;
+}
+
+.modal--header h3{
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 2rem;
+}

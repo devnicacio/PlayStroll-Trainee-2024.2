@@ -31,8 +31,8 @@ body {
 .modalc {
     background-color: #237ecd;
     color: white;
+    height: auto;
     width: 50%;
-    height: 95%;
     border-radius: 10px;
     padding: 10px;
     display: none;
@@ -121,6 +121,21 @@ h1 {
     
 }
 
+#btn-remover-imagem-capa, #btn-remover-imagem-retrato {
+    padding: 10px;
+    background-color: #C70E3C; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: none; 
+  }
+
+  #btn-remover-imagem-capa:hover, #btn-remover-imagem-retrato:hover {
+    background-color: #a6072e;
+  }
+
 
 .placeholders {
     display: flex;
@@ -185,8 +200,16 @@ h1 {
     background-color: #c70e3c;
 }
 
+.button-cancelar:hover {
+    background-color: #a6072e;
+}
+
 .button-postar {
     background-color: #237ecd;
+}
+
+.button-postar:hover {
+    background-color: #1b5fa7;
 }
 
 .tela {

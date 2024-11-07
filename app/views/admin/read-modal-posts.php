@@ -1,9 +1,9 @@
-<div class="modalr" id="visualizar">
-    <div class="modal-header">
+<div class="modal" id="modalVisualizar">
+    <div class="modal--header">
         <h3>Visualizar o post</h3>
     </div>
-    <div class="modal-container">
-        <div id="modalPost--container--header"> 
+    <div class="modal--container">
+        <div id="modal--container--header"> 
             <div id="modalPost--user">
                 <img src="/public/assets/avatar.jfif" alt="Avatar do user">
                 <span>Aang</span>
@@ -24,7 +24,7 @@
                 <figcaption>Foto de retrato</figcaption>
             </figure>
         </div>
-        <form action="#" method="get">
+        <form action="#" method="GET">
             <label for="">Título: </label>
             <input type="text" name="tituloPost" id="tituloPost">
             <label for="conteudoPost">Conteúdo</label>
@@ -35,6 +35,4 @@
             <button class="button-modals button-calcelar" onclick="fecharModal('visualizar')">Cancelar</button>
         </div>
     </div>
-</div>
-<div class="tela"></div>
 </div>

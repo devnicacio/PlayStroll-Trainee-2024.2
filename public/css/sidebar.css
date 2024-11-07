@@ -119,7 +119,7 @@ body{
 }
 #sideBar.open-sideBar .infos--itemDescription{
     width: 150px;
-    height: auto;
+    height: 18px;
 }
 #sideBar.open-sideBar .sideItems--sideItem a{
     justify-content: flex-start;

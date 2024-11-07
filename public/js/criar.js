@@ -11,8 +11,10 @@ const fecharModal = idModal => {
     tela.style.display = "none";
 }
 
-function previewImage(inputId, imgId) {
+function previewImage(inputId, imgId, tipo) {
     const input = document.getElementById(inputId);
+    const btnRemoverImagemCapa = document.getElementById('btn-remover-imagem-capa');
+    const btnRemoverImagemRetrato = document.getElementById('btn-remover-imagem-retrato');
     const imagePreview = document.getElementById(imgId);
 
     if (input.files && input.files[0]) {
@@ -21,10 +23,38 @@ function previewImage(inputId, imgId) {
         reader.onload = function(e) {
             imagePreview.src = e.target.result; 
             imagePreview.style.display = 'block'; 
-            };
+            if (tipo === 'capa') {
+                btnRemoverImagemCapa.style.display = 'block';
+            } else if (tipo === 'retrato') {
+                btnRemoverImagemRetrato.style.display = 'block';
+            } 
+        };
         reader.readAsDataURL(input.files[0]); 
     }
 }
+
+// Função para remover a imagem de perfil
+function removerImagem(tipo) {
+    if (tipo === 'capa') {
+        const imgPerfilCapa = document.getElementById('file-name-capa');
+        const inputFotoCapa = document.getElementById('file-capa');
+        const btnRemoverImagemCapa = document.getElementById('btn-remover-imagem-capa');
+
+        imgPerfilCapa.src = '';
+        imgPerfilCapa.style.display = 'none';
+        inputFotoCapa.value = '';
+        btnRemoverImagemCapa.style.display = 'none';
+    } else if (tipo === 'retrato') {
+        const imgPerfilRetrato = document.getElementById('file-name-retrato');
+        const inputFotoRetrato = document.getElementById('file-retrato');
+        const btnRemoverImagemRetrato = document.getElementById('btn-remover-imagem-retrato');
+
+        imgPerfilRetrato.src = '';
+        imgPerfilRetrato.style.display = 'none';
+        inputFotoRetrato.value = '';
+        btnRemoverImagemRetrato.style.display = 'none';
+    }
+} 
 
 function updateFileName() {
     const input = document.getElementById('file');

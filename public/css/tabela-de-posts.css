@@ -117,7 +117,18 @@ tbody {
 .btn-excluir {
     background-color: #C70E3C; 
 }
-
+.tela{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(var(--black));
+    opacity: 0.5;
+    z-index: 2;
+    transition: opacity 0.5s;
+}
 .navegacao {
     max-width: 850px;
     width: 100%;
@@ -131,6 +142,8 @@ tbody {
 .navegacao .nav2 {
     background-color: #080B3C;
 }
+
+
 
 @media (max-width: 1024px) {
 

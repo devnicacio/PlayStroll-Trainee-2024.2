@@ -1,7 +1,8 @@
 .modal{
     background-color: rgb(var(--cyan));
     color: rgb(var(--white));
-    width: 50%;
+    width: 50vw;
+    height: 95vh;
     border-radius: 10px;
     display: none;
     flex-direction: column;
@@ -10,16 +11,45 @@
     left: 50%;
     padding: 10px;
     transform: translate(-50%, -50%);
-    overflow-y: scroll;
     z-index: 3;
 }
 .modal--header{
     display: flex;
     justify-content: center;
 }
-
 .modal--header h3{
     text-align: center;
-    margin: 20px 0 10px 0;
+    margin: 20px 0;
     font-size: 2rem;
+    justify-content: center;
+}
+.buttonModal{
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    color: rgb(var(--white));
+    cursor: pointer;
+}
+.buttonModal__cancelar{
+    background-color: rgb(var(--red));
+}
+.modal ::-webkit-scrollbar{
+    width: 10px;
+    margin-right: 5px;
+    background-color: transparent;
+}
+.modal ::-webkit-scrollbar-track{
+    border-radius: 40px;
+}
+.modal ::-webkit-scrollbar-thumb{
+    background-color: rgba(var(--cyan), 0.5);
+    border-radius: 40px;
+}
+.note-editor, .note-frame {
+    max-width: 500px;
+    width: 100%;
+}
+
+.note-editing-area {
+    background-color: rgb(var(--white));
 }

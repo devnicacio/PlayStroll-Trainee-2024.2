@@ -8,6 +8,13 @@
     <!-- Favicon -->
     
     <!-- Third-party CSS -->
+    <!-- SummerNote -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.js"></script>
+    <!-- Google Fonts -->
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Personal CSS-->
@@ -15,8 +22,16 @@
 
     <!-- JS -->
     <script defer src="/public/js/modals.js"></script>
+   
 </head>
 <body>
+    <!-- Padronização dos seletores de CSS feita pelo Vítor:
+    Classe: serão usadas, se forem reutilizadas em outros lugares obrigatoriamente. 
+    Usarei, quando quero padronizar algo;
+    id: serão usadas em elementos únicos.
+    Ademais, usei a metodologia BEM(Block, Element, Modifier). Os elementos são identificados com --, e
+    os modificadores por __.
+    -->
     <main class="container">
         <div class="cabecalho">
                 <h1 class="titulo">Tabela de Posts</h1>
@@ -88,6 +103,7 @@
             require_once "read-modal-posts.php";
             require_once "update-modal-posts.php";
         ?>
+        <div class="tela"></div>
         <!-- Paginação -->
         <div class="navegacao">
             <button class="nav1">&lt;</button>
@@ -100,4 +116,19 @@
         </div>
     </div>
 </body>
+    <script>
+        $(".summernote").summernote('disable',{
+			tabsize: 2,
+			height: 120,
+			lang: "pt-BR",
+			toolbar: [
+				["style", ["style"]],
+				["font", ["bold", "underline"]],
+				["color", ["color"]],
+				["para", ["ul", "ol", "paragraph"]],
+				["table", ["table"]],
+				["insert", ["link", "picture"]],
+			],
+		});
+    </script>
 </html>

@@ -38,21 +38,17 @@ function removerImagem(tipo) {
     if (tipo === 'capa') {
         const imgPerfilCapa = document.getElementById('file-name-capa');
         const inputFotoCapa = document.getElementById('file-capa');
-        const btnRemoverImagemCapa = document.getElementById('btn-remover-imagem-capa');
 
         imgPerfilCapa.src = '';
         imgPerfilCapa.style.display = 'none';
         inputFotoCapa.value = '';
-        btnRemoverImagemCapa.style.display = 'none';
     } else if (tipo === 'retrato') {
         const imgPerfilRetrato = document.getElementById('file-name-retrato');
         const inputFotoRetrato = document.getElementById('file-retrato');
-        const btnRemoverImagemRetrato = document.getElementById('btn-remover-imagem-retrato');
 
         imgPerfilRetrato.src = '';
         imgPerfilRetrato.style.display = 'none';
         inputFotoRetrato.value = '';
-        btnRemoverImagemRetrato.style.display = 'none';
     }
 } 
 

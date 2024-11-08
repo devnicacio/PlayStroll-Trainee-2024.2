@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Satoshi', sans-serif;
+    box-sizing: border-box;
 }
 
 .container {
@@ -31,6 +32,7 @@ body {
 .modalc {
     background-color: #237ecd;
     color: white;
+    max-height: 455px;
     height: auto;
     width: 50%;
     border-radius: 10px;
@@ -53,12 +55,14 @@ h1 {
 .modal-container {
     background-color: #080b3c;
     width: 100%;
-    height: 100%;
+    max-height: 402px;
+    overflow-y: auto;
+    height: auto;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
+    row-gap: 20px;  
 }
 
 .custom-file-label {
@@ -81,22 +85,28 @@ h1 {
 }
 
 .capa, .retrato {
-    display: flex;
-    flex-direction: column;
+    display: flex;    
     align-items: center;
+    flex-direction: column;
+}
+
+.label-container {
+    display: flex;
+    flex-direction: column;    
 }
 
 .imagens {
     display: flex;
+    justify-content: space-around;    
+    align-items: center;    
     max-width: 500px;
-    width: 100%;
-    justify-content: space-around;
-    padding: 15px 0px;
+    width: 100%;    
+    padding-top: 18px;
 }
 
-.capa-preview {
-    width: 150px;
-    height: 100px;
+.capa-preview {    
+    width: 140px;
+    height: 90px;
     object-fit: cover;
     border: 2px solid #ddd;
     border-radius: 5px;
@@ -184,7 +194,10 @@ h1 {
 }
 
 .modal-buttons {
-    margin-bottom: 10px;    
+    margin: 8px 0 16px 0;   
+    display: flex;
+    justify-content: center;
+    column-gap: 12px;
 }
 
 .button-cancelar, .button-postar {
@@ -229,24 +242,16 @@ h1 {
     position: relative;
 }
 
-@media (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     .modalc {
-        width: 40%;
+        width: 70%;
         overflow-y: scroll;
     }
 
     h1 {
         font-size: 20px;
         padding-bottom: 5px;
-    }
-
-    label {
-        font-size: 12px;
-    }
-
-    .imagens {
-        padding: 0;
-    }
+    }      
 
     .capa-preview {
         width: 125px;
@@ -268,21 +273,21 @@ h1 {
     }
 
     .placeholders {
-        flex-direction: column; 
-        align-items: flex-start;
-        justify-content: flex-start;
-        width: 74%;
-        margin-bottom: 10px;
+        flex-direction: column;        
+        align-items: flex-start;          
+        margin-bottom: 16px;
+        row-gap: 8px;
+        padding-left: 20%;
     }
 
     .parte-avaliacao {
-        width: 97%; 
-        margin-bottom: 10px;
+        width: 60%; 
+        margin-bottom: 0 auto;
     }
 
     .parte-titulo {
-        width: 100%;
-        margin-bottom: 5px;
+        width: 62%;
+        margin-bottom: 0 auto;
     }
 
     .diminuir-word {
@@ -291,30 +296,28 @@ h1 {
     }
 
     .note-editor, .note-frame {
-        max-width: 80%; 
-    }
+        max-width: 90%; 
+    }    
 
-    .modal-buttons {
-        display: flex;
-        align-items: center; 
-    }
-
-    .button-cancelar, .button-postar {
-        width: 100%; 
+    .button-cancelar, .button-postar {        
         margin-left: 10px;
         margin-right: 10px;
     }
 }
 
 @media (max-width: 767px) {
-    .modalc {
-        max-height: 80%;
-        height: 100%;
+    .modalc {        
+        width: 86%;
     }
 
     h1 {
         font-size: 16px;
         padding-bottom: 5px;
+    }
+
+    .imagens {
+        justify-content: center;
+        column-gap: 8px;
     }
 
     .modal-container {
@@ -324,17 +327,15 @@ h1 {
     }
 
     label {
-        font-size: 10px;
-    }
-    
-    .imagens {
-        padding: 0;
-        display: flex;
-        flex-direction: column;
+        font-size: 12px;
     }
 
+    #btn-remover-imagem-capa, #btn-remover-imagem-retrato {
+        font-size: 12px;    
+    }   
+
     .titulo, .avaliacao {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .capa-preview {
@@ -359,7 +360,7 @@ h1 {
     .placeholders {
         flex-direction: column; 
         align-items: flex-start;
-        justify-content: flex-start;
+        
         width: 74%;
         margin-bottom: 10px;
     }
@@ -376,11 +377,10 @@ h1 {
 
     .diminuir-word {
         display: flex;
-        justify-content: center;
+        justify-content: center;        
     }
 
     .note-editor, .note-frame {
-        max-width: 80%; 
         font-size: 10px; 
     }
 
@@ -398,8 +398,7 @@ h1 {
     }
 
     .modal-buttons {
-        display: flex;
-        flex-direction: column-reverse;
+        display: flex;        
     }
 
     .button-cancelar, .button-postar {

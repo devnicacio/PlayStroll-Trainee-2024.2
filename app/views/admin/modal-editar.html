@@ -15,12 +15,16 @@
         <div class="fundo" id="cx">
             <p class="textin">EDITAR USUÁRIO</p>
             <div class="edit">
-                <div class="imagem">
-                    <img src="/app/views/admin/arquivos/perfil.jpg">
-                    <div class="editimg">TROCAR IMAGEM</div>
+                <div class="adiciona" id="add">
+                    <button class="addimg" onclick="adicionaImagem('add', 'img', 'remove'), document.getElementById('inputimage').click()">ADICIONAR IMAGEM</button>
                 </div>
-                <div class="remove">
-                    <div class="botremove"><p>REMOVER IMAGEM</p></div>
+                <div class="imagem" id="img">
+                    <img id="imagemIni" src="/app/views/admin/arquivos/perfil.jpg">
+                    <input type="file" id="inputimage" accept="image/*">
+                    <button class="editimg" onclick="document.getElementById('inputimage').click()">TROCAR IMAGEM</button>
+                </div>
+                <div class="remove" id="remove">
+                    <div class="botremove" onclick="removerImagem('img', 'remove', 'add')"><p>REMOVER IMAGEM</p></div>
                 </div>
                 <div class="editname">
                     <p>Username</p>
@@ -32,19 +36,22 @@
                 </div>
                 <div class="editname">
                     <p>Senha</p>
-                    <input type="text" value="coutinho123" >
+                    <div class="senha">
+                        <input type="password" value="coutinho123" id="senha" >
+                        <i class="bi bi-eye" id="mostrar" onclick="mostrarSenha()"></i>
+                    </div>
                 </div>
                 <div class="confirma">
-                    <div class="conf">
-                        <div class="boty" onclick="editar2('cx', 'bt')">CONFIRMAR</div>
-                    </div>
                     <div class="exclui">
                         <div class="botn" onclick="editar2('cx', 'bt')">CANCELAR</div>
+                    </div>
+                    <div class="conf">
+                        <div class="boty" onclick="editar2('cx', 'bt')">CONFIRMAR</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-<script src="/public/js/modal.editar.js"></script>
+<script src="../../../public/js/modal-editar.js"></script>
 </html>

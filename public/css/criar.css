@@ -160,18 +160,19 @@ h1 {
 .parte-titulo {
     display: flex;
     flex-direction: column;
-    width: 43%;
+    width: 63%;
 }
 
 .parte-avaliacao {
     display: flex;
     flex-direction: column;
-    width: 41%;
+    width: 21%;
 }
 
 .avaliacao {
     width: 100%;
     outline: none;
+    box-sizing: border-box;
 }
 
 .titulo {
@@ -187,6 +188,8 @@ h1 {
 .note-editor, .note-frame {
     max-width: 500px;
     width: 100%;
+    max-height: 190px;
+    height: 100%;
 }
 
 .note-editing-area {
@@ -210,11 +213,11 @@ h1 {
 }
 
 .button-cancelar {
-    background-color: #c70e3c;
+    background-color: #646464;
 }
 
 .button-cancelar:hover {
-    background-color: #a6072e;
+    background-color: #4d4c4c;
 }
 
 .button-postar {

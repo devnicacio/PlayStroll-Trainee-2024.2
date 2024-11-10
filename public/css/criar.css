@@ -87,7 +87,7 @@ h1 {
 .capa, .retrato {
     display: flex;    
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .label-container {
@@ -97,11 +97,16 @@ h1 {
 
 .imagens {
     display: flex;
-    justify-content: space-around;    
-    align-items: center;    
-    max-width: 500px;
+    justify-content: space-around;  
+    flex-direction: column;  
+    max-width: 457px;
     width: 100%;    
     padding-top: 18px;
+}
+
+.container-image {
+    display: flex;
+    flex-direction: column;
 }
 
 .capa-preview {    
@@ -109,7 +114,6 @@ h1 {
     height: 90px;
     object-fit: cover;
     border: 2px solid #ddd;
-    border-radius: 5px;
     margin: 10px 0px;
     display: none; 
 }
@@ -119,7 +123,6 @@ h1 {
     height: 100px;
     object-fit: cover;
     border: 2px solid #ddd;
-    border-radius: 5px;
     margin: 10px 0px;
     display: none; 
 }
@@ -181,7 +184,7 @@ h1 {
     width: 97%;
 }
 
-.diminuir-modal {
+.diminuir-word {
     width: 100%;
 }
 
@@ -194,6 +197,7 @@ h1 {
 
 .note-editing-area {
     background-color: white;
+    padding-bottom: 20px;
 }
 
 .modal-buttons {

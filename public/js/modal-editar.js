@@ -37,16 +37,16 @@ function trocarImagem(event){
 
 document.getElementById("inputimage").addEventListener("change", trocarImagem);
 
-function removerImagem(id5, id6, id7){
+function removerImagem(id5, id6, id7, outroID){
     const imagem = document.getElementById("imagemIni");
     imagem.src="";
     document.getElementById(id5).style.display = "none";
     document.getElementById(id6).style.display = "none";
     document.getElementById(id7).style.display = "flex";
+    document.getElementById(outroID).style.transform = "translateY(-40px)";
 }
 
-function adicionaImagem(id8, id9, maisID){
-    document.getElementById(id8).style.display = "none";
+function adicionaImagem(id8, id9){
+    document.getElementById(id8).style.display = "flex";
     document.getElementById(id9).style.display = "flex";
-    document.getElementById(maisID).style.display = "flex";
 }

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Editar</title>
     <link rel="stylesheet" href="/public/css/modal-editar.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
@@ -15,16 +16,13 @@
         <div class="fundo" id="cx">
             <p class="textin">EDITAR USUÁRIO</p>
             <div class="edit">
-                <div class="adiciona" id="add">
-                    <button class="addimg" onclick="adicionaImagem('add', 'img', 'remove'), document.getElementById('inputimage').click()">ADICIONAR IMAGEM</button>
-                </div>
                 <div class="imagem" id="img">
                     <img id="imagemIni" src="/app/views/admin/arquivos/perfil.jpg">
                     <input type="file" id="inputimage" accept="image/*">
-                    <button class="editimg" onclick="document.getElementById('inputimage').click()">TROCAR IMAGEM</button>
                 </div>
+                <button class="editimg" id="eimg" onclick="document.getElementById('inputimage').click(), adicionaImagem('img', 'remove')">ESCOLHER ARQUIVO</button>
                 <div class="remove" id="remove">
-                    <div class="botremove" onclick="removerImagem('img', 'remove', 'add')"><p>REMOVER IMAGEM</p></div>
+                    <div class="botremove" onclick="removerImagem('img', 'remove', 'add', 'eimg')"><p>REMOVER IMAGEM</p></div>
                 </div>
                 <div class="editname">
                     <p>Username</p>
@@ -32,7 +30,7 @@
                 </div>
                 <div class="editname">
                     <p>e-mail</p>
-                    <input type="text" value="coutinho_VASCOOO@gmail.com">
+                    <input type="email" value="coutinho_VASCOOO@gmail.com">
                 </div>
                 <div class="editname">
                     <p>Senha</p>

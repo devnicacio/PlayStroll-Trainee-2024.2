@@ -5,6 +5,10 @@ body {
     box-sizing: border-box;
 }
 
+button {
+    font-family: 'Satoshi', sans-serif; 
+}
+
 .container {
     height: 100vh;
     background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
@@ -70,7 +74,7 @@ h1 {
     background-color: #237ecd;
     color: white;
     padding: 10px 15px;
-    margin: 5px;
+    margin: 5px 5px 15px 0;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
@@ -90,6 +94,16 @@ h1 {
     flex-direction: row;
 }
 
+.capa {
+    column-gap: 65px;
+
+}
+
+.retrato {
+    column-gap: 100px;
+
+}
+
 .label-container {
     display: flex;
     flex-direction: column;    
@@ -99,7 +113,7 @@ h1 {
     display: flex;
     justify-content: space-around;  
     flex-direction: column;  
-    max-width: 457px;
+    max-width: 458px;
     width: 100%;    
     padding-top: 18px;
 }
@@ -127,22 +141,33 @@ h1 {
     display: none; 
 }
 
+.parte-retrato, .parte-capa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
 .image-capa, .image-retrato {
     max-width: 60%;
     width: 100%;
     display: none;
-    
 }
 
 #btn-remover-imagem-capa, #btn-remover-imagem-retrato {
-    padding: 10px;
     background-color: #C70E3C; 
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    border-radius: 50%;
     display: none; 
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: -35px;
   }
 
   #btn-remover-imagem-capa:hover, #btn-remover-imagem-retrato:hover {
@@ -152,12 +177,28 @@ h1 {
 
 .placeholders {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     max-width: 458px;
     width: 100%;
     margin-bottom: 10px;
     text-align: start;
+    row-gap: 10px;
+}
+
+.parte-data {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+}
+
+.data {
+    outline: none;
+    width: 100%;
+}
+
+.second-line {
+    display: flex;
+    justify-content: space-between;
 }
 
 .parte-titulo {

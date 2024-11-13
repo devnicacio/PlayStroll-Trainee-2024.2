@@ -28,37 +28,46 @@
 							<label for="file">Foto modo paisagem</label>
 							<label class="custom-file-label" for="file-capa">Escolha uma imagem</label>
 						</div>
-						<input type="file" class="image-capa" id="file-capa"
-						onchange="previewImage('file-capa', 'file-name-capa', 'capa')" />
-						<button id="btn-remover-imagem-capa" style="display: flex" onclick="removerImagem('capa')">
-							Remover imagem
-						</button>
-						<img id="file-name-capa" class="capa-preview" alt="Preview da Capa" />
+						<div class="parte-capa">
+							<img id="file-name-capa" class="capa-preview" alt="Preview da Capa" />
+							<input type="file" class="image-capa" id="file-capa"
+							onchange="previewImage('file-capa', 'file-name-capa', 'capa')" />
+							<button id="btn-remover-imagem-capa" style="display: flex" onclick="removerImagem('capa')">
+								X
+							</button>
+						</div>
 					</div>
 					<div class="retrato">
 						<div class="container-image">
 							<label for="file">Foto modo retrato</label>
 							<label class="custom-file-label" for="file-retrato">Escolha uma imagem</label>
 						</div>
-						<input type="file" class="image-retrato" id="file-retrato"
-						onchange="previewImage('file-retrato', 'file-name-retrato', 'retrato')" />
-						<button id="btn-remover-imagem-retrato" style="display: flex"
-						onclick="removerImagem('retrato')">
-						Remover imagem
-						</button>
-						<img id="file-name-retrato" class="retrato-preview" alt="Preview do Retrato" />
+						<div class="parte-retrato">
+							<img id="file-name-retrato" class="retrato-preview" alt="Preview do Retrato" />
+							<input type="file" class="image-retrato" id="file-retrato"
+							onchange="previewImage('file-retrato', 'file-name-retrato', 'retrato')" />
+							<button id="btn-remover-imagem-retrato" style="display: flex" onclick="removerImagem('retrato')">
+								X
+							</button>
+						</div>
 					</div>
 				</div>
 				<div>
 					<div class="placeholders">
-						<div class="parte-titulo">
-							<label for="text">Título</label>
-							<input type="text" class="titulo" placeholder="Coloque seu título" />
+						<div class="parte-data">
+							<label for="date">Data</label>
+							<input type="date" class="data" >
 						</div>
-						<div class="parte-avaliacao">
-							<label for="number">Avaliação</label>
-							<input type="number" class="avaliacao" step="0.5" min="0" max="5"
+						<div class="second-line">
+							<div class="parte-titulo">
+								<label for="text">Título</label>
+								<input type="text" class="titulo" placeholder="Coloque seu título" />
+							</div>
+							<div class="parte-avaliacao">
+								<label for="number">Avaliação</label>
+								<input type="number" class="avaliacao" step="0.5" min="0" max="5"
 								placeholder="Nota de 0 a 5" />
+							</div>
 						</div>
 					</div>
 					<div class="diminuir-word">

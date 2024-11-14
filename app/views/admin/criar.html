@@ -56,30 +56,31 @@
 					<div class="placeholders">
 						<div class="parte-data">
 							<label for="date">Data</label>
-							<input type="date" class="data" >
+							<input type="date" id="data" class="data" >
 							<span id="erro-data" class="erro"></span>
 						</div>
 						<div class="second-line">
 							<div class="parte-titulo">
 								<label for="text">Título</label>
-								<input type="text" class="titulo" placeholder="Coloque seu título" />
+								<input type="text" id="titulo" class="titulo" placeholder="Coloque seu título" />
 								<span id="erro-titulo" class="erro"></span>
 							</div>
 							<div class="parte-avaliacao">
 								<label for="number">Avaliação</label>
-								<input type="number" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota de 0 a 5" />
+								<input type="number"  id="avaliacao" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota de 0 a 5" />
 								<span id="erro-avaliacao" class="erro"></span>
 							</div>
 						</div>
 					</div>
 					<div class="diminuir-word">
 						<div id="summernote"></div>
+						<span id="erro-descricao" class="erro"></span>
 					</div>
 					<div class="modal-buttons">
-						<button class="button-cancelar" onclick="fecharModal('editar')">
+						<button id="btn-cancelar" class="button-cancelar" onclick="fecharModal('editar')">
 							Cancelar
 						</button>
-						<button class="button-postar">Criar</button>
+						<button id="btn-criar" class="button-postar">Criar</button>
 					</div>
 				</div>
 			</div>

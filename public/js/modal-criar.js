@@ -71,21 +71,6 @@ document.getElementById('btn-adicionar').onclick = function() {
 
     // Se a validação for bem-sucedida
     if (valid) {
-        const tbody = document.getElementById('usuarios-tbody');
-        const newRow = tbody.insertRow();
-
-        // Verifica se uma imagem de perfil foi fornecida
-        const imgHtml = imgPerfil ? 
-            `<img src="${imgPerfil}" class="imagem-perfil" alt="Imagem de Perfil" />` : 
-            `<div class="texto-placeholder">Imagem de perfil (somente PNG ou JPG)</div>`;
-
-        newRow.innerHTML = `
-            <td>${tbody.rows.length}</td>
-            <td>${nome}</td>
-            <td>${email}</td>
-            <td>${imgHtml}</td>
-        `;
-
         // Limpa os campos após adicionar
         document.getElementById('nome').value = '';
         document.getElementById('email').value = '';
@@ -93,9 +78,10 @@ document.getElementById('btn-adicionar').onclick = function() {
         document.getElementById('confirmar-senha').value = '';
         document.getElementById('foto').value = '';
         document.getElementById('img-perfil').src = '';
-        document.getElementById('btn-remover-imagem').style.display = 'none'; 
         document.getElementById('img-perfil').style.display = 'none'; 
-        fecharModal(); // Fecha o modal após adicionar o usuário
+        
+        // Fecha o modal após adicionar o usuário
+        fecharModal(); 
     }
 };
 
@@ -129,7 +115,3 @@ function removerImagem() {
 
 // Adiciona evento ao ícone "X" para remover a imagem
 document.getElementById('remover-imagem').onclick = removerImagem;
-
-
-// Adiciona evento ao botão "Remover Imagem"
-document.getElementById('btn-remover-imagem').onclick = removerImagem;

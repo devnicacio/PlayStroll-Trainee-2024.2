@@ -60,7 +60,7 @@ tbody {
 .modalc {
     background-color: #c70e3c;
     color: white;
-    width: 26%;
+    width: 24%;
     border-radius: 10px;
     padding: 10px;
     display: none;
@@ -73,7 +73,7 @@ tbody {
     z-index: 3;
 }
 
-h3 {
+h4 {
     margin: 0;
     padding-bottom: 10px;
 }
@@ -86,25 +86,40 @@ h3 {
 }
 
 img  {
+    margin-top: 20px;
     width: 100%;
-    max-width: 200px;
-    height: auto;
+    max-width: 150px;
 }
 
 .modal-buttons {
     display: flex;
     justify-content:space-evenly;
-    margin-bottom: 20px;
+    padding-bottom: 10px;
 }
 
-.button-modal {
+.button-cancelar, .button-excluir {
     color: white;
     width: 100px;
-    background-color: #c70e3c;
     border: none;
     border-radius: 10px;
     padding: 11px;
     cursor: pointer;
+}
+
+.button-cancelar {
+    background-color: #646464;
+}
+
+.button-cancelar:hover {
+    background-color: #4d4c4c;
+}
+
+.button-excluir {
+    background-color: #c70e3c;
+}
+
+.button-excluir:hover {
+    background-color: #a6072e;
 }
 
 .button-modal:focus,
@@ -133,8 +148,7 @@ img  {
     }
 
     .modalc {
-        padding: 15px;
-        max-width: 260px;
+        max-width: 250px;
         width: 100%;
     }
 
@@ -148,9 +162,6 @@ img  {
         padding: 10px;
     }
 
-    h3 {
-        font-size: 16px;
-    }
 }
 
 @media (max-width: 767px) {
@@ -171,8 +182,8 @@ img  {
     }
 
     img {
-        max-width: 100px;
-        max-height: 100px;
+        max-width: 150px;
+        max-height: 150px;
     }
 
     .button-modal {
@@ -181,10 +192,6 @@ img  {
         padding: 6px;
         text-align: center;
         font-size: 12px;
-    }
-
-    h3 {
-        font-size: 14px;
     }
 
     .modal-buttons {

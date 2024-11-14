@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi', sans-serif !important;
   }
   
   .container {
@@ -73,14 +73,38 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
   
   .imagem-perfil {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; 
-    display: none; 
-  }
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: none;
+}
+
+.remover-imagem {
+  display: none; 
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: rgba(255, 0, 0, 0.7); 
+  color: white;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.foto-perfil:hover .remover-imagem {
+  display: block; 
+}
   
   .input-container {
     position: relative;
@@ -118,20 +142,24 @@ body {
     margin-top: 10px; 
   }
   
-  #btn-remover-imagem {
-    padding: 10px;
-    background-color: #C70E3C; 
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    display: none; 
-  }
-  
-  #btn-remover-imagem:hover {
-    background-color: #a6072e; 
-  }
+
+#btn-escolher-imagem {
+  width: 100%; 
+  padding: 10px; 
+  background-color: #237ECD; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; 
+  box-sizing: border-box; 
+  white-space: nowrap; 
+  margin-top: 10px; 
+}
+
+#btn-escolher-imagem:hover {
+  background-color: #1b5b92; 
+}
   
   #btn-adicionar {
     width: 48%; 
@@ -151,7 +179,7 @@ body {
   #btn-fechar {
     width: 48%; 
     padding: 10px; 
-    background-color: #C70E3C; 
+    background-color: #646464; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -160,8 +188,21 @@ body {
   }
   
   #btn-fechar:hover {
-    background-color: #a6072e; 
+    background-color: #4d4c4c; 
   }
+
+
+    .erro {
+      color: red;
+      font-size: 12px;
+      text-align: start; 
+      display: block; 
+      margin-left: 0; 
+      width: 100%; 
+  }
+  
+
+
   
   @media (max-width: 768px) {
     .modal-background {
@@ -192,8 +233,14 @@ body {
     }
   
     #btn-adicionar,
-    #btn-fechar,
-    #btn-remover-imagem {
+    #btn-fechar {
+      width: 100%;
+      margin-top: 10px;
+      padding: 15px;
+    }
+
+
+    #btn-escolher-imagem {
       width: 100%;
       margin-top: 10px;
       padding: 15px;

@@ -15,24 +15,32 @@
 
     <div class="modal" id="modal-criar-usuario">
         <div class="modal-background">
-            <h1>Novo Usuário</h1>
-            <div class="modal-container">
-                <div class="foto-perfil">
-                    <img id="img-perfil" class="imagem-perfil" alt="Imagem de Perfil" style="display: none;"/>
-                    <input type="file" id="foto" accept="image/png, image/jpeg" onchange="mostrarImagem(event)">
-                    <button id="btn-remover-imagem" style="display: none;" onclick="removerImagem()">Remover Imagem</button>
-                </div>
-                
+
+            <div class="modal-container"> 
                 <input type="text" id="nome" placeholder="Seu Nome">
+                <span id="erro-nome" class="erro"></span>
+                
                 <input type="email" id="email" placeholder="Seu Email">
+                <span id="erro-email" class="erro"></span>
+
                 <div class="input-container">
                     <input type="password" id="senha" placeholder="Coloque sua senha" />
+                    <span id="erro-senha" class="erro"></span>
                     <i class="bi bi-eye-slash" onclick="toggleSenha('senha')" id="senha-icon"></i>
                 </div>
                 <div class="input-container">
                     <input type="password" id="confirmar-senha" placeholder="Confirme sua senha" />
+                    <span id="erro-confirmar-senha" class="erro"></span>
                     <i class="bi bi-eye-slash" onclick="toggleSenha('confirmar-senha')" id="confirmar-senha-icon"></i>
                 </div>
+
+                <div class="foto-perfil">
+                    <img id="img-perfil" class="imagem-perfil" alt="Imagem de Perfil" style="display: none;" />
+                    <input type="file" id="foto" accept="image/png, image/jpeg" onchange="mostrarImagem(event)" style="display: none;">
+                    <span id="remover-imagem" class="remover-imagem">X</span> 
+                </div>
+                
+                    <label for="foto" id="btn-escolher-imagem">Escolher Imagem</label>
                 <div class="botao-container">
                     <button id="btn-fechar" onclick="fecharModal()">Fechar</button>
                     <button id="btn-adicionar">Adicionar Usuário</button>
@@ -40,7 +48,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
     <script src="/public/js/modal-criar.js"></script>
 </body>

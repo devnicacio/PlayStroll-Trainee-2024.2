@@ -23,11 +23,7 @@ function previewImage(inputId, imgId, tipo) {
         reader.onload = function(e) {
             imagePreview.src = e.target.result; 
             imagePreview.style.display = 'block'; 
-            if (tipo === 'capa') {
-                btnRemoverImagemCapa.style.display = 'block';
-            } else if (tipo === 'retrato') {
-                btnRemoverImagemRetrato.style.display = 'block';
-            } 
+            
         };
         reader.readAsDataURL(input.files[0]); 
     }
@@ -38,19 +34,25 @@ function removerImagem(tipo) {
     if (tipo === 'capa') {
         const imgPerfilCapa = document.getElementById('file-name-capa');
         const inputFotoCapa = document.getElementById('file-capa');
+        const btnRemoverImagemCapa = document.getElementById('btn-remover-imagem-capa');
 
+        btnRemoverImagemCapa.style.display = 'none';
         imgPerfilCapa.src = '';
         imgPerfilCapa.style.display = 'none';
         inputFotoCapa.value = '';
     } else if (tipo === 'retrato') {
         const imgPerfilRetrato = document.getElementById('file-name-retrato');
         const inputFotoRetrato = document.getElementById('file-retrato');
+        const btnRemoverImagemRetrato = document.getElementById('btn-remover-imagem-retrato');
 
         imgPerfilRetrato.src = '';
         imgPerfilRetrato.style.display = 'none';
         inputFotoRetrato.value = '';
+        btnRemoverImagemRetrato.style.display = 'none';
     }
-} 
+}
+
+
 
 function updateFileName() {
     const input = document.getElementById('file');

@@ -32,7 +32,7 @@
 							<img id="file-name-capa" class="capa-preview" alt="Preview da Capa" />
 							<input type="file" class="image-capa" id="file-capa"
 							onchange="previewImage('file-capa', 'file-name-capa', 'capa')" />
-							<button id="btn-remover-imagem-capa" style="display: flex" onclick="removerImagem('capa')">
+							<button id="btn-remover-imagem-capa" onclick="removerImagem('capa')">
 								X
 							</button>
 						</div>
@@ -46,7 +46,7 @@
 							<img id="file-name-retrato" class="retrato-preview" alt="Preview do Retrato" />
 							<input type="file" class="image-retrato" id="file-retrato"
 							onchange="previewImage('file-retrato', 'file-name-retrato', 'retrato')" />
-							<button id="btn-remover-imagem-retrato" style="display: flex" onclick="removerImagem('retrato')">
+							<button id="btn-remover-imagem-retrato" onclick="removerImagem('retrato')">
 								X
 							</button>
 						</div>
@@ -57,16 +57,18 @@
 						<div class="parte-data">
 							<label for="date">Data</label>
 							<input type="date" class="data" >
+							<span id="erro-data" class="erro"></span>
 						</div>
 						<div class="second-line">
 							<div class="parte-titulo">
 								<label for="text">Título</label>
 								<input type="text" class="titulo" placeholder="Coloque seu título" />
+								<span id="erro-titulo" class="erro"></span>
 							</div>
 							<div class="parte-avaliacao">
 								<label for="number">Avaliação</label>
-								<input type="number" class="avaliacao" step="0.5" min="0" max="5"
-								placeholder="Nota de 0 a 5" />
+								<input type="number" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota de 0 a 5" />
+								<span id="erro-avaliacao" class="erro"></span>
 							</div>
 						</div>
 					</div>

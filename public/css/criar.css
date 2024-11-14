@@ -128,7 +128,7 @@ h1 {
     height: 90px;
     object-fit: cover;
     border: 2px solid #ddd;
-    margin: 10px 0px;
+    margin: 10px 10px 10px 0px;
     display: none; 
 }
 
@@ -137,7 +137,7 @@ h1 {
     height: 100px;
     object-fit: cover;
     border: 2px solid #ddd;
-    margin: 10px 0px;
+    margin: 10px 10px 10px 0px;
     display: none; 
 }
 
@@ -159,21 +159,26 @@ h1 {
     font-size: 20px;
     width: 30px;
     height: 30px;
+    line-height: 30px;
     color: white;
+    display: none;
     border: none;
     cursor: pointer;
     border-radius: 50%;
-    display: none; 
     font-weight: bold;
     position: absolute;
     top: 10px;
-    right: -35px;
+    right: -25px;
   }
 
-  #btn-remover-imagem-capa:hover, #btn-remover-imagem-retrato:hover {
+  #btn-remover-imagem-capa:hover #btn-remover-imagem-retrato:hover {
     background-color: #a6072e;
   }
 
+
+.parte-retrato:hover #btn-remover-imagem-retrato, .parte-capa:hover #btn-remover-imagem-capa {
+    display: block;
+}
 
 .placeholders {
     display: flex;
@@ -290,9 +295,18 @@ h1 {
     position: relative;
 }
 
+.erro {
+    color: red;
+    font-size: 12px;
+    text-align: start;
+    display: block;
+    margin-left: 0;
+    width: 100%;
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
     .modalc {
-        width: 70%;
+        width: 60%;
         overflow-y: scroll;
     }
 

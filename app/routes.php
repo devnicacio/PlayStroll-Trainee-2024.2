@@ -8,4 +8,6 @@ use App\Core\Router;
 
     //Admin
     $router->get('admin/tabela-de-posts', 'Controller@getTabelaDePosts');
+    $router->post('admin/tabela-de-posts/post-post', 'Controller@postPost');
+    $router->post('admin/tabela-de-posts/put-post', 'Controller@putPost');
 ?>

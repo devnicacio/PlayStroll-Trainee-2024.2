@@ -1,31 +1,7 @@
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Satoshi', sans-serif !important;
   }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f5f5f5; 
-  }
-  
-  button {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #237ECD; 
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 14px; 
-  }
-  
-  button:hover {
-    background-color: #1b5b92; 
-  }
+
   
   .modal {
     display: none; 
@@ -86,11 +62,11 @@ body {
 }
 
 .remover-imagem {
-  display: none; 
+  display: none; /* Inicialmente oculto */
   position: absolute;
   top: 5px;
   right: 5px;
-  background-color: rgba(255, 0, 0, 0.7); 
+  background-color: rgba(255, 0, 0, 0.7); /* Fundo vermelho */
   color: white;
   font-size: 20px;
   width: 30px;
@@ -103,7 +79,7 @@ body {
 }
 
 .foto-perfil:hover .remover-imagem {
-  display: block; 
+  display: block; /* Exibe o X quando o mouse passa sobre a div */
 }
   
   .input-container {
@@ -123,16 +99,7 @@ body {
     box-sizing: border-box; 
   }
   
-  .bi {
-    position: absolute;
-    right: 10px; 
-    top: 50%;
-    transform: translateY(-50%) !important; 
-    cursor: pointer;
-    font-size: 20px; 
-    color: #aaa; 
-    z-index: 1; 
-  }
+  
   
   
   .botao-container {

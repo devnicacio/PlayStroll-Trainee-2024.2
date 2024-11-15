@@ -1,2 +1,5 @@
 @import "base-modal.css";
 
+#modalPostEditar{
+    z-index: 5;
+}

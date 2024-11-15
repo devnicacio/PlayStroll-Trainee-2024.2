@@ -29,6 +29,17 @@ class AdminController
         
     }
 
+
+
+
+    public function delete()
+{
+    $id = $_POST['id'];
+
+    App::get('database')->delete('users', $id);
+
+    header('Location: /users');
 }
 
+}
 ?>

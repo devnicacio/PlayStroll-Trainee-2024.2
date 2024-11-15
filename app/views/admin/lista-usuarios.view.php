@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/public/css/lista-usuarios.css">
     <link rel="stylesheet" type="text/css" href="/public/css/modal-criar.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/modal-excluir.css">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -36,7 +37,7 @@
                         <td class="email-post"><?= $user->email ?></td>
                         <td><button class="verificar"><i class="bi bi-eye"></i></button></td>
                         <td><button class="editar"><i class="bi bi-pencil-square"></i></button></td>
-                        <td><button class="excluir"><i class="fas fa-trash"></i></button></td>
+                        <td><button class="excluir" onclick="abrirModalExcluir('modal-excluir', <?= $user->id ?>)"><i class="fas fa-trash"></i></button></td>
                     </tr>
                     <?php endforeach ?>
                 </tbody>
@@ -94,7 +95,28 @@
             </div>
         </div>
     </div>
+
+<!-- Modal Excluir Usuário -->
+<div class="modalc" id="modal-excluir">
+    <form action="/users/delete" method="POST">
+        <input type="hidden" name="id" id="id-excluir">
+        <div class="modal-container">
+            <img src="/public/assets/deletar2.png" alt="Excluir" height="100px" width="150px" />
+            <h4>Tem certeza que deseja excluir?</h4>
+            <div class="modal-buttons">
+                <button type="button" class="button-cancelar" onclick="fecharModalExcluir('modal-excluir')">
+                    Cancelar
+                </button>
+                <button type="submit" class="button-excluir">Excluir</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="tela" id="tela"></div>
+
+
     <script src="/public/js/modal-criar.js"></script>
+    <script src="/public/js/modal-excluir.js"></script>
 </body>
 
 </html>

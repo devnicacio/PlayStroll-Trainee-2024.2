@@ -1,11 +1,12 @@
 const tela = document.querySelector('#tela');
 
-const abrirModal = idModal => {
+const abrirModalExcluir = (idModal, userId) => {
     document.getElementById(idModal).style.display = "flex";
+    document.getElementById('id-excluir').value = userId; 
     tela.style.display = 'block';
-}
+};
 
-const fecharModal = idModal => {
+const fecharModalExcluir = (idModal) => {
     document.getElementById(idModal).style.display = "none";
     tela.style.display = 'none';
-}
+};

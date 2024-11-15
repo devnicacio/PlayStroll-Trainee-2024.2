@@ -28,7 +28,7 @@
             <tbody>
               <tr>
                 <td>
-                  <button class="btn-acao btn-excluir" onclick="abrirModal('editar')">
+                  <button class="btn-acao btn-excluir" onclick="abrirModal('editar-excluir')">
                     <i class="fas fa-trash"></i>
                   </button>
                 </td>
@@ -38,9 +38,9 @@
         </div>
       </div>
 
-      <div class="modalc" id="editar">
+      <div class="modal-excluir" id="editar-excluir">
         <form action="#">
-          <div class="modal-container">
+          <div class="modal-container-excluir">
             <img
               src="/public/assets/deletar2.png"
               alt=""
@@ -48,8 +48,8 @@
               width="150px"
             />
             <h4>Tem certeza que deseja excluir?</h4>
-            <div class="modal-buttons">
-              <button class="button-cancelar" onclick="fecharModal('editar')">
+            <div class="modal-buttons-excluir">
+              <button class="button-cancelar" onclick="fecharModal('editar-excluir')">
                 Cancelar
               </button>
               <button class="button-excluir">Excluir</button>
@@ -61,5 +61,5 @@
     <div class="tela" id="tela"></div>
   </body>
 
-  <script src="/public/js/excluir.js"></script>
+  <script src="/public/js/criar.js"></script>
 </html>

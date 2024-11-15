@@ -59,7 +59,7 @@
                     <td>25/10/2024</td>
                     <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
                     <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
-                    <td><button class="btn-acao btn-excluir" onclick="abrirModal('editar')"><i class="fas fa-trash"></i></button></td>
+                    <td><button class="btn-acao btn-excluir" onclick="abrirModal('editar-excluir')"><i class="fas fa-trash"></i></button></td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -118,7 +118,7 @@
     </div>
 
     <!-- Parte da criação de posts     -->
-    <div class="modalc" id="editar">
+    <div class="modal-criar" id="editar">
 		<form action="#">
 			<div class="modal-container">
 				<div class="imagens">
@@ -187,9 +187,9 @@
 	</div>
 
     <!-- Parte de excluir posts -->
-    <div class="modalc" id="editar">
+    <div class="modal-excluir" id="editar-excluir">
         <form action="#">
-          <div class="modal-container">
+          <div class="modal-container-excluir">
             <img
               src="/public/assets/deletar2.png"
               alt=""
@@ -197,8 +197,8 @@
               width="150px"
             />
             <h4>Tem certeza que deseja excluir?</h4>
-            <div class="modal-buttons">
-              <button class="button-cancelar" onclick="fecharModal('editar')">
+            <div class="modal-buttons-excluir">
+              <button class="button-cancelar" onclick="fecharModal('editar-excluir')">
                 Cancelar
               </button>
               <button class="button-excluir">Excluir</button>
@@ -228,8 +228,6 @@
 	</script>
 </body>
     <script src="/public/js/criar.js"></script>
-    <script src="/public/js/excluir.js"></script>
-
 
     <script>
         $(".summernote").summernote('disable',{

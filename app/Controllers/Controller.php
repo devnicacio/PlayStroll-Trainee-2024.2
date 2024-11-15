@@ -14,7 +14,7 @@ class Controller{
 
     //Admin
     public function getTabelaDePosts(){
-        $posts = App::get('db_playstroll')->selectAll('posts');
+        $posts = App::get('database')->selectAll('posts');
         return view('admin/tabela-de-posts', compact($posts));
     }
     public function postPost(){
@@ -24,6 +24,7 @@ class Controller{
         ];
 
         App::get("db_playstroll")->insert("post", $parameters);
-        header("Location: user")
+        header("Location: user");
     }
+}
 ?>

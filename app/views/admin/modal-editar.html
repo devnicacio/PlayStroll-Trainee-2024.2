@@ -12,6 +12,7 @@
     <div class="tela" id="tela"></div>
     <div class="container">
         <div class="botao" id="bt" onclick="editar('cx', 'bt')">EDITAR</div>
+        <form method="http" action="#">
         <div class="fundo" id="cx">
             <div class="edit">
                 <div class="editname">
@@ -25,11 +26,12 @@
                     <i class="bi bi-eye" id="mostrar" onclick="mostrarSenha()" ></i>
                 </div>
                 <div class="imagem">
-                    <img src="/app/views/admin/arquivos/perfil.jpg">
-                    <div class="editimg">TROCAR IMAGEM</div>
+                    <img id="imagemIni" src="/app/views/admin/arquivos/perfil.jpg" alt="Img Ini" >
+                    <input type="file" id="inputImage" accept="image/*">
+                    <button onclick="document.getElementById('inputImage').click()">Escolher imagem</button>
                 </div>
-                <div class="remove">
-                    <div class="botremove"><p>REMOVER IMAGEM</p></div>
+                <div class="remove" id="remove">
+                    <button onclick="removerImagem()">Remover imagem</button>
                 </div>
                 <div class="confirma">
                     <div class="conf">
@@ -41,6 +43,7 @@
                 </div>
             </div>
         </div>
+        </form>
     </div>
 </body>
 <script src="../../../public/js/modal-editar.js"></script>

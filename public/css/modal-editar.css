@@ -55,6 +55,7 @@ body{
 
 .edit{
     width: 380px;
+    padding: 20px;
     border-radius: 10px;
     background-color: #080b3c;
     display:flex;
@@ -65,7 +66,6 @@ body{
 }
 
 .imagem{
-    height: 150px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -81,6 +81,22 @@ body{
     margin-bottom: 10px;
 }
 
+.imagem input{
+    display: none;
+}
+
+.imagem button{
+    width: 100%;
+    background-color: #237ecd;
+    font-size: 14px;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
 .editimg{
     height: 18px;
     width: 170px;
@@ -91,24 +107,20 @@ body{
 
 .remove{
     width: 100%;
-    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.botremove{
-    width: 60%;
-    height: 30px;
-    border-radius: 30px;
+.remove button{
+    width: 40%;
     background-color: #c70e3c;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    color: #f5f5f5;
+    border-radius: 5px;
+    border: 0;
+    font-size: 14px;
+    padding: 5px;
+    cursor: pointer;
 }
 
 .botremove p{
@@ -116,8 +128,7 @@ body{
 }
 
 .editname, .inputmail, .inputsenha{
-    width: 100%;
-    height: 70px;
+    width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -126,13 +137,12 @@ body{
 }
 
 .inputsenha{
+    width: 100%;
     display: flex;
     flex-direction: row;
 }
 
-.inputsenha input{
-    width: 90%;
-}
+
 
 
 .inputsenha i{
@@ -146,7 +156,7 @@ body{
 }
 
 .name{
-    width: 90%;
+    width: 100%;
     height: 50px;
     margin-left: 5%;
     display: flex;
@@ -156,7 +166,7 @@ body{
 }
 
 .editname input, .inputmail input, .inputsenha input{
-    width: 90%;
+    width: 100%;
     padding: 10px;
     border-radius: 5px;
     display: flex;
@@ -198,33 +208,32 @@ body{
 
 .confirma{
     width: 100%;
-    height: 100px;
     display: flex;
     flex-direction: row;
 }
 
 .conf{
     width: 50%;
-    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .boty{
-    width: 80%;
-    height: 80px;
-    border-radius: 20px;
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 14px;
+    color: white;
     background-color: #237ecd;
+    cursor: pointer;
 }
 
 .exclui{
     width: 50%;
-    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -232,11 +241,14 @@ body{
 
 .botn{
     width: 80%;
-    height: 80px;
-    border-radius: 20px;
+    padding: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
-    background-color: #c70e3c;
+    font-size: 14px;
+    color: white;
+    background-color: gray;
+    cursor: pointer;
+    transform: translateX(10px);
 }

@@ -14,9 +14,9 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table)
+    public function selectAll($table): mixed
     {
-        $sql = "select * from {$table}";
+        $sql = "SELECT * FROM {$table}";
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -25,6 +25,23 @@ class QueryBuilder
             return $stmt->fetchAll(PDO::FETCH_CLASS);
 
         } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    public function insert(string $table, array $parameters): mixed{
+        $sql = sprintf("INSERT INTO %t VALUES (%p);", 
+        $table,
+        implode(", ", 
+        array_map(
+            function($param){return $param. " = " . $param;},
+            array_keys($parameters)
+        )));
+
+        try{
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_CLASS);          
+        }catch(Exception $e){
             die($e->getMessage());
         }
     }

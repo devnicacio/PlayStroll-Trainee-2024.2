@@ -34,7 +34,7 @@ class AdminController
 
     public function delete()
 {
-    $id = $_POST['id'];
+    $id = $_POST['iddelete'];
 
     App::get('database')->delete('users', $id);
 

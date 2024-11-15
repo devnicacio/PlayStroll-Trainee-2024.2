@@ -102,7 +102,7 @@
     <div class="modalc" id="modal-excluir-<?= $user->id ?>" style="display: none;">
         <form action="/users/delete" method="POST">
             <!-- Passa o ID do usuário no campo oculto -->
-            <input type="hidden" name="id" value="<?= $user->id ?>">
+            <input type="hidden" name="iddelete" value="<?= $user->id ?>">
             <div class="modal-container">
                 <img src="/public/assets/deletar2.png" alt="Excluir" height="100px" width="150px" />
                 <h4>Tem certeza que deseja excluir o usuário <strong><?= $user->name ?></strong>?</h4>

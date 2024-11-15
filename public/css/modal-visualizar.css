@@ -35,7 +35,7 @@ body{
 
 .visualisar{
     width: 400px;
-    height: 520px;
+    height: 490px;
     border-radius: 10px;
     background-color: #237ecd;
     display: flex;
@@ -60,21 +60,6 @@ body{
     background-color: #0b0b3c;
     display: flex;
     flex-direction: column;
-}
-
-.imagem{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.imagem img{
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
 }
 
 .id{
@@ -118,13 +103,10 @@ body{
 
 .box{
     width: 90%;
-    height: 40px;
     background-color: white;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: start;
     font-size: 14px;
+    padding: 10px;
 }
 .box p{
     margin-left: 10px;
@@ -150,6 +132,18 @@ body{
     justify-content: center;
     font-size: 14px;
     cursor: pointer;
+}
+.imagem{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem input{
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
 }
 
 @media only screen and (max-width: 769px)

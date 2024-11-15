@@ -37,7 +37,7 @@
                         <td class="email-post"><?= $user->email ?></td>
                         <td><button class="verificar"><i class="bi bi-eye"></i></button></td>
                         <td><button class="editar"><i class="bi bi-pencil-square"></i></button></td>
-                        <td><button class="excluir" onclick="abrirModalExcluir('modal-excluir', <?= $user->id ?>)"><i class="fas fa-trash"></i></button></td>
+                        <td><button class="excluir" onclick="abrirModalExcluirUsuario('modal-excluir-<?= $user->id ?>')"><i class="fas fa-trash"></i></button></td>
                     </tr>
                     <?php endforeach ?>
                 </tbody>
@@ -97,22 +97,25 @@
     </div>
 
 <!-- Modal Excluir Usuário -->
-<div class="modalc" id="modal-excluir">
-    <form action="/users/delete" method="POST">
-        <input type="hidden" name="id" id="id-excluir">
-        <div class="modal-container">
-            <img src="/public/assets/deletar2.png" alt="Excluir" height="100px" width="150px" />
-            <h4>Tem certeza que deseja excluir?</h4>
-            <div class="modal-buttons">
-                <button type="button" class="button-cancelar" onclick="fecharModalExcluir('modal-excluir')">
-                    Cancelar
-                </button>
-                <button type="submit" class="button-excluir">Excluir</button>
+<?php foreach ($users as $user): ?>
+    <!-- Modal Excluir Usuário (Exclusivo para cada usuário) -->
+    <div class="modalc" id="modal-excluir-<?= $user->id ?>" style="display: none;">
+        <form action="/users/delete" method="POST">
+            <!-- Passa o ID do usuário no campo oculto -->
+            <input type="hidden" name="id" value="<?= $user->id ?>">
+            <div class="modal-container">
+                <img src="/public/assets/deletar2.png" alt="Excluir" height="100px" width="150px" />
+                <h4>Tem certeza que deseja excluir o usuário <strong><?= $user->name ?></strong>?</h4>
+                <div class="modal-buttons">
+                    <button type="button" class="button-cancelar" onclick="fecharModalExcluirUsuario('modal-excluir-<?= $user->id ?>')">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="button-excluir">Excluir</button>
+                </div>
             </div>
-        </div>
-    </form>
-</div>
-<div class="tela" id="tela"></div>
+        </form>
+    </div>
+<?php endforeach; ?>
 
 
     <script src="/public/js/modal-criar.js"></script>

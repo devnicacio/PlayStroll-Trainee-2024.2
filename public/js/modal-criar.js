@@ -69,21 +69,6 @@ document.getElementById('btn-adicionar').onclick = function() {
         valid = false;
     }
 
-    // Se a validação for bem-sucedida
-    if (valid) {
-        // Limpa os campos após adicionar
-        document.getElementById('nome').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('senha').value = '';
-        document.getElementById('confirmar-senha').value = '';
-        document.getElementById('foto').value = '';
-        document.getElementById('img-perfil').src = '';
-        document.getElementById('img-perfil').style.display = 'none'; 
-        
-        // Fecha o modal após adicionar o usuário
-        fecharModal(); 
-    }
-};
 
 // Função para mostrar a imagem de perfil escolhida
 function mostrarImagem(event) {
@@ -115,3 +100,5 @@ function removerImagem() {
 
 // Adiciona evento ao ícone "X" para remover a imagem
 document.getElementById('remover-imagem').onclick = removerImagem;
+
+}

@@ -22,8 +22,6 @@ class AdminController
             'password' => $_POST['password'],
             'image' => $_POST['image']
         ]; 
-        var_dump($_POST);
-        exit();
 
         App::get('database')->insert('users', $parameters);
 

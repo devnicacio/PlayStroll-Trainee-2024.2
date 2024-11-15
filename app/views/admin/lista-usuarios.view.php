@@ -38,9 +38,7 @@
                         <td><button class="editar"><i class="bi bi-pencil-square"></i></button></td>
                         <td><button class="excluir"><i class="fas fa-trash"></i></button></td>
                     </tr>
-                </tbody>
-                <tbody>
-                    <!-- As linhas da tabela serão adicionadas aqui -->
+                    <?php endforeach ?>
                 </tbody>
             </table>
         </div>
@@ -55,6 +53,8 @@
         </div>
     </div>
 
+
+    
     <!-- Modal Criar Usuário -->
     <div class="modal" id="modal-criar-usuario" style="display: none;">
         <div class="modal-background">
@@ -75,7 +75,7 @@
                 </div>
                 <div class="input-container">
                     <input type="password" id="confirmar-senha" placeholder="Confirme sua senha" />
-                    <span name="password" id="erro-confirmar-senha" class="erro"></span>
+                    <span id="erro-confirmar-senha" class="erro"></span>
                     <i class="bi bi-eye-slash" onclick="toggleSenha('confirmar-senha')" id="confirmar-senha-icon"></i>
                 </div>
 
@@ -94,7 +94,6 @@
             </div>
         </div>
     </div>
-    <?php endforeach ?>
     <script src="/public/js/modal-criar.js"></script>
 </body>
 

@@ -35,9 +35,103 @@
     -->
     <main class="container">
         <div class="cabecalho">
-                <h1 class="titulo">Tabela de Posts</h1>
-            <button class="more" onclick="abrirModal('editar')">+</button>
+                <h1 class="table-title">Tabela de Posts</h1>
+            <button class="more" onclick="abrirModal('criar-post')">+</button>
         </div>
+
+        <div class="modal-criar" id="criar-post">
+		<form action="/criar-post" method="post">
+			<div class="modal-container">
+				<div class="imagens">
+					<div class="capa">
+						<div class="container-image">
+							<label for="file">Foto modo paisagem</label>
+							<label class="custom-file-label" for="file-capa">Escolha uma imagem</label>
+						</div>
+						<div class="parte-capa">
+							<img id="file-name-capa" class="capa-preview" alt="Preview da Capa" />
+							<input type="file" class="image-capa" id="file-capa" accept="image/*" name="image-capa"
+							onchange="previewImage('file-capa', 'file-name-capa', 'capa')" />
+							<button id="btn-remover-imagem-capa" onclick="removerImagem('capa')" type="button">
+								X
+							</button>
+						</div>
+					</div>
+					<div class="retrato">
+						<div class="container-image">
+							<label for="file">Foto modo retrato</label>
+							<label class="custom-file-label" for="file-retrato">Escolha uma imagem</label>
+						</div>
+						<div class="parte-retrato">
+							<img id="file-name-retrato" class="retrato-preview" alt="Preview do Retrato" />
+							<input type="file" class="image-retrato" id="file-retrato" accept="image/*" name="image-retrato"
+							onchange="previewImage('file-retrato', 'file-name-retrato', 'retrato')" />
+							<button id="btn-remover-imagem-retrato" onclick="removerImagem('retrato')" type="button">
+								X
+							</button>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="placeholders">
+						<div class="parte-data">
+							<label for="date">Data</label>
+							<input type="date" id="data" class="data" name="create-at">
+							<span id="erro-data" class="erro"></span>
+						</div>
+						<div class="second-line">
+							<div class="parte-titulo">
+								<label for="text">Título</label>
+								<input type="text" id="titulo" class="titulo" placeholder="Coloque seu título" name="title"/>
+								<span id="erro-titulo" class="erro"></span>
+							</div>
+							<div class="parte-avaliacao">
+								<label for="number">Avaliação</label>
+								<input type="number"  id="avaliacao" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota de 0 a 5" name="avaliation"/>
+								<span id="erro-avaliacao" class="erro"></span>
+							</div>
+                            <input type="hidden" name="content" id="content">
+						</div>
+					</div>
+					<div class="diminuir-word">
+						<div id="summernote"></div>
+						<span id="erro-descricao" class="erro"></span>
+					</div>
+					<div class="modal-buttons">
+						<button id="btn-cancelar" class="button-cancelar" onclick="fecharModal('criar-post')" type="button">
+							Cancelar
+						</button>
+						<button id="btn-criar" class="button-postar" type="submit">Criar</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="tela" id="tela"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.9.0/lang/summernote-pt-BR.min.js"></script>
+	<script>
+		$("#summernote").summernote({
+			placeholder: "Crie a sua descrição",
+			tabsize: 2,
+			height: 120,
+			lang: "pt-BR",
+			toolbar: [
+				["style", ["style"]],
+				["font", ["bold", "underline"]],
+				["color", ["color"]],
+				["para", ["ul", "ol", "paragraph"]],
+				["table", ["table"]],
+				["insert", ["link", "picture"]],
+			],
+            callbacks: {
+            onChange: function(contents) {
+                $('#content').val(contents);
+            }
+        }
+		});
+	</script>
+
         <div class="table-container">
         <table class="tabela-posts">
             <thead>
@@ -59,7 +153,7 @@
                     <td>25/10/2024</td>
                     <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
                     <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
-                    <td><button class="btn-acao btn-excluir" onclick="abrirModal('editar-excluir')"><i class="fas fa-trash"></i></button></td>
+                    <td><button class="btn-acao btn-excluir" onclick="abrirModal('excluir')"><i class="fas fa-trash"></i></button></td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -68,7 +162,7 @@
                     <td>26/10/2024</td>
                     <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
                     <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
-                    <td><button class="btn-acao btn-excluir"><i class="fas fa-trash"></i></button></td>
+                    <td><button class="btn-acao btn-excluir" onclick="abrirModal('excluir')"><i class="fas fa-trash"></i></button></td>
                 </tr>
                 <tr>
                     <td>3</td>
@@ -77,7 +171,7 @@
                     <td>27/10/2024</td>
                     <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
                     <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
-                    <td><button class="btn-acao btn-excluir"><i class="fas fa-trash"></i></button></td>
+                    <td><button class="btn-acao btn-excluir" onclick="abrirModal('excluir')"><i class="fas fa-trash"></i></button></td>
                 </tr>
                 <tr>
                     <td>4</td>
@@ -86,7 +180,7 @@
                     <td>28/10/2024</td>
                     <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
                     <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
-                    <td><button class="btn-acao btn-excluir"><i class="fas fa-trash"></i></button></td>
+                    <td><button class="btn-acao btn-excluir" onclick="abrirModal('excluir')"><i class="fas fa-trash"></i></button></td>
                 </tr>
                 <tr>
                     <td>5</td>
@@ -95,9 +189,31 @@
                     <td>29/10/2024</td>
                     <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
                     <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
-                    <td><button class="btn-acao btn-excluir"><i class="fas fa-trash"></i></button></td>
+                    <td><button class="btn-acao btn-excluir"onclick="abrirModal('excluir')"><i class="fas fa-trash"></i></button></td>
                 </tr>
             </tbody>
+
+            <div class="modal-excluir" id="excluir">
+        <form action="#">
+          <div class="modal-container-excluir">
+            <img
+              src="/public/assets/deletar2.png"
+              alt=""
+              height="100px"
+              width="150px"
+            />
+            <h4>Tem certeza que deseja excluir?</h4>
+            <div class="modal-buttons-excluir">
+              <button class="button-cancelar" onclick="fecharModal('excluir')">
+                Cancelar
+              </button>
+              <button class="button-excluir">Excluir</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="tela" id="tela"></div>
         </table>
         <!-- Modais -->
         <?php 
@@ -117,118 +233,7 @@
         </div>
     </div>
 
-    <!-- Parte da criação de posts     -->
-    <div class="modal-criar" id="editar">
-		<form action="#">
-			<div class="modal-container">
-				<div class="imagens">
-					<div class="capa">
-						<div class="container-image">
-							<label for="file">Foto modo paisagem</label>
-							<label class="custom-file-label" for="file-capa">Escolha uma imagem</label>
-						</div>
-						<div class="parte-capa">
-							<img id="file-name-capa" class="capa-preview" alt="Preview da Capa" />
-							<input type="file" class="image-capa" id="file-capa"
-							onchange="previewImage('file-capa', 'file-name-capa', 'capa')" />
-							<button id="btn-remover-imagem-capa" onclick="removerImagem('capa')">
-								X
-							</button>
-						</div>
-					</div>
-					<div class="retrato">
-						<div class="container-image">
-							<label for="file">Foto modo retrato</label>
-							<label class="custom-file-label" for="file-retrato">Escolha uma imagem</label>
-						</div>
-						<div class="parte-retrato">
-							<img id="file-name-retrato" class="retrato-preview" alt="Preview do Retrato" />
-							<input type="file" class="image-retrato" id="file-retrato"
-							onchange="previewImage('file-retrato', 'file-name-retrato', 'retrato')" />
-							<button id="btn-remover-imagem-retrato" onclick="removerImagem('retrato')">
-								X
-							</button>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div class="placeholders">
-						<div class="parte-data">
-							<label for="date">Data</label>
-							<input type="date" id="data" class="data" >
-							<span id="erro-data" class="erro"></span>
-						</div>
-						<div class="second-line">
-							<div class="parte-titulo">
-								<label for="text">Título</label>
-								<input type="text" id="titulo" class="titulo" placeholder="Coloque seu título" />
-								<span id="erro-titulo" class="erro"></span>
-							</div>
-							<div class="parte-avaliacao">
-								<label for="number">Avaliação</label>
-								<input type="number"  id="avaliacao" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota de 0 a 5" />
-								<span id="erro-avaliacao" class="erro"></span>
-							</div>
-						</div>
-					</div>
-					<div class="diminuir-word">
-						<div id="summernote"></div>
-						<span id="erro-descricao" class="erro"></span>
-					</div>
-					<div class="modal-buttons">
-						<button id="btn-cancelar" class="button-cancelar" onclick="fecharModal('editar')">
-							Cancelar
-						</button>
-						<button id="btn-criar" class="button-postar">Criar</button>
-					</div>
-				</div>
-			</div>
-		</form>
-	</div>
-
-    <!-- Parte de excluir posts -->
-    <div class="modal-excluir" id="editar-excluir">
-        <form action="#">
-          <div class="modal-container-excluir">
-            <img
-              src="/public/assets/deletar2.png"
-              alt=""
-              height="100px"
-              width="150px"
-            />
-            <h4>Tem certeza que deseja excluir?</h4>
-            <div class="modal-buttons-excluir">
-              <button class="button-cancelar" onclick="fecharModal('editar-excluir')">
-                Cancelar
-              </button>
-              <button class="button-excluir">Excluir</button>
-            </div>
-          </div>
-        </form>
-      </div>
-
-	<div class="tela" id="tela"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.9.0/lang/summernote-pt-BR.min.js"></script>
-	<script>
-		$("#summernote").summernote({
-			placeholder: "Crie a sua descrição",
-			tabsize: 2,
-			height: 120,
-			lang: "pt-BR",
-			toolbar: [
-				["style", ["style"]],
-				["font", ["bold", "underline"]],
-				["color", ["color"]],
-				["para", ["ul", "ol", "paragraph"]],
-				["table", ["table"]],
-				["insert", ["link", "picture"]],
-			],
-		});
-	</script>
-</body>
     <script src="/public/js/criar.js"></script>
-
     <script>
         $(".summernote").summernote('disable',{
 			tabsize: 2,
@@ -244,4 +249,7 @@
 			],
 		});
     </script>
+
+</body>
+
 </html>

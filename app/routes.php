@@ -10,4 +10,5 @@ use App\Core\Router;
     $router->get('admin/tabela-de-posts', 'Controller@getTabelaDePosts');
     $router->post('admin/tabela-de-posts/post-post', 'Controller@postPost');
     $router->post('admin/tabela-de-posts/put-post', 'Controller@putPost');
+    $router->post('criar-post', 'Controller@create');
 ?>

@@ -26,7 +26,7 @@
     margin-right: 10%;
 }
 
-.titulo {
+.table-title {
     color: white;
     background-color: #080b3c;
     padding: 1% 10%;
@@ -151,7 +151,7 @@ tbody {
         padding: 10px 5px;
     }
 
-    .titulo-post, .autor-post {
+    .table-title, .autor-post {
         max-width: 100px;
     }
 
@@ -159,7 +159,7 @@ tbody {
         width: 70%;
     }
 
-    .titulo {
+    .titulo-post {
         padding: 8px 25px;
         font-size: 20px;
     }
@@ -210,7 +210,7 @@ tbody {
         width: 70%;
     }
 
-    .titulo {
+    .table-title {
         padding: 8px 25px;
         font-size: 17px;
     }

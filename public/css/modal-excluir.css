@@ -1,61 +1,10 @@
 body {
-    margin: 0;
-    padding: 0;
+
     font-family: 'Satoshi', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
-}
 
-.table-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-}
-
-.tabela-posts {
-    width: 100%;
-    color: white;
-    border-radius: 10px;
-    border-collapse: collapse;
-    overflow: hidden;
-}
-
-thead {
-    background-color: #237ecd;
-}
-
-th, td {
-    text-align: center;
-    padding: 15px;
-}
-
-tbody {
-    background-color: #080b3c;
-}
-
-.excluir {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: none;
-    color: white;
-    cursor: pointer;
-    background-color: #c70e3c;
-}
 
 .modalc {
     background-color: #c70e3c;
@@ -73,14 +22,10 @@ tbody {
     z-index: 3;
 }
 
-h4 {
-    margin: 0;
-    padding-bottom: 10px;
-}
 
 .modal-container {
     background-color: #080b3c;
-    width: 100%;
+    width: 90%;
     height: 100%;
     border-radius: 10px;
 }
@@ -139,13 +84,7 @@ img  {
 }
 
 @media (max-width: 1023px) {
-    .container {
-        padding: 10px;
-    }
 
-    .tabela-posts {
-        max-width: 80%;
-    }
 
     .modalc {
         max-width: 250px;

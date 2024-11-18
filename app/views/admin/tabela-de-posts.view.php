@@ -40,7 +40,7 @@
         </div>
 
         <div class="modal-criar" id="criar-post">
-		<form action="/criar-post" method="post">
+		<form action="/criar-post" method="post" enctype="multipart/form-data">
 			<div class="modal-container">
 				<div class="imagens">
 					<div class="capa">

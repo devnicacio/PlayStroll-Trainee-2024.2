@@ -59,40 +59,40 @@ function updateFileName() {
 }
 
 // Adiciona um novo post
-document.getElementById('btn-criar').onclick = function(event) {
-    event.preventDefault();
+// document.getElementById('btn-criar').onclick = function(event) {
+//     event.preventDefault();
 
-    const data = document.getElementById('data').value;
-    const titulo = document.getElementById('titulo').value;
-    const avaliacao = document.getElementById('avaliacao').value;
-    const descricao = $('#summernote').summernote('code'); 
+//     const data = document.getElementById('data').value;
+//     const titulo = document.getElementById('titulo').value;
+//     const avaliacao = document.getElementById('avaliacao').value;
+//     const descricao = $('#summernote').summernote('code'); 
 
-    let valid = true;
+//     let valid = true;
 
-    // Limpar mensagens de erro anteriores
-    document.getElementById('erro-data').innerText = '';
-    document.getElementById('erro-titulo').innerText = '';
-    document.getElementById('erro-avaliacao').innerText = '';
-    document.getElementById('erro-descricao').innerText = '';
+//     // Limpar mensagens de erro anteriores
+//     document.getElementById('erro-data').innerText = '';
+//     document.getElementById('erro-titulo').innerText = '';
+//     document.getElementById('erro-avaliacao').innerText = '';
+//     document.getElementById('erro-descricao').innerText = '';
 
-    if (!data) {
-        document.getElementById('erro-data').innerText = 'Data é obrigatória';
-        valid = false;
-    }
+//     if (!data) {
+//         document.getElementById('erro-data').innerText = 'Data é obrigatória';
+//         valid = false;
+//     }
        
-    if (!titulo) {
-        document.getElementById('erro-titulo').innerText = 'Título é obrigatório';
-        valid = false;
-    }
+//     if (!titulo) {
+//         document.getElementById('erro-titulo').innerText = 'Título é obrigatório';
+//         valid = false;
+//     }
 
-    if (!avaliacao) {
-        document.getElementById('erro-avaliacao').innerText = 'Avaliação é obrigatória';
-        valid = false;
-    }
+//     if (!avaliacao) {
+//         document.getElementById('erro-avaliacao').innerText = 'Avaliação é obrigatória';
+//         valid = false;
+//     }
 
-    // Verifica se a descrição está vazia 
-    if (!descricao || descricao === '<p><br></p>') {
-        document.getElementById('erro-descricao').innerText = 'Descrição é obrigatória';
-        valid = false;
-    }
-};
+//     // Verifica se a descrição está vazia 
+//     if (!descricao || descricao === '<p><br></p>') {
+//         document.getElementById('erro-descricao').innerText = 'Descrição é obrigatória';
+//         valid = false;
+//     }
+// };

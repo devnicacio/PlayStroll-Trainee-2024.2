@@ -52,18 +52,20 @@ class QueryBuilder
         $novoNome1=uniqid();
         $caminho1 = $pasta . basename($novoNome1);
         move_uploaded_file($img1["tmp_name"], $caminho1);
-        $parameters['image-capa'] = $caminho1;
+        $parameters['image_capa'] = $caminho1; 
 
         $novoNome2=uniqid();
         $caminho2 = $pasta . basename($novoNome2);
         move_uploaded_file($img2["tmp_name"], $caminho2);
-        $parameters['image-retrato'] = $caminho2;
+        $parameters['image_retrato'] = $caminho2;
 
-        $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)',
+        $sql = sprintf('INSERT INTO %s (%s) VALUES (%s)',
         $table,
         implode(', ', array_keys($parameters)),
-        implode(', :', array_keys($parameters))
+        ':' . implode(', :', array_keys($parameters))
         );
+        // var_dump($sql);
+        // exit();
         
         try {
             $stmt = $this->pdo->prepare($sql);

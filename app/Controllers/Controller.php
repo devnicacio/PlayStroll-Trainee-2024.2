@@ -30,14 +30,12 @@ class Controller{
     public function create() {
         $parameters = [
             'title' => $_POST['title'],
-            'avaliatin' => $_POST['avaliation'],
-            'create-at' => $_POST['create-at'],
+            'avaliation' => $_POST['avaliation'],
+            'create_at' => $_POST['create-at'],
             'content' => $_POST['content'],
-            'id_user' => '1',
+            'id_user' => 1,
         ];
-        var_dump($parameters);
-        exit();
-
+        
         App::get("database")->inserePost("posts", $parameters, $_FILES['image-capa'], $_FILES['image-retrato']);
         header('Location: /admin/tabela-de-posts');
     }

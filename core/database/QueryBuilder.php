@@ -49,12 +49,14 @@ class QueryBuilder
     public function inserePost($table, $parameters, $img1, $img2){
         $pasta = "uploads/";
 
-        $novoNome1=uniqid();
+        $extensao1 = pathinfo($img1['name'], PATHINFO_EXTENSION);
+        $novoNome1=uniqid() . '.' . $extensao1;
         $caminho1 = $pasta . basename($novoNome1);
         move_uploaded_file($img1["tmp_name"], $caminho1);
         $parameters['image_capa'] = $caminho1; 
 
-        $novoNome2=uniqid();
+        $extensao2 = pathinfo($img2['name'], PATHINFO_EXTENSION);
+        $novoNome2=uniqid() . '.' . $extensao2;
         $caminho2 = $pasta . basename($novoNome2);
         move_uploaded_file($img2["tmp_name"], $caminho2);
         $parameters['image_retrato'] = $caminho2;

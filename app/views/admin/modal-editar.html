@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../public/css/modal-editar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <div class="tela" id="tela"></div>
+    <div class="container">
+        <form method="http" action="#">
+        <div class="fundo" id="cx">
+            <div class="edit">
+                <div class="editname">
+                    <input type="text" value="Phelippe_Coutinho"  placeholder="Username">
+                </div>
+                <div class="inputmail">
+                    <input type="text" value="coutinho_VASCOOO@gmail.com" placeholder="Email">
+                </div>
+                <div class="inputsenha">
+                    <input id="senha" type="password" value="coutinho123" placeholder="Senha">
+                    <i class="bi bi-eye" id="mostrar" onclick="mostrarSenha()" ></i>
+                </div>
+                <div class="imagem">
+                    <img id="imagemIni" src="/app/views/admin/arquivos/perfil.jpg" alt="Img Ini" >
+                    <input type="file" id="inputImage" accept="image/*">
+                    <button onclick="document.getElementById('inputImage').click()">Escolher imagem</button>
+                </div>
+                <div class="remove" id="remove">
+                    <button onclick="removerImagem()">Remover imagem</button>
+                </div>
+                <div class="confirma">
+                    <div class="conf">
+                        <div class="boty" onclick="editar2('cx', 'bt')">CONFIRMAR</div>
+                    </div>
+                    <div class="exclui">
+                        <div class="botn" onclick="editar2('cx', 'bt')">CANCELAR</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+<script src="../../../public/js/modal-editar.js"></script>
+</html>

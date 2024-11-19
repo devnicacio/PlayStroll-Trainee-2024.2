@@ -9,9 +9,11 @@ body {
     background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
     width: 100%;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: end;
+    z-index: 1;
 }
 
 .parte-de-cima {

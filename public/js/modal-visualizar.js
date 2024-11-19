@@ -1,10 +1,9 @@
-const tela = document.querySelector('#tela')
 
 function abrirModal(idModal, id2)
 {
     document.getElementById(idModal).style.display="flex";
-    document.getElementById(id2).style.display="none"
-    tela.style.display="block"
+    document.getElementById(id2).style.display="flex";
+
 }
 
 function fecharModal(id3, id4)

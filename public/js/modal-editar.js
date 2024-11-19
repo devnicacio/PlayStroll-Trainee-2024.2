@@ -1,14 +1,12 @@
 const tela = document.querySelector('#tela')
 
-function editar(idModal, id2){
+function editar(idModal){
     document.getElementById(idModal).style.display="flex";
-    document.getElementById(id2).style.display="none";
-    tela.style.display="block";
+    tela.style.display="flex";
 }
 
-function editar2(id3, id4){
+function editar2(id3){
     document.getElementById(id3).style.display="none";
-    document.getElementById(id4).style.display="flex";
     tela.style.display="none";
 }
 

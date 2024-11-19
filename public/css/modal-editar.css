@@ -1,36 +1,16 @@
-body{
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, rgba(213, 214, 227, 1.0), rgba(0, 174, 160, 0.5));
-}
-
 .tela{
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: rgba(11,11,11,0.5);
     display:none;
-    opacity: 0.5;
     position: absolute;
+    align-items: center;
+    justify-content: center;
     z-index: 2;
 }
 
-.container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.botao{
-    width: 70px;
-    height: 30px;
-    background-color: #237ecd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-}
+
 
 .fundo{
     background-color: #237ecd;
@@ -40,7 +20,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 3;
 }
 
 .textin{
@@ -62,7 +41,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 4;
+    z-index: 5;
 }
 
 .imagem{

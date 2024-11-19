@@ -37,7 +37,7 @@
                             <td><?= $user->id ?></td>
                             <td class="autor-post"><?= $user->name ?></td>
                             <td class="email-post"><?= $user->email ?></td>
-                            <td><button class="verificar" onclick="abrirModal('modal-view<?=$user->id ?>', 'ver<?=$user->id ?>')"><i class="bi bi-eye"></i></button></td>
+                            <td><button class="verificar" onclick="abrirModalView('modal-view<?=$user->id ?>', 'ver<?=$user->id ?>')"><i class="bi bi-eye"></i></button></td>
                             <td><button class="editar" onclick="editar('cx')"><i class="bi bi-pencil-square"></i></button></td>
                             <td><button class="excluir" onclick="abrirModalExcluirUsuario('modal-excluir-<?= $user->id ?>')"><i class="fas fa-trash"></i></button></td>
                         </tr>
@@ -61,7 +61,7 @@
                                         <input type="image" src="../site/arquivos/perfil 3.jpg">
                                     </div>
                                     <div class="sair">
-                                        <div class="botsair" onclick="fecharModal('ver', 'botao')">
+                                        <div class="botsair" onclick="fecharModalView('ver', 'botao')">
                                             <p>Fechar</p>
                                         </div>
                                     </div>

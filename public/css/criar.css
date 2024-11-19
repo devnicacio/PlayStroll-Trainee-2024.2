@@ -1,13 +1,4 @@
-.container {
-    height: 100vh;
-    background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.more {
+.more-c {
     padding: 4%;
     font-size: 50px;
     background-color: #080b3c;

@@ -36,18 +36,21 @@
 .more {
     padding: 3%;
     font-size: 50px;
+    background-color: #080b3c;
+    border: 1px solid #080b3c;
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+    color: white;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #080b3c;
-    border-radius: 20px;
-    border: 1px solid #080b3c;
 }
 
-button {
+.informacoes {
     border-radius: 12px;
     background-color: #237ecd;
-    border: 1px solid black;
     color: white;
     cursor: pointer;
     height: 30px;

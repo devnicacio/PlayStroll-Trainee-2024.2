@@ -135,7 +135,7 @@
         <div class="table-container">
         <table class="tabela-posts">
             <thead>
-                <tr>
+                <tr class="informacoes">
                     <th>ID</th>
                     <th>Título</th>
                     <th>Autor</th>

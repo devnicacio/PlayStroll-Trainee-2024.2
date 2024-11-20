@@ -37,7 +37,7 @@
                             <td><?= $user->id ?></td>
                             <td class="autor-post"><?= $user->name ?></td>
                             <td class="email-post"><?= $user->email ?></td>
-                            <td><button class="verificar" onclick="abrirModalView('modal-view<?= $user->id ?>')"><i class="bi bi-eye"></i></button></td>
+                            <td><button class="verificar" onclick="abrirModalView('modal-view<?=$user->id ?>')"><i class="bi bi-eye"></i></button></td>
                             <td><button class="editar" onclick="editar('editarUsuario')"><i class="bi bi-pencil-square"></i></button></td>
                             <td><button class="excluir" onclick="abrirModalExcluirUsuario('modal-excluirex<?= $user->id ?>')"><i class="fas fa-trash"></i></button></td>
                         </tr>
@@ -73,7 +73,7 @@
                         <input class="box" type="text" value="<?= $user->name ?>" readonly>
                     </div>
                     <div class="imagem-view" id="imgdiv">
-                        <input id="img" type="image" src="../site/arquivos/perfil 3.jpg">
+                        <input id="img" type="image" src="<?= $user->image ?>">
                     </div>
                     <div class="sair">
                         <div class="botsair" onclick="fecharModalView('modal-view<?= $user->id ?>')">
@@ -136,7 +136,7 @@
                         <input class="box" type="text" value="<?= $user->name ?>" readonly>
                     </div>
                     <div class="imagem-view" id="imgdiv">
-                        <input id="img" type="image" src="../site/arquivos/perfil 3.jpg">
+                        <input id="img" type="image" src="<?= $user->image ?>">
                     </div>
                     <div class="sair">
                         <div class="botsair" onclick="fecharModalView('modal-view<?= $user->id ?>')">
@@ -146,45 +146,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal" id="modal-criar-usuario" style="display: none;">
-            <div class="modal-background">
-
-                <div class="modal-container">
-                    <form class="modal-create" method="POST" action="/users/create">
-
-                        <input name="name" type="text" id="nome" placeholder="Seu Nome">
-                        <span id="erro-nome" class="erro"></span>
-
-                        <input name="email" type="email" id="email" placeholder="Seu Email">
-                        <span id="erro-email" class="erro"></span>
-
-                        <div class="input-container">
-                            <input name="password" type="password" id="senha" placeholder="Coloque sua senha" />
-                            <span id="erro-senha" class="erro"></span>
-                            <i class="bi bi-eye-slash" onclick="toggleSenha('senha')" id="senha-icon"></i>
-                        </div>
-                        <div class="input-container">
-                            <input type="password" id="confirmar-senha" placeholder="Confirme sua senha" />
-                            <span id="erro-confirmar-senha" class="erro"></span>
-                            <i class="bi bi-eye-slash" onclick="toggleSenha('confirmar-senha')" id="confirmar-senha-icon"></i>
-                        </div>
-
-                        <div class="foto-perfil">
-                            <img id="img-perfil" class="imagem-perfil" alt="Imagem de Perfil" style="display: none;" src="../../<?= $user->image ?>" />
-                            <input name="image" type="file" id="foto" accept="image/png, image/jpeg" onchange="mostrarImagem(event)" style="display: none;">
-                            <span id="remover-imagem" class="remover-imagem">X</span>
-                        </div>
-
-                        <label for="foto" id="btn-escolher-imagem">Escolher Imagem</label>
-                        <div class="botao-container">
-                            <button type="button" id="btn-fechar" onclick="fecharModalCriar()">Fechar</button>
-                            <button type="submit" id="btn-adicionar">Adicionar Usuário</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+        
 
 
 
@@ -218,7 +180,7 @@
 
                 <button type="button" id="btn-escolher-imagemcr">Escolher Imagem</button>
                 <div class="botao-containercr">
-                    <button type="button" id="btn-fecharcr" onclick="fecharModal()">Fechar</button>
+                    <button type="button" id="btn-fecharcr" onclick="fecharModalCriar()">Fechar</button>
                     <button id="btn-adicionarcr">Adicionar Usuário</button>
                 </div>
             </form>

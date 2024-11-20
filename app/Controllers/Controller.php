@@ -40,5 +40,15 @@ class Controller{
         header('Location: /admin/tabela-de-posts');
     }
 
+    public function delete_post(){
+        $post = $_POST['iddelete_post'];
+        unlink($_POST['iddelete_capa']);
+        unlink($_POST['iddelete_retrato']);
+
+        App::get("database")->deletaPost('posts', 'id');
+
+        header('Location: /posts');
+    }
+
 }
 ?>

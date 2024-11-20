@@ -146,71 +146,40 @@
                 </tr>
             </thead>
             <tbody>
+                <?php foreach ($posts as $post): ?>
                 <tr>
-                    <td>1</td>
-                    <td class="titulo-post">Exemplo de Post 1</td>
-                    <td class="autor-post">Nome</td>
-                    <td>25/10/2024</td>
+                    <td><?= $post->id ?></td>
+                    <td class="titulo-post"><?= $post->title ?></td>
+                    <td class="autor-post"><?= $post->id ?></td>
+                    <td><?= $post->create_at ?></td>
                     <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
                     <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
-                    <td><button class="btn-acao btn-excluir" onclick="abrirModal('excluir')"><i class="fas fa-trash"></i></button></td>
+                    <td><button class="btn-acao btn-excluir" onclick="abrirModal('excluir<?= $post->id ?>')"><i class="fas fa-trash"></i></button></td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td class="titulo-post">Exemplo de Post 2</td>
-                    <td class="autor-post">Nome</td>
-                    <td>26/10/2024</td>
-                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
-                    <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
-                    <td><button class="btn-acao btn-excluir" onclick="abrirModal('excluir')"><i class="fas fa-trash"></i></button></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td class="titulo-post">Exemplo de Post 3</td>
-                    <td class="autor-post">Nome</td>
-                    <td>27/10/2024</td>
-                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
-                    <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
-                    <td><button class="btn-acao btn-excluir" onclick="abrirModal('excluir')"><i class="fas fa-trash"></i></button></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td class="titulo-post">Exemplo de Post 4</td>
-                    <td class="autor-post">Nome</td>
-                    <td>28/10/2024</td>
-                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
-                    <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
-                    <td><button class="btn-acao btn-excluir" onclick="abrirModal('excluir')"><i class="fas fa-trash"></i></button></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td class="titulo-post">Exemplo de Post 5</td>
-                    <td class="autor-post">Nome</td>
-                    <td>29/10/2024</td>
-                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
-                    <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
-                    <td><button class="btn-acao btn-excluir"onclick="abrirModal('excluir')"><i class="fas fa-trash"></i></button></td>
-                </tr>
+                <?php endforeach ?>
             </tbody>
 
-            <div class="modal-excluir" id="excluir">
-        <form action="#">
-          <div class="modal-container-excluir">
-            <img
-              src="/public/assets/deletar2.png"
-              alt=""
-              height="100px"
-              width="150px"
-            />
-            <h4>Tem certeza que deseja excluir?</h4>
-            <div class="modal-buttons-excluir">
-              <button class="button-cancelar" onclick="fecharModal('excluir')">
-                Cancelar
-              </button>
-              <button class="button-excluir">Excluir</button>
-            </div>
-          </div>
-        </form>
+            <div class="modal-excluir" id="excluir<?= $post->id ?>">
+                <form action="/deletar-post" method="post" >
+                    <input type="hidden" name="iddelete_post" value="<?= $post->id ?>">
+                    <input type="hidden" name="iddelete_capa" value="<?= $post->image_capa ?>">
+                    <input type="hidden" name="iddelete_retrato" value="<?= $post->image_retrato ?>">
+                        <div class="modal-container-excluir">
+                            <img
+                            src="/public/assets/deletar2.png"
+                            alt=""
+                            height="100px"
+                            width="150px"
+                            />
+                            <h4>Tem certeza que deseja excluir o post?</h4>
+                            <div class="modal-buttons-excluir">
+                            <button class="button-cancelar" onclick="fecharModal('excluir <?= $post->id ?>')">
+                                Cancelar
+                            </button>
+                            <button class="button-excluir">Excluir</button>
+                            </div>
+                        </div>
+                </form>
       </div>
     </div>
     <div class="tela" id="tela"></div>

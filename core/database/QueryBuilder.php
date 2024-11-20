@@ -77,4 +77,16 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function deletaPost($table, $id){
+        $sql = sprintf('DELETE FROM % WHERE %s', $table, 'id = :id');
+
+        try {
+            $smt = $this->pdo->prepare($sql);
+            $smt->execute(compact('id'));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+    }
 }

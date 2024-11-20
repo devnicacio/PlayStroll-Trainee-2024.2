@@ -56,9 +56,9 @@
                     <button class="proximo>">></button>
         </div>
         <div class="tela" id="editarUsuario">
-            <form method="post" action="/users/edit">
+            <form method="post" action="/users/edit" enctype="multipart/form-data" >
                 <div class="fundo" id="cx">
-                    <input type="hidden" value="1" name="id">
+                    <input type="hidden" value="<?=$user->id ?>" name="id">
                     <div class="edit">
                         <div class="editname">
                             <input type="text" name="name" value="<?= $user->name ?>" placeholder="Username">
@@ -71,7 +71,7 @@
                             <i class="bi bi-eye" id="mostrar" onclick="mostrarSenha()"></i>
                         </div>
                         <div class="imagem">
-                            <img id="imagemIni" src="/app/views/admin/arquivos/perfil.jpg" alt="Img Ini">
+                            <img id="imagemIni" src="<?=$user->image ?>" alt="Img Ini">
                             <input type="file" name="image" id="inputImage" accept="image/*">
                             <button onclick="document.getElementById('inputImage').click()">Escolher imagem</button>
                         </div>
@@ -141,7 +141,7 @@
                         </div>
 
                         <div class="foto-perfil">
-                            <img id="img-perfil" class="imagem-perfil" alt="Imagem de Perfil" style="display: none;" />
+                            <img id="img-perfil" class="imagem-perfil" alt="Imagem de Perfil" style="display: none;" src="../../<?=$user->image ?>"/>
                             <input name="image" type="file" id="foto" accept="image/png, image/jpeg" onchange="mostrarImagem(event)" style="display: none;">
                             <span id="remover-imagem" class="remover-imagem">X</span>
                         </div>

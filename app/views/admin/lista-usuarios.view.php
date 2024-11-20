@@ -19,7 +19,7 @@
     <div class="gradient">
         <div class="parte-de-cima">
             <h1 class="titulo">Lista de usuários</h1>
-            <button class="more" onclick="abrirModal()">+</button>
+            <button class="more" onclick="abrirModalCriar()">+</button>
         </div>
         <div class="table-container">
             <table class="lista">
@@ -177,7 +177,7 @@
 
                         <label for="foto" id="btn-escolher-imagem">Escolher Imagem</label>
                         <div class="botao-container">
-                            <button type="button" id="btn-fechar" onclick="fecharModal()">Fechar</button>
+                            <button type="button" id="btn-fechar" onclick="fecharModalCriar()">Fechar</button>
                             <button type="submit" id="btn-adicionar">Adicionar Usuário</button>
                         </div>
                     </form>
@@ -189,6 +189,43 @@
 
 
     <!-- Modal Criar Usuário -->
+    <div class="modalcr" id="modal-criar-usuariocr" style="display: none;">
+    <div class="modal-backgroundcr">
+        <div class="modal-containercr">
+            <form class="modal-createcr" method="POST" action="/users/create" enctype="multipart/form-data">
+                <input name="name" type="text" id="nomecr" placeholder="Seu Nome">
+                <span id="erro-nomecr" class="errocr"></span>
+
+                <input name="email" type="email" id="emailcr" placeholder="Seu Email">
+                <span id="erro-emailcr" class="errocr"></span>
+
+                <div class="input-container">
+                    <input name="password" type="password" id="senhacr" placeholder="Coloque sua senha" />
+                    <span id="erro-senhacr" class="errocr"></span>
+                    <i class="bi bi-eye-slash" onclick="toggleSenha('senhacr')" id="senha-iconcr"></i>
+                </div>
+                <div class="input-containercr">
+                    <input type="password" id="confirmar-senhacr" placeholder="Confirme sua senha" />
+                    <span id="erro-confirmar-senhacr" class="errocr"></span>
+                    <i class="bi bi-eye-slash" onclick="toggleSenha('confirmar-senhacr')" id="confirmar-senha-iconcr"></i>
+                </div>
+
+                <div class="foto-perfilcr">
+                    <img id="img-perfilcr" class="imagem-perfilcr" alt="Imagem de Perfil" style="display: none;" />
+                    <input name="image" type="file" id="fotocr" accept="image/png, image/jpeg" onchange="mostrarImagem(event)" style="display: none;">
+                    <span id="remover-imagemcr" class="remover-imagemcr">X</span>
+                </div>
+
+                <button type="button" id="btn-escolher-imagemcr">Escolher Imagem</button>
+                <div class="botao-containercr">
+                    <button type="button" id="btn-fecharcr" onclick="fecharModal()">Fechar</button>
+                    <button id="btn-adicionarcr">Adicionar Usuário</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 
     <!-- Modal Editar Usuário -->
 
@@ -200,6 +237,7 @@
             <form action="/users/delete" method="POST">
                 <!-- Passa o ID do usuário no campo oculto -->
                 <input type="hidden" name="iddelete" value="<?= $user->id ?>">
+                <input type="hidden" name="imagedelete" value="<?= $user->image ?>">
                 <div class="modal-containerex">
                     <img src="/public/assets/deletar2.png" class="imgex" alt="Excluir" height="100px" width="150px" />
                     <h4>Tem certeza que deseja excluir o usuário <strong><?= $user->name ?></strong>?</h4>

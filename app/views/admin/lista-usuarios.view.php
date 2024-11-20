@@ -55,10 +55,40 @@
                     <button class="pag5">5</button>
                     <button class="proximo>">></button>
         </div>
+
+        <?php foreach ($users as $user): ?>
+        <div class="modal-view" id="modal-view<?= $user->id ?>">
+            <div class="visualisar" id="ver<?= $user->id ?>">
+                <div class="caixa">
+                    <div class="id">
+                        <p class="tit">ID</p>
+                        <input type="number" class="box" value="<?= $user->id ?>" readonly>
+                    </div>
+                    <div class="email">
+                        <p class="tit">Email</p>
+                        <input type="email" value="<?= $user->email ?>" readonly class="box">
+                    </div>
+                    <div class="username">
+                        <p class="tit">Usuário</p>
+                        <input class="box" type="text" value="<?= $user->name ?>" readonly>
+                    </div>
+                    <div class="imagem-view" id="imgdiv">
+                        <input id="img" type="image" src="../site/arquivos/perfil 3.jpg">
+                    </div>
+                    <div class="sair">
+                        <div class="botsair" onclick="fecharModalView('modal-view<?= $user->id ?>')">
+                            <p>Fechar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endforeach ?>
+
         <div class="tela" id="editarUsuario">
-            <form method="post" action="/users/edit" enctype="multipart/form-data" >
+            <form method="post" action="/users/edit" enctype="multipart/form-data">
                 <div class="fundo" id="cx">
-                    <input type="hidden" value="<?=$user->id ?>" name="id">
+                    <input type="hidden" value="<?= $user->id ?>" name="id">
                     <div class="edit">
                         <div class="editname">
                             <input type="text" name="name" value="<?= $user->name ?>" placeholder="Username">
@@ -71,7 +101,7 @@
                             <i class="bi bi-eye" id="mostrar" onclick="mostrarSenha()"></i>
                         </div>
                         <div class="imagem">
-                            <img id="imagemIni" src="<?=$user->image ?>" alt="Img Ini">
+                            <img id="imagemIni" src="<?= $user->image ?>" alt="Img Ini">
                             <input type="file" name="image" id="inputImage" accept="image/*">
                             <button onclick="document.getElementById('inputImage').click()">Escolher imagem</button>
                         </div>
@@ -91,7 +121,6 @@
             </form>
         </div>
         <div class="modal-view" id="modal-view<?= $user->id ?>">
-
             <div class="visualisar" id="ver<?= $user->id ?>">
                 <div class="caixa">
                     <div class="id">
@@ -106,8 +135,8 @@
                         <p class="tit">Usuário</p>
                         <input class="box" type="text" value="<?= $user->name ?>" readonly>
                     </div>
-                    <div class="imagem-view">
-                        <input type="image" src="../site/arquivos/perfil 3.jpg">
+                    <div class="imagem-view" id="imgdiv">
+                        <input id="img" type="image" src="../site/arquivos/perfil 3.jpg">
                     </div>
                     <div class="sair">
                         <div class="botsair" onclick="fecharModalView('modal-view<?= $user->id ?>')">
@@ -141,7 +170,7 @@
                         </div>
 
                         <div class="foto-perfil">
-                            <img id="img-perfil" class="imagem-perfil" alt="Imagem de Perfil" style="display: none;" src="../../<?=$user->image ?>"/>
+                            <img id="img-perfil" class="imagem-perfil" alt="Imagem de Perfil" style="display: none;" src="../../<?= $user->image ?>" />
                             <input name="image" type="file" id="foto" accept="image/png, image/jpeg" onchange="mostrarImagem(event)" style="display: none;">
                             <span id="remover-imagem" class="remover-imagem">X</span>
                         </div>

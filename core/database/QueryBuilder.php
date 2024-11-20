@@ -29,8 +29,15 @@ class QueryBuilder
         }
     }
 
-    public function insert($table, $parameters)
+    public function insert($table, $parameters, $image)
     {  
+        $pasta = "uploads/";
+        $extensao = pathinfo($image['name'], PATHINFO_EXTENSION);
+        $nomeimg = uniqid() . '.' . $extensao;
+        $caminhoimg = $pasta . basename($nomeimg);
+        move_uploaded_file($image['tmp_name'], $caminhoimg);
+        $parameters['image'] = $caminhoimg;
+
         $sql = sprintf('INSERT INTO %s (%s) VALUES (%s)',
             $table,
             implode(', ', array_keys($parameters)),

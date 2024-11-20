@@ -20,10 +20,10 @@ class AdminController
             'name' => $_POST['name'],
             'email' => $_POST['email'],
             'password' => $_POST['password'],
-            'image' => $_POST['image']
         ]; 
 
-        App::get('database')->insert('users', $parameters);
+        App::get('database')->insert('users', $parameters, $_FILES['image']);
+    
 
         header('Location: /users');
         
@@ -49,7 +49,9 @@ class AdminController
     public function delete()
 {
     $id = $_POST['iddelete'];
+    $image = $_POST['imagedelete'];
 
+    unlink($image);
     App::get('database')->delete('users', $id);
 
     header('Location: /users');

@@ -4,9 +4,7 @@ body {
 
 }
 
-
-
-.modalc {
+.modalex {
     background-color: #c70e3c;
     color: white;
     width: 24%;
@@ -22,53 +20,58 @@ body {
     z-index: 3;
 }
 
+h4 {
+    margin: 0;
+    padding-bottom: 10px;
+}
 
-.modal-container {
+
+.modal-containerex {
     background-color: #080b3c;
-    width: 90%;
+    width: 100%;
     height: 100%;
     border-radius: 10px;
 }
 
-img  {
+.imgex  {
     margin-top: 20px;
     width: 100%;
     max-width: 150px;
 }
 
-.modal-buttons {
+.modal-buttonsex {
     display: flex;
     justify-content:space-evenly;
     padding-bottom: 10px;
 }
 
-.button-cancelar, .button-excluir {
+.button-cancelarex, .button-excluirex {
     color: white;
     width: 100px;
     border: none;
     border-radius: 10px;
-    padding: 11px;
+    padding: 0px;
     cursor: pointer;
 }
 
-.button-cancelar {
+.button-cancelarex {
     background-color: #646464;
 }
 
-.button-cancelar:hover {
+.button-cancelarex:hover {
     background-color: #4d4c4c;
 }
 
-.button-excluir {
+.button-excluirex {
     background-color: #c70e3c;
 }
 
-.button-excluir:hover {
+.button-excluirex:hover {
     background-color: #a6072e;
 }
 
-.button-modal:focus,
-.button-modal:active {
+.button-modalex:focus,
+.button-modalex:active {
     outline: none;
     box-shadow: none;
 }
@@ -78,17 +81,17 @@ img  {
 @media (max-width: 1023px) {
 
 
-    .modalc {
+    .modalex {
         max-width: 250px;
         width: 100%;
     }
 
-    img {
+    .imgex {
         max-width: 150px;
         max-height: 150px;
     }
 
-    .button-modal {
+    .button-modalex {
         width: 90px;
         padding: 10px;
     }
@@ -96,28 +99,28 @@ img  {
 }
 
 @media (max-width: 767px) {
-    .container {
+    .containerex {
         padding: 5px;
     }
 
-    .table-container {
+    .table-containerex {
         max-width: 90%;
     }
 
-    .tabela-posts {
+    .tabela-postsex {
         max-width: 100%;
     }
 
-    .modalc {
+    .modalex {
         padding: 10px;
     }
 
-    img {
+    .button-excluir {
         max-width: 150px;
         max-height: 150px;
     }
 
-    .button-modal {
+    .button-modalex {
         max-width: 100px;
         width: 100%;
         padding: 6px;
@@ -125,7 +128,7 @@ img  {
         font-size: 12px;
     }
 
-    .modal-buttons {
+    .modal-buttonsex {
         align-items: center;
         gap: 10px;
     }

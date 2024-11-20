@@ -1,4 +1,4 @@
-const tela = document.querySelector('#tela')
+const tela = document.querySelector('#editarUsuario')
 
 function editar(idModal){
     document.getElementById(idModal).style.display="flex";

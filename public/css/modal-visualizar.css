@@ -9,28 +9,15 @@
     z-index: 2;
 }
 
-.botview{
-    width: 70px;
-    height: 30px;
-    background-color: #237ecd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    cursor: pointer;
-}
-
 .visualisar{
-    width: 400px;
-    height: 490px;
+    padding: 20px;
     border-radius: 10px;
     background-color: #237ecd;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    display: none;
-    z-index: 3;
+    display: flex;
 }
 
 .titulo{
@@ -42,7 +29,8 @@
 }
 
 .caixa{
-    width: 90%;
+    width: 350px;
+    padding: 10px;
     border-radius: 10px;
     background-color: #0b0b3c;
     display: flex;

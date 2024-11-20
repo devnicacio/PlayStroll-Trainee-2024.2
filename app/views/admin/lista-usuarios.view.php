@@ -37,37 +37,10 @@
                             <td><?= $user->id ?></td>
                             <td class="autor-post"><?= $user->name ?></td>
                             <td class="email-post"><?= $user->email ?></td>
-                            <td><button class="verificar" onclick="abrirModalView('modal-view<?=$user->id ?>', 'ver<?=$user->id ?>')"><i class="bi bi-eye"></i></button></td>
-                            <td><button class="editar" onclick="editar('cx')"><i class="bi bi-pencil-square"></i></button></td>
+                            <td><button class="verificar" onclick="abrirModalView('modal-view<?= $user->id ?>')"><i class="bi bi-eye"></i></button></td>
+                            <td><button class="editar" onclick="editar('editarUsuario')"><i class="bi bi-pencil-square"></i></button></td>
                             <td><button class="excluir" onclick="abrirModalExcluirUsuario('modal-excluirex<?= $user->id ?>')"><i class="fas fa-trash"></i></button></td>
                         </tr>
-                        <div class="modal-view" id="modal-view<?=$user->id ?>">
-
-                            <div class="visualisar" id="ver<?=$user->id ?>">
-                                <div class="caixa">
-                                    <div class="id">
-                                        <p class="tit">ID</p>
-                                        <input type="number" class="box" value="" readonly>
-                                    </div>
-                                    <div class="email">
-                                        <p class="tit">Email</p>
-                                        <input type="text" value="<?= $user->email ?>" readonly class="box">
-                                    </div>
-                                    <div class="username">
-                                        <p class="tit">Usuário</p>
-                                        <input class="box" type="text" value="Phelippe_Coutinho" readonly>
-                                    </div>
-                                    <div class="imagem-view">
-                                        <input type="image" src="../site/arquivos/perfil 3.jpg">
-                                    </div>
-                                    <div class="sair">
-                                        <div class="botsair" onclick="fecharModalView('ver', 'botao')">
-                                            <p>Fechar</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     <?php endforeach ?>
                 </tbody>
             </table>
@@ -82,23 +55,24 @@
                     <button class="pag5">5</button>
                     <button class="proximo>">></button>
         </div>
-        <div class="tela" id="tela">
-            <form method="http" action="#">
+        <div class="tela" id="editarUsuario">
+            <form method="post" action="/users/edit">
                 <div class="fundo" id="cx">
+                    <input type="hidden" value="1" name="id">
                     <div class="edit">
                         <div class="editname">
-                            <input type="text" value="Phelippe_Coutinho" placeholder="Username">
+                            <input type="text" name="name" value="<?= $user->name ?>" placeholder="Username">
                         </div>
                         <div class="inputmail">
-                            <input type="text" value="coutinho_VASCOOO@gmail.com" placeholder="Email">
+                            <input type="text" name="email" value="<?= $user->email ?>" placeholder="Email">
                         </div>
                         <div class="inputsenha">
-                            <input id="senha" type="password" value="coutinho123" placeholder="Senha">
+                            <input id="senha" type="password" name="password" value="<?= $user->password ?>" placeholder="Senha">
                             <i class="bi bi-eye" id="mostrar" onclick="mostrarSenha()"></i>
                         </div>
                         <div class="imagem">
                             <img id="imagemIni" src="/app/views/admin/arquivos/perfil.jpg" alt="Img Ini">
-                            <input type="file" id="inputImage" accept="image/*">
+                            <input type="file" name="image" id="inputImage" accept="image/*">
                             <button onclick="document.getElementById('inputImage').click()">Escolher imagem</button>
                         </div>
                         <div class="remove" id="remove">
@@ -106,15 +80,42 @@
                         </div>
                         <div class="confirma">
                             <div class="conf">
-                                <div class="boty" onclick="editar2('cx')">CONFIRMAR</div>
+                                <button type="submit" class="boty">CONFIRMAR</button>
                             </div>
                             <div class="exclui">
-                                <div class="botn" onclick="editar2('cx')">CANCELAR</div>
+                                <div class="botn" onclick="editar2('editarUsuario')">CANCELAR</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
+        </div>
+        <div class="modal-view" id="modal-view<?= $user->id ?>">
+
+            <div class="visualisar" id="ver<?= $user->id ?>">
+                <div class="caixa">
+                    <div class="id">
+                        <p class="tit">ID</p>
+                        <input type="number" class="box" value="<?= $user->id ?>" readonly>
+                    </div>
+                    <div class="email">
+                        <p class="tit">Email</p>
+                        <input type="email" value="<?= $user->email ?>" readonly class="box">
+                    </div>
+                    <div class="username">
+                        <p class="tit">Usuário</p>
+                        <input class="box" type="text" value="<?= $user->name ?>" readonly>
+                    </div>
+                    <div class="imagem-view">
+                        <input type="image" src="../site/arquivos/perfil 3.jpg">
+                    </div>
+                    <div class="sair">
+                        <div class="botsair" onclick="fecharModalView('modal-view<?= $user->id ?>')">
+                            <p>Fechar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="modal" id="modal-criar-usuario" style="display: none;">
             <div class="modal-background">

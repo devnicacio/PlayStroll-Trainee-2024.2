@@ -7,5 +7,6 @@ use App\Core\Router;
 
     $router->get('users', 'AdminController@index');
     $router->post('users/create', 'AdminController@createUsers');
+    $router->post('users/edit', 'AdminController@edit');
     $router->post('users/delete', 'AdminController@delete');
 ?>

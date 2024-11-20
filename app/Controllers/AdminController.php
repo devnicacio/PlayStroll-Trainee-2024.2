@@ -29,7 +29,21 @@ class AdminController
         
     }
 
+    public function edit()
+    {
+        $parameters = [
+            'name' => $_POST['name'],
+            'email' => $_POST['email'],
+            'password' => $_POST['password'],
+            'image' => $_POST['image']
+        ];
 
+        $id = $_POST['id'];
+
+        App::get('database')->update('users', $id, $parameters);
+
+        header('Location: /users');
+    }
 
 
     public function delete()

@@ -79,7 +79,7 @@ class QueryBuilder
     }
 
     public function deletaPost($table, $id){
-        $sql = sprintf('DELETE FROM % WHERE %s', $table, 'id = :id');
+        $sql = sprintf('DELETE FROM %s WHERE %s', $table, 'id = :id');
 
         try {
             $smt = $this->pdo->prepare($sql);

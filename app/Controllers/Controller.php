@@ -15,7 +15,7 @@ class Controller{
     //Admin
     public function getTabelaDePosts(){
         $posts = App::get('database')->selectAll('posts');
-        return view('admin/tabela-de-posts', compact($posts));
+        return view('admin/tabela-de-posts', compact('posts'));
     }
     public function postPost(){
         $parameters = [
@@ -41,13 +41,13 @@ class Controller{
     }
 
     public function delete_post(){
-        $post = $_POST['iddelete_post'];
+        $id = $_POST['iddelete_post'];
         unlink($_POST['iddelete_capa']);
         unlink($_POST['iddelete_retrato']);
 
-        App::get("database")->deletaPost('posts', 'id');
+        App::get("database")->deletaPost('posts', $id);
 
-        header('Location: /posts');
+        header('Location: /admin/tabela-de-posts');
     }
 
 }

@@ -162,15 +162,15 @@
                 <input name="email" type="email" id="emailcr" placeholder="Seu Email">
                 <span id="erro-emailcr" class="errocr"></span>
 
-                <div class="input-container">
+                <div class="input-containercr">
                     <input name="password" type="password" id="senhacr" placeholder="Coloque sua senha" />
                     <span id="erro-senhacr" class="errocr"></span>
-                    <i class="bi bi-eye-slash" onclick="toggleSenha('senhacr')" id="senha-iconcr"></i>
+                    <i class="bi bi-eye" onclick="toggleSenha('senhacr')" id="senha-iconcr"></i>
                 </div>
                 <div class="input-containercr">
                     <input type="password" id="confirmar-senhacr" placeholder="Confirme sua senha" />
                     <span id="erro-confirmar-senhacr" class="errocr"></span>
-                    <i class="bi bi-eye-slash" onclick="toggleSenha('confirmar-senhacr')" id="confirmar-senha-iconcr"></i>
+                    <i class="bi bi-eye" onclick="toggleConfirmacaoSenha('confirmar-senhacr')" id="confirmar-senha-iconcr"></i>
                 </div>
 
                 <div class="foto-perfilcr">

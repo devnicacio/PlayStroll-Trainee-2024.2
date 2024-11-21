@@ -13,22 +13,31 @@ function fecharModalCriar() {
     modal.style.display = 'none'; // Modal desaparece
 }
 
-// Função para mostrar ou ocultar a senha e alternar o ícone
-function toggleSenha(id) {
-    const senhaInput = document.getElementById(id);  // Acessa o campo de senha
-    const senhaIcon = document.getElementById(`${id}-iconcr`);  // Acessa o ícone correspondente
+// Função para mostrar ou ocultar a senha e a confirmação da senha, alternando os ícones
+function toggleSenha() {
+    // Seleciona os campos de senha e confirmação de senha
+    var inputPass = document.getElementById('senhacr');
+    var confirmarSenha = document.getElementById('confirmar-senhacr');
+    
+    // Seleciona os ícones dos campos
+    var showPass = document.getElementById('senha-iconcr');
+    var showConfirmarSenha = document.getElementById('confirmar-senha-iconcr');
 
-    // Verifica o tipo do campo de senha e alterna entre 'password' e 'text'
-    if (senhaInput.type === "password") {
-        senhaInput.type = "text";  // Muda para 'text' (mostrar senha)
-        senhaIcon.classList.remove("bi-eye-slash");  // Remove o ícone de "ocultar"
-        senhaIcon.classList.add("bi-eye");  // Adiciona o ícone de "mostrar"
+    // Verifica se a senha está oculta (type="password")
+    if(inputPass.type === 'password') {
+        inputPass.setAttribute('type', 'text');         // Torna a senha visível
+        confirmarSenha.setAttribute('type', 'text');    // Torna a confirmação visível
+        showPass.classList.replace('bi-eye', 'bi-eye-slash'); // Troca ícone de oculto para visível
+        showConfirmarSenha.classList.replace('bi-eye', 'bi-eye-slash'); // Troca ícone de oculto para visível
     } else {
-        senhaInput.type = "password";  // Muda para 'password' (ocultar senha)
-        senhaIcon.classList.remove("bi-eye");  // Remove o ícone de "mostrar"
-        senhaIcon.classList.add("bi-eye-slash");  // Adiciona o ícone de "ocultar"
+        inputPass.setAttribute('type', 'password');     // Torna a senha oculta
+        confirmarSenha.setAttribute('type', 'password');// Torna a confirmação oculta
+        showPass.classList.replace('bi-eye-slash', 'bi-eye'); // Troca ícone de visível para oculto
+        showConfirmarSenha.classList.replace('bi-eye-slash', 'bi-eye'); // Troca ícone de visível para oculto
     }
 }
+
+
 
 
 // Função para adicionar um novo usuário

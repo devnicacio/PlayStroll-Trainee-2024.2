@@ -55,10 +55,6 @@ body {
   border-radius: 50%; 
   display: none; 
   margin-top: 10px;
-  margin-bottom: 10px;
-  width: 250px;
-  height: 250px;
-  display: none;
 }
 
 .remover-imagemcr {
@@ -192,6 +188,8 @@ input[type="file"] {
   width: 100%; 
 }
 
+
+
 @media (max-width: 768px) {
   .modal-backgroundcr {
       max-width: 400px;
@@ -217,7 +215,7 @@ input[type="file"] {
   .botao-containercr {
       flex-direction: column;
       align-items: center;
-      width: 80%;
+      width: 100%;
   }
 
   #btn-adicionarcr,
@@ -226,11 +224,17 @@ input[type="file"] {
       width: 100%;
       margin-top: 10px;
       padding: 15px;
+      display: flex;
+     align-items: center;
+     justify-content: center;
   }
 
   #btn-escolher-imagemcr {
       width: 100%;
-      margin-top: 10px;
       padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: -10px;
   }
 }

@@ -84,6 +84,7 @@
             </div>
         </div>
         <?php endforeach ?>
+        <?php foreach ($users as $user): ?>
 
         <div class="tela" id="editarUsuario">
             <form method="post" action="/users/edit" enctype="multipart/form-data">
@@ -101,12 +102,10 @@
                             <i class="bi bi-eye" id="mostrar" onclick="mostrarSenha()"></i>
                         </div>
                         <div class="imagem">
-                            <img id="imagemIni" src="<?= $user->image ?>" alt="Img Ini">
+                            <img id="imagemIni" src="/app/views/site/arquivos/image-removebg-preview.png" alt="Img Ini">
                             <input type="file" name="image" id="inputImage" accept="image/*">
+                            <span id="remover-imagemedit" class="remover-imagemedit">X</span>
                             <button onclick="document.getElementById('inputImage').click()">Escolher imagem</button>
-                        </div>
-                        <div class="remove" id="remove">
-                            <button onclick="removerImagem()">Remover imagem</button>
                         </div>
                         <div class="confirma">
                             <div class="conf">
@@ -120,6 +119,8 @@
                 </div>
             </form>
         </div>
+        <?php endforeach ?>
+
         <div class="modal-view" id="modal-view<?= $user->id ?>">
             <div class="visualisar" id="ver<?= $user->id ?>">
                 <div class="caixa">

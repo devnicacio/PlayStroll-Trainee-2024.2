@@ -38,7 +38,7 @@
                             <td class="autor-post"><?= $user->name ?></td>
                             <td class="email-post"><?= $user->email ?></td>
                             <td><button class="verificar" onclick="abrirModalView('modal-view<?=$user->id ?>')"><i class="bi bi-eye"></i></button></td>
-                            <td><button class="editar" onclick="editar('editarUsuario')"><i class="bi bi-pencil-square"></i></button></td>
+                            <td><button class="editar" onclick="editar('editarUsuario<?= $user->id ?>')"><i class="bi bi-pencil-square"></i></button></td>
                             <td><button class="excluir" onclick="abrirModalExcluirUsuario('modal-excluirex<?= $user->id ?>')"><i class="fas fa-trash"></i></button></td>
                         </tr>
                     <?php endforeach ?>
@@ -85,8 +85,7 @@
         </div>
         <?php endforeach ?>
         <?php foreach ($users as $user): ?>
-
-        <div class="tela" id="editarUsuario">
+        <div class="tela" id="editarUsuario<?= $user->id ?>">
             <form method="post" action="/users/edit" enctype="multipart/form-data">
                 <div class="fundo" id="cx">
                     <input type="hidden" value="<?= $user->id ?>" name="id">
@@ -102,17 +101,17 @@
                             <i class="bi bi-eye" id="mostrar" onclick="mostrarSenha()"></i>
                         </div>
                         <div class="imagem">
-                            <img id="imagemIni" src="/app/views/site/arquivos/image-removebg-preview.png" alt="Img Ini">
-                            <input type="file" name="image" id="inputImage" accept="image/*">
+                            <input type="hidden" value="<?= $user->image ?>" name="fotoAtual">
+                            <img src="<?= $user->image ?>" alt="">
+                            <input id="img" name="image"  type="file" src="<?= $user->image ?>">
                             <span id="remover-imagemedit" class="remover-imagemedit">X</span>
-                            <button onclick="document.getElementById('inputImage').click()">Escolher imagem</button>
                         </div>
                         <div class="confirma">
                             <div class="conf">
                                 <button type="submit" class="boty">CONFIRMAR</button>
                             </div>
                             <div class="exclui">
-                                <div class="botn" onclick="editar2('editarUsuario')">CANCELAR</div>
+                                <div class="botn" onclick="editar2('editarUsuario<?= $user->id ?>')">CANCELAR</div>
                             </div>
                         </div>
                     </div>

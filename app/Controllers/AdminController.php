@@ -35,12 +35,13 @@ class AdminController
             'name' => $_POST['name'],
             'email' => $_POST['email'],
             'password' => $_POST['password'],
-            'image' => $_POST['image']
         ];
+
+        
 
         $id = $_POST['id'];
 
-        App::get('database')->update('users', $id, $parameters);
+        App::get('database')->update('users', $id, $parameters, $_FILES['image'], $_FILES['fotoAtual']);
 
         header('Location: /users');
     }

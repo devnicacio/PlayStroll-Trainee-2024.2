@@ -53,8 +53,18 @@ class QueryBuilder
         }
     }
 
-    public function update($table, $id, $parameters)
+    public function update($table, $id, $parameters, $image, $fotoAtual)
     {
+        if(isset($image)){
+            unlink($fotoAtual);
+            $pasta = "uploads/";
+            $extensao = pathinfo($image['name'], PATHINFO_EXTENSION);
+            $nomeimg = uniqid() . '.' . $extensao;
+            $caminhoimg = $pasta . basename($nomeimg);
+            move_uploaded_file($image['tmp_name'], $caminhoimg);
+            $parameters['image'] = $caminhoimg;
+        }
+
         $sql = sprintf('UPDATE %s SET %s WHERE id = %s', 
             $table, 
             implode(', ', array_map(function($param) {

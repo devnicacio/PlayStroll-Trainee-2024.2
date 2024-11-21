@@ -47,7 +47,8 @@
 						<div class="container-image">
 							<label for="file">Foto modo paisagem</label>
 							<label class="custom-file-label" for="file-capa">Escolha uma imagem</label>
-						</div>
+                            <span id="erro-capa" class="erro-img"></span>
+                        </div>
 						<div class="parte-capa">
 							<img id="file-name-capa" class="capa-preview" alt="Preview da Capa" />
 							<input type="file" class="image-capa" id="file-capa" accept="image/*" name="image-capa"
@@ -61,6 +62,7 @@
 						<div class="container-image">
 							<label for="file">Foto modo retrato</label>
 							<label class="custom-file-label" for="file-retrato">Escolha uma imagem</label>
+                            <span id="erro-retrato" class="erro-img"></span>
 						</div>
 						<div class="parte-retrato">
 							<img id="file-name-retrato" class="retrato-preview" alt="Preview do Retrato" />
@@ -150,7 +152,8 @@
                 <tr>
                     <td><?= $post->id ?></td>
                     <td class="titulo-post"><?= $post->title ?></td>
-                    <td class="autor-post"><?= $post->id ?></td>
+                    <td class="autor-post"> Diego Pereira Betti </td>
+                    <!-- ?= $post->id ?> -->
                     <td><?= $post->create_at ?></td>
                     <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
                     <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>

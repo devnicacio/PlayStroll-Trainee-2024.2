@@ -9,11 +9,7 @@
     
     <!-- Third-party CSS -->
     <!-- SummerNote -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-		crossorigin="anonymous"></script>
 	<link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.css" rel="stylesheet" />
-	<script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.js"></script>
     <!-- Google Fonts -->
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -21,8 +17,16 @@
     <link rel="stylesheet" href="/public/css/tabela-de-posts.css">
 	<link rel="stylesheet" type="text/css" href="/public/css/criar.css" />
     <link rel="stylesheet" type="text/css" href="/public/css/excluir.css" />
-    <!-- JS -->
+
+    <!-- Third-party JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.9.0/lang/summernote-pt-BR.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.js"></script>
+    <!-- Personal JS -->
     <script defer src="/public/js/modals.js"></script>
+    <script defer src="/public/js/criar.js"></script>
    
 </head>
 <body>
@@ -35,105 +39,13 @@
     -->
     <main class="container">
         <div class="cabecalho">
-                <h1 class="table-title">Tabela de Posts</h1>
+            <h1 class="table-title">Tabela de Posts</h1>
             <button class="more" onclick="abrirModal('criar-post')">+</button>
         </div>
-
-        <div class="modal-criar" id="criar-post">
-		<form action="/criar-post" method="post" enctype="multipart/form-data">
-			<div class="modal-container">
-				<div class="imagens">
-					<div class="capa">
-						<div class="container-image">
-							<label for="file">Foto modo paisagem</label>
-							<label class="custom-file-label" for="file-capa">Escolha uma imagem</label>
-                            <span id="erro-capa" class="erro-img"></span>
-                        </div>
-						<div class="parte-capa">
-							<img id="file-name-capa" class="capa-preview" alt="Preview da Capa" />
-							<input type="file" class="image-capa" id="file-capa" accept="image/*" name="image-capa"
-							onchange="previewImage('file-capa', 'file-name-capa', 'capa')" />
-							<button id="btn-remover-imagem-capa" onclick="removerImagem('capa')" type="button">
-								X
-							</button>
-						</div>
-					</div>
-					<div class="retrato">
-						<div class="container-image">
-							<label for="file">Foto modo retrato</label>
-							<label class="custom-file-label" for="file-retrato">Escolha uma imagem</label>
-                            <span id="erro-retrato" class="erro-img"></span>
-						</div>
-						<div class="parte-retrato">
-							<img id="file-name-retrato" class="retrato-preview" alt="Preview do Retrato" />
-							<input type="file" class="image-retrato" id="file-retrato" accept="image/*" name="image-retrato"
-							onchange="previewImage('file-retrato', 'file-name-retrato', 'retrato')" />
-							<button id="btn-remover-imagem-retrato" onclick="removerImagem('retrato')" type="button">
-								X
-							</button>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div class="placeholders">
-						<div class="parte-data">
-							<label for="date">Data</label>
-							<input type="date" id="data" class="data" name="create-at">
-							<span id="erro-data" class="erro"></span>
-						</div>
-						<div class="second-line">
-							<div class="parte-titulo">
-								<label for="text">Título</label>
-								<input type="text" id="titulo" class="titulo" placeholder="Coloque seu título" name="title"/>
-								<span id="erro-titulo" class="erro"></span>
-							</div>
-							<div class="parte-avaliacao">
-								<label for="number">Avaliação</label>
-								<input type="number"  id="avaliacao" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota de 0 a 5" name="avaliation"/>
-								<span id="erro-avaliacao" class="erro"></span>
-							</div>
-                            <input type="hidden" name="content" id="content">
-						</div>
-					</div>
-					<div class="diminuir-word">
-						<div id="summernote"></div>
-						<span id="erro-descricao" class="erro"></span>
-					</div>
-					<div class="modal-buttons">
-						<button id="btn-cancelar" class="button-cancelar" onclick="fecharModal('criar-post')" type="button">
-							Cancelar
-						</button>
-						<button id="btn-criar" class="button-postar" type="submit">Criar</button>
-					</div>
-				</div>
-			</div>
-		</form>
-	</div>
-	<div class="tela" id="tela"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.9.0/lang/summernote-pt-BR.min.js"></script>
-	<script>
-		$("#summernote").summernote({
-			placeholder: "Crie a sua descrição",
-			tabsize: 2,
-			height: 120,
-			lang: "pt-BR",
-			toolbar: [
-				["style", ["style"]],
-				["font", ["bold", "underline"]],
-				["color", ["color"]],
-				["para", ["ul", "ol", "paragraph"]],
-				["table", ["table"]],
-				["insert", ["link", "picture"]],
-			],
-            callbacks: {
-            onChange: function(contents) {
-                $('#content').val(contents);
-            }
-        }
-		});
-	</script>
-
+        <!-- Modal Criar -->
+        <?php
+            require_once("modais/posts/create_modal_posts.php");
+        ?>
         <div class="table-container">
         <table class="tabela-posts">
             <thead>
@@ -159,39 +71,17 @@
                     <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
                     <td><button class="btn-acao btn-excluir" onclick="abrirModal('excluir<?= $post->id ?>')"><i class="fas fa-trash"></i></button></td>
                 </tr>
-                <div class="modal-excluir" id="excluir<?= $post->id ?>">
-                    <form action="/deletar-post" method="post" >
-                        <input type="hidden" name="iddelete_post" value="<?= $post->id ?>">
-                        <input type="hidden" name="iddelete_capa" value="<?= $post->image_capa ?>">
-                        <input type="hidden" name="iddelete_retrato" value="<?= $post->image_retrato ?>">
-                            <div class="modal-container-excluir">
-                                <img
-                                src="/public/assets/deletar2.png"
-                                alt=""
-                                height="100px"
-                                width="150px"
-                                />
-                                <h4>Tem certeza que deseja excluir o post?</h4>
-                                <div class="modal-buttons-excluir">
-                                <button class="button-cancelar" type="button" onclick="fecharModal('excluir<?= $post->id ?>')">
-                                    Cancelar
-                                </button>
-                                <button class="button-excluir" type="submit">Excluir</button>
-                                </div>
-                            </div>
-                    </form>
-                </div>
-                <?php endforeach ?>
+                <!-- Modais de leitura, alteração e exclusão--> 
+                <?php
+                    require_once realpath(dirname(__FILE__)."/modais/posts/read_modal_posts.php");
+                    require_once realpath(dirname(__FILE__)."/modais/posts/update_modal_posts.php");
+                    require_once realpath(dirname(__FILE__)."/modais/posts/delete_modal_posts.php");
+                ?>
+                <?php endforeach?>
             </tbody>
-        </div>
-    <div class="tela" id="tela"></div>
+            <div class="tela" id="tela"></div>
         </table>
-        <!-- Modais -->
-        <?php 
-            require_once "read-modal-posts.php";
-            require_once "update-modal-posts.php";
-        ?>
-        <div class="tela"></div>
+            
         <!-- Paginação -->
         <div class="navegacao">
             <button class="nav1">&lt;</button>
@@ -202,25 +92,40 @@
             <button class="nav6">5</button>
             <button class="nav7">&gt;</button>
         </div>
-    </div>
-
-    <script src="/public/js/criar.js"></script>
-    <script>
-        $(".summernote").summernote('disable',{
-			tabsize: 2,
-			height: 120,
-			lang: "pt-BR",
-			toolbar: [
-				["style", ["style"]],
-				["font", ["bold", "underline"]],
-				["color", ["color"]],
-				["para", ["ul", "ol", "paragraph"]],
-				["table", ["table"]],
-				["insert", ["link", "picture"]],
-			],
-		});
-    </script>
-
+    </main>
 </body>
-
+<script>
+    $(".summernote").summernote('disable',{
+        tabsize: 2,
+        height: 120,
+        lang: "pt-BR",
+        toolbar: [
+            ["style", ["style"]],
+            ["font", ["bold", "underline"]],
+            ["color", ["color"]],
+            ["para", ["ul", "ol", "paragraph"]],
+            ["table", ["table"]],
+            ["insert", ["link", "picture"]],
+        ],
+    });
+    $("#summernote").summernote({
+        placeholder: "Crie a sua descrição",
+        tabsize: 2,
+        height: 120,
+        lang: "pt-BR",
+        toolbar: [
+            ["style", ["style"]],
+            ["font", ["bold", "underline"]],
+            ["color", ["color"]],
+            ["para", ["ul", "ol", "paragraph"]],
+            ["table", ["table"]],
+            ["insert", ["link", "picture"]],
+        ],
+        callbacks: {
+        onChange: function(contents) {
+            $('#content').val(contents);
+        }
+    }
+    });
+</script>
 </html>

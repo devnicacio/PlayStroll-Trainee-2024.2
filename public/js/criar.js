@@ -1,16 +1,5 @@
 const tela = document.querySelector('#tela');
 
-const abrirModal = idModal => {
-    document.getElementById(idModal).style.display = "flex";
-    tela.style.display = "block";
-    tela.style.opacity = "0.5"
-}
-
-const fecharModal = idModal => {
-    document.getElementById(idModal).style.display = "none";
-    tela.style.display = "none";
-}
-
 function previewImage(inputId, imgId, tipo) {
     const input = document.getElementById(inputId);
     const btnRemoverImagemCapa = document.getElementById('btn-remover-imagem-capa');

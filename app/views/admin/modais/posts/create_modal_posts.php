@@ -34,7 +34,7 @@
 				</div>
 			</div>
 			<div>
-				<div class="placeholders">
+				<div class="placeholders-criar">
 					<div class="parte-data">
 						<label for="date">Data</label>
 						<input type="date" id="data" class="data" name="create-at">

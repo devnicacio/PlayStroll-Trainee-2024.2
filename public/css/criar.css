@@ -155,7 +155,7 @@
     display: block;
 }
 
-.placeholders {
+.placeholders-criar {
     display: flex;
     flex-direction: column;
     max-width: 458px;
@@ -303,7 +303,7 @@
         padding: 5px 10px;
     }
 
-    .placeholders {      
+    .placeholders-criar {      
         margin-bottom: 16px;
         row-gap: 8px;
     }
@@ -325,6 +325,8 @@
     .diminuir-word {
         max-height: 230px;
         height: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     .modal-buttons {
@@ -378,7 +380,7 @@
         margin: 8px;
     }
 
-    .placeholders {
+    .placeholders-criar {
         margin-bottom: 10px;
         max-width: 200px;
         width: 100%;
@@ -406,6 +408,8 @@
     .diminuir-word {
         max-width: 200px;
         width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     .note-editor, .note-frame {

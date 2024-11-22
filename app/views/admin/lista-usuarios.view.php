@@ -78,11 +78,11 @@
                             <button type="button" id="btnImage<?= $user->id ?>" onclick="document.getElementById('inputImage<?= $user->id ?>').click()">Escolher imagem</button>
                         </div>
                         <div class="confirma">
+                            <div class="exclui">
+                                <button type="button" class="botn" onclick="editar2('editarUsuario<?= $user->id ?>')">CANCELAR</button>
+                            </div>
                             <div class="conf">
                                 <button type="submit" class="boty">CONFIRMAR</button>
-                            </div>
-                            <div class="exclui">
-                                <div class="botn" onclick="editar2('editarUsuario<?= $user->id ?>')">CANCELAR</div>
                             </div>
                         </div>
                     </div>

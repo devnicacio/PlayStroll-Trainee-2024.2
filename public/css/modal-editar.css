@@ -63,12 +63,12 @@
 }
 
 .editname, .inputmail, .inputsenha{
-    width: 95%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    border: 0;
 }
 
 .inputsenha{
@@ -156,12 +156,12 @@
 .conf{
     width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 }
 
 .boty{
-    width: 90%;
+    width: 95%;
     padding: 10px;
     border-radius: 5px;
     display: flex;
@@ -176,12 +176,12 @@
 .exclui{
     width: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
 }
 
 .botn{
-    width: 80%;
+    width: 95%;
     padding: 10px;
     border-radius: 5px;
     display: flex;
@@ -191,5 +191,37 @@
     color: white;
     background-color: gray;
     cursor: pointer;
-    transform: translateX(10px);
+}
+
+
+@media only screen and (max-width: 770px){
+    .confirma{
+        flex-direction: column;
+    }
+
+    .exclui, .conf{
+        width: 100%;
+    }
+
+    .boty, .botn{
+        width: 100%;
+    }
+    .imagem button, .botn, .boty{
+        margin-bottom: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 500px)
+{
+    form{
+        width: 80%;
+    }
+    .fundo{
+        width: 100%;
+    }
+
+    .edit{
+        width: 90%;
+    }
 }

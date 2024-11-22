@@ -58,7 +58,9 @@
     margin-bottom: 10px;
 }
 
-
+.imagemView{
+    display: none;
+}
 
 .imagem button{
     width: 100%;

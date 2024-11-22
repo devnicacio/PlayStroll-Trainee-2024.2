@@ -103,7 +103,8 @@
                         <div class="imagem">
                             <input type="hidden" value="<?= $user->image ?>" name="fotoAtual">
                             <img src="<?= $user->image ?>" alt="">
-                            <input id="img" name="image"  type="file" src="<?= $user->image ?>">
+                            <input id="imgEdit" class="imagemView" name="image"  type="file" src="<?= $user->image ?>">
+                            <button onclick="document.getElementById('imgEdit').click()">Selecionar imagem</button>
                             <span id="remover-imagemedit" class="remover-imagemedit">X</span>
                         </div>
                         <div class="confirma">

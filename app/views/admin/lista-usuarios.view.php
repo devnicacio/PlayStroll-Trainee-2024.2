@@ -57,34 +57,6 @@
         </div>
 
         <?php foreach ($users as $user): ?>
-        <div class="modal-view" id="modal-view<?= $user->id ?>">
-            <div class="visualisar" id="ver<?= $user->id ?>">
-                <div class="caixa">
-                    <div class="id">
-                        <p class="tit">ID</p>
-                        <input type="number" class="box" value="<?= $user->id ?>" readonly>
-                    </div>
-                    <div class="email">
-                        <p class="tit">Email</p>
-                        <input type="email" value="<?= $user->email ?>" readonly class="box">
-                    </div>
-                    <div class="username">
-                        <p class="tit">Usuário</p>
-                        <input class="box" type="text" value="<?= $user->name ?>" readonly>
-                    </div>
-                    <div class="imagem-view" id="imgdiv">
-                        <input id="img" type="image" src="<?= $user->image ?>">
-                    </div>
-                    <div class="sair">
-                        <div class="botsair" onclick="fecharModalView('modal-view<?= $user->id ?>')">
-                            <p>Fechar</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <?php endforeach ?>
-        <?php foreach ($users as $user): ?>
         <div class="tela" id="editarUsuario<?= $user->id ?>">
             <form method="post" action="/users/edit" enctype="multipart/form-data">
                 <div class="fundo" id="cx">
@@ -104,7 +76,7 @@
                             <input type="hidden" value="<?= $user->image ?>" name="fotoAtual">
                             <img src="<?= $user->image ?>" alt="">
                             <input id="imgEdit" class="imagemView" name="image"  type="file" src="<?= $user->image ?>">
-                            <button onclick="document.getElementById('imgEdit').click()">Selecionar imagem</button>
+                            <button id="botImgView" >Selecionar imagem</button>
                             <span id="remover-imagemedit" class="remover-imagemedit">X</span>
                         </div>
                         <div class="confirma">

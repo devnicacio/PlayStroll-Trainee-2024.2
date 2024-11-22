@@ -24,26 +24,5 @@ function mostrarSenha(){
     }
 }
 
-function trocarImagem(event){
-    const imagemIni = document.getElementById("imagemIni");
-    const arquivo = event.target.files[0];
-
-    if(arquivo){
-        imagemIni.src = URL.createObjectURL(arquivo);
-        document.getElementById("remove").style.display = "flex";
-    document.getElementById("imagemIni").style.display = "flex";
-    }
-}
-
-document.getElementById("inputImage").addEventListener("change", trocarImagem);
-
-function removerImagem(){
-    const imagemIni = document.getElementById("imagemIni");
-    imagemIni.src = "";
-    imagemIni.alt = "Imagem removida";
-    document.getElementById("remove").style.display = "none";
-    document.getElementById("imagemIni").style.display = "none";
-
-}
 
 

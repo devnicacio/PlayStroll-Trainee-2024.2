@@ -57,7 +57,7 @@
         </div>
 
         <?php foreach ($users as $user): ?>
-        <div class="tela" id="editarUsuario<?= $user->id ?>">
+        <div class="tela" id="editarUsuario<?= $user->id ?>" data-user-id="<?= $user->id ?>">
             <form method="post" action="/users/edit" enctype="multipart/form-data">
                 <div class="fundo" id="cx">
                     <input type="hidden" value="<?= $user->id ?>" name="id">
@@ -73,11 +73,9 @@
                             <i class="bi bi-eye" id="mostrar" onclick="mostrarSenha()"></i>
                         </div>
                         <div class="imagem">
-                            <input type="hidden" value="<?= $user->image ?>" name="fotoAtual">
-                            <img src="<?= $user->image ?>" alt="">
-                            <input id="imgEdit" class="imagemView" name="image"  type="file" src="<?= $user->image ?>">
-                            <button id="botImgView" >Selecionar imagem</button>
-                            <span id="remover-imagemedit" class="remover-imagemedit">X</span>
+                            <img id="imgEdit<?= $user->id ?>" src="<?= $user->image ?>">
+                            <input type="file" id="inputImage<?= $user->id ?>" name="image" accept="image/png, image/jpeg">
+                            <button type="button" id="btnImage<?= $user->id ?>" onclick="document.getElementById('inputImage<?= $user->id ?>').click()">Escolher imagem</button>
                         </div>
                         <div class="confirma">
                             <div class="conf">

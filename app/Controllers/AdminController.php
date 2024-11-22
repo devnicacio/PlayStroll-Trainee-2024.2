@@ -41,7 +41,10 @@ class AdminController
 
         $id = $_POST['id'];
 
-        App::get('database')->update('users', $id, $parameters, $_FILES['image'], $_FILES['fotoAtual']);
+        $image = isset($_FILES['image']) && $_FILES['image']['size'] > 0 ? $_FILES['image'] : null;
+        $fotoAtual = $_POST['fotoAtual'];
+
+        App::get('database')->update('users', $id, $parameters, $image, $fotoAtual);
 
         header('Location: /users');
     }

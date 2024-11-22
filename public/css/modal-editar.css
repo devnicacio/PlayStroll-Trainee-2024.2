@@ -95,6 +95,10 @@
     font-weight: bold;
 }
 
+.imagem input{
+    display:none;
+}
+
 .imagem:hover{
     .remover-imagemedit{
         display: block;

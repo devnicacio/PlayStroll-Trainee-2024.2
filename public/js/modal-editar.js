@@ -24,5 +24,33 @@ function mostrarSenha(){
     }
 }
 
+function selectImgEdit(userId){
 
+    const inputImagem = document.getElementById('inputImage${userId}');
+    const botaoSelecionar = document.getElementById('btnImage${userId}');
+    const previewImg = document.querySelector('.imagem img${userId}');
 
+    botaoSelecionar.addEventListener('click', (e) => {
+        e.preventDefault();
+        inputImagem.click();
+    });
+
+    inputImagem.addEventListener('change', (event) => {
+        const arquivo = event.target.files[0];
+        if(arquivo) {
+            const leitor = new FileReader();
+
+            leitor.onload = () => {
+                previewImg.src = leitor.result;
+            };
+
+            leitor.readAsDataURL(arquivo);
+        }
+    });
+
+}
+
+document.querySelectorAll('[data-user-id]').forEach(element => {
+    const userId = element.getAttribute('data-user-id');
+    selectImgEdit(userId);
+})

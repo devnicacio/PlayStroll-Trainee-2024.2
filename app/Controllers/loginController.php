@@ -13,7 +13,7 @@ class loginController
         return view('site/index');
     }
 
-    public function efetuaLogin(){
+    public function executaLogin(){
         $email = $_POST('email');
         $senha = $_POST('password');
 

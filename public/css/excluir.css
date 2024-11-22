@@ -118,11 +118,11 @@ img  {
 }
 
 @media (max-width: 1023px) {
-    .container {
+    .container-e {
         padding: 10px;
     }
 
-    .tabela-posts {
+    .tabela-posts-e {
         max-width: 80%;
     }
 
@@ -144,15 +144,15 @@ img  {
 }
 
 @media (max-width: 767px) {
-    .container {
+    .container-e {
         padding: 5px;
     }
 
-    .table-container {
+    .table-container-e {
         max-width: 90%;
     }
 
-    .tabela-posts {
+    .tabela-posts-e {
         max-width: 100%;
     }
 

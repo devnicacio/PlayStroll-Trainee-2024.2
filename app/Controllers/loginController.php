@@ -18,6 +18,17 @@ class loginController
         $senha = $_POST('password');
 
         $user = App::get(key: 'database')->verificaLogin($email, $senha);
+
+        if($user != false){
+            session_start();
+            $_SESSION['id'] = $user->id;
+            header('Location: /dashboard');
+        }
+        else{
+            session_start();
+            $_SESSION['mensagem-erro'] = "Usuário e/ou senha incorretos";
+            header('Location: /login');
+        }
     }
 }
 

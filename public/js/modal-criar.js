@@ -49,6 +49,7 @@ document.getElementById('btn-adicionarcr').addEventListener('click', function(ev
     const senha = document.getElementById('senhacr').value;
     const confirmarSenha = document.getElementById('confirmar-senhacr').value;
     const imgPerfil = document.getElementById('img-perfilcr').src;
+    const inputFoto = document.getElementById('fotocr').files[0];
 
     let valid = true;
 
@@ -82,6 +83,12 @@ document.getElementById('btn-adicionarcr').addEventListener('click', function(ev
     if (senha !== confirmarSenha) {
         document.getElementById('erro-confirmar-senhacr').innerText = 'As senhas não coincidem.';
         document.getElementById('erro-confirmar-senhacr').style.display = 'block';
+        valid = false;
+    }
+
+    if (!inputFoto) {
+        document.getElementById('erro-imagemcr').innerText = 'A imagem de perfil é obrigatória.';
+        document.getElementById('erro-imagemcr').style.display = 'block';
         valid = false;
     }
 

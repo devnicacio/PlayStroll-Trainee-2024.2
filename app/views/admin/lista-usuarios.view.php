@@ -172,11 +172,12 @@
                     <span id="erro-confirmar-senhacr" class="errocr"></span>
                     <i class="bi bi-eye" onclick="toggleConfirmacaoSenha('confirmar-senhacr')" id="confirmar-senha-iconcr"></i>
                 </div>
-
+                <span id="erro-imagemcr" class="errocr"></span>
                 <div class="foto-perfilcr">
                     <img id="img-perfilcr" class="imagem-perfilcr" alt="Imagem de Perfil" style="display: none;" />
                     <input name="image" type="file" id="fotocr" accept="image/png, image/jpeg" onchange="mostrarImagem(event)" style="display: none;">
                     <span id="remover-imagemcr" class="remover-imagemcr">X</span>
+                    
                 </div>
 
                 <button type="button" id="btn-escolher-imagemcr">Escolher Imagem</button>

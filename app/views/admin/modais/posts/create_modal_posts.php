@@ -48,7 +48,7 @@
 						</div>
 						<div class="parte-avaliacao">
 							<label for="number">Avaliação</label>
-							<input type="number"  id="avaliacao" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota de 0 a 5" name="avaliation"/>
+							<input type="number"  id="avaliacao" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota" name="avaliation"/>
 							<span id="erro-avaliacao" class="erro"></span>
 						</div>
 						<input type="hidden" name="content" id="content">

@@ -369,7 +369,7 @@
 
 @media (max-width: 767px) {
     .modal-criar {        
-        width: 65%;
+        width: 70%;
     }
 
     label {
@@ -382,6 +382,7 @@
 
     .titulo, .avaliacao {
         font-size: 12px;
+        width: 100%;
     }
 
     .capa-preview {
@@ -408,15 +409,21 @@
         margin: 8px;
     }
 
+    .abc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .placeholders-criar {
         margin-bottom: 10px;
-        max-width: 200px;
+        max-width: 210px;
         width: 100%;
     }    
 
     .parte-data {
         margin-bottom: 0 auto;
-        width: 97%;
+        width: 100%;
     }
 
     .second-line {
@@ -429,12 +436,12 @@
     }
 
     .parte-titulo {
-        margin-bottom: 0 auto;
+        margin: 0;
         width: 100%;
     }
 
     .diminuir-word {
-        max-width: 200px;
+        max-width: 210px;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -458,7 +465,6 @@
     }
 
     .button-cancelar, .button-postar {
-        width: 100%; 
         margin: 5px;
         padding: 6px;
     }

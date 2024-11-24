@@ -48,7 +48,7 @@ function updateFileName() {
 }
 
 // Adiciona um novo post
- document.getElementById('btn-criar').onclick = function(event) {
+document.getElementById('btn-criar').onclick = function(event) {
      event.preventDefault();
 
      const capa = document.getElementById('file-capa').value;
@@ -103,3 +103,28 @@ function updateFileName() {
         document.querySelector('form').submit();
     }
  };
+
+// Remove os erros quando os componentes são preenchidos
+const inputs = [
+    { field: 'file-capa', error: 'erro-capa' },
+    { field: 'file-retrato', error: 'erro-retrato' },
+    { field: 'data', error: 'erro-data' },
+    { field: 'titulo', error: 'erro-titulo' },
+    { field: 'avaliacao', error: 'erro-avaliacao' }
+];
+
+inputs.forEach(input => {
+    const field = document.getElementById(input.field);
+    field.addEventListener('input', function () {
+        if (field.value.trim()) {
+            document.getElementById(input.error).innerText = '';
+        }
+    });
+});
+
+$('#summernote').on('summernote.change', function() {
+    const descricao = $('#summernote').summernote('code');
+    if (descricao && descricao !== '<p><br></p>') {
+        document.getElementById('erro-descricao').innerText = '';
+    }
+});

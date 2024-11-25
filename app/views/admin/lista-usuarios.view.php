@@ -152,7 +152,7 @@
 
                 <button type="button" id="btn-escolher-imagemcr">Escolher Imagem</button>
                 <div class="botao-containercr">
-                    <button type="button" id="btn-fecharcr" onclick="fecharModalCriar()">Fechar</button>
+                    <button type="button" id="btn-fecharcr" onclick="fecharModalCriar()">Cancelar</button>
                     <button id="btn-adicionarcr">Adicionar Usuário</button>
                 </div>
             </form>

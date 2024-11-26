@@ -25,16 +25,12 @@
           <div class="parte-de-baixo">
             <div class="sessao-login">
               <label>Email</label>
-              <input type="text" placeholder="Coloque seu email" />
+              <input type="text" placeholder="Coloque seu email" name="email"/>
             </div>
             <div class="sessao-login">
               <label>Senha</label>
               <div class="visualizacao">
-                <input
-                  type="password"
-                  id="senha"
-                  placeholder="Coloque sua senha"
-                />
+                <input type="password" id="senha" placeholder="Coloque sua senha" name="password"/>
                 <i class="bi bi-eye-slash" onclick="senha()"></i>
               </div>
             </div>

@@ -30,7 +30,7 @@ class QueryBuilder
     }
 
     public function verificaLogin($email, $senha){
-        $sql = sprintf(format: 'SELECT = users WHERE email = :email AND password = :password');
+        $sql = sprintf( 'SELECT * FROM users WHERE email = :email AND password = :password');
 
         try {
             $stmt = $this->pdo->prepare($sql);

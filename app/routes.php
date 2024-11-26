@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Controllers;
-use App\Controllers\loginController;
+use App\Controllers\LoginController;
 use App\Core\Router;
 
-    $router->get('login', 'loginController@exibirLogin');
-    $router->get('dashboard', 'loginController@exibirDashboard');
-    $router->post('login', 'loginController@executaLogin');
+    $router->get('login', 'LoginController@exibirLogin');
+    $router->get('dashboard', 'LoginController@exibirDashboard');
+    $router->post('login', 'LoginController@executaLogin');
 
 ?>

@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class loginController
+class LoginController
 {
 
     public function index()
@@ -14,8 +14,8 @@ class loginController
     }
 
     public function executaLogin(){
-        $email = $_POST('email');
-        $senha = $_POST('password');
+        $email = $_POST['email'];
+        $senha = $_POST['password'];
 
         $user = App::get(key: 'database')->verificaLogin($email, $senha);
 
@@ -29,6 +29,16 @@ class loginController
             $_SESSION['mensagem-erro'] = "Usuário e/ou senha incorretos";
             header('Location: /login');
         }
+    }
+
+    public function exibirLogin()
+    {
+        return view('site/login');
+    }
+
+    public function exibirDashboard()
+    {
+        return view('admin/dashboard');
     }
 }
 

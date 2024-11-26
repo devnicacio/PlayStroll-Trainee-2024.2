@@ -2,6 +2,8 @@
 uso, ao criar variáveis ou constantes que guardam um elemento HTML, o $(dollar ou cifrão) 
 no início do identificador destas. */
 
+
+/* Lógica para abrir e fechar todos os modais */
 const $tela = document.querySelector('.tela');
 
 const abrirModal = idModal => {
@@ -15,15 +17,20 @@ const fecharModal = idModal => {
     $tela.style.display = 'none';
 }
 
-const $postAvaliation = document.querySelector(".postAvaliation");
-($postAvaliation => {
-    const $modalPostVisualizarStars = document.querySelector(".modalPostVisualizar--stars");
-    $modalPostVisualizarStars.textContent = ``;
-    let i = 0;
-    while(i < $postAvaliation){
-        $modalPostVisualizarStars.textContent += `★` ;
-        i++;
+/* Lógica para definir as estrelas vindo do banco de dados no HTML. */
+const updateStars = () => {
+    const rating = document.querySelector(".postAvaliation").textContent;
+    const $stars = document.querySelectorAll(".star");
+
+    const fullStars = Math.floor(rating);
+    const halfStars = (rating % 1) >= 0.5 ? 1 : 0;
+    const emptyStarts = 5 - (fullStars + halfStars);
+
+    for(let i = 0; i < $stars.length; i++){
+        if(i < fullStars){
+            $stars[i].classList.add("full");
+            $stars[i].classList.remove("")
+        }
     }
-    for(let j = 0; j < $postAvaliation-i; j++)
-        $modalPostVisualizarStars.textContent += `☆`;
-})
+}
+updateStars();

@@ -1,7 +1,4 @@
-<div class="modal" id="visualizar<?= $post->id?>">
-    <div class="modal--header">
-        <h3>Visualizar o post</h3>
-    </div>
+<div class="modal" id="read<?= $post->id?>">
     <div class="modal--container">
         <div class="modalPostVisualizar--container--header"> 
             <div class="modalPostVisualizar--user">

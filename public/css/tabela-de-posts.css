@@ -1,6 +1,6 @@
 @import "reset.css";
 @import "modais/read-modal-posts.css";
-@import "modais/update-modal-posts";
+@import "modais/update-modal-posts.css";
 
 .container {
     height: 100vh;

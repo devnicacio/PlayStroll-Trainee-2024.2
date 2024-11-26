@@ -6,7 +6,7 @@
             <div class="modal-container-excluir">
                 <img
                 src="/public/assets/deletar2.png"
-                alt=""
+                alt="Imagem de Deletar"
                 height="100px"
                 width="150px"
                 />

@@ -22,7 +22,17 @@
           <h3>Login</h3>
         </div>
         <form action="/login" method="POST">
+
           <div class="parte-de-baixo">
+          <div class="mensagem-erro">
+          <p>
+            <?php
+              if(isset($_SESSION['mensagem-erro']))
+              echo $_SESSION['mensagem-erro'];
+              unset( $_SESSION['mensagem-erro']);
+            ?>
+          </p>
+        </div>
             <div class="sessao-login">
               <label>Email</label>
               <input type="text" placeholder="Coloque seu email" name="email"/>

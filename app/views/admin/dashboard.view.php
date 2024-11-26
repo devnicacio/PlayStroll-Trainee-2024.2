@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['id'])){
+        header('Location: /login');
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -39,17 +48,20 @@
                             <div class="poststxt">INÍCIO</div>
                         </div>
                     </div>
-                    <div class="button square">
-                        <div class="posts">
+                    <!-- Botão "Sair" com formulário -->
+                    <form action="/logout" method="POST" class="button square">
+                        <button type="submit" class="posts">
                             <div class="quadrado">
                                 <i class="bi bi-x-lg"></i>
                             </div>
                             <div class="poststxt">SAIR</div>
-                        </div>
-                    </div>
+                        </button>
+                    </form>
                 </div>
             </div>
-            <div class="imagem"><img src="/app/views/admin/arquivos/Logo_escura_sem_fundo.png"></div>
+            <div class="imagem">
+                <img src="/app/views/admin/arquivos/Logo_escura_sem_fundo.png" alt="Logo">
+            </div>
         </div>
     </div>
 </body>

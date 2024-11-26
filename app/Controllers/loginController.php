@@ -8,10 +8,22 @@ use Exception;
 class LoginController
 {
 
-    public function index()
+    public function exibirLogin()
     {
-        return view('site/index');
+        session_start();
+
+        if(isset($_SESSION['id'])){
+        header('Location: /dashboard');
     }
+        
+        return view('site/login');
+    }
+
+    public function exibirDashboard()
+    {
+        return view('admin/dashboard');
+    }
+
 
     public function executaLogin(){
         $email = $_POST['email'];
@@ -31,15 +43,15 @@ class LoginController
         }
     }
 
-    public function exibirLogin()
-    {
-        return view('site/login');
-    }
 
-    public function exibirDashboard()
-    {
-        return view('admin/dashboard');
-    }
+    public function executaLogout()
+{
+    session_start();
+    session_unset();
+    session_destroy();
+    header('Location: /login');
 }
+}
+
 
 ?>

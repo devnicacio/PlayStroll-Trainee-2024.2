@@ -130,8 +130,9 @@
             ["insert", ["link", "picture"]],
         ],
     });
-    $("#summernote").summernote({
+    $("#summernote-criar").summernote({
         placeholder: "Crie a sua descrição",
+        height: 300,
         tabsize: 2,
         height: 120,
         lang: "pt-BR",
@@ -144,10 +145,13 @@
             ["insert", ["link", "picture"]],
         ],
         callbacks: {
-        onChange: function(contents) {
-            $('#content').val(contents);
+            onInit: function() {
+                $('.note-editable').css('resize', 'none');
+            },
+            onChange: function(contents) {
+                $('#content').val(contents);
+            }
         }
-    }
     });
 </script>
 </html>

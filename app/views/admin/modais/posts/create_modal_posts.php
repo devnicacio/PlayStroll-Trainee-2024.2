@@ -55,7 +55,7 @@
 					</div>
 				</div>
 				<div class="diminuir-word">
-					<div id="summernote"></div>
+					<div id="summernote-criar"></div>
 					<span id="erro-descricao" class="erro"></span>
 				</div>
 				<div class="modal-buttons">

@@ -1,0 +1,280 @@
+@import "base-modal.css";
+.modalRead{
+    background-color: rgb(var(--cyan));
+    color: rgb(var(--white));
+    width: 50vw;
+    height: 95vh;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+.modal--container {
+    background-color: rgb(var(--firstBlue));
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    align-self: center;
+    overflow-y: scroll;
+}
+.modal--container img{
+    pointer-events: none;
+    user-select: none;
+}
+.modalPostVisualizar--container--header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+    gap:10vw;
+}
+.modalPostVisualizar--user{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+.modalPostVisualizar--user img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+.modalPostVisualizar--container--stars{
+    font-size: 20px;
+}
+.modalPostVisualizar--container--photos{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+.modalPostVisualizar--container--photos figure{
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+}
+.modalPostVisualizar--container--photos img{
+    border: 2px solid rgb(var(--white)); 
+    border-radius: 5px;
+    object-fit: cover;
+}
+.modalPostVisualizar--container--photos figcaption{
+    text-align: center;
+}
+.modalPostVisualizar--banner{
+    width: 150px;
+    height: 100px;
+}
+.modalPostVisualizar--retrato{
+    width: 75px;
+    height: 100px;
+}
+.modalPostVisualizar--container--textos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modalPostVisualizar--container--textos div:first-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8.5vw;
+}
+.modalPostVisualizar--container--textos div:first-child p:first-child{
+    max-width: 190px;
+    height: auto;
+    word-wrap: break-word;
+}
+.modalPostVisualizar--container--textos>p {
+    margin: 3rem 0 1rem 0;
+}
+.modalPostVisualizar--container--buttons{
+    display: flex;
+    margin: 2rem 0 1rem 0;
+    justify-content: center;
+}
+/*
+    STYLE OF THE SCROLLBAR
+*/
+.modalRead ::-webkit-scrollbar{
+    width: 10px;
+    margin-right: 5px;
+    background-color: transparent;
+}
+.modalRead ::-webkit-scrollbar-track{
+    border-radius: 40px;
+}
+.modalRead ::-webkit-scrollbar-thumb{
+    background-color: rgba(var(--cyan), 0.5);
+    border-radius: 40px;
+}
+/*
+    STYLE OF THE RATING OF ALL MODAIS
+*/
+#rating{
+    display: flex;
+}
+.star{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(var(--gray));
+    margin-right: 5px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    position: relative;
+}
+.star.full {
+    background-color: rgb(var(--yellow));
+}
+.star.half {
+    background: linear-gradient(to right,rgb(var(--yellow))  50%, rgb(var(--cyan)) 50%);
+}
+.star.empty {
+    background-color: rgb(var(--cyan));
+}
+
+/* RESPONSIVIDADE */
+@media (min-width: 768px) and (max-width: 1023px) {     
+
+
+    .placeholders {
+        flex-direction: column;        
+        align-items: flex-start;          
+        margin-bottom: 16px;
+        row-gap: 8px;
+        padding-left: 20%;
+    }
+
+    .parte-avaliacao {
+        width: 60%; 
+        margin-bottom: 0 auto;
+    }
+
+    .parte-titulo {
+        width: 62%;
+        margin-bottom: 0 auto;
+    }
+
+    .diminuir-word {
+        display: flex;
+        justify-content: center;
+    }
+
+    .note-editor, .note-frame {
+        max-width: 90%; 
+    }    
+
+    .button-cancelar, .button-postar {        
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .modalc {        
+        width: 86%;
+    }
+
+    h1 {
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
+
+    .imagens {
+        justify-content: center;
+        column-gap: 8px;
+    }
+
+    .modal-container {
+        height: 100%;
+        overflow-y: scroll;
+        justify-content: start;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    #btn-remover-imagem-capa, #btn-remover-imagem-retrato {
+        font-size: 12px;    
+    }   
+
+    .titulo, .avaliacao {
+        font-size: 12px;
+    }
+
+    .capa-preview {
+        width: 125px;
+        height: 75px;
+    }
+
+    .retrato-preview {
+        width: 50px;
+        height: 75px;
+    }
+
+    .capa, .retrato {
+        margin-bottom: 0;
+    }
+
+    .custom-file-label {
+        padding: 5px 10px;
+        margin: 8px;
+    }
+
+    .placeholders {
+        flex-direction: column; 
+        align-items: flex-start;
+        
+        width: 74%;
+        margin-bottom: 10px;
+    }
+
+    .parte-avaliacao {
+        width: 77%; 
+        margin-bottom: 10px;
+    }
+
+    .parte-titulo {
+        width: 80%;
+        margin-bottom: 5px;
+    }
+
+    .diminuir-word {
+        display: flex;
+        justify-content: center;        
+    }
+
+    .note-editor, .note-frame {
+        font-size: 10px; 
+    }
+
+    .note-toolbar .note-btn-group {
+        flex-wrap: wrap; 
+    }
+
+    .note-btn {
+        font-size: 9px; 
+        padding: 2px 4px; 
+    }
+
+    .note-editable {
+        min-height: 60px; 
+    }
+
+    .modal-buttons {
+        display: flex;        
+    }
+
+    .button-cancelar, .button-postar {
+        width: 100%; 
+        margin: 5px;
+        padding: 6px;
+    }
+}

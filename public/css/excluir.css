@@ -1,32 +1,14 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Satoshi', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
-}
-
-.table-container {
+.table-container-e {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
+    font-family: 'Satoshi', sans-serif;
 }
 
-.tabela-posts {
+.tabela-posts-e {
     width: 100%;
     color: white;
     border-radius: 10px;
@@ -47,20 +29,23 @@ tbody {
     background-color: #080b3c;
 }
 
-.excluir {
+.btn-acao {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     border: none;
     color: white;
     cursor: pointer;
+}
+
+.btn-excluir {
     background-color: #c70e3c;
 }
 
-.modalc {
+.modal-excluir {
     background-color: #c70e3c;
     color: white;
-    width: 26%;
+    width: 24%;
     border-radius: 10px;
     padding: 10px;
     display: none;
@@ -73,12 +58,12 @@ tbody {
     z-index: 3;
 }
 
-h3 {
+h4 {
     margin: 0;
     padding-bottom: 10px;
 }
 
-.modal-container {
+.modal-container-excluir {
     background-color: #080b3c;
     width: 100%;
     height: 100%;
@@ -86,31 +71,40 @@ h3 {
 }
 
 img  {
+    margin-top: 20px;
     width: 100%;
-    max-width: 200px;
-    height: auto;
+    max-width: 150px;
 }
 
-.modal-buttons {
+.modal-buttons-excluir {
     display: flex;
     justify-content:space-evenly;
-    margin-bottom: 20px;
+    padding-bottom: 10px;
 }
 
-.button-modal {
+.button-cancelar, .button-excluir {
     color: white;
     width: 100px;
-    background-color: #c70e3c;
     border: none;
     border-radius: 10px;
     padding: 11px;
     cursor: pointer;
 }
 
-.button-modal:focus,
-.button-modal:active {
-    outline: none;
-    box-shadow: none;
+.button-cancelar {
+    background-color: #646464;
+}
+
+.button-cancelar:hover {
+    background-color: #4d4c4c;
+}
+
+.button-excluir {
+    background-color: #c70e3c;
+}
+
+.button-excluir:hover {
+    background-color: #a6072e;
 }
 
 .tela {
@@ -124,17 +118,16 @@ img  {
 }
 
 @media (max-width: 1023px) {
-    .container {
+    .container-e {
         padding: 10px;
     }
 
-    .tabela-posts {
+    .tabela-posts-e {
         max-width: 80%;
     }
 
-    .modalc {
-        padding: 15px;
-        max-width: 260px;
+    .modal-excluir {
+        max-width: 250px;
         width: 100%;
     }
 
@@ -143,51 +136,36 @@ img  {
         max-height: 150px;
     }
 
-    .button-modal {
+    .button-modal-excluir {
         width: 90px;
         padding: 10px;
     }
 
-    h3 {
-        font-size: 16px;
-    }
 }
 
 @media (max-width: 767px) {
-    .container {
+    .container-e {
         padding: 5px;
     }
 
-    .table-container {
+    .table-container-e {
         max-width: 90%;
     }
 
-    .tabela-posts {
+    .tabela-posts-e {
         max-width: 100%;
     }
 
-    .modalc {
+    .modal-excluir {
         padding: 10px;
     }
 
     img {
-        max-width: 100px;
-        max-height: 100px;
+        max-width: 150px;
+        max-height: 150px;
     }
 
-    .button-modal {
-        max-width: 100px;
-        width: 100%;
-        padding: 6px;
-        text-align: center;
-        font-size: 12px;
-    }
-
-    h3 {
-        font-size: 14px;
-    }
-
-    .modal-buttons {
+    .modal-buttons-excluir {
         align-items: center;
         gap: 10px;
     }

@@ -12,6 +12,7 @@
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Lista de usuarios</title>
 </head>
 
@@ -46,23 +47,22 @@
             </table>
         </div>
         <div class="paginas">
-            <button class="anterior">
-                < </button>
-                    <button class="pag1">1</button>
-                    <button class="pag2">2</button>
-                    <button class="pag3">3</button>
-                    <button class="pag4">4</button>
-                    <button class="pag5">5</button>
-                    <button class="proximo>">></button>
+            <button class="anterior"<?= $page <= 1 ? "disabled" : "" ?> onclick="location.href='?paginacaoNumero=<?=$page-1?>'" > <  </button>
+                <?php for($page_number = 1; $page_number<= $total_pages; $page_number++): ?>
+                    <button class="pag1" onclick="location.href='?paginacaoNumero=<?= $page_number ?>'"><?= $page_number ?></button>
+                <?php endfor ?>
+                    <button class="proximo"<?= $page >= $total_pages ? "disabled" : "" ?> onclick="location.href='?paginacaoNumero=<?=$page+1?>'">></button>
         </div>
 
         <?php foreach ($users as $user): ?>
         <div class="tela" id="editarUsuario<?= $user->id ?>" data-user-id="<?= $user->id ?>">
-            <form method="post" action="/users/edit" enctype="multipart/form-data">
+            
                 <div class="fundo" id="cx">
-                    <input type="hidden" value="<?= $user->id ?>" name="id">
                     <div class="edit">
+                    <form method="post" action="/users/edit" enctype="multipart/form-data">
+                    <input type="hidden" value="<?= $user->id ?>" name="id">
                         <div class="editname">
+                        
                             <input type="text" name="name" value="<?= $user->name ?>" placeholder="Username">
                         </div>
                         <div class="inputmail">
@@ -70,7 +70,6 @@
                         </div>
                         <div class="inputsenha">
                             <input id="senha" type="password" name="password" value="<?= $user->password ?>" placeholder="Senha">
-                            <i class="bi bi-eye" id="mostrar" onclick="mostrarSenha()"></i>
                         </div>
                         <div class="imagem">
                             <img id="imgEdit<?= $user->id ?>" src="<?= $user->image ?>">
@@ -79,19 +78,21 @@
                         </div>
                         <div class="confirma">
                             <div class="exclui">
-                                <button type="button" class="botn" onclick="editar2('editarUsuario<?= $user->id ?>')">CANCELAR</button>
+                                <button type="button" class="botn" onclick="editar2('editarUsuario<?= $user->id ?>')">Fechar</button>
                             </div>
                             <div class="conf">
-                                <button type="submit" class="boty">CONFIRMAR</button>
+                                <button type="submit" class="boty">Confirmar</button>
                             </div>
                         </div>
+                    </form>
                     </div>
                 </div>
-            </form>
+            
         </div>
         <?php endforeach ?>
-
-        <div class="modal-view" id="modal-view<?= $user->id ?>">
+        
+        <?php foreach ($users as $user): ?>
+            <div class="modal-view" id="modal-view<?= $user->id ?>">
             <div class="visualisar" id="ver<?= $user->id ?>">
                 <div class="caixa">
                     <div class="id">
@@ -117,6 +118,8 @@
                 </div>
             </div>
         </div>
+        <?php endforeach ?>
+
         
 
 

@@ -83,6 +83,11 @@
     font-size: 14px;
     padding: 10px;
 }
+
+.id .box{
+    width: 95%;
+}
+
 .box p{
     margin-left: 10px;
 }
@@ -121,29 +126,3 @@
     border-radius: 90px;
 }
 
-@media only screen and (max-width: 769px)
-{
-    .tela{
-        height: 120%;
-    }
-}
-
-@media only screen and (max-width: 450px){
-    .visualisar{
-        width: 350px;
-    }
-}
-
-@media only screen and (max-width: 380px)
-{
-    .visualisar{
-        width: 320px;
-    }
-}
-
-@media only screen and (max-width: 360px)
-{
-    .visualisar{
-        width: 300px;
-    }
-}

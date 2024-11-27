@@ -1,5 +1,33 @@
 @import "base-modal.css";
 
+.modalUpdate{
+    background-color: rgb(var(--cyan));
+    color: rgb(var(--white));
+    width: 50vw;
+    height: 95vh;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+.modalUpdate ::-webkit-scrollbar{
+    width: 10px;
+    margin-right: 5px;
+    background-color: transparent;
+}
+.modalUpdate ::-webkit-scrollbar-track{
+    border-radius: 40px;
+}
+.modalUpdate ::-webkit-scrollbar-thumb{
+    background-color: rgba(var(--cyan), 0.5);
+    border-radius: 40px;
+}
+
 #modalPostEditar{
     z-index: 20;
 }

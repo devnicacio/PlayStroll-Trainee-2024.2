@@ -17,14 +17,16 @@ class Controller{
         $posts = App::get('database')->selectAll('posts');
         return view('admin/tabela-de-posts', compact('posts',));
     }
-    public function postPost(){
+    public function updatePost(){
         $parameters = [
-            "nome" => $_POST["name"],
-            
+            "id" => $_POST["id"],
+            "title" => $_POST["title"],
+            "content" => $_POST["content"],
+            "avaliation" => $_POST["avaliation"],
         ];
 
-        App::get("database")->insert("posts", $parameters);
-        header("Location: user");
+        App::get("database")->updatePost("posts", $parameters, $_FILES["image_capa"], $_FILES["image_retrato"]);
+        redirect("app/views/admin/tabela-de-posts");
     }
 
     public function create() {

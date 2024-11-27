@@ -1,5 +1,19 @@
 @import "base-modal.css";
-
+.modalRead{
+    background-color: rgb(var(--cyan));
+    color: rgb(var(--white));
+    width: 50vw;
+    height: 95vh;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
 .modal--container {
     background-color: rgb(var(--firstBlue));
     width: 100%;
@@ -85,6 +99,44 @@
     display: flex;
     margin: 2rem 0 1rem 0;
     justify-content: center;
+}
+/*
+    STYLE OF THE SCROLLBAR
+*/
+.modalRead ::-webkit-scrollbar{
+    width: 10px;
+    margin-right: 5px;
+    background-color: transparent;
+}
+.modalRead ::-webkit-scrollbar-track{
+    border-radius: 40px;
+}
+.modalRead ::-webkit-scrollbar-thumb{
+    background-color: rgba(var(--cyan), 0.5);
+    border-radius: 40px;
+}
+/*
+    STYLE OF THE RATING OF ALL MODAIS
+*/
+#rating{
+    display: flex;
+}
+.star{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(var(--gray));
+    margin-right: 5px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    position: relative;
+}
+.star.full {
+    background-color: rgb(var(--yellow));
+}
+.star.half {
+    background: linear-gradient(to right,rgb(var(--yellow))  50%, rgb(var(--cyan)) 50%);
+}
+.star.empty {
+    background-color: rgb(var(--cyan));
 }
 
 /* RESPONSIVIDADE */

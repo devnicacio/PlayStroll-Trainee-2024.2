@@ -65,10 +65,9 @@
                     <td><?= $post->id ?></td>
                     <td class="titulo-post"><?= $post->title ?></td>
                     <td class="autor-post"> Diego Pereira Betti </td>
-                    <!-- ?= $post->id ?> -->
                     <td><?= $post->create_at ?></td>
-                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('modalPostVisualizar')"><i class="fa-regular fa-eye"></i></button></td>
-                    <td><button class="btn-acao btn-editar" onclick="abrirModal('modalPostEditar')"><i class="fas fa-edit"></i></button></td>
+                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('read<?= $post->id?>')"><i class="fa-regular fa-eye"></i></button></td>
+                    <td><button class="btn-acao btn-editar" onclick="abrirModal('update<?= $post->id?>')"><i class="fas fa-edit"></i></button></td>
                     <td><button class="btn-acao btn-excluir" onclick="abrirModal('excluir<?= $post->id ?>')"><i class="fas fa-trash"></i></button></td>
                 </tr>
                 <!-- Modais de leitura, alteração e exclusão--> 
@@ -77,7 +76,29 @@
                     require_once realpath(dirname(__FILE__)."/modais/posts/read_modal_posts.php");
                     require_once realpath(dirname(__FILE__)."/modais/posts/update_modal_posts.php");
                 ?>
-                
+                <script>/*
+                    $("#summernote-update-<?= $post->id?>").summernote({
+                        tabsize: 2,
+                        height: 120,
+                        lang: "pt-BR",
+                        toolbar: [
+                            ["style", ["style"]],
+                            ["font", ["bold", "underline"]],
+                            ["color", ["color"]],
+                            ["para", ["ul", "ol", "paragraph"]],
+                            ["table", ["table"]],
+                            ["insert", ["link", "picture"]],
+                        ],
+                        callbacks: {
+                            onInit: function() {
+                                $('.note-editable').css('resize', 'none');
+                            },
+                            onChange: function(contents) {
+                                $('#content').val(contents);
+                            }
+                        }
+                    });*/
+                </script>
                 <?php endforeach?>
             </tbody>
             <div class="tela" id="tela"></div>
@@ -96,19 +117,6 @@
     </main>
 </body>
 <script>
-    $(".summernote").summernote('disable',{
-        tabsize: 2,
-        height: 120,
-        lang: "pt-BR",
-        toolbar: [
-            ["style", ["style"]],
-            ["font", ["bold", "underline"]],
-            ["color", ["color"]],
-            ["para", ["ul", "ol", "paragraph"]],
-            ["table", ["table"]],
-            ["insert", ["link", "picture"]],
-        ],
-    });
     $("#summernote-criar").summernote({
         placeholder: "Crie a sua descrição",
         height: 300,

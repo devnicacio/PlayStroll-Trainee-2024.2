@@ -28,6 +28,25 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+    /**
+     * Summary of select
+     * @param mixed $table
+     * @return mixed
+     */
+    public function select($table): mixed
+    {
+        $sql = "SELECT * FROM {$table}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
     public function insert(string $table, array $parameters): mixed{
         $sql = sprintf("INSERT INTO %t VALUES (%p);", 
         $table,
@@ -76,6 +95,29 @@ class QueryBuilder
         } catch (Exception $e) {
             die($e->getMessage());
         }
+    }
+    public function updatePost($table, $parameters, $img1, $img2):void{
+        $pasta = "uploads/";
+        if(isset($parameters["image_capa"])){
+            $extensao1 = pathinfo($img1['name'], PATHINFO_EXTENSION);
+            $novoNome1 = uniqid() . '.' . $extensao1;
+            $caminho1 = $pasta . basename($novoNome1);
+            move_uploaded_file($img1["tmp_name"], $caminho1);
+            $parameters['image_capa'] = $caminho1; 
+        }
+        if(isset($parameters["image_retrato"])){
+            $extensao2 = pathinfo($img2['name'], PATHINFO_EXTENSION);
+            $novoNome2 = uniqid() . '.' . $extensao2;
+            $caminho2 = $pasta . basename($novoNome2);
+            move_uploaded_file($img2["tmp_name"], $caminho2);
+            $parameters['image_retrato'] = $caminho2;
+        }
+        $sql = sprintf('UPDATE FROM %t VALUES(%v) WHERE %i',
+        $table,
+        implode(string: ',', array: array_keys($parameters)),
+        ':' . implode(', :', array_keys($parameters)),
+        )
+
     }
 
     public function deletaPost($table, $id){

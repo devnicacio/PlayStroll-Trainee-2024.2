@@ -1,15 +1,19 @@
-const tela = document.querySelector('#tela')
 
-function abrirModal(idModal, id2)
+function abrirModalView(idModal)
 {
     document.getElementById(idModal).style.display="flex";
-    document.getElementById(id2).style.display="none"
-    tela.style.display="block"
+    const imagem = document.getElementById('img');
+    const imagemDiv = document.getElementById('imgdiv');
+
+    if(imagem.src.trim()){
+        imagemDiv.style.display = 'flex';
+    }
+    else{
+        imagemDiv.style.display = 'none';
+    }
 }
 
-function fecharModal(id3, id4)
+function fecharModalView(id3)
 {
     document.getElementById(id3).style.display="none";
-    document.getElementById(id4).style.display="flex";
-    tela.style.display="none"
 }

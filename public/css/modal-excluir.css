@@ -1,66 +1,13 @@
 body {
-    margin: 0;
-    padding: 0;
+
     font-family: 'Satoshi', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
-}
-
-.table-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-}
-
-.tabela-posts {
-    width: 100%;
-    color: white;
-    border-radius: 10px;
-    border-collapse: collapse;
-    overflow: hidden;
-}
-
-thead {
-    background-color: #237ecd;
-}
-
-th, td {
-    text-align: center;
-    padding: 15px;
-}
-
-tbody {
-    background-color: #080b3c;
-}
-
-.excluir {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: none;
-    color: white;
-    cursor: pointer;
-    background-color: #c70e3c;
-}
-
-.modalc {
+.modalex {
     background-color: #c70e3c;
     color: white;
-    width: 26%;
+    width: 24%;
     border-radius: 10px;
     padding: 10px;
     display: none;
@@ -73,109 +20,107 @@ tbody {
     z-index: 3;
 }
 
-h3 {
+h4 {
     margin: 0;
     padding-bottom: 10px;
 }
 
-.modal-container {
+
+.modal-containerex {
     background-color: #080b3c;
     width: 100%;
     height: 100%;
     border-radius: 10px;
 }
 
-img  {
+.imgex  {
+    margin-top: 20px;
     width: 100%;
-    max-width: 200px;
-    height: auto;
+    max-width: 150px;
 }
 
-.modal-buttons {
+.modal-buttonsex {
     display: flex;
     justify-content:space-evenly;
-    margin-bottom: 20px;
+    padding-bottom: 10px;
 }
 
-.button-modal {
+.button-cancelarex, .button-excluirex {
     color: white;
     width: 100px;
-    background-color: #c70e3c;
     border: none;
     border-radius: 10px;
-    padding: 11px;
+    padding: 0px;
     cursor: pointer;
 }
 
-.button-modal:focus,
-.button-modal:active {
+.button-cancelarex {
+    background-color: #646464;
+}
+
+.button-cancelarex:hover {
+    background-color: #4d4c4c;
+}
+
+.button-excluirex {
+    background-color: #c70e3c;
+}
+
+.button-excluirex:hover {
+    background-color: #a6072e;
+}
+
+.button-modalex:focus,
+.button-modalex:active {
     outline: none;
     box-shadow: none;
 }
 
-.tela {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.5;
-    position: absolute;
-    display: none;
-    z-index: 2;
-}
+
 
 @media (max-width: 1023px) {
-    .container {
-        padding: 10px;
-    }
 
-    .tabela-posts {
-        max-width: 80%;
-    }
 
-    .modalc {
-        padding: 15px;
-        max-width: 260px;
+    .modalex {
+        max-width: 250px;
         width: 100%;
     }
 
-    img {
+    .imgex {
         max-width: 150px;
         max-height: 150px;
     }
 
-    .button-modal {
+    .button-modalex {
         width: 90px;
         padding: 10px;
     }
 
-    h3 {
-        font-size: 16px;
-    }
 }
 
 @media (max-width: 767px) {
-    .container {
+    .containerex {
         padding: 5px;
     }
 
-    .table-container {
+    .table-containerex {
         max-width: 90%;
     }
 
-    .tabela-posts {
+    .tabela-postsex {
         max-width: 100%;
     }
 
-    .modalc {
+    .modalex {
         padding: 10px;
     }
 
-    img {
-        max-width: 100px;
-        max-height: 100px;
+    .button-excluir {
+        max-width: 150px;
+        max-height: 150px;
     }
 
-    .button-modal {
+    .button-modalex {
         max-width: 100px;
         width: 100%;
         padding: 6px;
@@ -183,11 +128,7 @@ img  {
         font-size: 12px;
     }
 
-    h3 {
-        font-size: 14px;
-    }
-
-    .modal-buttons {
+    .modal-buttonsex {
         align-items: center;
         gap: 10px;
     }

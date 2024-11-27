@@ -1,19 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Satoshi', sans-serif;
-}
-
-.container {
-    height: 100vh;
-    background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.criar {
+.more-c {
     padding: 4%;
     font-size: 50px;
     background-color: #080b3c;
@@ -28,13 +13,14 @@ body {
     align-items: center;
 }
 
-.modalc {
+.modal-criar {
     background-color: #237ecd;
     color: white;
+    max-height: 455px;
+    height: auto;
     width: 50%;
-    height: 95%;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     display: none;
     flex-direction: column;
     position: absolute;
@@ -45,20 +31,17 @@ body {
     z-index: 3;
 }
 
-h1 {
-    margin: 0;
-    padding-bottom: 10px;
-}
-
 .modal-container {
     background-color: #080b3c;
     width: 100%;
-    height: 100%;
+    max-height: 402px;
+    overflow-y: auto;
+    height: auto;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
+    row-gap: 20px;  
 }
 
 .custom-file-label {
@@ -66,7 +49,7 @@ h1 {
     background-color: #237ecd;
     color: white;
     padding: 10px 15px;
-    margin: 5px;
+    margin: 5px 5px 10px 0;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
@@ -81,26 +64,46 @@ h1 {
 }
 
 .capa, .retrato {
-    display: flex;
-    flex-direction: column;
+    display: flex;    
     align-items: center;
+    flex-direction: row;
+}
+
+.capa {
+    column-gap: 65px;
+
+}
+
+.retrato {
+    column-gap: 100px;
+
+}
+
+.label-container {
+    display: flex;
+    flex-direction: column;    
 }
 
 .imagens {
     display: flex;
-    max-width: 500px;
-    width: 100%;
-    justify-content: space-around;
-    padding: 15px 0px;
+    justify-content: space-around;  
+    flex-direction: column;  
+    max-width: 458px;
+    width: 100%;    
+    padding-top: 18px;
 }
 
-.capa-preview {
-    width: 150px;
-    height: 100px;
+.container-image {
+    display: flex;
+    flex-direction: column;
+}
+
+.capa-preview {    
+    width: 140px;
+    height: 90px;
     object-fit: cover;
     border: 2px solid #ddd;
-    border-radius: 5px;
-    margin: 10px 0px;
+    margin: 10px 10px 10px 0px;
     display: none; 
 }
 
@@ -109,67 +112,136 @@ h1 {
     height: 100px;
     object-fit: cover;
     border: 2px solid #ddd;
-    border-radius: 5px;
-    margin: 10px 0px;
+    margin: 10px 10px 10px 0px;
     display: none; 
+}
+
+.parte-retrato, .parte-capa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 .image-capa, .image-retrato {
     max-width: 60%;
     width: 100%;
     display: none;
-    
 }
 
+#btn-remover-imagem-capa, #btn-remover-imagem-retrato {
+    background-color: #C70E3C; 
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    display: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: -25px;
+  }
 
-.placeholders {
+  #btn-remover-imagem-capa:hover #btn-remover-imagem-retrato:hover {
+    background-color: #a6072e;
+  }
+
+
+.parte-retrato:hover #btn-remover-imagem-retrato, .parte-capa:hover #btn-remover-imagem-capa {
+    display: block;
+}
+
+.placeholders-criar {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     max-width: 458px;
     width: 100%;
     margin-bottom: 10px;
     text-align: start;
+    row-gap: 10px;
+}
+
+.parte-data {
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+}
+
+.data {
+    outline: none;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.second-line {
+    display: flex;
+    justify-content: space-between;
 }
 
 .parte-titulo {
     display: flex;
     flex-direction: column;
-    width: 43%;
+    width: 63%;
 }
 
 .parte-avaliacao {
     display: flex;
     flex-direction: column;
-    width: 41%;
+    width: 21%;
 }
 
 .avaliacao {
     width: 100%;
     outline: none;
+    box-sizing: border-box;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 .titulo {
     color: #00aea0;
     outline: none;
     width: 97%;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-.diminuir-modal {
+.diminuir-word {
     width: 100%;
 }
 
 .note-editor, .note-frame {
-    max-width: 500px;
+    max-width: 460px;
     width: 100%;
+    max-height: 900px;
+    height: 100%;
+    overflow: hidden;
 }
 
 .note-editing-area {
     background-color: white;
+    padding-bottom: 20px;
 }
 
 .modal-buttons {
-    margin-bottom: 10px;    
+    margin: 8px 0 16px 0;   
+    display: flex;
+    justify-content: center;
+    column-gap: 12px;
 }
 
 .button-cancelar, .button-postar {
@@ -182,11 +254,19 @@ h1 {
 }
 
 .button-cancelar {
-    background-color: #c70e3c;
+    background-color: #646464;
+}
+
+.button-cancelar:hover {
+    background-color: #4d4c4c;
 }
 
 .button-postar {
     background-color: #237ecd;
+}
+
+.button-postar:hover {
+    background-color: #1b5fa7;
 }
 
 .tela {
@@ -206,33 +286,42 @@ h1 {
     position: relative;
 }
 
-@media (max-width: 1023px) {
-    .modalc {
-        width: 40%;
-        overflow-y: scroll;
-    }
+.erro {
+    color: red;
+    font-size: 12px;
+    text-align: start;
+    display: block;
+    margin-left: 0;
+    margin-bottom: 2px;
+    margin-top: 10px;
+}
 
-    h1 {
-        font-size: 20px;
-        padding-bottom: 5px;
-    }
+.erro-img {
+    color: red;
+    font-size: 12px;
+    text-align: start;
+    display: block;
+    margin-left: 0;
+    margin-bottom: 5px;
+    width: 160px;
+}
 
-    label {
-        font-size: 12px;
-    }
+.modal-criar ::-webkit-scrollbar{
+    width: 10px;
+    margin-right: 5px;
+    background-color: transparent;
+}
+.modal-criar ::-webkit-scrollbar-track{
+    border-radius: 40px;
+}
+.modal-criar ::-webkit-scrollbar-thumb{
+    background-color: rgba(27, 95, 167, 0.5);
+    border-radius: 40px;
+}
 
-    .imagens {
-        padding: 0;
-    }
-
-    .capa-preview {
-        width: 125px;
-        height: 75px;
-    }
-
-    .retrato-preview {
-        width: 50px;
-        height: 75px;
+@media (min-width: 768px) and (max-width: 1023px) {
+    .modal-criar {
+        width: 65%;
     }
 
     .capa, .retrato {
@@ -241,77 +330,60 @@ h1 {
 
     .custom-file-label {
         padding: 5px 10px;
-        margin: 8px;
     }
 
-    .placeholders {
-        flex-direction: column; 
-        align-items: flex-start;
-        justify-content: flex-start;
-        width: 74%;
-        margin-bottom: 10px;
+    .placeholders-criar {      
+        margin-bottom: 16px;
+        row-gap: 8px;
+    }
+    
+    .data {
+        width: 100%;
     }
 
     .parte-avaliacao {
-        width: 97%; 
-        margin-bottom: 10px;
+        margin-bottom: 0 auto;
+        width: 23%;
     }
 
     .parte-titulo {
-        width: 100%;
-        margin-bottom: 5px;
+        margin-bottom: 0 auto;
+        width: 73%;
     }
 
     .diminuir-word {
+        max-height: 230px;
+        height: 100%;
         display: flex;
-        justify-content: center;
-    }
-
-    .note-editor, .note-frame {
-        max-width: 80%; 
+        flex-direction: column;
     }
 
     .modal-buttons {
-        display: flex;
-        align-items: center; 
+        width: 90%;
     }
 
-    .button-cancelar, .button-postar {
-        width: 100%; 
+    .button-cancelar, .button-postar {        
         margin-left: 10px;
         margin-right: 10px;
     }
 }
 
 @media (max-width: 767px) {
-    .modalc {
-        max-height: 80%;
-        height: 100%;
-    }
-
-    h1 {
-        font-size: 16px;
-        padding-bottom: 5px;
-    }
-
-    .modal-container {
-        height: 100%;
-        overflow-y: scroll;
-        justify-content: start;
+    .modal-criar {        
+        width: 70%;
     }
 
     label {
-        font-size: 10px;
-    }
-    
-    .imagens {
-        padding: 0;
-        display: flex;
-        flex-direction: column;
+        font-size: 12px;
     }
 
+    #btn-remover-imagem-capa, #btn-remover-imagem-retrato {
+        font-size: 12px;    
+    }   
+
     .titulo, .avaliacao {
-        font-size: 10px;
+        font-size: 12px;
+        width: 100%;
     }
 
     .capa-preview {
@@ -325,7 +397,12 @@ h1 {
     }
 
     .capa, .retrato {
-        margin-bottom: 0;
+        margin-bottom: 0 auto;
+        flex-direction: column-reverse;
+    }
+
+    .capa {
+        margin-bottom: 10px;
     }
 
     .custom-file-label {
@@ -333,31 +410,45 @@ h1 {
         margin: 8px;
     }
 
-    .placeholders {
-        flex-direction: column; 
-        align-items: flex-start;
-        justify-content: flex-start;
-        width: 74%;
+    .abc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .placeholders-criar {
         margin-bottom: 10px;
+        max-width: 210px;
+        width: 100%;
+    }    
+
+    .parte-data {
+        margin-bottom: 0 auto;
+        width: 100%;
+    }
+
+    .second-line {
+        flex-direction: column-reverse;
     }
 
     .parte-avaliacao {
-        width: 77%; 
         margin-bottom: 10px;
+        width: 100%;
     }
 
     .parte-titulo {
-        width: 80%;
-        margin-bottom: 5px;
+        margin: 0;
+        width: 100%;
     }
 
     .diminuir-word {
+        max-width: 210px;
+        width: 100%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
     }
 
     .note-editor, .note-frame {
-        max-width: 80%; 
         font-size: 10px; 
     }
 
@@ -374,13 +465,7 @@ h1 {
         min-height: 60px; 
     }
 
-    .modal-buttons {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
     .button-cancelar, .button-postar {
-        width: 100%; 
         margin: 5px;
         padding: 6px;
     }

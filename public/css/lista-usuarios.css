@@ -9,9 +9,11 @@ body {
     background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
     width: 100%;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: end;
+    z-index: 1;
 }
 
 .parte-de-cima {
@@ -35,17 +37,18 @@ body {
 }
 
 .more {
-    padding: 4%;
+    padding: 3%;
     font-size: 50px;
+    line-height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #080b3c;
-    border-radius: 20px;
+    border-radius: 20%;
     border: 1px solid #080b3c;
 }
 
-button {
+.verificar, .editar, .excluir {
     border-radius: 12px;
     background-color: #237ecd;
     border: 1px solid black;
@@ -118,8 +121,17 @@ tbody {
     margin-right: 10%;
 }
 
+.paginas button{
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    background-color: #237ecd;
+    border: 1px solid black;
+    color: black;
+}
+
 .pag1 {
-    background-color: #080b3c;
+    background-color: #237ecd;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -187,7 +199,7 @@ tbody {
     }
 
     .titulo {
-        padding: 8px 25px;
+        padding: 8px;
         font-size: 17px;
     }
 
@@ -219,4 +231,11 @@ tbody {
         height: 25px;
         width: 25px;
     }
+}
+
+@media (max-width: 425px){
+.titulo{
+    padding-left: 10px;
+    width: 65%;
+}
 }

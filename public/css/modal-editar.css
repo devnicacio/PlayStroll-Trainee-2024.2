@@ -1,115 +1,118 @@
-body{
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, rgba(213, 214, 227, 1.0), rgba(0, 174, 160, 0.5));
-}
-
 .tela{
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: rgba(11,11,11,0.5);
     display:none;
-    opacity: 0.5;
     position: absolute;
+    align-items: center;
+    justify-content: center;
     z-index: 2;
+    font-family: 'Satoshi', sans-serif;
 }
 
-.container{
-    width: 100%;
-    height: 100vh;
+.fundo{
+    background-color: #ffc739;
+    border-radius: 10px;
+    padding: 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.botao{
-    width: 70px;
-    height: 30px;
-    background-color: #237ecd;
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 30px;
 }
 
 .edit{
-    width: 25%;
-    height: 600px;
-    border-radius: 40px;
+    width: 380px;
+    padding: 20px;
+    border-radius: 10px;
     background-color: #080b3c;
-    display:none;
-    z-index: 3;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form{
+    width: 100%;
 }
 
 .imagem{
-    height: 150px;
     width: 100%;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
 .imagem img{
-    width: 80px;
-    height: 80px;
-    border-radius: 80px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
     margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.editimg{
-    height: 18px;
-    width: 170px;
-    background-color: #d5d6e3;
-    display: flex;
-    justify-content: center;
-}
-
-.remove{
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 20px;
 }
 
-.botremove{
-    width: 60%;
-    height: 30px;
-    border-radius: 30px;
-    background-color: #c70e3c;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    color: #f5f5f5;
-}
 
-.botremove p{
-    margin: 0;
-}
 
-.editname{
+.imagem button{
     width: 100%;
-    height: 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
+    background-color: #237ecd;
+    font-size: 14px;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
     margin-bottom: 10px;
 }
 
-.editname p{
-    margin: 0;
-    margin-left: 10%;
-    color: #f5f5f5;
+.editname, .inputmail, .inputsenha{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0;
 }
 
-.editname i{
-    font-size: 24px;
+.inputsenha{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.remover-imagemedit{
+    display: none; 
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(255, 0, 0, 0.7); 
+    color: white;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.imagem input{
+    display:none;
+}
+
+.imagem:hover{
+    .remover-imagemedit{
+        display: block;
+    }
+}
+
+.inputsenha i{
+    position: absolute;
+    transform: translateX(170px);
+    cursor: pointer;
 }
 
 .name p{
@@ -117,7 +120,7 @@ body{
 }
 
 .name{
-    width: 90%;
+    width: 100%;
     height: 50px;
     margin-left: 5%;
     display: flex;
@@ -126,31 +129,22 @@ body{
     background-color: #d5d6e3;
 }
 
-.ename{
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-    background-color: #237ecd;
+.editname input, .inputmail input, .inputsenha input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
+    background-color: #d5d6e3;
 }
+
 
 .name p{
     margin-right: 20px;
     margin-left: 10px;
 }
 
-.ename{
-    justify-self: end;
-}
-
-.inputs{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .senha{
     width: 90%;
@@ -159,45 +153,86 @@ body{
 
 .confirma{
     width: 100%;
-    height: 100px;
     display: flex;
     flex-direction: row;
 }
 
 .conf{
     width: 50%;
-    height: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 }
 
 .boty{
-    width: 80%;
-    height: 80px;
-    border-radius: 20px;
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 14px;
+    color: white;
     background-color: #237ecd;
+    cursor: pointer;
 }
 
 .exclui{
     width: 50%;
-    height: 100px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
 }
 
 .botn{
-    width: 80%;
-    height: 80px;
-    border-radius: 20px;
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
-    background-color: #c70e3c;
+    font-size: 14px;
+    color: white;
+    background-color: gray;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 770px){
+    .confirma{
+        flex-direction: column;
+    }
+
+    .exclui, .conf{
+        width: 100%;
+    }
+
+    .boty, .botn{
+        width: 100%;
+    }
+    .imagem button, .botn, .boty{
+        margin-bottom: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 500px)
+{
+
+    .fundo{
+        width: 70%;
+        padding: 20px 40px;
+    }
+
+    .edit{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .fundo{
+        width: 65%;
+        padding: 17px 35px;
+    }
 }

@@ -1,109 +1,133 @@
 // Função para abrir o modal
-function abrirModal() {
-    document.getElementById('modal-criar-usuario').style.display = 'flex';
-  }
-  
-  // Função para fechar o modal
-  function fecharModal() {
-    document.getElementById('modal-criar-usuario').style.display = 'none';
-  }
-  
-  // Função para mostrar a imagem de perfil selecionada
-  function mostrarImagem(event) {
-    const imgPerfil = document.getElementById('img-perfil');
-    const btnRemoverImagem = document.getElementById('btn-remover-imagem');
-    const file = event.target.files[0];
-  
-    if (file && (file.type === 'image/png' || file.type === 'image/jpeg')) {
-        const reader = new FileReader();
-  
-        reader.onload = function(e) {
-            imgPerfil.src = e.target.result;
-            imgPerfil.style.display = 'block'; 
-            btnRemoverImagem.style.display = 'block'; 
-        };
-  
-        reader.readAsDataURL(file);
+function abrirModalCriar() {
+    const modal = document.getElementById('modal-criar-usuariocr');
+    modal.style.display = 'flex'; // Modal aparece
+}
+
+// Função para fechar o modal
+function fecharModalCriar() {
+    const modal = document.getElementById('modal-criar-usuariocr');
+    modal.style.display = 'none'; // Modal desaparece
+}
+
+// Função para mostrar ou ocultar a senha e a confirmação da senha, alternando os ícones
+function toggleSenha() {
+    var inputPass = document.getElementById('senhacr');
+    var confirmarSenha = document.getElementById('confirmar-senhacr');
+    var showPass = document.getElementById('senha-iconcr');
+    var showConfirmarSenha = document.getElementById('confirmar-senha-iconcr');
+
+    if (inputPass.type === 'password') {
+        inputPass.setAttribute('type', 'text');
+        confirmarSenha.setAttribute('type', 'text');
+        showPass.classList.replace('bi-eye', 'bi-eye-slash');
+        showConfirmarSenha.classList.replace('bi-eye', 'bi-eye-slash');
     } else {
-        alert('Por favor, selecione uma imagem PNG ou JPG.');
-        imgPerfil.style.display = 'none'; 
-        btnRemoverImagem.style.display = 'none'; 
+        inputPass.setAttribute('type', 'password');
+        confirmarSenha.setAttribute('type', 'password');
+        showPass.classList.replace('bi-eye-slash', 'bi-eye');
+        showConfirmarSenha.classList.replace('bi-eye-slash', 'bi-eye');
     }
-  }
-  
-  // Função para adicionar um novo usuário
-  document.getElementById('btn-adicionar').onclick = function() {
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const senha = document.getElementById('senha').value;
-    const confirmarSenha = document.getElementById('confirmar-senha').value;
-    const imgPerfil = document.getElementById('img-perfil').src;
-  
-    if (nome && email && senha && (senha === confirmarSenha)) {
-        const tbody = document.getElementById('usuarios-tbody');
-        const newRow = tbody.insertRow();
-  
-        // Verifica se uma imagem de perfil foi fornecida
-        const imgHtml = imgPerfil ? 
-            `<img src="${imgPerfil}" class="imagem-perfil" alt="Imagem de Perfil" />` : 
-            `<div class="texto-placeholder">Imagem de perfil (somente PNG ou JPG)</div>`;
-  
-        newRow.innerHTML = `
-            <td>${tbody.rows.length}</td>
-            <td>${nome}</td>
-            <td>${email}</td>
-            <td>${imgHtml}</td>
-        `;
-  
-        // Limpa os campos após adicionar
-        document.getElementById('nome').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('senha').value = '';
-        document.getElementById('confirmar-senha').value = '';
-        document.getElementById('foto').value = '';
-        document.getElementById('img-perfil').src = '';
-        document.getElementById('btn-remover-imagem').style.display = 'none'; 
-        document.getElementById('img-perfil').style.display = 'none'; 
-        document.getElementById('modal-criar-usuario').style.display = 'none';
-    } else {
-        if (senha !== confirmarSenha) {
-            alert('As senhas não são iguais. Por favor, tente novamente.');
-        } else {
-            alert('Por favor, preencha todos os campos.');
-        }
+}
+
+// Função para adicionar um novo usuário
+document.getElementById('btn-adicionarcr').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById('nomecr').value;
+    const email = document.getElementById('emailcr').value;
+    const senha = document.getElementById('senhacr').value;
+    const confirmarSenha = document.getElementById('confirmar-senhacr').value;
+    const inputFoto = document.getElementById('fotocr').files[0];
+    let valid = true;
+
+    document.querySelectorAll('.errocr').forEach((erro) => {
+        erro.style.display = 'none';
+    });
+
+    if (!nome) {
+        document.getElementById('erro-nomecr').innerText = 'Nome é obrigatório.';
+        document.getElementById('erro-nomecr').style.display = 'block';
+        valid = false;
     }
-  };
-  
-  // Função para remover a imagem de perfil
-  function removerImagem() {
-    const imgPerfil = document.getElementById('img-perfil');
-    const btnRemoverImagem = document.getElementById('btn-remover-imagem');
-    const inputFoto = document.getElementById('foto');
-  
-    imgPerfil.src = ''; 
-    imgPerfil.style.display = 'none'; 
-    btnRemoverImagem.style.display = 'none'; 
-    inputFoto.value = ''; 
-  }
-  
-  // Adiciona evento ao botão "Remover Imagem"
-  document.getElementById('btn-remover-imagem').onclick = removerImagem;
-  
-  
-  // Adiciona função para mostrar ou ocultar senha
-  function toggleSenha(id) {
-    const senhaInput = document.getElementById(id);
-    const senhaIcon = document.getElementById(`${id}-icon`);
-  
-    if (senhaInput.type === "password") {
-        senhaInput.type = "text"; 
-        senhaIcon.classList.remove("bi-eye-slash");
-        senhaIcon.classList.add("bi-eye"); 
-    } else {
-        senhaInput.type = "password"; 
-        senhaIcon.classList.remove("bi-eye");
-        senhaIcon.classList.add("bi-eye-slash"); 
+
+    if (!email) {
+        document.getElementById('erro-emailcr').innerText = 'Email é obrigatório.';
+        document.getElementById('erro-emailcr').style.display = 'block';
+        valid = false;
     }
-  }
-  
-  
+
+    if (!senha) {
+        document.getElementById('erro-senhacr').innerText = 'Senha é obrigatória.';
+        document.getElementById('erro-senhacr').style.display = 'block';
+        valid = false;
+    }
+
+    if (senha !== confirmarSenha) {
+        document.getElementById('erro-confirmar-senhacr').innerText = 'As senhas não coincidem.';
+        document.getElementById('erro-confirmar-senhacr').style.display = 'block';
+        valid = false;
+    }
+
+    if (!inputFoto) {
+        document.getElementById('erro-imagemcr').innerText = 'A imagem de perfil é obrigatória.';
+        document.getElementById('erro-imagemcr').style.display = 'block';
+        valid = false;
+    }
+
+    if (!valid) return;
+    document.querySelector('.modal-createcr').submit();
+});
+
+// Função para mostrar a imagem de perfil escolhida
+function mostrarImagem(event) {
+    const imgPerfil = document.getElementById('img-perfilcr');
+    const inputFoto = document.getElementById('fotocr');
+    const file = inputFoto.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+        imgPerfil.src = e.target.result;
+        imgPerfil.style.display = 'block';
+    };
+
+    if (file) reader.readAsDataURL(file);
+}
+
+// Função para remover a imagem de perfil
+function removerImagem() {
+    const imgPerfil = document.getElementById('img-perfilcr');
+    const inputFoto = document.getElementById('fotocr');
+
+    imgPerfil.src = '';
+    imgPerfil.style.display = 'none';
+    inputFoto.value = '';
+}
+
+document.getElementById('remover-imagemcr').onclick = removerImagem;
+
+document.getElementById('btn-escolher-imagemcr').onclick = function () {
+    document.getElementById('fotocr').click();
+};
+
+// Remover mensagem de erro ao digitar nos campos
+document.getElementById('nomecr').addEventListener('input', () => {
+    document.getElementById('erro-nomecr').style.display = 'none';
+});
+
+document.getElementById('emailcr').addEventListener('input', () => {
+    document.getElementById('erro-emailcr').style.display = 'none';
+});
+
+document.getElementById('senhacr').addEventListener('input', () => {
+    document.getElementById('erro-senhacr').style.display = 'none';
+    document.getElementById('erro-confirmar-senhacr').style.display = 'none';
+});
+
+document.getElementById('confirmar-senhacr').addEventListener('input', () => {
+    document.getElementById('erro-confirmar-senhacr').style.display = 'none';
+});
+
+document.getElementById('fotocr').addEventListener('change', () => {
+    document.getElementById('erro-imagemcr').style.display = 'none';
+});

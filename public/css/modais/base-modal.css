@@ -1,0 +1,39 @@
+.modal--header{
+    display: flex;
+    justify-content: center;
+}
+.modal--header h3{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2rem;
+    justify-content: center;
+}
+.buttonModal{
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    color: rgb(var(--white));
+    cursor: pointer;
+}
+.buttonModal__cancelar{
+    background-color: rgb(var(--red));
+}
+.buttonModal__editar{
+    background-color: rgb(var(--yellow));
+}
+.note-editor, .note-frame {
+    max-width: 460px;
+    width: 100%;
+    max-height: 900px;
+    height: 100%;
+    overflow: hidden;
+}
+.note-editing-area {
+    background-color: rgb(var(--white));
+    padding-bottom: 20px;
+}
+.note-modal-backdrop {
+    z-index: 5;
+    position: relative;
+}
+

@@ -6,7 +6,7 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My Simple Page</h1>
+        <h1>Brah</h1>
     </header>
     <nav>
         <ul>

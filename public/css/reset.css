@@ -1,14 +1,14 @@
 :root{
     --principalFont: 'Satoshi';
     /* Paleta da PlayStrool*/
-    --firstBlue: #080B3C;
-    --secoundBlue:  #00AEA0;
-    --red: #C70E3C;
-    --yellow: #FFC739;
-    --cyan: #00AEA0;
-    --gray: #D5D6E3;
-    --white: #F5F5F5;
-    --black: #0B0B0B;
+    --firstBlue: 8,11,60;
+    --secoundBlue:  0,174,160;
+    --red: 199,14,60;
+    --yellow: 255,199,57;
+    --cyan: 0,174,160;
+    --gray: 213,214,227;
+    --white: 245,245,245;
+    --black: 11,11,11;
 }
 *{
     padding: 0;

@@ -1,49 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/public/css/modal-excluir.css">
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/public/css/modal-excluir.css" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <title>Excluir</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="sub-container">
-            <div class="table-container">
-                <table class="tabela-posts">
-                    <thead>
-                        <tr>
-                            <th>Excluir</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><button class="excluir" onclick="abrirModal('editar')"><i class="fas fa-trash"></i></button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+      <div class="sub-container">
+        <div class="table-container">
+          <table class="tabela-posts">
+            <thead>
+              <tr>
+                <th>Excluir</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <button class="excluir" onclick="abrirModal('editar')">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        
-        <div class="modalc" id="editar">
-            <form action="#">
-                <h3>Tem certeza que deseja excluir?</h3>
-            </form>
-            <div class="modal-container">
-                <img src="/public/assets/deletar.png" alt="" height="200px" width="200px">
-                <div class="modal-buttons">                    
-                    <button class="button-modal" onclick="fecharModal('editar')">Cancelar</button>
-                    <button class="button-modal">Excluir</button>                   
-                </div>
+      </div>
+
+      <div class="modalc" id="editar">
+        <form action="#">
+          <div class="modal-container">
+            <img
+              src="/public/assets/deletar2.png"
+              alt=""
+              height="100px"
+              width="150px"
+            />
+            <h4>Tem certeza que deseja excluir?</h4>
+            <div class="modal-buttons">
+              <button class="button-cancelar" onclick="fecharModal('editar')">
+                Cancelar
+              </button>
+              <button class="button-excluir">Excluir</button>
             </div>
-        </div>
+          </div>
+        </form>
+      </div>
     </div>
     <div class="tela" id="tela"></div>
-</body>
+  </body>
 
-<script src="/public/js/modal-excluir.js"></script>
+  <script src="/public/js/excluir.js"></script>
 </html>

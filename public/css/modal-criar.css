@@ -141,6 +141,10 @@ input[type="file"] {
   box-sizing: border-box; 
   white-space: nowrap; 
   margin-top: 10px; 
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 #btn-escolher-imagemcr:hover {
@@ -157,6 +161,10 @@ input[type="file"] {
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px; 
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 #btn-adicionarcr:hover {
@@ -172,7 +180,10 @@ input[type="file"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 14px; 
+  font-size: 14px;       display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 #btn-fecharcr:hover {

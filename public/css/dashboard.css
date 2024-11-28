@@ -34,7 +34,6 @@ body{
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    cursor: pointer;
 }
 
 .posts{
@@ -75,6 +74,15 @@ body{
         animation-duration: 0.5s;
         color: #1837BF;
     }
+    .poststxt{
+        animation-name: lightLetter;
+        animation-duration: 0.5s;
+        color:#d5d6e3
+    }
+}
+
+button{
+    border: 0;
 }
 
 .poststxt{
@@ -234,4 +242,9 @@ body{
 @keyframes xizin{
     0% {color: #2A4AD7;}
     100% {color: #1837BF}
+}
+
+@keyframes lightLetter{
+    0% {color: #0b0b0b;}
+    100% {color: #d5d6e3}
 }

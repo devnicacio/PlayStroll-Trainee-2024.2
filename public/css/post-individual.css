@@ -53,18 +53,9 @@ body{
 }
 
 .icon1 {
-    position: relative;
     height: 60px;
     width: 60px;
 }
-
-.icon2 {
-    position: absolute;
-    justify-content: center;
-    transform: translate(50%, 40%);
-    height: 30px;
-    width: 30px;
-} 
 
 h2 {
     margin: 0;
@@ -133,12 +124,6 @@ h1 {
         width: 50px;
     }
 
-    .icon2 {
-        height: 25px;
-        width: 25px;
-        transform: translate(50%, 40%);
-    }
-
     .display2{
         align-items: center;
     }
@@ -192,11 +177,6 @@ h1 {
     .display2{
         flex-direction: column;
         align-items: center;
-    }
-
-    .image2{
-        height: 40%;
-        width: 60%;
     }
 
     h1 {

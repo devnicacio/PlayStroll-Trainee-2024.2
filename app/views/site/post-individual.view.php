@@ -13,9 +13,8 @@
     <div class="container">
                 <div class="linha-preta"></div> 
                 <?php 
-                $combined = array_map(null, $posts, $users);
 
-                foreach ($combined as [$post, $user]): ?>
+                foreach ($posts as $post): ?>
                 <div class="image-container">
                 <img src="<?= $post->image_capa ?>" alt="" class="image1">
             </div>       
@@ -23,9 +22,9 @@
                 <div class="section-description">
                     <div class="avaliation-line">
                         <div class="dados">
-                            <img src="<?= $user->name ?>" alt="" class="icon1">
+                            <img src="<?= $post->image_author ?>" alt="" class="icon1">
                             <div>
-                                <h2><?= $user->image ?></h2>
+                                <h2><?= $post->author_name ?></h2>
                                 <h3><?= $post->create_at ?></h3>
                             </div>
                         </div>

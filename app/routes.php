@@ -6,6 +6,7 @@ use App\Core\Router;
 use App\Controllers\ExampleController;
 use App\Controllers\AdminController;
 use App\Controllers\Controller;
+use App\Controllers\IntegracaoController;
 
     //Login
     $router->get('login', 'LoginController@exibirLogin');
@@ -25,5 +26,9 @@ use App\Controllers\Controller;
     $router->post('admin/tabela-de-posts/update-post', 'Controller@updatePost');
     $router->post('criar-post', 'Controller@create');
     $router->post('deletar-post', 'Controller@delete_post');
+
+    //Lista de posts e Post individual
+    $router->get('lista-de-posts', 'IntegracaoController@exibirListaDePosts');
+    $router->post('post-individual', 'IntegracaoController@exbibirPostIndividual');
 
 ?>

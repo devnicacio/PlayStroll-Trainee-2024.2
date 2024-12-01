@@ -51,6 +51,6 @@ class Controller{
 
         header('Location: /admin/tabela-de-posts');
     }
-
+    
 }
 ?>

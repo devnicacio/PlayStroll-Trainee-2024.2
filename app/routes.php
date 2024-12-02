@@ -29,6 +29,6 @@ use App\Controllers\IntegracaoController;
 
     //Lista de posts e Post individual
     $router->get('lista-de-posts', 'IntegracaoController@exibirListaDePosts');
-    $router->post('post-individual', 'IntegracaoController@exbibirPostIndividual');
+    $router->get('post-individual', 'IntegracaoController@exbibirPostIndividual');
 
 ?>

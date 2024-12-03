@@ -141,6 +141,22 @@ class QueryBuilder
         }
     }
 
+    public function search($table, $search){
+        $sql = "SELECT * FROM {$table} WHERE title LIKE '%$search%'";
+
+        
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function update($table, $id, $parameters, $image, $fotoAtual)
 {
     if ($image && isset($image['tmp_name']) && $image['tmp_name']) {

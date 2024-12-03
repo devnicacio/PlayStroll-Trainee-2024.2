@@ -26,4 +26,9 @@ use App\Controllers\Controller;
     $router->post('criar-post', 'Controller@create');
     $router->post('deletar-post', 'Controller@delete_post');
 
+    //lista de posts(pública)
+    $router->get('posts', 'listaDePostsController@index');
+    $router->get('pesquisa', 'listaDePostsController@search');
+
+
 ?>

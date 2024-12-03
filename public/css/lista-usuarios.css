@@ -38,6 +38,7 @@ body {
 
 .more {
     padding: 3%;
+    color: white;
     font-size: 50px;
     line-height: 30px;
     display: flex;
@@ -121,13 +122,22 @@ tbody {
     margin-right: 10%;
 }
 
-.paginas button{
+.pag1, .anterior, .proximo{
     width: 36px;
     height: 36px;
     border-radius: 12px;
     background-color: #237ecd;
     border: 1px solid black;
     color: black;
+}
+
+.active{
+    background-color: #080b3c;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    border: 1px solid black;
 }
 
 .pag1 {

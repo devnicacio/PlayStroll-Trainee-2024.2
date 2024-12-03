@@ -1,4 +1,6 @@
-lista de posts.html
+<?php 
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt">
@@ -12,10 +14,10 @@ lista de posts.html
 </head>
 <body>
     <div class="pesquisa">
-        <div class="pesquisa-input" onclick="inputFocus('busca')">
+        <form method="GET" action="/pesquisa" class="pesquisa-input" onclick="inputFocus('busca')">
             <i class="bi bi-search"></i>
-            <input type="text" name="" id="busca"  class="caixa" placeholder="ENCONTRE UM JOGO">
-        </div>
+            <input type="text" name="busca" id="busca"  class="caixa" placeholder="ENCONTRE UM JOGO">
+        </form>
     </div>
     <div class="inicialização-dos-posts">
         <h4>MAIS RECENTES</h4>

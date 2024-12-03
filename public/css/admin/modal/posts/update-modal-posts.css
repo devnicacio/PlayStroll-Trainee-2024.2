@@ -1,4 +1,4 @@
-@import "base-modal.css";
+@import "../base-modal.css";
 
 .modalUpdate{
     background-color: rgb(var(--cyan));

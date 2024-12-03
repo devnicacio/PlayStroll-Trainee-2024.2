@@ -14,9 +14,7 @@
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Personal CSS-->
-    <link rel="stylesheet" href="/public/css/tabela-de-posts.css">
-	<link rel="stylesheet" type="text/css" href="/public/css/criar.css" />
-    <link rel="stylesheet" type="text/css" href="/public/css/excluir.css" />
+    <link rel="stylesheet" type="text/css" href="/public/css/admin/tabela-de-posts.css">
 
     <!-- Third-party JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -25,8 +23,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.9.0/lang/summernote-pt-BR.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.js"></script>
     <!-- Personal JS -->
-    <script defer src="/public/js/modals.js"></script>
-    <script defer src="/public/js/criar.js"></script>
+    <script defer src="/public/js/admin/modal/base-modal.js"></script>
+    <script defer scr="/public/js/admin/modal/posts/read-modal-posts.js"></script>
+    <script defer src="/public/js/admin/modal/posts/create-modal-posts.js"></script>
    
 </head>
 <body>
@@ -37,6 +36,9 @@
     Ademais, usei a metodologia BEM(Block, Element, Modifier). Os elementos são identificados com --, e
     os modificadores por __.
     -->
+    <?php
+        require_once realpath(dirname(__FILE__)."sidebar.php");
+    ?>
     <main class="container">
         <div class="cabecalho">
             <h1 class="table-title">Tabela de Posts</h1>
@@ -44,7 +46,7 @@
         </div>
         <!-- Modal Criar -->
         <?php
-            require_once realpath(dirname(__FILE__)."/modais/posts/create_modal_posts.php");
+            require_once realpath(dirname(__FILE__)."/modal/posts/create-modal-posts.php");
         ?>
         <div class="table-container">
         <table class="tabela-posts">
@@ -72,9 +74,9 @@
                 </tr>
                 <!-- Modais de leitura, alteração e exclusão--> 
                 <?php
-                    require_once realpath(dirname(__FILE__) ."/modais/posts/delete_modal_posts.php");
-                    require_once realpath(dirname(__FILE__)."/modais/posts/read_modal_posts.php");
-                    require_once realpath(dirname(__FILE__)."/modais/posts/update_modal_posts.php");
+                    require_once realpath(dirname(__FILE__) ."/modal/posts/delete-modal-posts.php");
+                    require_once realpath(dirname(__FILE__)."/modal/posts/read-modal-posts.php");
+                    require_once realpath(dirname(__FILE__)."/modal/posts/update-modal-posts.php");
                 ?>
                 <script>/*
                     $("#summernote-update-<?= $post->id?>").summernote({

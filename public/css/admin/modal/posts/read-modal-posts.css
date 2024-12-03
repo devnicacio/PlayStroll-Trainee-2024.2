@@ -1,4 +1,5 @@
-@import "base-modal.css";
+@import "../base-modal.css";
+
 .modalRead{
     background-color: rgb(var(--cyan));
     color: rgb(var(--white));

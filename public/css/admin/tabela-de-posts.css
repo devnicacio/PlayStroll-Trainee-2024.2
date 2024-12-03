@@ -1,6 +1,9 @@
-@import "reset.css";
-@import "modais/read-modal-posts.css";
-@import "modais/update-modal-posts.css";
+@import "../reset.css";
+@import "modal/posts/create-modal-posts.css";
+@import "modal/posts/read-modal-posts.css";
+@import "modal/posts/update-modal-posts.css";
+@import "modal/posts/delete-modal-posts.css";
+@import "sidebar.css";
 
 .container {
     height: 100vh;

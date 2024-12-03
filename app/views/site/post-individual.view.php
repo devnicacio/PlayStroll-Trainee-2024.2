@@ -12,9 +12,6 @@
 <body>
     <div class="container">
                 <div class="linha-preta"></div> 
-                <?php 
-
-                foreach ($posts as $post): ?>
                 <div class="image-container">
                 <img src="<?= $post->image_capa ?>" alt="" class="image1">
             </div>       
@@ -36,7 +33,6 @@
                     <p><?= $post->content ?></p>
                 </div>
             </div>
-            <?php endforeach ?>
     </div>
 </body>
 

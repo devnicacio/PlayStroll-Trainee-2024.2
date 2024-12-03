@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Controllers;
+namespace App;
 use App\Controllers\LoginController;
 use App\Core\Router;
 use App\Controllers\ExampleController;
 use App\Controllers\AdminController;
 use App\Controllers\Controller;
+use App\Controllers\NavbarController;
 
     //Login
     $router->get('login', 'LoginController@exibirLogin');
@@ -30,5 +31,7 @@ use App\Controllers\Controller;
     $router->get('posts', 'listaDePostsController@index');
     $router->get('pesquisa', 'listaDePostsController@search');
 
-
+    //navbar
+    $router->get('navbar', 'NavbarController@index');
+    $router->get('pesquisa/navbar', 'NavbarController@search');
 ?>

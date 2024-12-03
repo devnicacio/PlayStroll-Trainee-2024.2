@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
+    <?php include 'navbar.view.php'  ?>
     <div class="pesquisa">
         <form method="GET" action="/pesquisa" class="pesquisa-input" onclick="inputFocus('busca')">
             <i class="bi bi-search"></i>

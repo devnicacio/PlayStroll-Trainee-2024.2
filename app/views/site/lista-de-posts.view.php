@@ -1,5 +1,3 @@
-lista de posts.html
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>

@@ -71,8 +71,15 @@ class IntegracaoController{
     //Lista de Posts
 
     public function exibirListaDePosts(){
-        return view('site/lista-de-posts');
+        $posts = App::get('database')->select(
+            'SELECT posts.*, users.name AS author_name, users.image AS author_image
+            FROM posts
+            INNER JOIN users ON posts.id_user = users.id'
+        );
+    
+        return view('site/lista-de-posts', compact('posts'));
     }
-
+    
+    
 }
 ?>

@@ -27,8 +27,11 @@ use App\Controllers\IntegracaoController;
     $router->post('criar-post', 'Controller@create');
     $router->post('deletar-post', 'Controller@delete_post');
 
-    //Lista de posts e Post individual
+    //Lista de posts Post individual
     $router->get('lista-de-posts', 'IntegracaoController@index');
     $router->get('post-individual', 'IntegracaoController@exbibirPostIndividual');
+
+    //Landing page
+    $router->get('landing-page', 'IntegracaoController@paginaInicial');
 
 ?>

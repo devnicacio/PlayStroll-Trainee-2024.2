@@ -16,23 +16,13 @@
 
              <div class="swiper-slide" id="slide-principal">
                 <div class="fade-swipper">
-                        <p class="nome-swipper">Nome do Jogo</p>
-                        <p class="nota-swipper"><span style="color: #FFC739;"> ★★★★☆</span> 4,0</p>
-                        <p class="autor-swipper"> <img src="/public/assets/usuario.png" alt="usuario">NomeDeUsuário</p>
-                        <p class="descricao-swipper"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante... </p>
+                        <p class="nome-swipper"><?= $post->title ?></p>
+                        <p class="nota-swipper"><span style="color: #FFC739;"><?= $post->avaliation ?></span></p>
+                        <p class="autor-swipper"> <img src="<?= $post->author_image ?>" alt="usuario"><?= $post->author_name ?></p>
+                        <p class="descricao-swipper"><?= $post->content ?></p>
                         <button class="botao-swipper">Veja mais</button>
                 </div>
-                <img src="/public/assets/god-of-war.png" alt="imagem">
-             </div>
-             <div class="swiper-slide" id="slide-principal">
-                <div class="fade-swipper">
-                    <p class="nome-swipper">Nome do Jogo</p>
-                    <p class="nota-swipper"><span style="color: #FFC739;"> ★★★★☆</span> 4,0</p>
-                    <p class="autor-swipper"> <img src="/public/assets/usuario.png" alt="usuario" class="imagem-usuario">NomeDeUsuário</p>
-                    <p class="descricao-swipper"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante... </p>
-                    <button class="botao-swipper">Veja mais</button>
-            </div>
-                <img src="/public/assets/stardew-valley.png" alt="imagem">
+                <img src="<?= $post->image_capa ?>" alt="imagem">
              </div>
     </div>
 

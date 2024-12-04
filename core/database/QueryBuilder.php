@@ -74,8 +74,31 @@ class QueryBuilder
             'SELECT %s.*, users.name, users.image 
              FROM %s 
              INNER JOIN users ON %s.id_user = users.id 
-             ORDER BY %1$s.id DESC',
+             ORDER BY %s.id DESC',
             $table, $table, $table
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function selecionaPost($table, $id){
+        //$postId = isset($_GET['id']) ? $_GET['id'] : null;
+
+        $sql = sprintf(
+            'SELECT posts.*, users.name AS author_name, users.image AS author_image
+            FROM posts
+            INNER JOIN users ON posts.id_user = users.id
+            WHERE posts.id = %s',
+                $table, $table, $id
+            //['id' => $postId]
         );
 
         try {

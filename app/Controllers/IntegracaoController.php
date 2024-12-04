@@ -22,26 +22,7 @@ class IntegracaoController{
     //Post Individual
 
     public function exbibirPostIndividual(){
-        $postId = isset($_GET['id']) ? $_GET['id'] : null;
-
-        if (!$postId) {
-            header('Location: /lista-de-posts');
-            exit;
-        }
-
-        $post = App::get('database')->selectOne(
-            'SELECT posts.*, users.name AS author_name, users.image AS author_image
-            FROM posts
-            INNER JOIN users ON posts.id_user = users.id
-            WHERE posts.id = :id',
-            ['id' => $postId]
-        );
-
-        if (!$post) {
-            header('Location: /lista-de-posts');
-            exit;
-        }
-
+        $post = App::get('database')->selecionaPost('posts');
         return view('site/post-individual', ['post' => $post]);
     }
 

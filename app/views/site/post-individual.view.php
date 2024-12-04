@@ -19,7 +19,7 @@
                 <div class="section-description">
                     <div class="avaliation-line">
                         <div class="dados">
-                            <img src="<?= $post->image_author ?>" alt="" class="icon1">
+                            <img src="<?= $post->author_image ?>" alt="" class="icon1">
                             <div>
                                 <h2><?= $post->author_name ?></h2>
                                 <h3><?= $post->create_at ?></h3>

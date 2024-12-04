@@ -17,115 +17,30 @@
     </div>
     <div class="inicialização-dos-posts">
         <h4>MAIS RECENTES</h4>
-        <div class="barra"></div>
+        
     </div>
     <div class="posts">
-    <div class="post um">
-        <div class="imagem um"><img src="arquivos/foto jogo1.jpg"></div>
-        <div class="imagem-mobile um"><img src="arquivos/capa horizontal.jpg"></div>
+    <?php foreach ($posts as $post): ?>
+        <div class="barra"></div>
+    <div class="post um" id="post->id">
+        <div class="imagem um"><img src="<?= $post->image_retrato ?>"></div>
+        <div class="imagem-mobile um"><img src="<?= $post->image_capa ?>"></div>
         <div class="texto um">
             <div class="titulo um">
-                <h3>TÍTULO DO POST</h3>
+                <h3><?= $post->title ?></h3>
             </div>
-            <div class="nota um"><h4><span>★★★</span>☆☆</h4></div>
+            <div class="nota um"><h4><?= $post->avaliation ?></h4></div>
                 <div class="dados um">
-                    <div class="perfil um"><img src="arquivos/perfil1.jpg"></div>
-                    <div class="user um"><p>Nome_de_usuario</p>></div>
+                    <div class="perfil um"><img src="<?= $post->image ?>"></div>
+                    <div class="user um"><p><?= $post->name ?></p>></div>
                 </div>
                 <div class="conteúdo um">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, unde laborum ipsa sequi
-                     maiores eius odit! Ea, quo soluta, harum facere voluptatum pariatur blanditiis 
-                     dolorem sit tempore minima, deleniti quaerat. Lorem ipsum dolor, sit amet consectetur...
+                    <p><?= $post->content ?>
                     </p>
                 </div>
         </div>
     </div>
-    <div class="barra"></div>
-    <div class="post dois">
-        <div class="imagem dois"><img src="arquivos/foto jogo1.jpg"></div>
-        <div class="imagem-mobile dois"><img src="arquivos/capa horizontal.jpg"></div>
-
-        <div class="texto dois">
-            <div class="titulo dois">
-                <h3>TÍTULO DO POST</h3>
-            </div>
-            <div class="nota dois"><h4><span>★★★</span>☆☆</h4></div>
-            <div class="dados dois">
-                <div class="perfil dois"><img src="arquivos/perfil1.jpg"></div>
-                <div class="user dois"><p>Geralt_O_Bruxo</p>></div>
-            </div>
-            <div class="conteúdo dois">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, unde laborum ipsa sequi
-                    maiores eius odit! Ea, quo soluta, harum facere voluptatum pariatur blanditiis 
-                    dolorem sit tempore minima, deleniti quaerat. Lorem ipsum dolor, sit amet consectetur...              
-                </p>
-            </div>
-            
-        </div>
-    </div>
-    <div class="barra"></div>
-    <div class="post tres">
-        <div class="imagem tres"><img src="arquivos/foto jogo2.jpg"></div>
-        <div class="imagem-mobile três"><img src="arquivos/capa horizontal.jpg"></div>
-        <div class="texto tres">
-            <div class="titulo tres">
-                <h3>TÍTULO DO POST</h3>
-            </div>
-            <div class="nota tres"><h4><span>★★★</span>☆☆</h4></div>
-            <div class="dados tres">
-                <div class="perfil tres"><img src="arquivos/perfil 3.jpg"></div>
-                <div class="user tres"><p>Felipe_Coutinho</p>></div>
-            </div>
-            <div class="conteúdo tres">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, unde laborum ipsa sequi
-                    maiores eius odit! Ea, quo soluta, harum facere voluptatum pariatur blanditiis 
-                    dolorem sit tempore minima, deleniti quaerat. Lorem ipsum dolor, sit amet consectetur...              
-                </p>
-            </div>   
-        </div>
-    </div>
-    <div class="barra"></div>
-    <div class="post quatro">
-        <div class="imagem quatro"><img src="arquivos/imagem 4.jpg"></div>
-        <div class="imagem-mobile quatro"><img src="arquivos/capa horizontal.jpg"></div>
-        <div class="texto quatro">
-            <div class="titulo quatro">
-                <h3>TÍTULO DO POST</h3>
-            </div>
-            <div class="nota quatro"><h4><span>★★★</span>☆☆ </h4></div>
-            <div class="dados quatro">
-                <div class="perfil quatro"><img src="arquivos/perfil4.jpg"></div>
-                <div class="user quatro"><p>Vincent_Vega</p>></div>
-            </div>
-            <div class="conteúdo quatro">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, unde laborum ipsa sequi
-                    maiores eius odit! Ea, quo soluta, harum facere voluptatum pariatur blanditiis 
-                    dolorem sit tempore minima, deleniti quaerat. Lorem ipsum dolor, sit amet consectetur...
-                </p>
-            </div>   
-        </div>
-    </div>
-    <div class="barra"></div>
-    <div class="post cinco">
-        <div class="imagem cinco"><img src="arquivos/foto jogo5.jpg"></div>
-        <div class="imagem-mobile cinco"><img src="arquivos/capa horizontal.jpg"></div>
-        <div class="texto cinco">
-            <div class="titulo cinco">
-                <h3>TÍTULO DO POST</h3>
-            </div>
-            <div class="nota cinco"><h4><span>★★★</span>☆☆ </h4></div>
-            <div class="dados cinco">
-                <div class="perfil cinco"><img src="arquivos/perfil5.jpg"></div>
-                <div class="user cinco"><p>Ez_Depressivo</p>></div>
-            </div>
-            <div class="conteúdo cinco">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, unde laborum ipsa sequi
-                    maiores eius odit! Ea, quo soluta, harum facere voluptatum pariatur blanditiis 
-                    dolorem sit tempore minima, deleniti quaerat. Lorem ipsum dolor, sit amet consectetur...
-                </p>
-            </div>   
-        </div>
-    </div>
+    <?php endforeach ?>
     <div class="barra"></div>
     </div>
    
@@ -139,7 +54,6 @@
         <button class="nav7">></button>
         
     </div>
-    <i class="bi bi-search"></i>
 </body>
 <script src="/public/js/lista-de-posts.js"></script>
 </html>

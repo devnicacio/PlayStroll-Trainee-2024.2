@@ -28,7 +28,7 @@ use App\Controllers\IntegracaoController;
     $router->post('deletar-post', 'Controller@delete_post');
 
     //Lista de posts e Post individual
-    $router->get('lista-de-posts', 'IntegracaoController@exibirListaDePosts');
+    $router->get('lista-de-posts', 'IntegracaoController@index');
     $router->get('post-individual', 'IntegracaoController@exbibirPostIndividual');
 
 ?>

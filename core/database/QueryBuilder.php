@@ -70,13 +70,19 @@ class QueryBuilder
 
     public function select($table): mixed
     {
-        $sql = "SELECT * FROM {$table}";
+        $sql = sprintf(
+            'SELECT %s.*, users.name, users.image 
+             FROM %s 
+             INNER JOIN users ON %s.id_user = users.id 
+             ORDER BY %1$s.id DESC',
+            $table, $table, $table
+        );
 
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
 
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
 
         } catch (Exception $e) {
             die($e->getMessage());

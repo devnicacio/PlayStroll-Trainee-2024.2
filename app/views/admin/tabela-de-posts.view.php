@@ -236,6 +236,7 @@
         </form>
     <div>
     <span class="postAvaliation" style="display:none"><?= $post->avaliation?></span>
+    </div>
 </div>
 <script>
 	$('#summernote').summernote({

@@ -29,7 +29,7 @@ use App\Controllers\IntegracaoController;
 
     //Lista de posts Post individual
     $router->get('lista-de-posts', 'IntegracaoController@index');
-    $router->get('post-individual', 'IntegracaoController@exbibirPostIndividual');
+    $router->get('post-individual', 'IntegracaoController@exibirPostIndividual');
 
     //Landing page
     $router->get('landing-page', 'IntegracaoController@paginaInicial');

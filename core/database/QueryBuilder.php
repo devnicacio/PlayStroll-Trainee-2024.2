@@ -75,8 +75,8 @@ class QueryBuilder
              FROM %s 
              INNER JOIN users ON %s.id_user = users.id 
              ORDER BY %s.id DESC',
-            $table, $table, $table
-        );
+            $table, $table, $table, $table
+        );  
 
         try {
             $stmt = $this->pdo->prepare($sql);

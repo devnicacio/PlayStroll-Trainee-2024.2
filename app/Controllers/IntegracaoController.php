@@ -21,7 +21,7 @@ class IntegracaoController{
 
     //Post Individual
 
-    public function exbibirPostIndividual(){
+    public function exibirPostIndividual(){
         $post = App::get('database')->selecionaPost('posts');
         return view('site/post-individual', ['post' => $post]);
     }

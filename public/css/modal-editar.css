@@ -75,6 +75,13 @@ form{
     border: 0;
 }
 
+.erroEdit{
+    text-align: start;
+    width: 100%;
+    color: red;
+    font-size: 12px;
+}
+
 .inputsenha{
     width: 100%;
     display: flex;
@@ -139,6 +146,11 @@ form{
     background-color: #d5d6e3;
 }
 
+.inputsenha{
+    display: flex;
+    flex-direction: column;
+}
+
 
 .name p{
     margin-right: 20px;
@@ -162,6 +174,10 @@ form{
     display: flex;
     justify-content: end;
     align-items: center;
+}
+
+.conf button{
+    border: 0;
 }
 
 .boty{
@@ -195,6 +211,7 @@ form{
     color: white;
     background-color: gray;
     cursor: pointer;
+    border: 0;
 }
 
 

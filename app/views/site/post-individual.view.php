@@ -13,24 +13,24 @@
     <div class="container">
                 <div class="linha-preta"></div> 
                 <div class="image-container">
-                <img src="<?= $post->image_capa ?>" alt="" class="image1">
+                <img src="<?= $post[0]->image_capa ?>" alt="" class="image1">
             </div>       
             <div class="main">
                 <div class="section-description">
                     <div class="avaliation-line">
                         <div class="dados">
-                            <img src="<?= $post->author_image ?>" alt="" class="icon1">
+                            <img src="<?= $post[0]->image ?>" alt="" class="icon1">
                             <div>
-                                <h2><?= $post->author_name ?></h2>
-                                <h3><?= $post->create_at ?></h3>
+                                <h2><?= $post[0]->name ?></h2>
+                                <h3><?= $post[0]->create_at ?></h3>
                             </div>
                         </div>
                         <div class="classificacao">
-                            <h3 class="star"><?= $post->avaliation ?></h3>
+                            <h3 class="star"><?= $post[0]->avaliation ?></h3>
                         </div>
                     </div>
-                    <h1><?= $post->title ?></h1>
-                    <p><?= $post->content ?></p>
+                    <h1><?= $post[0]->title ?></h1>
+                    <p><?= $post[0]->content ?></p>
                 </div>
             </div>
     </div>

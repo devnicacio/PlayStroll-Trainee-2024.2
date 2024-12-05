@@ -21,7 +21,7 @@
                             <p class="nota-swipper"><span style="color: #FFC739;"><?= $post->avaliation ?></span></p>
                             <p class="autor-swipper"> <img src="<?= $post->image ?>" alt="usuario"><?= $post->name ?></p>
                             <p class="descricao-swipper"><?= $post->content ?></p>
-                            <button class="botao-swipper">Veja mais</button>
+                            <button class="botao-swipper" onclick="location.href = '/post-individual?id=<?= $post->id?>'">Veja mais</button>
                     </div>
                     <img src="<?= $post->image_capa ?>" alt="imagem">
                 </div>

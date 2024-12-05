@@ -90,15 +90,12 @@ class QueryBuilder
     }
 
     public function selecionaPost($table, $id){
-        //$postId = isset($_GET['id']) ? $_GET['id'] : null;
-
         $sql = sprintf(
-            'SELECT posts.*, users.name AS author_name, users.image AS author_image
-            FROM posts
+            'SELECT %s.*, users.name, users.image 
+            FROM %s
             INNER JOIN users ON posts.id_user = users.id
-            WHERE posts.id = %s',
-                $table, $table, $id
-            //['id' => $postId]
+            WHERE %s.id = %s',
+                $table, $table, $table, $id
         );
 
         try {

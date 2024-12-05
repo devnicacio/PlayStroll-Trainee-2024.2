@@ -22,8 +22,9 @@ class IntegracaoController{
     //Post Individual
 
     public function exibirPostIndividual(){
-        $post = App::get('database')->selecionaPost('posts');
-        return view('site/post-individual', ['post' => $post]);
+        $id = $_GET['id'];
+        $post = App::get('database')->selecionaPost('posts', $id);
+        return view('site/post-individual', compact('post'));
     }
 
     //Landing Page

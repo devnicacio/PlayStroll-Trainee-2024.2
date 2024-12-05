@@ -11,34 +11,33 @@
 <body>
     <main>
         <div class="swiper" id="swiper-principal">
+            <?php foreach ($posts as $post): ?>
 
             <div class="swiper-wrapper" id="wrapper-principal">
 
-             <div class="swiper-slide" id="slide-principal">
-                <div class="fade-swipper">
-                        <p class="nome-swipper"><?= $post->title ?></p>
-                        <p class="nota-swipper"><span style="color: #FFC739;"><?= $post->avaliation ?></span></p>
-                        <p class="autor-swipper"> <img src="<?= $post->author_image ?>" alt="usuario"><?= $post->author_name ?></p>
-                        <p class="descricao-swipper"><?= $post->content ?></p>
-                        <button class="botao-swipper">Veja mais</button>
+                <div class="swiper-slide" id="slide-principal">
+                    <div class="fade-swipper">
+                            <p class="nome-swipper"><?= $post->title ?></p>
+                            <p class="nota-swipper"><span style="color: #FFC739;"><?= $post->avaliation ?></span></p>
+                            <p class="autor-swipper"> <img src="<?= $post->author_image ?>" alt="usuario"><?= $post->author_name ?></p>
+                            <p class="descricao-swipper"><?= $post->content ?></p>
+                            <button class="botao-swipper">Veja mais</button>
+                    </div>
+                    <img src="<?= $post->image_capa ?>" alt="imagem">
                 </div>
-                <img src="<?= $post->image_capa ?>" alt="imagem">
-             </div>
-    </div>
+            </div>
 
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  
-  </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> 
+        </div>
 
-            <div class="comunidade">
-                <h2>Comunidade<span style="color: #C70E37;"> engajada</span> e <span style="color: #C70E37;">diversificada</span> em diferentes tipos de jogos</h2>
-                 </div>
+        <div class="comunidade">
+            <h2>Comunidade<span style="color: #C70E37;"> engajada</span> e <span style="color: #C70E37;">diversificada</span> em diferentes tipos de jogos</h2>
+        </div>
 
-
-    <section class="ultimas-postagens">
-        <h1>Últimas publicações</h1>
-    </section>
+        <section class="ultimas-postagens">
+            <h1>Últimas publicações</h1>
+        </section>
 
     <div class="swiper" id="swiper-secundario">
         <div class="swiper-wrapper" id="wrapper-secundario">
@@ -117,6 +116,7 @@
         <!-- Botões de navegação fora da wrapper -->
         <div class="swiper-button-prev" id="segundo-prev"></div>
         <div class="swiper-button-next" id="segundo-next"></div>
+        <?php endforeach ?>
     </div>  
         
         </section>

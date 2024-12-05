@@ -112,6 +112,23 @@ class QueryBuilder
         }
     }
 
+    public function start($table, $id){
+        $sql = sprintf(
+            'SELECT posts.*, users.name AS author_name, users.image AS author_image
+            FROM posts
+            INNER JOIN users ON posts.id_user = users.id
+            WHERE posts.id = %s',
+                $table, $table, $id
+        );
+
+        try {
+            $stmt = $this->pdo->query("SELECT * FROM posts ORDER BY RAND()");
+            $posts = $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function insert($table, $parameters, $image)
     {  
         $pasta = "uploads/";

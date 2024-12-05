@@ -11,22 +11,22 @@
 <body>
     <main>
         <div class="swiper" id="swiper-principal">
-            <?php foreach ($posts as $post): ?>
-
+            
             <div class="swiper-wrapper" id="wrapper-principal">
+                <?php foreach ($posts as $post): ?>
 
                 <div class="swiper-slide" id="slide-principal">
                     <div class="fade-swipper">
                             <p class="nome-swipper"><?= $post->title ?></p>
                             <p class="nota-swipper"><span style="color: #FFC739;"><?= $post->avaliation ?></span></p>
-                            <p class="autor-swipper"> <img src="<?= $post->author_image ?>" alt="usuario"><?= $post->author_name ?></p>
+                            <p class="autor-swipper"> <img src="<?= $post->image ?>" alt="usuario"><?= $post->name ?></p>
                             <p class="descricao-swipper"><?= $post->content ?></p>
                             <button class="botao-swipper">Veja mais</button>
                     </div>
                     <img src="<?= $post->image_capa ?>" alt="imagem">
                 </div>
+                <?php endforeach ?>
             </div>
-
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div> 
         </div>
@@ -56,67 +56,10 @@
                     <button class="botao-veja-mais">Veja mais</button>
                 </div>
             </div>
-            <div class="swiper-slide" id="slide-secundario">
-                <div class="post-individual3">
-                    <img class="capa-jogo" src="/public/assets/banner.png" alt="Capa do post 3">
-                    <h3><span style="color: #000000;">Nome Do Jogo</span></h3>
-                    <div class="nota">
-                        <span style="color: #FFC739;"> ★★★★☆</span> <span style="color: #080B3C;">4,0</span>
-                    </div>
-                    <p class="autor"> <img src="/public/assets/usuario.png" alt="usuario"> <span style="color: #0B0B0B;">NomeDeUsuário</span></p>
-                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante. 
-                        Nam fringilla ipsum vitae tempus euismod. In hac habitasse platea dictumst... </p>
-                    <button class="botao-veja-mais">Veja mais</button>
-                </div>
-            </div>
-            <div class="swiper-slide" id="slide-secundario">
-                <div class="post-individual3">
-                    <img class="capa-jogo" src="/public/assets/banner.png" alt="Capa do post 3">
-                    <h3><span style="color: #000000;">Nome Do Jogo</span></h3>
-                    <div class="nota">
-                        <span style="color: #FFC739;"> ★★★★☆</span> <span style="color: #080B3C;">4,0</span>
-                    </div>
-                    <p class="autor"> <img src="/public/assets/usuario.png" alt="usuario"> <span style="color: #0B0B0B;">NomeDeUsuário</span></p>
-                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante. 
-                        Nam fringilla ipsum vitae tempus euismod. In hac habitasse platea dictumst... </p>
-                    <button class="botao-veja-mais">Veja mais</button>
-                </div>
-            </div>
-            <div class="swiper-slide" id="slide-secundario">
-                <div class="post-individual3">
-                    <img class="capa-jogo" src="/public/assets/banner.png" alt="Capa do post 3">
-                    <h3><span style="color: #000000;">Nome Do Jogo</span></h3>
-                    <div class="nota">
-                        <span style="color: #FFC739;"> ★★★★☆</span> <span style="color: #080B3C;">4,0</span>
-                    </div>
-                    <p class="autor"> <img src="/public/assets/usuario.png" alt="usuario"> <span style="color: #0B0B0B;">NomeDeUsuário</span></p>
-                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante. 
-                        Nam fringilla ipsum vitae tempus euismod. In hac habitasse platea dictumst... </p>
-                    <button class="botao-veja-mais">Veja mais</button>
-                </div>
-            </div>
-            <div class="swiper-slide" id="slide-secundario">
-                <div class="post-individual3">
-                    <img class="capa-jogo" src="/public/assets/banner.png" alt="Capa do post 3">
-                    <h3><span style="color: #000000;">Nome Do Jogo</span></h3>
-                    <div class="nota">
-                        <span style="color: #FFC739;"> ★★★★☆</span> <span style="color: #080B3C;">4,0</span>
-                    </div>
-                    <p class="autor"> <img src="/public/assets/usuario.png" alt="usuario"> <span style="color: #0B0B0B;">NomeDeUsuário</span></p>
-                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante. 
-                        Nam fringilla ipsum vitae tempus euismod. In hac habitasse platea dictumst... </p>
-                    <button class="botao-veja-mais">Veja mais</button>
-                </div>
-            </div>
         </div>
         <!-- Botões de navegação fora da wrapper -->
         <div class="swiper-button-prev" id="segundo-prev"></div>
         <div class="swiper-button-next" id="segundo-next"></div>
-        <?php endforeach ?>
     </div>  
         
         </section>

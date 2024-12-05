@@ -112,18 +112,41 @@ class QueryBuilder
         }
     }
 
-    public function start($table, $id){
+    public function selecionaAleatorio($table){
         $sql = sprintf(
-            'SELECT posts.*, users.name AS author_name, users.image AS author_image
-            FROM posts
-            INNER JOIN users ON posts.id_user = users.id
-            WHERE posts.id = %s',
-                $table, $table, $id
-        );
+            'SELECT %s.*, users.name, users.image 
+             FROM %s 
+             INNER JOIN users ON %s.id_user = users.id 
+             ORDER BY RAND()',
+            $table, $table, $table
+        );   
 
         try {
-            $stmt = $this->pdo->query("SELECT * FROM posts ORDER BY RAND()");
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
             $posts = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+            return $posts;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function fiveposts($table){
+        $sql = sprintf(
+            'SELECT %s.*, users.name, users.image 
+             FROM %s 
+             INNER JOIN users ON %s.id_user = users.id 
+             ORDER BY %s.id DESC LIMIT 5',
+            $table, $table, $table, $table
+        );   
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $posts = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+            return $posts;
         } catch (Exception $e) {
             die($e->getMessage());
         }

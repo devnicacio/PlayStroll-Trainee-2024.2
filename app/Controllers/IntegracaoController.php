@@ -28,7 +28,8 @@ class IntegracaoController{
 
     //Landing Page
     public function paginaInicial(){
-        $posts = App::get('database')->start('posts', 'id');
+        $posts = App::get('database')->selecionaAleatorio('posts');
+        $postsfive = App::get('database')->fivePosts('posts');
         return view('site/landing-page', compact('posts'));
     }
     

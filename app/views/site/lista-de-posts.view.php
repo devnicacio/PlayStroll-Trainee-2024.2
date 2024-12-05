@@ -23,7 +23,7 @@
     <?php foreach ($posts as $post): ?>
         <div class="barra"></div>
         
-    <div class="post um" id="<?= $post->id ?>" onclick="location.href='/post-individual '">
+    <div class="post um" id="<?= $post->id ?>" onclick="location.href = '/post-individual?id=<?= $post->id?>'">
         <div class="imagem um"><img src="<?= $post->image_retrato ?>"></div>
         <div class="imagem-mobile um"><img src="<?= $post->image_capa ?>"></div>
         <div class="texto um">

@@ -145,8 +145,17 @@ tbody {
     margin-right: 10%;
 }
 
-.navegacao .nav2 {
-    background-color: #080B3C;
+.active{
+    border-radius: 12px;
+    background-color: #080b3c;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
 }
 
 .nav1, .nav2, .nav3, .nav4, .nav5, .nav6, .nav7 {

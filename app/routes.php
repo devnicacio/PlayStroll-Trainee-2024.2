@@ -26,6 +26,7 @@ use App\Controllers\IntegracaoController;
     $router->post('admin/tabela-de-posts/update-post', 'Controller@updatePost');
     $router->post('criar-post', 'Controller@create');
     $router->post('deletar-post', 'Controller@delete_post');
+    $router->get('admin/tabela-de-posts', 'paginacaoPostsController@index');
 
     //Lista de posts Post individual
     $router->get('lista-de-posts', 'IntegracaoController@index');

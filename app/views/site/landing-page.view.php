@@ -42,20 +42,20 @@
     <div class="swiper" id="swiper-secundario">
         <div class="swiper-wrapper" id="wrapper-secundario">
             <!-- Slides aqui -->
+            <?php foreach ($postsfive as $post): ?>
             <div class="swiper-slide" id="slide-secundario">
                 <div class="post-individual3">
-                    <img class="capa-jogo" src="/public/assets/banner.png" alt="Capa do post 3">
-                    <h3><span style="color: #000000;">Nome Do Jogo</span></h3>
+                    <img class="capa-jogo" src="<?= $post->image_retrato?>" alt="Capa do post 3">
+                    <h3><span><?= $post->title ?></span></h3>
                     <div class="nota">
-                        <span style="color: #FFC739;"> ★★★★☆</span> <span style="color: #080B3C;">4,0</span>
+                        <span> </span> <span><?= $post->avaliation?></span>
                     </div>
-                    <p class="autor"> <img src="/public/assets/usuario.png" alt="usuario"> <span style="color: #0B0B0B;">NomeDeUsuário</span></p>
-                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Suspendisse ex nibh, eleifend id aliquam at, fermentum ut ante. 
-                        Nam fringilla ipsum vitae tempus euismod. In hac habitasse platea dictumst... </p>
-                    <button class="botao-veja-mais">Veja mais</button>
+                    <p class="autor"> <img src="<?= $post->image ?>" alt="usuario"> <span><?= $post->name ?></span></p>
+                    <p class="descricao"><?= strlen($post->content) > 500 ? substr($post->content, 0, 500) . '...' : $post->content ?> </p>
+                    <button class="botao-veja-mais" onclick="location.href = '/post-individual?id=<?= $post->id?>'">Veja mais</button>
                 </div>
             </div>
+            <?php endforeach ?>
         </div>
         <!-- Botões de navegação fora da wrapper -->
         <div class="swiper-button-prev" id="segundo-prev"></div>

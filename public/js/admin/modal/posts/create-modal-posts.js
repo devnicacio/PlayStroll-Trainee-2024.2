@@ -56,7 +56,7 @@ document.getElementById('btn-criar').onclick = function(event) {
      const data = document.getElementById('data').value;
      const titulo = document.getElementById('titulo').value;
      const avaliacao = document.getElementById('avaliacao').value;
-     const descricao = $('#summernote').summernote('code'); 
+     const descricao = $('#summernote-criar').summernote('code'); 
 
      let valid = true;
 
@@ -122,9 +122,9 @@ inputs.forEach(input => {
     });
 });
 
-$('#summernote').on('summernote.change', function() {
-    const descricao = $('#summernote').summernote('code');
-    if (descricao && descricao !== '<p><br></p>') {
+$('#summernote-criar').on('summernote.change', function() {
+    const descricao = $('#summernote-criar').summernote('code');
+    if (descricao && descricao.trim() !== '' && descricao !== '<p><br></p>') {
         document.getElementById('erro-descricao').innerText = '';
     }
 });

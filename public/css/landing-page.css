@@ -179,6 +179,12 @@ body {
     margin-bottom: 10px;
 }
 
+.autor img{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+}
+
 .nome-jogo {
     font-size: 1.5em; 
     margin: 10px 0; 

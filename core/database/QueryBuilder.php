@@ -16,7 +16,12 @@ class QueryBuilder
 
     public function selectAll($table, $inicio = null, $rows_count = null)
     {
-        $sql = "SELECT * FROM {$table}";
+        $sql = sprintf('SELECT %s.*, users.name, users.image 
+             FROM %s 
+             INNER JOIN users ON %s.id_user = users.id 
+             ORDER BY %s.id DESC',
+            $table, $table, $table, $table
+        );  
 
         if($inicio >= 0 && $rows_count >0){
             $sql .= " LIMIT {$inicio}, {$rows_count}";
@@ -296,29 +301,35 @@ class QueryBuilder
         }
     }
 
-    // public function updatePost($table, $parameters, $img1, $img2):void{
-    //     $pasta = "uploads/";
-    //     if(isset($parameters["image_capa"])){
-    //         $extensao1 = pathinfo($img1['name'], PATHINFO_EXTENSION);
-    //         $novoNome1 = uniqid() . '.' . $extensao1;
-    //         $caminho1 = $pasta . basename($novoNome1);
-    //         move_uploaded_file($img1["tmp_name"], $caminho1);
-    //         $parameters['image_capa'] = $caminho1; 
-    //     }
-    //     if(isset($parameters["image_retrato"])){
-    //         $extensao2 = pathinfo($img2['name'], PATHINFO_EXTENSION);
-    //         $novoNome2 = uniqid() . '.' . $extensao2;
-    //         $caminho2 = $pasta . basename($novoNome2);
-    //         move_uploaded_file($img2["tmp_name"], $caminho2);
-    //         $parameters['image_retrato'] = $caminho2;
-    //     }
-    //     $sql = sprintf('UPDATE FROM %t VALUES(%v) WHERE %i',
-    //     $table,
-    //     implode(string: ',', array: array_keys($parameters)),
-    //     ':' . implode(', :', array_keys($parameters)),
-    // )
+    public function updatePost($table, $parameters, $img1, $img2):void{
+        $pasta = "uploads/";
+        if(isset($parameters["image_capa"])){
+            $extensao1 = pathinfo($img1['name'], PATHINFO_EXTENSION);
+            $novoNome1 = uniqid() . '.' . $extensao1;
+            $caminho1 = $pasta . basename($novoNome1);
+            move_uploaded_file($img1["tmp_name"], $caminho1);
+            $parameters['image_capa'] = $caminho1; 
+        }
+        if(isset($parameters["image_retrato"])){
+            $extensao2 = pathinfo($img2['name'], PATHINFO_EXTENSION);
+            $novoNome2 = uniqid() . '.' . $extensao2;
+            $caminho2 = $pasta . basename($novoNome2);
+            move_uploaded_file($img2["tmp_name"], $caminho2);
+            $parameters['image_retrato'] = $caminho2;
+        }
+        $sql = sprintf('UPDATE FROM %t VALUES(%v) WHERE %i',
+        $table,
+        implode( ',', array: array_keys($parameters)),
+        ':' . implode(', :', array_keys($parameters)),
+        );
 
-    // }
+        try {
+            $smt = $this->pdo->prepare($sql);
+            $smt->execute(compact('id'));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 
     public function deletaPost($table, $id){
         $sql = sprintf('DELETE FROM %s WHERE %s', $table, 'id = :id');

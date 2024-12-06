@@ -42,6 +42,8 @@ class Controller{
         header('Location: /admin/tabela-de-posts');
     }
 
+    
+
     public function delete_post(){
         $id = $_POST['iddelete_post'];
         unlink($_POST['iddelete_capa']);

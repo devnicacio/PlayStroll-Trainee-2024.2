@@ -130,7 +130,7 @@
                 <tr>
                     <td><?= $post->id ?></td>
                     <td class="titulo-post"><?= $post->title ?></td>
-                    <td class="autor-post"> Diego Pereira Betti </td>
+                    <td class="autor-post"><?= $post->name ?></td>
                     <td><?= $post->create_at ?></td>
                     <td><button class="btn-acao btn-visualizar" onclick="abrirModal('read<?= $post->id?>')"><i class="fa-regular fa-eye"></i></button></td>
                     <td><button class="btn-acao btn-editar" onclick="abrirModal('update<?= $post->id?>')"><i class="fas fa-edit"></i></button></td>
@@ -201,8 +201,12 @@
             </div>
 
             <div class="modal-editar" id="update<?= $post->id ?>">
-            <form action="/criar-post" method="post" enctype="multipart/form-data">
+            <form action="/editar-post" method="post" enctype="multipart/form-data">
                 <div class="modal-container">
+                    <div class="parte-autor">
+                        <input type="hidden" value="<?= $post->id ?>" name="id">
+                    <input type="hidden" name="content" id="content">
+                    </div>
                     <div class="imagens">
                         <div class="capa">
                             <div class="container-image">
@@ -211,9 +215,9 @@
                                 <span id="erro-capa" class="erro-img"></span>
                             </div>
                             <div class="parte-capa">
-                                <img id="file-name-capa" class="capa-preview" alt="Preview da Capa" />
-                                <input type="file" class="image-capa" id="file-capa" accept="image/*" name="image-capa"
-                                onchange="previewImage('file-capa', 'file-name-capa', 'capa')" />
+                                <img id="edit-name-capa" class="capa-preview" alt="Preview da Capa" />
+                                <input type="file" class="image-capa" id="edit-capa" accept="image/*" name="image-capa"
+                                onchange="previewImage('edit-capa', 'edit-name-capa')" />
                                 <button id="btn-remover-imagem-capa" onclick="removerImagem('capa')" type="button">
                                     X
                                 </button>
@@ -239,25 +243,46 @@
                         <div class="placeholders-criar">
                             <div class="parte-data">
                                 <label for="date">Data</label>
-                                <input type="date" id="data" class="data" name="create-at">
+                                <input type="date" value="<?= $post->create_at ?>" id="data" class="data" name="create-at">
                                 <span id="erro-data" class="erro"></span>
                             </div>
                             <div class="second-line">
                                 <div class="parte-titulo">
                                     <label for="text">Título</label>
-                                    <input type="text" id="titulo" class="titulo" placeholder="Coloque seu título" name="title"/>
+                                    <input type="text" value="<?= $post->title ?>" id="titulo" class="titulo" placeholder="Coloque seu título" name="title"/>
                                     <span id="erro-titulo" class="erro"></span>
                                 </div>
                                 <div class="parte-avaliacao">
                                     <label for="number">Avaliação</label>
-                                    <input type="number"  id="avaliacao" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota" name="avaliation"/>
+                                    <input type="number" value="<?= $post->avaliation ?>" id="avaliacao" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota" name="avaliation"/>
                                     <span id="erro-avaliacao" class="erro"></span>
                                 </div>
                                 <input type="hidden" name="content" id="content">
                             </div>
                         </div>
                         <div class="diminuir-word">
-                            <div id="summernote"></div>
+                            <div id="summernote<?= $post->id ?>"></div>
+                            <script>
+                            $('#summernote<?= $post->id ?>').summernote({
+                                placeholder: 'Coloque sua descrição',
+                                tabsize: 2,
+                                height: 120,
+                                toolbar: [
+                                ["style", ["style"]],
+                                ["font", ["bold", "underline"]],
+                                ["color", ["color"]],
+                                ["para", ["ul", "ol", "paragraph"]],
+                                ["table", ["table"]],
+                                ["insert", ["link", "picture"]],
+                                ],
+                                callbacks: {
+                                    onChange: function(contents) {
+                                        $('#content').val(contents);
+                                    }
+                                }
+                            });
+                            $("#summernote<?= $post->id ?>").summernote('code', `<?= $post->content?>`);
+                            </script>    
                             <span id="erro-descricao" class="erro"></span>
                         </div>
                         <div class="modal-buttons">
@@ -273,7 +298,7 @@
 
 <script>
 	$('#summernote').summernote({
-		placeholder: '',
+		placeholder: 'Coloque sua descrição',
 		tabsize: 2,
 		height: 120,
 		toolbar: [

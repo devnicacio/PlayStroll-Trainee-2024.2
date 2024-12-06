@@ -25,7 +25,12 @@ class IntegracaoController{
 
         $itensPage = 5;
         $inicio = $itensPage * $page - $itensPage;
-        $rows_count = App::get('database')->countAllPosts('posts');
+        if($_GET['busca']){
+            $rows_count = App::get('database')->countSearch('posts', $_GET['busca']);
+        } else{
+            $rows_count = App::get('database')->countAllPosts('posts');
+        }
+
 
         
 
@@ -33,10 +38,7 @@ class IntegracaoController{
 
         $total_pages = ceil($rows_count/$itensPage);
 
-        if($page > $total_pages){
-            header('Location: /posts?paginacaoNumero=1');
-            exit;
-        }
+        
 
         return view('site/lista-de-posts', compact('posts', 'page', 'total_pages'));
     }

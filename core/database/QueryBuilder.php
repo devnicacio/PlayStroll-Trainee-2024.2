@@ -64,6 +64,20 @@ class QueryBuilder
         }
     }
 
+    public function countSearch($table, $search){
+        $sql = "SELECT  COUNT(*) from {$table} WHERE title LIKE '%$search%'";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return intval($stmt->fetch(PDO::FETCH_NUM)[0]);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function verificaLogin($email, $senha){
         $sql = sprintf( 'SELECT * FROM users WHERE email = :email AND password = :password');
 

@@ -28,7 +28,7 @@ use App\Controllers\NavbarController;
     $router->post('deletar-post', 'Controller@delete_post');
 
     //lista de posts(pública)
-    $router->get('lista-de-posts', 'listaDePostsController@index');
+    $router->get('posts', 'listaDePostsController@index');
     $router->get('pesquisa', 'listaDePostsController@search');
 
     //navbar

@@ -10,6 +10,9 @@
     
 </head>
 <body>
+
+    <?php include 'navbar.view.php' ?>
+
     <div class="pesquisa">
     <form method="GET" action="/lista-de-posts" class="pesquisa-input" onclick="inputFocus('busca')">
             <i class="bi bi-search"></i>
@@ -55,6 +58,8 @@
         <button class="nav7<?= $page >= $total_pages ? "disabled" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page + 1 ?>'">></button>
         
     </div>
+
+    <?php include 'footer.view.php' ?>
 </body>
 <script src="/public/js/lista-de-posts.js"></script>
 </html>

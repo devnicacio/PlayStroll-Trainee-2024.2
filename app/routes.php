@@ -41,5 +41,7 @@ use App\Controllers\IntegracaoController;
     $router->get('navbar', 'NavbarController@index');
     $router->get('pesquisa/navbar', 'NavbarController@search');
 
+    //footer
+    $router->get('footer', 'footerController@index');
 
 ?>

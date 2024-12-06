@@ -9,7 +9,13 @@
     <title>Play Stroll</title>
 </head>
 <body>
+    
+    <?php include 'navbar.view.php' ?>
+
     <main>
+
+
+
         <div class="swiper" id="swiper-principal">
             
             <div class="swiper-wrapper" id="wrapper-principal">
@@ -72,6 +78,8 @@
                     </div>
                 </div>
             </div>
+
+            <?php include 'footer.view.php' ?>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

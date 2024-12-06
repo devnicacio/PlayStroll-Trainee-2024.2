@@ -30,6 +30,7 @@ class ComposerStaticInit90bbf95869b4e88bf0dc5022e708a458
         'App\\Controllers\\IntegracaoController' => __DIR__ . '/../..' . '/app/Controllers/IntegracaoController.php',
         'App\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Controllers/loginController.php',
         'App\\Controllers\\NavbarController' => __DIR__ . '/../..' . '/app/Controllers/navbarController.php',
+        'App\\Controllers\\footerController' => __DIR__ . '/../..' . '/app/Controllers/footerController.php',
         'App\\Controllers\\paginacaoListaPostsController' => __DIR__ . '/../..' . '/app/Controllers/paginacaoListaPostsController.php',
         'App\\Controllers\\paginacaoPostsController' => __DIR__ . '/../..' . '/app/Controllers/paginacaoPostsController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',

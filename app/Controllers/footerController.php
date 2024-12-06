@@ -5,9 +5,9 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class NavbarController{
+class footerController{
     public function index()
     {
-        return view('site/navbar');
+        return view('site/footer');
     }
 }

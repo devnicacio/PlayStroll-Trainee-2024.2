@@ -11,6 +11,7 @@ return array(
     'App\\Controllers\\IntegracaoController' => $baseDir . '/app/Controllers/IntegracaoController.php',
     'App\\Controllers\\LoginController' => $baseDir . '/app/Controllers/loginController.php',
     'App\\Controllers\\NavbarController' => $baseDir . '/app/Controllers/navbarController.php',
+    'App\\Controllers\\footerController' => $baseDir . '/app/Controllers/footerController.php',
     'App\\Controllers\\paginacaoListaPostsController' => $baseDir . '/app/Controllers/paginacaoListaPostsController.php',
     'App\\Controllers\\paginacaoPostsController' => $baseDir . '/app/Controllers/paginacaoPostsController.php',
     'App\\Core\\App' => $baseDir . '/core/App.php',

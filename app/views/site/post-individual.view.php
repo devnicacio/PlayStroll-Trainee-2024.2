@@ -10,6 +10,8 @@
 </head>
 
 <body>
+
+
     <div class="container">
                 <div class="linha-preta"></div> 
                 <div class="image-container">
@@ -34,6 +36,7 @@
                 </div>
             </div>
     </div>
+    <?php include 'footer.view.php' ?>
 </body>
 
 </html>

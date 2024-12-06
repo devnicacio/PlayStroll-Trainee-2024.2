@@ -39,13 +39,16 @@ body {
 .more {
     padding: 3%;
     font-size: 50px;
-    line-height: 30px;
+    background-color: #080b3c;
+    border: 1px solid #080b3c;
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+    color: white;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #080b3c;
-    border-radius: 20%;
-    border: 1px solid #080b3c;
 }
 
 .verificar, .editar, .excluir {
@@ -83,6 +86,7 @@ body {
 
 thead{
     background-color: #237ecd;
+    text-align: center;
 }
 
 th, td {

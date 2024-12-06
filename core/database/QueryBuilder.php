@@ -87,7 +87,7 @@ class QueryBuilder
     {
         
         if($search){
-            $sql = "SELECT * FROM {$table} WHERE title LIKE '%$search%' ORDER BY posts.id DESC'";
+            $sql = "SELECT * FROM {$table} WHERE title LIKE '%$search%' ORDER BY posts.id DESC";
         } else{
             $sql = sprintf(
                 'SELECT %s.*, users.name, users.image 

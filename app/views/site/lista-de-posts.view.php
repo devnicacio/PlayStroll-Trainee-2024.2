@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="pesquisa">
-    <form method="GET" action="/pesquisa" class="pesquisa-input" onclick="inputFocus('busca')">
+    <form method="GET" action="/lista-de-posts" class="pesquisa-input" onclick="inputFocus('busca')">
             <i class="bi bi-search"></i>
             <input type="text" name="busca" id="busca"  class="caixa" placeholder="ENCONTRE UM JOGO">
         </form>

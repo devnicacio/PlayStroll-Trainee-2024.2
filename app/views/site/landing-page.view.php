@@ -51,7 +51,7 @@
                         <span> </span> <span><?= $post->avaliation?></span>
                     </div>
                     <p class="autor"> <img src="<?= $post->image ?>" alt="usuario"> <span><?= $post->name ?></span></p>
-                    <p class="descricao"><?= strlen($post->content) > 500 ? substr($post->content, 0, 500) . '...' : $post->content ?> </p>
+                    <p class="descricao"><?= strlen($post->content) > 350 ? substr($post->content, 0, 350) . '...' : $post->content ?> </p>
                     <button class="botao-veja-mais" onclick="location.href = '/post-individual?id=<?= $post->id?>'">Veja mais</button>
                 </div>
             </div>

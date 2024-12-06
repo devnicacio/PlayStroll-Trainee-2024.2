@@ -14,8 +14,31 @@ class IntegracaoController{
     // Paginação Lista de Posts
     public function index()
     {
-        $posts = App::get('database')->select('posts', $_GET['busca']);
-        return view('site/lista-de-posts', compact('posts'));
+        $page = 1;
+        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])){
+            $page = intval($_GET['paginacaoNumero']);
+
+            if($page <= 0){
+                return redirect('lista-de-posts');
+            }
+        }
+
+        $itensPage = 5;
+        $inicio = $itensPage * $page - $itensPage;
+        $rows_count = App::get('database')->countAllPosts('posts');
+
+        
+
+        $posts = App::get('database')->selectAll('posts', $inicio, $itensPage, $_GET['busca']);
+
+        $total_pages = ceil($rows_count/$itensPage);
+
+        if($page > $total_pages){
+            header('Location: /posts?paginacaoNumero=1');
+            exit;
+        }
+
+        return view('site/lista-de-posts', compact('posts', 'page', 'total_pages'));
     }
 
 

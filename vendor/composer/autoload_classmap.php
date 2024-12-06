@@ -10,7 +10,6 @@ return array(
     'App\\Controllers\\Controller' => $baseDir . '/app/Controllers/Controller.php',
     'App\\Controllers\\IntegracaoController' => $baseDir . '/app/Controllers/IntegracaoController.php',
     'App\\Controllers\\LoginController' => $baseDir . '/app/Controllers/loginController.php',
-    'App\\Controllers\\paginacaoPostsController' => $baseDir . '/app/Controllers/paginacaoPostsController.php',
     'App\\Core\\App' => $baseDir . '/core/App.php',
     'App\\Core\\Database\\Connection' => $baseDir . '/core/database/Connection.php',
     'App\\Core\\Database\\QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',

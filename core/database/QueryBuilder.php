@@ -14,9 +14,14 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table, $inicio = null, $rows_count = null)
+    public function selectAll($table, $inicio = null, $rows_count = null, $search)
     {
-        $sql = "SELECT * FROM {$table}";
+        if($search){
+            $sql = "SELECT * FROM {$table} WHERE title LIKE '%$search%' ORDER BY posts.id DESC";
+        }else{
+            $sql = "SELECT * FROM {$table}";
+        }
+
 
         if($inicio >= 0 && $rows_count >0){
             $sql .= " LIMIT {$inicio}, {$rows_count}";
@@ -27,6 +32,32 @@ class QueryBuilder
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function select($table, $search): mixed
+    {
+        
+        if($search){
+            $sql = "SELECT * FROM {$table} WHERE title LIKE '%$search%' ORDER BY posts.id DESC";
+        } else{
+            $sql = sprintf(
+                'SELECT %s.*, users.name, users.image 
+                 FROM %s 
+                 INNER JOIN users ON %s.id_user = users.id 
+                 ORDER BY %s.id DESC',
+                $table, $table, $table, $table
+            ); 
+        }
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
 
         } catch (Exception $e) {
             die($e->getMessage());
@@ -83,31 +114,7 @@ class QueryBuilder
         }
     }
 
-    public function select($table, $search): mixed
-    {
-        
-        if($search){
-            $sql = "SELECT * FROM {$table} WHERE title LIKE '%$search%' ORDER BY posts.id DESC";
-        } else{
-            $sql = sprintf(
-                'SELECT %s.*, users.name, users.image 
-                 FROM %s 
-                 INNER JOIN users ON %s.id_user = users.id 
-                 ORDER BY %s.id DESC',
-                $table, $table, $table, $table
-            ); 
-        }
-
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
-
-            return $stmt->fetchAll(PDO::FETCH_OBJ);
-
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-    }
+    
 
     public function selecionaPost($table, $id){
         $sql = sprintf(

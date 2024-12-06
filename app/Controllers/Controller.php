@@ -15,7 +15,7 @@ class Controller{
     //Admin
     public function getTabelaDePosts(){
         $posts = App::get('database')->selectAll('posts');
-        return view('admin/tabela-de-posts', compact('posts',));
+        return view('admin/tabela-de-posts', compact('posts'));
     }
     public function updatePost(){
         $parameters = [

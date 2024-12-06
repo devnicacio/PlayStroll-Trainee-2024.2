@@ -1,18 +1,3 @@
-.more-c {
-    padding: 4%;
-    font-size: 50px;
-    background-color: #080b3c;
-    border: 1px solid #080b3c;
-    border-radius: 20px;
-    height: 30px;
-    width: 30px;
-    color: white;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .modal-criar {
     background-color: #237ecd;
     color: white;

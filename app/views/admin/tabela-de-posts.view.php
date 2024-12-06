@@ -159,47 +159,101 @@
                     </form>
                 </div>
 
-            <div class="modalRead" id="read<?= $post->id?>">
-                <div class="modal--container">
-                    <div class="modalPostVisualizar--container--header"> 
-                        <div class="modalPostVisualizar--user">
-                            <img src="/public/assets/avatar.jfif" alt="Avatar do user">
-                            <span>Aang</span>
-                        </div>
-                        <span class="modalPostVisualizar--dataDeCricao"><?= $post->create_at ?></span>
-                    </div>
-                    <div class="modalPostVisualizar--container--photos">
-                        <figure>
-                            <img src="<?= $post->image_retrato ?>" alt="Banner do Post" class="modalPostVisualizar--banner">
-                            <figcaption>Foto modo paisagem</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="<?= $post->image_capa ?>" alt="Retrato do Post" class="modalPostVisualizar--retrato">
-                            <figcaption>Foto modo retrato</figcaption>
-                        </figure>
-                    </div>
-                    <div class="modalPostVisualizar--container--textos">
-                        <div>
-                            <p>Título:<span class="modalPostVisualizar--titulo"><?= $post->title?></span></p>
-                            <span class="postAvaliation"style="display:none"><?= $post->avaliation?></span>
-                            <div class="rating">
-                                Avaliação:
-                                <span data-value="1" class="star"></span>
-                                <span data-value="2" class="star"></span>
-                                <span data-value="3" class="star"></span>
-                                <span data-value="4" class="star"></span>
-                                <span data-value="5" class="star"></span>
+                <!-- modal visualizar -->
+                <div class="modal-visualizar" id="read<?= $post->id?>">
+            <form action="/visualizar-post" method="post" enctype="multipart/form-data">
+                <div class="modal-container">
+                    <div class="imagens">
+                        <div class="capa">
+                            <div class="container-image">
+                                <label for="file">Foto modo paisagem</label>
+                                <label class="custom-file-label" for="file-capa">Escolha uma imagem</label>
+                                <span id="erro-capa" class="erro-img"></span>
+                            </div>
+                            <div class="parte-capa">
+                                <img id="file-name-capa" class="capa-preview" alt="Preview da Capa" />
+                                <input type="file" class="image-capa" id="file-capa" accept="image/*" name="image-capa"
+                                onchange="previewImage('file-capa', 'file-name-capa', 'capa')" />
+                                <button id="btn-remover-imagem-capa" onclick="removerImagem('capa')" type="button">
+                                    X
+                                </button>
                             </div>
                         </div>
-                        <p>Conteúdo: </p>
-                        <div class="summernote" class="modalPostVisualizar--conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo id augue non efficitur. Ut imperdiet feugiat lacus, ac ornare enim volutpat sed. Sed malesuada a quam at egestas. Sed nec turpis volutpat, volutpat nunc eu, consequat orci. Fusce bibendum ligula ac euismod ultrices. Maecenas mattis tortor id sem luctus blandit. Donec ultrices elit a tellus tincidunt faucibus. Donec id lorem eu sem sagittis rutrum vel eu felis. Proin arcu ipsum, mattis in eros ac, sagittis interdum turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin gravida imperdiet sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum urna velit, faucibus maximus neque feugiat nec. Ut est est, faucibus ut ultricies sit amet, rhoncus et nunc. Quisque sit amet augue dictum, rhoncus leo non, ullamcorper lorem. Morbi sit amet bibendum enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi id quam at lorem scelerisque varius. Sed accumsan molestie ligula, ut consectetur sapien varius in. Nullam at ligula ante. Duis venenatis tempor ligula et scelerisque. Sed nec aliquet quam, tristique tincidunt nisi. Maecenas in pulvinar turpis. Vivamus eleifend et est bibendum rhoncus. Nam sollicitudin lacus id dui congue luctus. Aliquam sed velit sapien. In accumsan arcu non felis tempus fringilla. Donec feugiat enim vitae iaculis tristique. Suspendisse ac metus ac risus euismod dictum sagittis id felis. Ut sollicitudin risus id dolor congue volutpat. Suspendisse at placerat nisi. Suspendisse potenti. Morbi ultricies molestie massa, eget fringilla tellus luctus eu. Sed quis nisl fermentum, commodo neque quis, luctus neque. Etiam non condimentum est. In elementum quis nulla sit amet viverra. Morbi ac felis id nisi rhoncus pulvinar. Sed in aliquam nisl. Nunc venenatis imperdiet luctus. Aenean eget justo eu mi ultrices varius sed eu ipsum. Nullam lacus velit, posuere sit amet nisi ac, consequat mollis ligula. Integer maximus eros id odio mattis efficitur. Mauris ut malesuada turpis. Phasellus rhoncus, magna at consequat convallis, dolor ante malesuada eros, ac scelerisque tortor diam vel neque. Vestibulum suscipit nunc consequat orci elementum, id lacinia eros finibus. Fusce tempor pretium interdum. Nam eget vestibulum leo. Ut tincidunt nisi erat, ut fermentum risus euismod nec. Morbi vel aliquam dui, at pharetra leo. Ut pharetra, libero at suscipit mollis, purus neque vehicula felis, id tincidunt tortor ante eget ante. Phasellus a pulvinar nunc, vel molestie ligula.</div>
+                        <div class="retrato">
+                            <div class="container-image">
+                                <label for="file">Foto modo retrato</label>
+                                <label class="custom-file-label" for="file-retrato">Escolha uma imagem</label>
+                                <span id="erro-retrato" class="erro-img"></span>
+                            </div>
+                            <div class="parte-retrato">
+                                <img id="file-name-retrato" class="retrato-preview" alt="Preview do Retrato" />
+                                <input type="file" class="image-retrato" id="file-retrato" accept="image/*" name="image-retrato"
+                                onchange="previewImage('file-retrato', 'file-name-retrato', 'retrato')" />
+                                <button id="btn-remover-imagem-retrato" onclick="removerImagem('retrato')" type="button">
+                                    X
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modalPostVisualizar--container--buttons">
-                        <button class="buttonModal buttonModal__cancelar" onclick="fecharModal('read<?= $post->id?>')">Cancelar</button>
+                    <div class="abc"><!-- poggers -->
+                        <div class="placeholders-criar">
+                            <div class="parte-data">
+                                <label for="date">Data</label>
+                                <input type="date" value="<?= $post->create_at ?>" id="data" class="data" name="create-at" readonly>
+                                <span id="erro-data" class="erro"></span>
+                            </div>
+                            <div class="second-line">
+                                <div class="parte-titulo">
+                                    <label for="text">Título</label>
+                                    <input type="text" value="<?= $post->title ?>" id="titulo" class="titulo" placeholder="Coloque seu título" name="title" readonly/>
+                                    <span id="erro-titulo" class="erro"></span>
+                                </div>
+                                <div class="parte-avaliacao">
+                                    <label for="number">Avaliação</label>
+                                    <input type="number" value="<?= $post->avaliation ?>"  id="avaliacao" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota" name="avaliation" readonly/>
+                                    <span id="erro-avaliacao" class="erro"></span>
+                                </div>
+                                <input type="hidden" name="content" id="content">
+                            </div>
+                        </div>
+                        <div class="diminuir-word">
+                            <div id="summernote-visualizar<?= $post->id ?>"></div>
+                            <script>
+                            $('#summernote-visualizar<?= $post->id ?>').summernote({
+                                placeholder: 'Coloque sua descrição',
+                                tabsize: 2,
+                                height: 120,
+                                toolbar: [
+                                ["style", ["style"]],
+                                ["font", ["bold", "underline"]],
+                                ["color", ["color"]],
+                                ["para", ["ul", "ol", "paragraph"]],
+                                ["table", ["table"]],
+                                ["insert", ["link", "picture"]],
+                                ],
+                                callbacks: {
+                                    onChange: function(contents) {
+                                        $('#content').val(contents);
+                                    }
+                                }
+                            });
+                            $("#summernote-visualizar<?= $post->id ?>").summernote('code', `<?= $post->content ?>`);
+                            $('.note-editable').attr('contenteditable', 'false');
+                            $('.note-toolbar button').attr('disabled', true);
+                            $('.note-toolbar button').css('pointer-events', 'none');
+                            </script>    
+                            <span id="erro-descricao" class="erro"></span>
+                        </div>
+                        <div class="modal-buttons">
+                            <button id="btn-cancelar" class="button-cancelar" onclick="fecharModal('read<?= $post->id?>')" type="button">
+                                Cancelar
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-
+            </form>
+        </div>
+            <!-- Modal editar -->
             <div class="modal-editar" id="update<?= $post->id ?>">
             <form action="/editar-post" method="post" enctype="multipart/form-data">
                 <div class="modal-container">
@@ -230,9 +284,9 @@
                                 <span id="erro-retrato" class="erro-img"></span>
                             </div>
                             <div class="parte-retrato">
-                                <img id="file-name-retrato" class="retrato-preview" alt="Preview do Retrato" />
-                                <input type="file" class="image-retrato" id="file-retrato" accept="image/*" name="image-retrato"
-                                onchange="previewImage('file-retrato', 'file-name-retrato', 'retrato')" />
+                                <img id="edit-name-retrato" class="retrato-preview" alt="Preview do Retrato" />
+                                <input type="file" class="image-retrato" id="edit-retrato" accept="image/*" name="image-retrato"
+                                onchange="previewImage('edit-retrato', 'edit-name-retrato', 'retrato')" />
                                 <button id="btn-remover-imagem-retrato" onclick="removerImagem('retrato')" type="button">
                                     X
                                 </button>
@@ -342,6 +396,7 @@
                 </script>
                 <?php endforeach?>
             </tbody>
+            <div class="tela-read" id="tela" onclick="fecharModal('read<?= $post->id?>')"></div>
             <div class="tela" id="tela"></div>
         </table>    
         <!-- Paginação -->

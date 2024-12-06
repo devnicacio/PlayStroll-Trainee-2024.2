@@ -14,7 +14,7 @@ class IntegracaoController{
     // Paginação Lista de Posts
     public function index()
     {
-        $posts = App::get('database')->select('posts');
+        $posts = App::get('database')->select('posts', $_GET['busca']);
         return view('site/lista-de-posts', compact('posts'));
     }
 

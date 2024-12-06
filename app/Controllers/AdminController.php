@@ -31,7 +31,8 @@ class AdminController
 
         if($page > $total_pages){
             header('Location: /users?paginacaoNumero=1');
-            exit;
+    
+        exit;
         }
 
         return view('admin/lista-usuarios', compact('users', 'page', 'total_pages'));

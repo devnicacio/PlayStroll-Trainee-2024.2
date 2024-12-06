@@ -88,15 +88,20 @@ class QueryBuilder
         }
     }
 
-    public function select($table): mixed
+    public function select($table, $search): mixed
     {
-        $sql = sprintf(
-            'SELECT %s.*, users.name, users.image 
-             FROM %s 
-             INNER JOIN users ON %s.id_user = users.id 
-             ORDER BY %s.id DESC',
-            $table, $table, $table, $table
-        );  
+        
+        if($search){
+            $sql = "SELECT * FROM {$table} WHERE title LIKE '%$search%' ORDER BY posts.id DESC";
+        } else{
+            $sql = sprintf(
+                'SELECT %s.*, users.name, users.image 
+                 FROM %s 
+                 INNER JOIN users ON %s.id_user = users.id 
+                 ORDER BY %s.id DESC',
+                $table, $table, $table, $table
+            ); 
+        }
 
         try {
             $stmt = $this->pdo->prepare($sql);

@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="/public/css/lista-de-posts.css">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
 </head>
 <body>
     <div class="pesquisa">
-    <form method="GET" action="/pesquisa" class="pesquisa-input" onclick="inputFocus('busca')">
+    <form method="GET" action="/lista-de-posts" class="pesquisa-input" onclick="inputFocus('busca')">
             <i class="bi bi-search"></i>
             <input type="text" name="busca" id="busca"  class="caixa" placeholder="ENCONTRE UM JOGO">
         </form>
@@ -47,13 +48,11 @@
     </div>
    
     <div class="navegação">
-        <button class="nav1"><</button>
-        <button class="nav2">1</button>
-        <button class="nav3">2</button>
-        <button class="nav4">3</button>
-        <button class="nav5">4</button>
-        <button class="nav6">5</button>
-        <button class="nav7">></button>
+        <button class="nav1<?= $page <=1 ? "disabled" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page - 1 ?>'"><</button>
+        <?php for($page_number = 1; $page_number<=$total_pages; $page_number++): ?>
+            <button class="nav2<?= $page_number == $page ? "nav2 active" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page_number ?>'"><?= $page_number ?></button>
+        <?php endfor ?>
+        <button class="nav7<?= $page >= $total_pages ? "disabled" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page + 1 ?>'">></button>
         
     </div>
 </body>

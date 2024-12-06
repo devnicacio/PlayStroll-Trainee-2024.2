@@ -187,7 +187,7 @@ body{
     text-align: center;
 }
 
-.navegação button{
+.nav1, .nav2, .nav7{
     display: inline;
     width: 36px;
     height: 36px;
@@ -197,10 +197,37 @@ body{
     color: white;
     background-color: #237ECD;
     border: 1px solid black;
+    cursor: pointer;
 }
 
 .navegação .nav4 {
     background-color: #0b0b3c;
+}
+
+.active{
+    display: inline;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    font-size: 24px;
+    margin-right: 10px;
+    color: white;
+    background-color: #0b0b3c;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.disabled{
+    display: inline;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    font-size: 24px;
+    margin-right: 10px;
+    color: white;
+    background-color: #237ECD;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
 @media only screen and (max-width:1300px){

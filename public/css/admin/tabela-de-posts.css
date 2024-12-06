@@ -171,6 +171,19 @@ tbody {
     font-size: 16px;
 }
 
+.disabled{
+    border-radius: 12px;
+    background-color: #237ecd;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+}
+
 
 @media (max-width: 1024px) {
 

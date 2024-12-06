@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class paginacaoPostsController
+class paginacaoListaPostsController
 {
     public function index()
     {
@@ -14,7 +14,7 @@ class paginacaoPostsController
             $page = intval($_GET['paginacaoNumero']);
 
             if($page <= 0){
-                return redirect('admin/tabela-de-posts');
+                return redirect('site/lista-de-posts');
             }
         }
 
@@ -33,6 +33,6 @@ class paginacaoPostsController
             exit;
         }
 
-        return view('admin/tabela-de-posts', compact('posts', 'page', 'total_pages'));
+        return view('site/lista-de-posts', compact('posts', 'page', 'total_pages'));
     }
 }

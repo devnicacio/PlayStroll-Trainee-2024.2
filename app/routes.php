@@ -30,6 +30,7 @@ use App\Controllers\IntegracaoController;
 
     //Lista de posts Post individual
     $router->get('lista-de-posts', 'IntegracaoController@index');
+    $router->get('lista-de-posts', 'paginacaoListaPostsController@index');
     $router->get('post-individual', 'IntegracaoController@exibirPostIndividual');
 
     //Landing page

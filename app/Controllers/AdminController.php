@@ -25,7 +25,7 @@ class AdminController
 
         
 
-        $users = App::get('database')->selectAll('users', $inicio, $itensPage);
+        $users = App::get('database')->selectAllUsers('users', $inicio, $itensPage, null);
 
         $total_pages = ceil($rows_count/$itensPage);
 

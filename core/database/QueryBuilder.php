@@ -14,7 +14,36 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table, $inicio = null, $rows_count = null, $search = null)
+    public function selectAll($table, $inicio = null, $rows_count = null, $search)
+    {
+        
+        if($search){
+            $sql = "SELECT posts.*, users.name, users.image FROM {$table} WHERE title LIKE '%$search%' 
+            INNER JOIN users ON posts.id_user = users.id
+            ORDER BY posts.id DESC";
+        }
+        else{
+            $sql = "SELECT posts.*, users.name, users.image FROM {$table}
+            INNER JOIN users ON users.id = posts.id_user";
+        }
+
+
+        if($inicio >= 0 && $rows_count >0){
+            $sql .= " LIMIT {$inicio}, {$rows_count}";
+        }
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function selectAllUsers($table, $inicio = null, $rows_count = null, $search)
     {
         if($search){
             $sql = "SELECT * FROM {$table} WHERE title LIKE '%$search%' ORDER BY posts.id DESC";

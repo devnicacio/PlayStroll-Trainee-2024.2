@@ -18,13 +18,17 @@ class QueryBuilder
     {
         
         if($search){
-            $sql = "SELECT posts.*, users.name, users.image FROM {$table} WHERE title LIKE '%$search%' 
-            INNER JOIN users ON posts.id_user = users.id
+            $sql = "SELECT posts.*, users.name, users.image 
+            FROM {$table} 
+            INNER JOIN users ON users.id = posts.id_user
+            WHERE title LIKE '%$search%' 
             ORDER BY posts.id DESC";
         }
         else{
-            $sql = "SELECT posts.*, users.name, users.image FROM {$table}
-            INNER JOIN users ON users.id = posts.id_user";
+            $sql = "SELECT posts.*, users.name, users.image 
+            FROM {$table}
+            INNER JOIN users ON users.id = posts.id_user
+            ORDER BY posts.id DESC";
         }
 
 

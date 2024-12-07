@@ -14,7 +14,7 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table, $inicio = null, $rows_count = null, $search)
+    public function selectAll($table, $inicio = null, $rows_count = null, $search = null)
     {
         if($search){
             $sql = "SELECT * FROM {$table} WHERE title LIKE '%$search%' ORDER BY posts.id DESC";

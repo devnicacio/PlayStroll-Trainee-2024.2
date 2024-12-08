@@ -232,12 +232,12 @@
                                 tabsize: 2,
                                 height: 120,
                                 toolbar: [
-                                ["style", ["style"]],
-                                ["font", ["bold", "underline"]],
-                                ["color", ["color"]],
-                                ["para", ["ul", "ol", "paragraph"]],
-                                ["table", ["table"]],
-                                ["insert", ["link", "picture"]],
+                                    ["style", ["style"]],
+                                    ["font", ["bold", "underline"]],
+                                    ["color", ["color"]],
+                                    ["para", ["ul", "ol", "paragraph"]],
+                                    ["table", ["table"]],
+                                    ["insert", ["link", "picture"]],
                                 ],
                                 callbacks: {
                                     onChange: function(contents) {
@@ -245,10 +245,11 @@
                                     }
                                 }
                             });
+                            
                             $("#summernote-visualizar<?= $post->id ?>").summernote('code', `<?= $post->content ?>`);
-                            $('.note-editable').attr('contenteditable', 'false');
-                            $('.note-toolbar button').attr('disabled', true);
-                            $('.note-toolbar button').css('pointer-events', 'none');
+                            $('#summernote-visualizar<?= $post->id ?>').next('.note-editor').find('.note-editable').attr('contenteditable', 'false');
+                            $('#summernote-visualizar<?= $post->id ?>').next('.note-editor').find('.note-toolbar button').attr('disabled', true);
+                            $('#summernote-visualizar<?= $post->id ?>').next('.note-editor').find('.note-toolbar button').css('pointer-events', 'none');
                             </script>    
                             <span id="erro-descricao" class="erro"></span>
                         </div>
@@ -323,19 +324,19 @@
                             </div>
                         </div>
                         <div class="diminuir-word">
-                            <div id="summernote<?= $post->id ?>"></div>
+                            <div id="summernote-editar<?= $post->id ?>"></div>
                             <script>
-                            $('#summernote<?= $post->id ?>').summernote({
+                            $('#summernote-editar<?= $post->id ?>').summernote({
                                 placeholder: 'Coloque sua descrição',
                                 tabsize: 2,
                                 height: 120,
                                 toolbar: [
-                                ["style", ["style"]],
-                                ["font", ["bold", "underline"]],
-                                ["color", ["color"]],
-                                ["para", ["ul", "ol", "paragraph"]],
-                                ["table", ["table"]],
-                                ["insert", ["link", "picture"]],
+                                    ["style", ["style"]],
+                                    ["font", ["bold", "underline"]],
+                                    ["color", ["color"]],
+                                    ["para", ["ul", "ol", "paragraph"]],
+                                    ["table", ["table"]],
+                                    ["insert", ["link", "picture"]],
                                 ],
                                 callbacks: {
                                     onChange: function(contents) {
@@ -343,7 +344,8 @@
                                     }
                                 }
                             });
-                            $("#summernote<?= $post->id ?>").summernote('code', `<?= $post->content?>`);
+
+                            $("#summernote-editar<?= $post->id ?>").summernote('code', `<?= $post->content?>`);
                             </script>    
                             <span id="erro-descricao" class="erro"></span>
                         </div>

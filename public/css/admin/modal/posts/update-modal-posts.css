@@ -89,7 +89,7 @@
     object-fit: cover;
     border: 2px solid #ddd;
     margin: 10px 10px 10px 0px;
-    display: none; 
+    display: flex; 
 }
 
 .retrato-preview {
@@ -98,7 +98,7 @@
     object-fit: cover;
     border: 2px solid #ddd;
     margin: 10px 10px 10px 0px;
-    display: none; 
+    display: flex; 
 }
 
 .parte-retrato, .parte-capa {

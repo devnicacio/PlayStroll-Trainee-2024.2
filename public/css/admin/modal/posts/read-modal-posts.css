@@ -30,21 +30,6 @@
     row-gap: 20px;  
 }
 
-.custom-file-label {
-    display: inline-block;
-    background-color: #237ecd;
-    color: white;
-    padding: 10px 15px;
-    margin: 5px 5px 10px 0;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.custom-file-label:hover {
-    background-color: #1b5fa7;
-}
-
 .file-name {
     margin-left: 10px;
 }
@@ -90,7 +75,7 @@
     object-fit: cover;
     border: 2px solid #ddd;
     margin: 10px 10px 10px 0px;
-    display: none; 
+    display: flex; 
 }
 
 .retrato-preview {
@@ -99,7 +84,7 @@
     object-fit: cover;
     border: 2px solid #ddd;
     margin: 10px 10px 10px 0px;
-    display: none; 
+    display: flex; 
 }
 
 .parte-retrato, .parte-capa {
@@ -113,32 +98,6 @@
     max-width: 60%;
     width: 100%;
     display: none;
-}
-
-#btn-remover-imagem-capa, #btn-remover-imagem-retrato {
-    background-color: #C70E3C; 
-    font-size: 20px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    color: white;
-    display: none;
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: -25px;
-  }
-
-  #btn-remover-imagem-capa:hover #btn-remover-imagem-retrato:hover {
-    background-color: #a6072e;
-  }
-
-
-.parte-retrato:hover #btn-remover-imagem-retrato, .parte-capa:hover #btn-remover-imagem-capa {
-    display: block;
 }
 
 .placeholders-criar {
@@ -272,26 +231,6 @@
     position: relative;
 }
 
-.erro {
-    color: red;
-    font-size: 12px;
-    text-align: start;
-    display: block;
-    margin-left: 0;
-    margin-bottom: 2px;
-    margin-top: 10px;
-}
-
-.erro-img {
-    color: red;
-    font-size: 12px;
-    text-align: start;
-    display: block;
-    margin-left: 0;
-    margin-bottom: 5px;
-    width: 160px;
-}
-
 .modal-visualizar ::-webkit-scrollbar{
     width: 10px;
     margin-right: 5px;
@@ -312,10 +251,6 @@
 
     .capa, .retrato {
         margin-bottom: 0;
-    }
-
-    .custom-file-label {
-        padding: 5px 10px;
     }
 
     .placeholders-criar {      
@@ -391,10 +326,6 @@
         margin-bottom: 10px;
     }
 
-    .custom-file-label {
-        padding: 5px 10px;
-        margin: 8px;
-    }
 
     .abc {
         display: flex;

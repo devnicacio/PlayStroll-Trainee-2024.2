@@ -60,7 +60,7 @@
                                 <span id="erro-capa" class="erro-img"></span>
                             </div>
                             <div class="parte-capa">
-                                <img id="file-name-capa" class="capa-preview" alt="Preview da Capa" />
+                                <img id="file-name-capa" class="capaCreate-preview" alt="Preview da Capa" />
                                 <input type="file" class="image-capa" id="file-capa" accept="image/*" name="image-capa"
                                 onchange="previewImage('file-capa', 'file-name-capa', 'capa')" />
                                 <button id="btn-remover-imagem-capa" onclick="removerImagem('capa')" type="button">
@@ -75,7 +75,7 @@
                                 <span id="erro-retrato" class="erro-img"></span>
                             </div>
                             <div class="parte-retrato">
-                                <img id="file-name-retrato" class="retrato-preview" alt="Preview do Retrato" />
+                                <img id="file-name-retrato" class="retratoCreate-preview" alt="Preview do Retrato" />
                                 <input type="file" class="image-retrato" id="file-retrato" accept="image/*" name="image-retrato"
                                 onchange="previewImage('file-retrato', 'file-name-retrato', 'retrato')" />
                                 <button id="btn-remover-imagem-retrato" onclick="removerImagem('retrato')" type="button">
@@ -140,7 +140,7 @@
                     <td class="titulo-post"><?= $post->title ?></td>
                     <td class="autor-post"><?= $post->name ?></td>
                     <td><?= $post->create_at ?></td>
-                    <td><button class="btn-acao btn-visualizar" onclick="abrirModal('read<?= $post->id?>')"><i class="fa-regular fa-eye"></i></button></td>
+                    <td><button class="btn-acao btn-visualizar" onclick="abrirModalVer('read<?= $post->id?>')"><i class="fa-regular fa-eye"></i></button></td>
                     <td><button class="btn-acao btn-editar" onclick="abrirModal('update<?= $post->id?>')"><i class="fas fa-edit"></i></button></td>
                     <td><button class="btn-acao btn-excluir" onclick="abrirModal('excluir<?= $post->id ?>')"><i class="fas fa-trash"></i></button></td>
                 </tr>
@@ -175,31 +175,21 @@
                         <div class="capa">
                             <div class="container-image">
                                 <label for="file">Foto modo paisagem</label>
-                                <label class="custom-file-label" for="file-capa">Escolha uma imagem</label>
-                                <span id="erro-capa" class="erro-img"></span>
                             </div>
                             <div class="parte-capa">
-                                <img id="file-name-capa" class="capa-preview" alt="Preview da Capa" />
-                                <input type="file" class="image-capa" id="file-capa" accept="image/*" name="image-capa"
-                                onchange="previewImage('file-capa', 'file-name-capa', 'capa')" />
-                                <button id="btn-remover-imagem-capa" onclick="removerImagem('capa')" type="button">
-                                    X
-                                </button>
+                                <img id="read-name-capa" class="capa-preview" alt="Preview da Capa" src="<?= $post->image_capa ?>"/>
+                                <input type="file" class="image-capa" id="read-capa" accept="image/*" name="image-capa"
+                                onchange="previewImage('read-capa', 'read-name-capa', 'capa')" />
                             </div>
                         </div>
                         <div class="retrato">
                             <div class="container-image">
                                 <label for="file">Foto modo retrato</label>
-                                <label class="custom-file-label" for="file-retrato">Escolha uma imagem</label>
-                                <span id="erro-retrato" class="erro-img"></span>
                             </div>
                             <div class="parte-retrato">
-                                <img id="file-name-retrato" class="retrato-preview" alt="Preview do Retrato" />
-                                <input type="file" class="image-retrato" id="file-retrato" accept="image/*" name="image-retrato"
-                                onchange="previewImage('file-retrato', 'file-name-retrato', 'retrato')" />
-                                <button id="btn-remover-imagem-retrato" onclick="removerImagem('retrato')" type="button">
-                                    X
-                                </button>
+                                <img id="read-name-retrato" class="retrato-preview" alt="Preview do Retrato" src="<?= $post->image_capa ?>"/>
+                                <input type="file" class="image-retrato" id="read-retrato" accept="image/*" name="image-retrato"
+                                onchange="previewImage('read-retrato', 'read-name-retrato', 'retrato')" />
                             </div>
                         </div>
                     </div>
@@ -208,18 +198,15 @@
                             <div class="parte-data">
                                 <label for="date">Data</label>
                                 <input type="date" value="<?= $post->create_at ?>" id="data" class="data" name="create-at" readonly>
-                                <span id="erro-data" class="erro"></span>
                             </div>
                             <div class="second-line">
                                 <div class="parte-titulo">
                                     <label for="text">Título</label>
                                     <input type="text" value="<?= $post->title ?>" id="titulo" class="titulo" placeholder="Coloque seu título" name="title" readonly/>
-                                    <span id="erro-titulo" class="erro"></span>
                                 </div>
                                 <div class="parte-avaliacao">
                                     <label for="number">Avaliação</label>
                                     <input type="number" value="<?= $post->avaliation ?>"  id="avaliacao" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota" name="avaliation" readonly/>
-                                    <span id="erro-avaliacao" class="erro"></span>
                                 </div>
                                 <input type="hidden" name="content" id="content">
                             </div>
@@ -245,23 +232,20 @@
                                     }
                                 }
                             });
-                            
+
                             $("#summernote-visualizar<?= $post->id ?>").summernote('code', `<?= $post->content ?>`);
                             $('#summernote-visualizar<?= $post->id ?>').next('.note-editor').find('.note-editable').attr('contenteditable', 'false');
                             $('#summernote-visualizar<?= $post->id ?>').next('.note-editor').find('.note-toolbar button').attr('disabled', true);
                             $('#summernote-visualizar<?= $post->id ?>').next('.note-editor').find('.note-toolbar button').css('pointer-events', 'none');
+
                             </script>    
                             <span id="erro-descricao" class="erro"></span>
-                        </div>
-                        <div class="modal-buttons">
-                            <button id="btn-cancelar" class="button-cancelar" onclick="fecharModal('read<?= $post->id?>')" type="button">
-                                Cancelar
-                            </button>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
+
             <!-- Modal editar -->
             <div class="modal-editar" id="update<?= $post->id ?>">
             <form action="/editar-post" method="post" enctype="multipart/form-data">
@@ -274,12 +258,12 @@
                         <div class="capa">
                             <div class="container-image">
                                 <label for="file">Foto modo paisagem</label>
-                                <label class="custom-file-label" for="file-capa">Editar imagem</label>
+                                <label class="custom-file-label" for="file-capa">Escolher imagem</label>
                                 <span id="erro-capa" class="erro-img"></span>
                             </div>
                             <div class="parte-capa">
-                                <img id="edit-name-capa" class="capa-preview" alt="Preview da Capa" />
-                                <input type="file" class="image-capa" id="edit-capa" accept="image/*" name="image-capa"
+                                <img id="edit-name-capa<?= $post->id ?>" class="capa-preview" alt="Preview da Capa" src="<?= $post->image_capa ?>"/>
+                                <input type="file" class="image-capa" id="edit-capa<?= $post->id ?>" accept="image/*" name="image-capa"
                                 onchange="previewImage('edit-capa', 'edit-name-capa')" />
                                 <button id="btn-remover-imagem-capa" onclick="removerImagem('capa')" type="button">
                                     X
@@ -289,12 +273,12 @@
                         <div class="retrato">
                             <div class="container-image">
                                 <label for="file">Foto modo retrato</label>
-                                <label class="custom-file-label" for="file-retrato">Editar imagem</label>
+                                <label class="custom-file-label" for="file-retrato">Escolher imagem</label>
                                 <span id="erro-retrato" class="erro-img"></span>
                             </div>
                             <div class="parte-retrato">
-                                <img id="edit-name-retrato" class="retrato-preview" alt="Preview do Retrato" />
-                                <input type="file" class="image-retrato" id="edit-retrato" accept="image/*" name="image-retrato"
+                                <img id="edit-name-retrato<?= $post->id ?>" class="retrato-preview" alt="Preview do Retrato" src="<?= $post->image_retrato ?>"/>
+                                <input type="file" class="image-retrato" id="edit-retrato<?= $post->id ?>" accept="image/*" name="image-retrato"
                                 onchange="previewImage('edit-retrato', 'edit-name-retrato', 'retrato')" />
                                 <button id="btn-remover-imagem-retrato" onclick="removerImagem('retrato')" type="button">
                                     X
@@ -406,8 +390,8 @@
                 </script>
                 <?php endforeach?>
             </tbody>
-            <div class="tela-read" id="tela" onclick="fecharModal('read<?= $post->id?>')"></div>
             <div class="tela" id="tela"></div>
+            <div class="tela-read" id="tela-read" onclick="fecharModalVer('read<?= $post->id?>')"></div>
         </table>    
         <!-- Paginação -->
         <div class="navegacao">

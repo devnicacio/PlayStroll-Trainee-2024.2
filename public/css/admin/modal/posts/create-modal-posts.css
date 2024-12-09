@@ -83,7 +83,7 @@
     flex-direction: column;
 }
 
-.capa-preview {    
+.capaCreate-preview {    
     width: 140px;
     height: 90px;
     object-fit: cover;
@@ -92,7 +92,7 @@
     display: none; 
 }
 
-.retrato-preview {
+.retratoCreate-preview {
     width: 75px;
     height: 100px;
     object-fit: cover;
@@ -371,12 +371,12 @@
         width: 100%;
     }
 
-    .capa-preview {
+    .capaCreate-preview {
         width: 125px;
         height: 75px;
     }
 
-    .retrato-preview {
+    .retratoCreate-preview {
         width: 50px;
         height: 75px;
     }

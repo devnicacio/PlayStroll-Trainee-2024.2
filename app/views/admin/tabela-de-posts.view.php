@@ -170,12 +170,16 @@
                 <!-- modal visualizar -->
                 <div class="modal-visualizar" id="read<?= $post->id?>">
                     <div class="modal-container">
+                        <div>
+                        <img src="/<?= $post->image ?>" alt="" class="icon1">
+                        <h2><?= $post->name ?></h2>
+                        </div>                       
                         <div class="imagens">
                             <div class="capa">
                                 <div class="container-image">
+                                    </div>
+                                    <div class="parte-capa">
                                     <label for="file">Foto modo paisagem</label>
-                                </div>
-                                <div class="parte-capa">
                                     <img id="read-name-capa" class="capa-preview" alt="Preview da Capa" src="/<?= $post->image_capa ?>"/>
                                     <input type="file" class="image-capa" id="read-capa" accept="image/*" name="image-capa"
                                     onchange="previewImage('read-capa', 'read-name-capa', 'capa')" />
@@ -183,9 +187,9 @@
                             </div>
                             <div class="retrato">
                                 <div class="container-image">
+                                    </div>
+                                    <div class="parte-retrato">
                                     <label for="file">Foto modo retrato</label>
-                                </div>
-                                <div class="parte-retrato">
                                     <img id="read-name-retrato" class="retrato-preview" alt="Preview do Retrato" src="/<?= $post->image_retrato ?>"/>
                                     <input type="file" class="image-retrato" id="read-retrato" accept="image/*" name="image-retrato"
                                     onchange="previewImage('read-retrato', 'read-name-retrato', 'retrato')" />

@@ -169,23 +169,23 @@
 
                 <!-- modal visualizar -->
                 <div class="modal-visualizar" id="read<?= $post->id?>">
-                    <div class="modal-container">
-                        <div>
-                        <img src="/<?= $post->image ?>" alt="" class="icon1">
-                        <h2><?= $post->name ?></h2>
-                        </div>                       
-                        <div class="imagens">
-                            <div class="capa">
+                    <div class="modal-container">                       
+                        <div class="imagens-edit">
+                            <div class="user-info">
+                                <img src="/<?= $post->image ?>" alt="" class="icon1">
+                                <p><?= $post->name ?></p>
+                            </div>
+                            <div class="capa-edit">
                                 <div class="container-image">
                                     </div>
                                     <div class="parte-capa">
                                     <label for="file">Foto modo paisagem</label>
-                                    <img id="read-name-capa" class="capa-preview" alt="Preview da Capa" src="/<?= $post->image_capa ?>"/>
+                                    <img id="read-name-capa" class="capa-preview-edit" alt="Preview da Capa" src="/<?= $post->image_capa ?>"/>
                                     <input type="file" class="image-capa" id="read-capa" accept="image/*" name="image-capa"
                                     onchange="previewImage('read-capa', 'read-name-capa', 'capa')" />
                                 </div>
                             </div>
-                            <div class="retrato">
+                            <div class="retrato-edit">
                                 <div class="container-image">
                                     </div>
                                     <div class="parte-retrato">

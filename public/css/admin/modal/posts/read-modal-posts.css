@@ -34,34 +34,34 @@
     margin-left: 10px;
 }
 
-.capa, .retrato {
-    display: flex;    
-    align-items: center;
-    flex-direction: row;
-}
-
-.capa {
-    column-gap: 65px;
-
-}
-
-.retrato {
-    column-gap: 100px;
-
-}
-
 .label-container {
     display: flex;
     flex-direction: column;    
 }
 
-.imagens {
+.imagens-edit {
     display: flex;
-    justify-content: space-around;  
-    flex-direction: row;  
+    align-items: center;
+    justify-content: space-between;
     max-width: 458px;
-    width: 100%;    
+    width: 100%;
     padding-top: 18px;
+}
+
+.icon1 {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
 }
 
 .container-image {
@@ -69,12 +69,29 @@
     flex-direction: column;
 }
 
-.capa-preview {    
+.capa-edit, .retrato-edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.capa-edit {
+    max-width: 165px;
+    width: 100%;
+}
+
+.retrato-edit {
+    max-width: 127px;
+    width: 100%;
+}
+
+.capa-preview-edit {    
     width: 140px;
     height: 90px;
     object-fit: cover;
     border: 2px solid #ddd;
-    margin: 10px 10px 10px 0px;
+    margin: 10px 0px;
     display: flex; 
 }
 
@@ -92,6 +109,9 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+}
+.parte-capa {
+    width: 165px;
 }
 
 .image-capa, .image-retrato {

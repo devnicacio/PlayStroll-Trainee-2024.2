@@ -58,7 +58,7 @@
 .imagens {
     display: flex;
     justify-content: space-around;  
-    flex-direction: column;  
+    flex-direction: row;  
     max-width: 458px;
     width: 100%;    
     padding-top: 18px;

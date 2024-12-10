@@ -17,7 +17,7 @@
     
     <!-- Third-party CSS -->
     <!-- SummerNote -->
-	<link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.css" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -169,82 +169,84 @@
 
                 <!-- modal visualizar -->
                 <div class="modal-visualizar" id="read<?= $post->id?>">
-            <form action="/visualizar-post" method="post" enctype="multipart/form-data">
-                <div class="modal-container">
-                    <div class="imagens">
-                        <div class="capa">
-                            <div class="container-image">
-                                <label for="file">Foto modo paisagem</label>
-                            </div>
-                            <div class="parte-capa">
-                                <img id="read-name-capa" class="capa-preview" alt="Preview da Capa" src="<?= $post->image_capa ?>"/>
-                                <input type="file" class="image-capa" id="read-capa" accept="image/*" name="image-capa"
-                                onchange="previewImage('read-capa', 'read-name-capa', 'capa')" />
-                            </div>
-                        </div>
-                        <div class="retrato">
-                            <div class="container-image">
-                                <label for="file">Foto modo retrato</label>
-                            </div>
-                            <div class="parte-retrato">
-                                <img id="read-name-retrato" class="retrato-preview" alt="Preview do Retrato" src="<?= $post->image_capa ?>"/>
-                                <input type="file" class="image-retrato" id="read-retrato" accept="image/*" name="image-retrato"
-                                onchange="previewImage('read-retrato', 'read-name-retrato', 'retrato')" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="abc"><!-- poggers -->
-                        <div class="placeholders-criar">
-                            <div class="parte-data">
-                                <label for="date">Data</label>
-                                <input type="date" value="<?= $post->create_at ?>" id="data" class="data" name="create-at" readonly>
-                            </div>
-                            <div class="second-line">
-                                <div class="parte-titulo">
-                                    <label for="text">Título</label>
-                                    <input type="text" value="<?= $post->title ?>" id="titulo" class="titulo" placeholder="Coloque seu título" name="title" readonly/>
+                    <div class="modal-container">
+                        <div>
+                        <img src="/<?= $post->image ?>" alt="" class="icon1">
+                        <h2><?= $post->name ?></h2>
+                        </div>                       
+                        <div class="imagens">
+                            <div class="capa">
+                                <div class="container-image">
+                                    </div>
+                                    <div class="parte-capa">
+                                    <label for="file">Foto modo paisagem</label>
+                                    <img id="read-name-capa" class="capa-preview" alt="Preview da Capa" src="/<?= $post->image_capa ?>"/>
+                                    <input type="file" class="image-capa" id="read-capa" accept="image/*" name="image-capa"
+                                    onchange="previewImage('read-capa', 'read-name-capa', 'capa')" />
                                 </div>
-                                <div class="parte-avaliacao">
-                                    <label for="number">Avaliação</label>
-                                    <input type="number" value="<?= $post->avaliation ?>"  id="avaliacao" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota" name="avaliation" readonly/>
+                            </div>
+                            <div class="retrato">
+                                <div class="container-image">
+                                    </div>
+                                    <div class="parte-retrato">
+                                    <label for="file">Foto modo retrato</label>
+                                    <img id="read-name-retrato" class="retrato-preview" alt="Preview do Retrato" src="/<?= $post->image_retrato ?>"/>
+                                    <input type="file" class="image-retrato" id="read-retrato" accept="image/*" name="image-retrato"
+                                    onchange="previewImage('read-retrato', 'read-name-retrato', 'retrato')" />
                                 </div>
-                                <input type="hidden" name="content" id="content">
                             </div>
                         </div>
-                        <div class="diminuir-word">
-                            <div id="summernote-visualizar<?= $post->id ?>"></div>
-                            <script>
-                            $('#summernote-visualizar<?= $post->id ?>').summernote({
-                                placeholder: 'Coloque sua descrição',
-                                tabsize: 2,
-                                height: 120,
-                                toolbar: [
-                                    ["style", ["style"]],
-                                    ["font", ["bold", "underline"]],
-                                    ["color", ["color"]],
-                                    ["para", ["ul", "ol", "paragraph"]],
-                                    ["table", ["table"]],
-                                    ["insert", ["link", "picture"]],
-                                ],
-                                callbacks: {
-                                    onChange: function(contents) {
-                                        $('#content').val(contents);
-                                    }
-                                }
-                            });
+                        <div class="abc"><!-- poggers -->
+                            <div class="placeholders-criar">
+                                <div class="parte-data">
+                                    <label for="date">Data</label>
+                                    <input type="date" value="<?= $post->create_at ?>" id="data" class="data" name="create-at" readonly>
+                                </div>
+                                <div class="second-line">
+                                    <div class="parte-titulo">
+                                        <label for="text">Título</label>
+                                        <input type="text" value="<?= $post->title ?>" id="titulo" class="titulo" placeholder="Coloque seu título" name="title" readonly/>
+                                    </div>
+                                    <div class="parte-avaliacao">
+                                        <label for="number">Avaliação</label>
+                                        <input type="number" value="<?= $post->avaliation ?>"  id="avaliacao" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota" name="avaliation" readonly/>
+                                    </div>
+                                    <input type="hidden" name="content" id="content">
+                                </div>
+                            </div>
+                                <div class="diminuir-word">
+                                    <div id="summernote-visualizar<?= $post->id ?>"></div>
+                                    <script>
+                                    $('#summernote-visualizar<?= $post->id ?>').summernote({
+                                        placeholder: 'Coloque sua descrição',
+                                        tabsize: 2,
+                                        height: 120,
+                                        toolbar: [
+                                            ["style", ["style"]],
+                                            ["font", ["bold", "underline"]],
+                                            ["color", ["color"]],
+                                            ["para", ["ul", "ol", "paragraph"]],
+                                            ["table", ["table"]],
+                                            ["insert", ["link", "picture"]],
+                                        ],
+                                        callbacks: {
+                                            onChange: function(contents) {
+                                                $('#content').val(contents);
+                                            }
+                                        }
+                                    });
 
-                            $("#summernote-visualizar<?= $post->id ?>").summernote('code', `<?= $post->content ?>`);
-                            $('#summernote-visualizar<?= $post->id ?>').next('.note-editor').find('.note-editable').attr('contenteditable', 'false');
-                            $('#summernote-visualizar<?= $post->id ?>').next('.note-editor').find('.note-toolbar button').attr('disabled', true);
-                            $('#summernote-visualizar<?= $post->id ?>').next('.note-editor').find('.note-toolbar button').css('pointer-events', 'none');
+                                    $("#summernote-visualizar<?= $post->id ?>").summernote('code', `<?= $post->content ?>`);
+                                    $('#summernote-visualizar<?= $post->id ?>').next('.note-editor').find('.note-editable').attr('contenteditable', 'false');
+                                    $('#summernote-visualizar<?= $post->id ?>').next('.note-editor').find('.note-toolbar button').attr('disabled', true);
+                                    $('#summernote-visualizar<?= $post->id ?>').next('.note-editor').find('.note-toolbar button').css('pointer-events', 'none');
 
-                            </script>    
-                            <span id="erro-descricao" class="erro"></span>
+                                    </script>    
+                                    <span id="erro-descricao" class="erro"></span>
+                                </div>
                         </div>
                     </div>
                 </div>
-            </form>
-        </div>
 
             <!-- Modal editar -->
             <div class="modal-editar" id="update<?= $post->id ?>">
@@ -262,7 +264,7 @@
                                 <span id="erro-capa" class="erro-img"></span>
                             </div>
                             <div class="parte-capa">
-                                <img id="edit-name-capa<?= $post->id ?>" class="capa-preview" alt="Preview da Capa" src="<?= $post->image_capa ?>"/>
+                                <img id="edit-name-capa<?= $post->id ?>" class="capa-preview" alt="Preview da Capa" src="/<?= $post->image_capa ?>"/>
                                 <input type="file" class="image-capa" id="edit-capa<?= $post->id ?>" accept="image/*" name="image-capa"
                                 onchange="previewImage('edit-capa', 'edit-name-capa')" />
                                 <button id="btn-remover-imagem-capa" onclick="removerImagem('capa')" type="button">
@@ -277,7 +279,7 @@
                                 <span id="erro-retrato" class="erro-img"></span>
                             </div>
                             <div class="parte-retrato">
-                                <img id="edit-name-retrato<?= $post->id ?>" class="retrato-preview" alt="Preview do Retrato" src="<?= $post->image_retrato ?>"/>
+                                <img id="edit-name-retrato<?= $post->id ?>" class="retrato-preview" alt="Preview do Retrato" src="/<?= $post->image_retrato ?>"/>
                                 <input type="file" class="image-retrato" id="edit-retrato<?= $post->id ?>" accept="image/*" name="image-retrato"
                                 onchange="previewImage('edit-retrato', 'edit-name-retrato', 'retrato')" />
                                 <button id="btn-remover-imagem-retrato" onclick="removerImagem('retrato')" type="button">
@@ -388,10 +390,10 @@
                         }
                     });*/
                 </script>
+                <div class="tela-read" id="tela-read<?= $post->id ?>" onclick="fecharModalVer('read<?= $post->id?>')"></div>
                 <?php endforeach?>
             </tbody>
             <div class="tela" id="tela"></div>
-            <div class="tela-read" id="tela-read" onclick="fecharModalVer('read<?= $post->id?>')"></div>
         </table>    
         <!-- Paginação -->
         <div class="navegacao">

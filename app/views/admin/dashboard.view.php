@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class="button square">
-                        <div class="posts">
+                        <div class="posts" onclick="location.href='/users'" >
                             <div class="quadrado">
                                 <i class="bi bi-square"></i>
                             </div>

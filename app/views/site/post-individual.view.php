@@ -10,6 +10,9 @@
 </head>
 
 <body>
+
+<?php include 'navbar.view.php'; ?>
+
     <div class="container">
                 <div class="linha-preta"></div> 
                 <div class="image-container">

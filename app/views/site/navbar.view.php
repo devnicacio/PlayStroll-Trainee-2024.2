@@ -12,7 +12,7 @@
 </head>
 <body>
     <nav id="navigationBar">
-        <a id="navigationBar--home" title="Home" href="/app/views/site/index.html">
+        <a id="navigationBar--home" title="Home">
             <p>PLAY STROLL</p>
             <img src="/public/assets/logo-escura-sem-fundo.png" alt="Logo da Playstroll">
         </a>
@@ -27,8 +27,8 @@
                 </a>
             </li>
             <li>
-                <form id="links--searchPosts" action="/app/views/site/index.html" method="get" enctype="application/x-www-form-urlencoded">
-                    <input type="search" name="buscarPublicacoes" title="Buscar" placeholder="Buscar" autocomplete="off" autosave required>
+                <form id="links--searchPosts" action="lista-de-posts" method="GET">
+                    <input type="search" name="busca" title="Buscar" placeholder="Buscar" autocomplete="off" autosave required>
                     <button type="submit">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icons bi-search" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
@@ -62,8 +62,8 @@
                 </a>
             </li>
             <li>
-                <form id="links--searchPosts" action="/app/views/site/index.html" method="get" enctype="application/x-www-form-urlencoded">
-                    <input type="search" name="buscarPublicacoes" title="Buscar" placeholder="Buscar" autocomplete="off" autosave required>
+                <form id="links--searchPosts" action="/lista-de-posts" method="GET" enctype="application/x-www-form-urlencoded">
+                    <input type="search" name="busca" title="Buscar" placeholder="Buscar" autocomplete="off" autosave required>
                     <button type="submit">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icons bi-search" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>

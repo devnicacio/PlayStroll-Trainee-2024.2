@@ -6,6 +6,10 @@ body {
     padding-top: 5%;
 }
 
+main{
+    margin-top: 50px;
+}
+
 
 #swiper-principal {
     width: 70vw;

@@ -14,33 +14,16 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table, $inicio = null, $rows_count = null, $search)
+    public function selectAll($table, $skip, $take)
     {
         
-        if($search){
-            $sql = "SELECT posts.*, users.name, users.image 
-            FROM {$table} 
-            INNER JOIN users ON users.id = posts.id_user
-            WHERE title LIKE '%$search%' 
-            ORDER BY posts.id DESC";
-        }
-        else{
-            $sql = "SELECT posts.*, users.name, users.image 
-            FROM {$table}
-            INNER JOIN users ON users.id = posts.id_user
-            ORDER BY posts.id DESC";
-        }
-
-
-        if($inicio >= 0 && $rows_count >0){
-            $sql .= " LIMIT {$inicio}, {$rows_count}";
-        }
+        $sql = " SELECT * FROM {$table} LIMIT {$take} OFFSET {$skip} ";
 
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
 
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
 
         } catch (Exception $e) {
             die($e->getMessage());
@@ -97,8 +80,36 @@ class QueryBuilder
         }
     }
 
+    public function selectSearch($table, $search, $skip, $take, $where){
+        $sql = " SELECT * FROM {$table} WHERE {$where} LIKE '%$search%' LIMIT {$take} OFFSET {$skip} ";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function countSearch($table, $search){
         $sql = "SELECT  COUNT(*) from {$table} WHERE title LIKE '%$search%'";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return intval($stmt->fetch(PDO::FETCH_NUM)[0]);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function count($table){
+        $sql = "SELECT  COUNT(*) from {$table}";
 
         try {
             $stmt = $this->pdo->prepare($sql);

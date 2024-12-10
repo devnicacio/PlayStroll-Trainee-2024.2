@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
+
+    <?php include 'navbar.view.php'; ?>
+
     <div class="pesquisa">
     <form method="GET" action="/lista-de-posts" class="pesquisa-input" onclick="inputFocus('busca')">
             <i class="bi bi-search"></i>
@@ -47,11 +50,11 @@
     </div>
    
     <div class="navegação">
-        <button class="nav1<?= $page <=1 ? "disabled" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page - 1 ?>'"><</button>
+        <button class="nav1 <?= $page <=1 ? "disabled" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page - 1 . $search ?>'"><</button>
         <?php for($page_number = 1; $page_number<=$total_pages; $page_number++): ?>
-            <button class="nav2<?= $page_number == $page ? "nav2 active" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page_number ?>'"><?= $page_number ?></button>
+            <button class="nav2<?= $page_number == $page ? "nav2 active" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page_number . $search ?>'"><?= $page_number ?></button>
         <?php endfor ?>
-        <button class="nav7<?= $page >= $total_pages ? "disabled" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page + 1 ?>'">></button>
+        <button class="nav7 <?= $page >= $total_pages ? "disabled" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page + 1 . $search ?>'">></button>
         
     </div>
 </body>

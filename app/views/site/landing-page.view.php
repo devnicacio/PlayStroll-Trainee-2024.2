@@ -9,6 +9,8 @@
     <title>Play Stroll</title>
 </head>
 <body>
+    <?php include 'navbar.view.php'; ?>
+
     <main>
         <div class="swiper" id="swiper-principal">
             

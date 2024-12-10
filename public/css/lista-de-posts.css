@@ -163,6 +163,10 @@ body{
     margin-left: 0px;
 }
 
+.disabled{
+    pointer-events: none;
+}
+
 .conteúdo p{
     font-size: 20px;
     margin-bottom: 0;

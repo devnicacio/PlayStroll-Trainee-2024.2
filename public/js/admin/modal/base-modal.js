@@ -17,23 +17,28 @@ function fecharModal(idModal){
 }
 
 // Abrir modal-visualizar
-const $telaVer = document.querySelector('.tela-read');
-const $modalVer = document.querySelector('.read');
 
 /**
  * @param {string} idModal
  */
-function abrirModalVer(idModal){
-    document.getElementById(idModal).style.display = "flex";
-    $telaVer.style.display = 'block';
-    $telaVer.style.opacity = '0.5';
+function abrirModalVer(idModal) {
+    const modal = document.getElementById(idModal);
+    const telaRead = document.getElementById(`tela-${idModal}`);
+    if (modal && telaRead) {
+        modal.style.display = "flex";
+        telaRead.style.display = "block";
+        telaRead.style.opacity = "0.5";
+    }
 }
 
 /**
  * @param {string} idModal 
  */
-function fecharModalVer(idModal){
-    document.getElementById(idModal).style.display = "none";
-    $telaVer.style.display = 'none';
-    $modalVer.style.display = 'none';
+function fecharModalVer(idModal) {
+    const modal = document.getElementById(idModal);
+    const telaRead = document.getElementById(`tela-${idModal}`);
+    if (modal && telaRead) {
+        modal.style.display = "none";
+        telaRead.style.display = "none";
+    }
 }

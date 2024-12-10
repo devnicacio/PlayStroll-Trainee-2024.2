@@ -34,7 +34,4 @@ use App\Controllers\IntegracaoController;
     //Landing page
     $router->get('landing-page', 'IntegracaoController@paginaInicial');
 
-    //navbar
-    $router->get('navbar', 'navbarController@index');
-
 ?>

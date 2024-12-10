@@ -30,7 +30,7 @@ class Controller{
         
 
         $posts = App::get('database')->selectAll('posts', $inicio, $itensPage, null);
-
+        
         $total_pages = ceil($rows_count/$itensPage);
 
         if($page > $total_pages){

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lista de posts</title>
+    <title>Lista de Posts</title>
     <link rel="stylesheet" href="/public/css/lista-de-posts.css">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -37,8 +37,7 @@
                     <div class="user um"><p><?= $post->name ?></p>></div>
                 </div>
                 <div class="conteúdo um">
-                    <p><?= $post->content ?>
-                    </p>
+                <p class="descricao"><?= strlen($post->content) > 250 ? substr($post->content, 0, 250) . '...' : $post->content ?> </p>
                 </div>
         </div>
     </div>

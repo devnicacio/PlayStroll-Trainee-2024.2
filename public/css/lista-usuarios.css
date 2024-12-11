@@ -126,7 +126,7 @@ tbody {
     margin-right: 10%;
 }
 
-.paginas button{
+.anterior, .pag1, .proximo{
     width: 36px;
     height: 36px;
     border-radius: 12px;
@@ -137,6 +137,15 @@ tbody {
 
 .pag1 {
     background-color: #237ecd;
+}
+
+.disabled{
+    display: none;
+}
+
+.active{
+    background-color: #080b3c;
+    color: white;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

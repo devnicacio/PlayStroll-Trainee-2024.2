@@ -377,13 +377,13 @@
         </table>    
         <!-- Paginação -->
         <div class="navegacao">
-            <button class="nav1<?= $page <= 1 ? "disabled" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page - 1 ?>'" >&lt;</button>
+            <button class="nav1<?= $page <= 1 ? " disabled" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page - 1 ?>'" >&lt;</button>
 
             <?php for($page_number = 1; $page_number<=$total_pages; $page_number++): ?>
                 <button class="nav2<?= $page_number == $page ? "nav2 active" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page_number ?>'" ><?= $page_number ?></button>
             <?php endfor ?>
 
-            <button class="nav7<?= $page >= $total_pages ? "disabled" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page + 1 ?>'" >&gt;</button>
+            <button class="nav7<?= $page >= $total_pages ? " disabled" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page + 1 ?>'" >&gt;</button>
         </div>
     </main>
 </body>

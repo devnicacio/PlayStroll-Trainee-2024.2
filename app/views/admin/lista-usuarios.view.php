@@ -59,12 +59,12 @@
             </table>
         </div>
         <div class="paginas">
-            <button class="anterior" <?= $page <= 1 ? "disabled" : "" ?> onclick="location.href='?paginacaoNumero=<?= $page - 1 ?>'">
+            <button class="anterior<?= $page <= 1 ? " disabled" : "" ?>"  onclick="location.href='?paginacaoNumero=<?= $page - 1 ?>'">
                 < </button>
                     <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
-                        <button class="pag1" onclick="location.href='?paginacaoNumero=<?= $page_number ?>'"><?= $page_number ?></button>
+                        <button class="pag1<?= $page_number == $page ? " active" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page_number ?>'"><?= $page_number ?></button>
                     <?php endfor ?>
-                    <button class="proximo" <?= $page >= $total_pages ? "disabled" : "" ?> onclick="location.href='?paginacaoNumero=<?= $page + 1 ?>'">></button>
+                    <button class="proximo<?= $page >= $total_pages ? " disabled" : "" ?>"  onclick="location.href='?paginacaoNumero=<?= $page + 1 ?>'">></button>
         </div>
 
         <?php foreach ($users as $user): ?>

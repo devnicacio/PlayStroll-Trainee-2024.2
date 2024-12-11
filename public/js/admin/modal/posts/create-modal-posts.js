@@ -1,6 +1,9 @@
 const tela = document.querySelector('#tela');
 
 function previewImage(inputId, imgId, tipo) {
+    console.log(inputId);
+    console.log(imgId);
+
     const input = document.getElementById(inputId);
     const btnRemoverImagemCapa = document.getElementById('btn-remover-imagem-capa');
     const btnRemoverImagemRetrato = document.getElementById('btn-remover-imagem-retrato');

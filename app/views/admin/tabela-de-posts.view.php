@@ -254,19 +254,18 @@
                 <div class="modal-container">
                     <div class="parte-autor">
                         <input type="hidden" value="<?= $post->id ?>" name="id">
-                    <input type="hidden" name="content" id="content">
                     </div>
                     <div class="imagens">
                         <div class="capa">
                             <div class="container-image">
                                 <label for="file">Foto modo paisagem</label>
-                                <label class="custom-file-label" for="file-capa">Escolher imagem</label>
+                                <label class="custom-file-label" for="edit-capa">Escolher imagem</label>
                                 <span id="erro-capa" class="erro-img"></span>
                             </div>
                             <div class="parte-capa">
                                 <img id="edit-name-capa<?= $post->id ?>" class="capa-preview" alt="Preview da Capa" src="/<?= $post->image_capa ?>"/>
                                 <input type="file" class="image-capa" id="edit-capa<?= $post->id ?>" accept="image/*" name="image-capa"
-                                onchange="previewImage('edit-capa', 'edit-name-capa')" />
+                                onchange="previewImage('edit-capa<?= $post->id ?>', 'edit-name-capa<?= $post->id ?>')" />
                                 <button id="btn-remover-imagem-capa-edit" onclick="removerImagem('capa')" type="button">
                                     X
                                 </button>
@@ -275,13 +274,13 @@
                         <div class="retrato">
                             <div class="container-image">
                                 <label for="file">Foto modo retrato</label>
-                                <label class="custom-file-label" for="file-retrato">Escolher imagem</label>
+                                <label class="custom-file-label" for="edit-retrato">Escolher imagem</label>
                                 <span id="erro-retrato" class="erro-img"></span>
                             </div>
                             <div class="parte-retrato">
                                 <img id="edit-name-retrato<?= $post->id ?>" class="retrato-preview" alt="Preview do Retrato" src="/<?= $post->image_retrato ?>"/>
                                 <input type="file" class="image-retrato" id="edit-retrato<?= $post->id ?>" accept="image/*" name="image-retrato"
-                                onchange="previewImage('edit-retrato', 'edit-name-retrato', 'retrato')" />
+                                onchange="previewImage('edit-retrato<?= $post->id ?>', 'edit-name-retrato<?= $post->id ?>')" />
                                 <button id="btn-remover-imagem-retrato-edit" onclick="removerImagem('retrato')" type="button">
                                     X
                                 </button>
@@ -290,7 +289,6 @@
                     </div>
                     <input type="hidden" name="fotoAtualCapa" value="<?= $post->image_capa ?>">
                     <input type="hidden" name="fotoAtualRetrato" value="<?= $post->image_retrato ?>">
-                    <input type="hidden" name="content" id="content<?= $post->id ?>">
                     <div class="abc"><!-- poggers -->
                         <div class="placeholders-criar">
                             <div class="parte-data">
@@ -309,7 +307,7 @@
                                     <input type="number" value="<?= $post->avaliation ?>" id="avaliacao" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota" name="avaliation"/>
                                     <span id="erro-avaliacao" class="erro"></span>
                                 </div>
-                                <input type="hidden" name="content" id="content">
+                                <input type="hidden" name="content" id="content<?= $post->id ?>">
                             </div>
                         </div>
                         <div class="diminuir-word">

@@ -37,7 +37,7 @@
             <div class="nota um"><h4><?= $post->avaliation ?></h4></div>
                 <div class="dados um">
                     <div class="perfil um"><img src="<?= $post->image ?>"></div>
-                    <div class="user um"><p><?= $post->name ?></p>></div>
+                    <div class="user um"><p><?= $post->name ?></p></div>
                 </div>
                 <div class="conteúdo um">
                 <p class="descricao"><?= strlen($post->content) > 250 ? substr($post->content, 0, 250) . '...' : $post->content ?> </p>

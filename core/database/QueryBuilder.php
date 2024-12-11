@@ -47,22 +47,48 @@ class QueryBuilder
         }
     }
 
-    public function selectAllSearch($table, $skip, $take){
-
-
-        $sql = " SELECT * FROM {$table} LIMIT {$take} OFFSET {$skip} ";
-
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
-
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
-
-        } catch (Exception $e) {
-            die($e->getMessage());
+    public function selectAllSearch($table, $skip, $take, $search = null) {
+        if ($search) {
+            $sql = "SELECT posts.*, users.name, users.image
+                    FROM {$table} AS posts
+                    INNER JOIN users ON users.id = posts.id_user
+                    WHERE posts.title LIKE :search
+                    ORDER BY posts.id DESC
+                    LIMIT :take OFFSET :skip";
+            
+            try {
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->bindValue(':search', "%{$search}%", PDO::PARAM_STR);
+                $stmt->bindValue(':take', $take, PDO::PARAM_INT);
+                $stmt->bindValue(':skip', $skip, PDO::PARAM_INT);
+                $stmt->execute();
+    
+                return $stmt->fetchAll(PDO::FETCH_CLASS);
+    
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        } else {
+            $sql = "SELECT posts.*, users.name, users.image
+                    FROM {$table} AS posts
+                    INNER JOIN users ON users.id = posts.id_user
+                    ORDER BY posts.id DESC
+                    LIMIT :take OFFSET :skip";
+            
+            try {
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->bindValue(':take', $take, PDO::PARAM_INT);
+                $stmt->bindValue(':skip', $skip, PDO::PARAM_INT);
+                $stmt->execute();
+    
+                return $stmt->fetchAll(PDO::FETCH_CLASS);
+    
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
         }
-
     }
+    
 
     public function selectAllUsers($table, $inicio = null, $rows_count = null, $search)
     {
@@ -114,19 +140,32 @@ class QueryBuilder
         }
     }
 
-    public function selectSearch($table, $search, $skip, $take, $where){
-        $sql = " SELECT * FROM {$table} WHERE {$where} LIKE '%$search%' LIMIT {$take} OFFSET {$skip} ";
+    public function selectSearch($table, $search, $skip, $take, $where)
+{
+    // Consulta com a junção da tabela users
+    $sql = "SELECT posts.*, users.name, users.image
+            FROM {$table}
+            INNER JOIN users ON users.id = posts.id_user
+            WHERE posts.{$where} LIKE :search
+            LIMIT :take OFFSET :skip";
 
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
+    try {
+        $stmt = $this->pdo->prepare($sql);
 
-            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        // Ligando os parâmetros de busca para evitar SQL Injection
+        $stmt->bindValue(':search', "%{$search}%", PDO::PARAM_STR);
+        $stmt->bindValue(':take', $take, PDO::PARAM_INT);
+        $stmt->bindValue(':skip', $skip, PDO::PARAM_INT);
 
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+
+    } catch (Exception $e) {
+        die($e->getMessage());
     }
+}
+
 
     public function countSearch($table, $search){
         $sql = "SELECT  COUNT(*) from {$table} WHERE title LIKE '%$search%'";

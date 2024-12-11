@@ -41,6 +41,28 @@ function removerImagem(tipo) {
     }
 }
 
+function removerImagemEdit(tipo) {
+    if (tipo === 'capa') {
+        const imgPerfilCapaEdit = document.getElementById('edit-name-capa');
+        const inputFotoCapaEdit = document.getElementById('edit-capa');
+        const btnRemoverImagemCapaEdit = document.getElementById('btn-remover-imagem-capa-edit');
+
+        btnRemoverImagemCapaEdit.style.display = 'none';
+        imgPerfilCapaEdit.src = '';
+        imgPerfilCapaEdit.style.display = 'none';
+        inputFotoCapaEdit.value = '';
+    } else if (tipo === 'retrato') {
+        const imgPerfilRetratoEdit = document.getElementById('edit-name-retrato');
+        const inputFotoRetratoEdit = document.getElementById('edit-retrato');
+        const btnRemoverImagemRetratoEdit = document.getElementById('btn-remover-imagem-retrato-edit');
+
+        imgPerfilRetratoEdit.src = '';
+        imgPerfilRetratoEdit.style.display = 'none';
+        inputFotoRetratoEdit.value = '';
+        btnRemoverImagemRetratoEdit.style.display = 'none';
+    }
+}
+
 function updateFileName() {
     const input = document.getElementById('file');
     const fileName = document.getElementById('file-name');

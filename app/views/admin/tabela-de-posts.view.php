@@ -267,7 +267,7 @@
                                 <img id="edit-name-capa<?= $post->id ?>" class="capa-preview" alt="Preview da Capa" src="/<?= $post->image_capa ?>"/>
                                 <input type="file" class="image-capa" id="edit-capa<?= $post->id ?>" accept="image/*" name="image-capa"
                                 onchange="previewImage('edit-capa', 'edit-name-capa')" />
-                                <button id="btn-remover-imagem-capa" onclick="removerImagem('capa')" type="button">
+                                <button id="btn-remover-imagem-capa-edit" onclick="removerImagem('capa')" type="button">
                                     X
                                 </button>
                             </div>
@@ -282,7 +282,7 @@
                                 <img id="edit-name-retrato<?= $post->id ?>" class="retrato-preview" alt="Preview do Retrato" src="/<?= $post->image_retrato ?>"/>
                                 <input type="file" class="image-retrato" id="edit-retrato<?= $post->id ?>" accept="image/*" name="image-retrato"
                                 onchange="previewImage('edit-retrato', 'edit-name-retrato', 'retrato')" />
-                                <button id="btn-remover-imagem-retrato" onclick="removerImagem('retrato')" type="button">
+                                <button id="btn-remover-imagem-retrato-edit" onclick="removerImagem('retrato')" type="button">
                                     X
                                 </button>
                             </div>
@@ -330,7 +330,7 @@
                                 callbacks: {
                                     onChange: function(contents) {
                                         $('#content<?= $post->id ?>').val(contents);
-                                    }
+                                    }                                    
                                 }
                             });
 

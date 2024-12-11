@@ -41,6 +41,8 @@ class Controller{
         return view('admin/tabela-de-posts', compact('posts', 'page', 'total_pages'));
     }
     public function updatePost(){
+        // var_dump($_POST["content"]);
+        // exit();
         $parameters = [
             "title" => $_POST["title"],
             "content" => $_POST["content"],

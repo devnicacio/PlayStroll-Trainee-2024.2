@@ -50,8 +50,12 @@
                     <img class="capa-jogo" src="<?= $post->image_retrato?>" alt="Capa do post 3">
                     <h3><span><?= $post->title ?></span></h3>
                     <div class="nota">
-                        <span> </span> <span><?= $post->avaliation?></span>
-                    </div>
+    <span><?= $post->avaliation ?></span>
+    <div class="avaliacao-estrelas">
+        <?php renderizarEstrelas($post->id, 30, $post->avaliation); ?>
+    </div>
+</div>
+
                     <p class="autor"> <img src="<?= $post->image ?>" alt="usuario"> <span><?= $post->name ?></span></p>
                     <p class="descricao"><?= strlen($post->content) > 350 ? substr($post->content, 0, 350) . '...' : $post->content ?> </p>
                     <button class="botao-veja-mais" onclick="location.href = '/post-individual?id=<?= $post->id?>'">Veja mais</button>
@@ -75,6 +79,8 @@
                 </div>
             </div>
     </main>
+
+    <?php include 'footer.view.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

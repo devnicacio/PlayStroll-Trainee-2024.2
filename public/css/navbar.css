@@ -12,8 +12,6 @@
     font-family: Satoshi, sans-serif;
 }
 body{
-    width: 100vw;
-    height: 100vh;
     padding: 0;
 }
 a,
@@ -29,7 +27,6 @@ input[type="search"]::-webkit-search-decoration{
 }
 /*//////////////////////// NAVIGATION BAR ////////////////////////*/
 #navigationBar{
-    width: auto;
     height: 28vh;
     background: var(--firstBlue);
     display: flex;
@@ -40,7 +37,6 @@ input[type="search"]::-webkit-search-decoration{
 }
 /*//////////////////////// FILHOS DIRETOS DA NAVIGATION BAR ////////////////////////*/
 #navigationBar--home{
-    width: auto;
     height: fit-content;
     display: flex;
     flex-direction: column;

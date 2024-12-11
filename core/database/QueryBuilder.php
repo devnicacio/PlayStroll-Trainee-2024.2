@@ -47,6 +47,23 @@ class QueryBuilder
         }
     }
 
+    public function selectAllSearch($table, $skip, $take){
+
+
+        $sql = " SELECT * FROM {$table} LIMIT {$take} OFFSET {$skip} ";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+    }
+
     public function selectAllUsers($table, $inicio = null, $rows_count = null, $search)
     {
         if($search){

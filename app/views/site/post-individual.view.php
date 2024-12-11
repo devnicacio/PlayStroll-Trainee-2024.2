@@ -14,7 +14,6 @@
 <?php include 'navbar.view.php'; ?>
 
     <div class="container">
-                <div class="linha-preta"></div> 
                 <div class="image-container">
                 <img src="<?= $post[0]->image_capa ?>" alt="" class="image1">
             </div>       
@@ -37,6 +36,9 @@
                 </div>
             </div>
     </div>
+
+    <?php include 'footer.view.php'; ?>
+
 </body>
 
 </html>

@@ -12,14 +12,14 @@
 </head>
 <body>
     <nav id="navigationBar">
-        <a id="navigationBar--home" title="Home">
+        <a id="navigationBar--home" title="Home" href="landing-page" >
             <p>PLAY STROLL</p>
             <img src="/public/assets/logo-escura-sem-fundo.png" alt="Logo da Playstroll">
         </a>
             
         <ul class="navigationBar--links">
             <li>
-                <a href="posts.html">
+                <a href="lista-de-posts">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icons bi-chat-left-fill" viewBox="0 0 16 16">
                         <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                     </svg>
@@ -37,7 +37,7 @@
                 </form>
             </li>
             <li>
-                <a href="login.html">
+                <a href="login">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icons bi-unlock-fill" viewBox="0 0 16 16">
                         <path d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2"/>
                     </svg>

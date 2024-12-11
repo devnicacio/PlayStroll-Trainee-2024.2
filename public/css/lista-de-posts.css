@@ -8,7 +8,6 @@ html, body{
     background: linear-gradient(to right, rgba(213, 214, 227, 1.0), rgba(0, 174, 160, 0.5));
     margin: 0;
     padding: 0;
-    font-size: 0;
 }
 
 body{
@@ -191,7 +190,7 @@ body{
     text-align: center;
 }
 
-.navegação button{
+.nav1, .nav2, .nav7{
     display: inline;
     width: 36px;
     height: 36px;
@@ -201,6 +200,11 @@ body{
     color: white;
     background-color: #237ECD;
     border: 1px solid black;
+    cursor: pointer;
+}
+
+.active{
+    background-color: #0b0b3c;
 }
 
 .navegação .nav4 {

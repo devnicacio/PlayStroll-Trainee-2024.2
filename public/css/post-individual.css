@@ -16,7 +16,7 @@ body{
     margin-top: 50px;
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .image1{
@@ -33,6 +33,7 @@ body{
     width: 100%;
     margin: 0 auto;
     padding-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .avaliation-line{
@@ -146,9 +147,7 @@ h1 {
         object-fit: contain;        
     }
 
-    .main {
-        margin-top: 108px;
-    }
+    
 
     .section-description {
         width: 70%;

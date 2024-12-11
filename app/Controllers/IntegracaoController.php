@@ -47,7 +47,7 @@ class IntegracaoController{
 
         $skip = ($page -1) * 5;        
 
-        $posts = App::get('database')->selectAll('posts', $skip, 5);
+        $posts = App::get('database')->selectAllSearch('posts', $skip, 5);
 
         
 

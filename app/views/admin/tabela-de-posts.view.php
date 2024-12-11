@@ -44,6 +44,9 @@
     Ademais, usei a metodologia BEM(Block, Element, Modifier). Os elementos são identificados com --, e
     os modificadores por __.
     -->
+
+    <?php include 'sidebar.view.php'; ?>
+
     <main class="container">
         <div class="cabecalho">
             <h1 class="table-title">Tabela de Posts</h1>

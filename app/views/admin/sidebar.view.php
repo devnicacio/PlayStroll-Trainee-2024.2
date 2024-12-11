@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../../public/css/admin/sidebar.css" >
+    <link rel="stylesheet" href="/public/css/sidebar.css" >
 </head>
 <body>
     
@@ -81,4 +81,4 @@
         </button>
     </div>
 </nav>
-<script type="module" src="/public/js/sidebar.js"></script>
+<script type="module" src="/public/js/admin/sidebar.js"></script>

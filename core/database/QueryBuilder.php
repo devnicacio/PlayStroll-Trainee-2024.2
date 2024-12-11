@@ -367,6 +367,64 @@ class QueryBuilder
     }
 }
    
+public function updatePost($table, $id, $parameters, $imageCapa, $imageRetrato, $fotoAtualCapa, $fotoAtualRetrato)
+{
+    // Processa a imagem capa
+    if ($imageCapa && isset($imageCapa['tmp_name']) && $imageCapa['tmp_name']) {
+        // Remove a imagem antiga da capa se existir
+        if (file_exists($fotoAtualCapa)) {
+            unlink($fotoAtualCapa);
+        }
+
+        // Processa a nova imagem capa
+        $pasta = "uploads/";
+        $extensao = pathinfo($imageCapa['name'], PATHINFO_EXTENSION);
+        $nomeImgCapa = uniqid() . '.' . $extensao;
+        $caminhoImgCapa = $pasta . basename($nomeImgCapa);
+        move_uploaded_file($imageCapa['tmp_name'], $caminhoImgCapa);
+
+        $parameters['image_capa'] = $caminhoImgCapa;
+    } else {
+        unset($parameters['image_capa']); // Não altera a imagem capa se nenhuma for enviada
+    }
+
+    // Processa a imagem retrato
+    if ($imageRetrato && isset($imageRetrato['tmp_name']) && $imageRetrato['tmp_name']) {
+        // Remove a imagem antiga do retrato se existir
+        if (file_exists($fotoAtualRetrato)) {
+            unlink($fotoAtualRetrato);
+        }
+
+        // Processa a nova imagem retrato
+        $pasta = "uploads/";
+        $extensao = pathinfo($imageRetrato['name'], PATHINFO_EXTENSION);
+        $nomeImgRetrato = uniqid() . '.' . $extensao;
+        $caminhoImgRetrato = $pasta . basename($nomeImgRetrato);
+        move_uploaded_file($imageRetrato['tmp_name'], $caminhoImgRetrato);
+
+        $parameters['image_retrato'] = $caminhoImgRetrato;
+    } else {
+        unset($parameters['image_retrato']); // Não altera a imagem retrato se nenhuma for enviada
+    }
+
+    // Monta a query SQL
+    $sql = sprintf(
+        'UPDATE %s SET %s WHERE id = :id',
+        $table,
+        implode(', ', array_map(function ($param) {
+            return "$param = :$param";
+        }, array_keys($parameters)))
+    );
+
+    $parameters['id'] = $id;
+
+    try {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute($parameters);
+    } catch (Exception $e) {
+        die($e->getMessage());
+    }
+}
 
     public function delete($table, $id)
     {
@@ -381,10 +439,7 @@ class QueryBuilder
         } catch (Exception $e) {
             die($e->getMessage());
         }
-    }
-
-    // public function updatePost($table, $parameters, $img1, $img2):void
-        
+    }        
 
     public function deletaPost($table, $id){
         $sql = sprintf('DELETE FROM %s WHERE %s', $table, 'id = :id');

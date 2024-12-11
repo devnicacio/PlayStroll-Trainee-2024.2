@@ -42,3 +42,4 @@ function fecharModalVer(idModal) {
         telaRead.style.display = "none";
     }
 }
+

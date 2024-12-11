@@ -288,6 +288,9 @@
                             </div>
                         </div>
                     </div>
+                    <input type="hidden" name="fotoAtualCapa" value="<?= $post->image_capa ?>">
+                    <input type="hidden" name="fotoAtualRetrato" value="<?= $post->image_retrato ?>">
+                    <input type="hidden" name="content" id="content<?= $post->id ?>">
                     <div class="abc"><!-- poggers -->
                         <div class="placeholders-criar">
                             <div class="parte-data">
@@ -326,7 +329,7 @@
                                 ],
                                 callbacks: {
                                     onChange: function(contents) {
-                                        $('#content').val(contents);
+                                        $('#content<?= $post->id ?>').val(contents);
                                     }
                                 }
                             });
@@ -367,29 +370,6 @@
 	});
 </script>
 
-                <script>/*
-                    $("#summernote-update-<?= $post->id?>").summernote({
-                        tabsize: 2,
-                        height: 120,
-                        lang: "pt-BR",
-                        toolbar: [
-                            ["style", ["style"]],
-                            ["font", ["bold", "underline"]],
-                            ["color", ["color"]],
-                            ["para", ["ul", "ol", "paragraph"]],
-                            ["table", ["table"]],
-                            ["insert", ["link", "picture"]],
-                        ],
-                        callbacks: {
-                            onInit: function() {
-                                $('.note-editable').css('resize', 'none');
-                            },
-                            onChange: function(contents) {
-                                $('#content').val(contents);
-                            }
-                        }
-                    });*/
-                </script>
                 <div class="tela-read" id="tela-read<?= $post->id ?>" onclick="fecharModalVer('read<?= $post->id?>')"></div>
                 <?php endforeach?>
             </tbody>

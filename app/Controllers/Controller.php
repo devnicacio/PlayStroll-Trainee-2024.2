@@ -42,14 +42,22 @@ class Controller{
     }
     public function updatePost(){
         $parameters = [
-            "id" => $_POST["id"],
             "title" => $_POST["title"],
             "content" => $_POST["content"],
             "avaliation" => $_POST["avaliation"],
+            "create_at" => $_POST["create-at"],
         ];
 
-        App::get("database")->updatePost("posts", $parameters, $_FILES["image_capa"], $_FILES["image_retrato"]);
-        redirect("app/views/admin/tabela-de-posts");
+        $id = $_POST["id"];
+
+        $fotoAtualCapa = $_POST['fotoAtualCapa'];
+        $fotoAtualRetrato = $_POST['fotoAtualRetrato'];
+
+        $imageCapa = isset($_FILES['image_capa']) && $_FILES['image_capa']['size'] > 0 ? $_FILES['image_capa'] : null;
+        $imageRetrato = isset($_FILES['image_retrato']) && $_FILES['image_retrato']['size'] > 0 ? $_FILES['image_retrato'] : null;
+
+        App::get("database")->updatePost("posts", $id, $parameters, $imageCapa, $imageRetrato, $fotoAtualCapa, $fotoAtualRetrato);
+        header('Location: /admin/tabela-de-posts');
     }
 
     public function create() {
@@ -61,7 +69,7 @@ class Controller{
             'id_user' => 1,
         ];
         
-        App::get("database")->inserePost("posts", $parameters, $_FILES['image-capa'], $_FILES['image-retrato']);
+        App::get("database")->inserePost("posts", $parameters, $_FILES['image_capa'], $_FILES['image_retrato']);
         header('Location: /admin/tabela-de-posts');
     }
 

@@ -37,5 +37,24 @@ function renderizarEstrelas($id, $tamanhoEstrela, $avaliation) {
     return require __DIR__ . '/../app/views/site/estrelas.php';
 }
 
+// Função para limitar o conteúdo de texto, mantendo algumas tags HTML
+function limitText($content, $maxWords = 30, $allowedTags = '<p><strong>') {
+    // Remove tags HTML indesejadas, mantendo <strong> e <p> (adapte conforme necessário)
+    $filteredContent = strip_tags($content, $allowedTags);
+
+    // Limitar o número de palavras
+    $words = explode(' ', $filteredContent);
+    $limitedContent = implode(' ', array_slice($words, 0, $maxWords));
+
+    // Adicionar reticências se o texto for truncado
+    if (count($words) > $maxWords) {
+        $limitedContent .= '...';
+    }
+
+    return $limitedContent;
+}
+?>
+
+
 
 

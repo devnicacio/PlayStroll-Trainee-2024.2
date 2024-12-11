@@ -8,7 +8,6 @@ body {
 
 main{
     margin-top: 50px;
-    margin-bottom: 50px;
 }
 
 
@@ -60,7 +59,7 @@ main{
 }
 
 .nota-swipper {
-    font-size: 20px; 
+    font-size: 30px; 
 }
 
 .autor-swipper {
@@ -69,20 +68,37 @@ main{
     justify-items: center;
     width: 40px;
     height: 40px;          
-
+    margin-top: 20px;
 }
 
 .autor-swipper img {
     margin-right: 10px; 
     vertical-align: middle; 
+    border-radius: 50%;
 }
+
+.nota-e-estrelas-swipper {
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+}
+
+.nota-swipper {
+    margin: 0; 
+}
+
+.avaliacao-estrelas {
+    display: inline-block; 
+}
+
 
 
 .imagem-usuario {
     width: 30px;               
-    height: auto;              
+    height: auto;             
     margin-right: 10px;      
     margin: 10px 0px 10px;  
+
 }
 
 .nome-swipper{
@@ -174,7 +190,7 @@ main{
     align-items: center; 
     justify-content: center; 
     max-width: 400px !important;
-    height: 700px;
+    height: 600px;
     margin: 0; 
 }
 
@@ -185,10 +201,21 @@ main{
     margin-bottom: 10px;
 }
 
+.autor {
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    margin: 10px;
+}
+
 .autor img{
     height: 40px;
     width: 40px;
     border-radius: 100%;
+}
+
+.titulo-jogo{
+    margin-top: 10px;
 }
 
 .nome-jogo {
@@ -199,6 +226,7 @@ main{
 .nota {
     font-size: 1em; 
     margin-top: 5px; 
+    color: #FFC739;
 }
 
 .descricao {
@@ -223,12 +251,30 @@ main{
     font-size: 25px;
 }
 
+.nota {
+    margin-top: 10px;
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+}
+
+.nota span {
+    margin: 0;
+    font-size: 25px; 
+}
+
+.avaliacao-estrelas {
+    display: inline-block; 
+}
+
+
 .post-individual h3 {
     margin-top: 10px; 
     margin-bottom: 5px; 
     font-size: 22px; 
     text-align: center;
 }
+
 
 .botao-veja-mais {
     background-color: #0B0B0B;
@@ -239,7 +285,7 @@ main{
     padding-left: 30px;
     padding-right: 30px;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-top: 40px;
 }
 
 #segundo-next,
@@ -419,12 +465,13 @@ main{
 
 
     .capa-jogo {
-        width: auto;
-        height: auto;
-        max-height: 250px;
+        margin-top: 10px;
+        width: 50%;
+        height: 50%;
         border-radius: 8px;
         object-fit: cover; 
     }
+    
 
     .descricao{
         font-size: 15px;
@@ -535,8 +582,8 @@ main{
 
 
     .capa-jogo {
-        width: auto;
-        height: auto;
+        width: 100px;
+        height: 150px;
         max-height: 250px;
         border-radius: 8px;
         object-fit: cover; 

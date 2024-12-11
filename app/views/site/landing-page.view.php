@@ -20,9 +20,19 @@
                 <div class="swiper-slide" id="slide-principal">
                     <div class="fade-swipper">
                             <p class="nome-swipper"><?= $post->title ?></p>
-                            <p class="nota-swipper"><span style="color: #FFC739;"><?= $post->avaliation ?></span></p>
+                            <div class="nota-e-estrelas-swipper">
+                                <p class="nota-swipper">
+                                    <span style="color: #FFC739;"><?= $post->avaliation ?></span>
+                                </p>
+                                <div class="avaliacao-estrelas">
+                                    <?php renderizarEstrelas($post->id, 30, $post->avaliation); ?>
+                                </div>
+                            </div>
                             <p class="autor-swipper"> <img src="<?= $post->image ?>" alt="usuario"><?= $post->name ?></p>
-                            <p class="descricao-swipper"><?= $post->content ?></p>
+                                <?php
+                                    $limitedContent = limitText($post->content, 30);
+                                ?>
+                            <p class="descricao-swipper"><?= $limitedContent ?></p>
                             <button class="botao-swipper" onclick="location.href = '/post-individual?id=<?= $post->id?>'">Veja mais</button>
                     </div>
                     <img src="<?= $post->image_capa ?>" alt="imagem">
@@ -48,17 +58,19 @@
             <div class="swiper-slide" id="slide-secundario">
                 <div class="post-individual3">
                     <img class="capa-jogo" src="<?= $post->image_retrato?>" alt="Capa do post 3">
-                    <h3><span><?= $post->title ?></span></h3>
+                    <h3 class="titulo-jogo"><span><?= $post->title ?></span></h3>
                     <div class="nota">
-    <span><?= $post->avaliation ?></span>
-    <div class="avaliacao-estrelas">
-        <?php renderizarEstrelas($post->id, 30, $post->avaliation); ?>
-    </div>
-</div>
-
+                            <span><?= $post->avaliation ?></span>
+                        <div class="avaliacao-estrelas">
+                            <?php renderizarEstrelas($post->id, 30, $post->avaliation); ?>
+                        </div>
+                    </div>
                     <p class="autor"> <img src="<?= $post->image ?>" alt="usuario"> <span><?= $post->name ?></span></p>
-                    <p class="descricao"><?= strlen($post->content) > 350 ? substr($post->content, 0, 350) . '...' : $post->content ?> </p>
-                    <button class="botao-veja-mais" onclick="location.href = '/post-individual?id=<?= $post->id?>'">Veja mais</button>
+                        <?php
+                            $limitedContent = limitText($post->content, 30);
+                        ?>
+                    <p class="descricao"><?= $limitedContent ?></p>
+                        <button class="botao-veja-mais" onclick="location.href = '/post-individual?id=<?= $post->id?>'">Veja mais</button>
                 </div>
             </div>
             <?php endforeach ?>

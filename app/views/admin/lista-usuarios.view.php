@@ -26,6 +26,9 @@
 </head>
 
 <body>
+
+    <?php include 'sidebar.view.php'; ?>
+
     <div class="gradient">
         <div class="parte-de-cima">
             <h1 class="titulo">Lista de usuários</h1>

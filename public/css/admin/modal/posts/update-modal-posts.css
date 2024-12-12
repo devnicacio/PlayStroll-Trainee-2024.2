@@ -114,7 +114,7 @@
     display: none;
 }
 
-#btn-remover-imagem-capa-edit, #btn-remover-imagem-retrato-edit {
+.btn-remove-imagem-capa, .btn-remove-imagem-retrato /* #btn-remover-imagem-capa-edit, #btn-remover-imagem-retrato-edit */{
     background-color: #C70E3C; 
     font-size: 20px;
     width: 30px;
@@ -131,12 +131,12 @@
     right: -25px;
   }
 
-  #btn-remover-imagem-capa-edit:hover #btn-remover-imagem-retrato-edit:hover {
+  .btn-remove-imagem-capa:hover, .btn-remove-imagem-retrato:hover {
     background-color: #a6072e;
   }
 
 
-.parte-retrato:hover #btn-remover-imagem-retrato-edit, .parte-capa:hover #btn-remover-imagem-capa-edit {
+.parte-retrato:hover .btn-remove-imagem-retrato, .parte-capa:hover .btn-remove-imagem-capa {
     display: block;
 }
 

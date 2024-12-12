@@ -37,13 +37,6 @@
    
 </head>
 <body>
-    <!-- Padronização dos seletores de CSS feita pelo Vítor:
-    Classe: serão usadas, se forem reutilizadas em outros lugares obrigatoriamente. 
-    Usarei, quando quero padronizar algo;
-    id: serão usadas em elementos únicos.
-    Ademais, usei a metodologia BEM(Block, Element, Modifier). Os elementos são identificados com --, e
-    os modificadores por __.
-    -->
     <main class="container">
         <div class="cabecalho">
             <h1 class="table-title">Tabela de Posts</h1>
@@ -63,9 +56,7 @@
                                 <img id="file-name-capa" class="capaCreate-preview" alt="Preview da Capa" />
                                 <input type="file" class="image-capa" id="file-capa" accept="image/*" name="image-capa"
                                 onchange="previewImage('file-capa', 'file-name-capa', 'capa')" />
-                                <button id="btn-remover-imagem-capa" onclick="removerImagem('capa')" type="button">
-                                    X
-                                </button>
+                                <button class="btn-remove-imagem-capa" id="btn-remover-imagem-capa" onclick="removerImagem('capa')" type="button">X</button>
                             </div>
                         </div>
                         <div class="retrato">
@@ -78,9 +69,7 @@
                                 <img id="file-name-retrato" class="retratoCreate-preview" alt="Preview do Retrato" />
                                 <input type="file" class="image-retrato" id="file-retrato" accept="image/*" name="image-retrato"
                                 onchange="previewImage('file-retrato', 'file-name-retrato', 'retrato')" />
-                                <button id="btn-remover-imagem-retrato" onclick="removerImagem('retrato')" type="button">
-                                    X
-                                </button>
+                                <button class="btn-remove-imagem-retrato" id="btn-remover-imagem-retrato" onclick="removerImagem('retrato')" type="button">X</button>
                             </div>
                         </div>
                     </div>
@@ -263,10 +252,10 @@
                                 <span id="erro-capa" class="erro-img"></span>
                             </div>
                             <div class="parte-capa">
-                                <img id="edit-name-capa<?= $post->id ?>" class="capa-preview" alt="Preview da Capa" src="/<?= $post->image_capa ?>"/>
-                                <input type="file" class="image-capa" id="edit-capa<?= $post->id ?>" accept="image/*" name="image-capa"
-                                onchange="previewImage('edit-capa<?= $post->id ?>', 'edit-name-capa<?= $post->id ?>')" />
-                                <button id="btn-remover-imagem-capa-edit" onclick="removerImagem('capa')" type="button">
+                                <img id="file-name-capa<?= $post->id ?>" class="capa-preview" alt="Preview da Capa" src="/<?= $post->image_capa ?>"/>
+                                <input type="file" class="image-capa" id="file-capa<?= $post->id ?>" accept="image/*" name="image-capa"
+                                       onchange="previewImage('file-capa<?= $post->id ?>', 'file-name-capa<?= $post->id ?>')" />
+                                <button class="btn-remove-imagem-capa" id="btn-remover-imagem-capa<?= $post->id ?>" onclick="removerImagem('capa', <?= $post->id ?>)" type="button">
                                     X
                                 </button>
                             </div>
@@ -278,10 +267,10 @@
                                 <span id="erro-retrato" class="erro-img"></span>
                             </div>
                             <div class="parte-retrato">
-                                <img id="edit-name-retrato<?= $post->id ?>" class="retrato-preview" alt="Preview do Retrato" src="/<?= $post->image_retrato ?>"/>
-                                <input type="file" class="image-retrato" id="edit-retrato<?= $post->id ?>" accept="image/*" name="image-retrato"
-                                onchange="previewImage('edit-retrato<?= $post->id ?>', 'edit-name-retrato<?= $post->id ?>')" />
-                                <button id="btn-remover-imagem-retrato-edit" onclick="removerImagem('retrato')" type="button">
+                                <img id="file-name-retrato<?= $post->id ?>" class="retrato-preview" alt="Preview do Retrato" src="/<?= $post->image_retrato ?>"/>
+                                <input type="file" class="image-retrato" id="file-retrato<?= $post->id ?>" accept="image/*" name="image-retrato"
+                                       onchange="previewImage('file-retrato<?= $post->id ?>', 'file-name-retrato<?= $post->id ?>')" />
+                                <button class="btn-remove-imagem-retrato" id="btn-remover-imagem-retrato<?= $post->id ?>" onclick="removerImagem('retrato', <?= $post->id ?>)" type="button">
                                     X
                                 </button>
                             </div>

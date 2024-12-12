@@ -4,16 +4,20 @@
     function editar(idModal) {
         document.getElementById(idModal).style.display = "flex";
         tela.style.display = "flex";
+        document.querySelectorAll('span').forEach((spanErro) => {
+            spanErro.style.display = 'none';
+        });
     }
 
     function editar2(id3) {
         document.getElementById(id3).style.display = "none";
         tela.style.display = "none";
+        document.querySelectorAll('.erroEdit').style.display = 'none';
     }
 
-    function mostrarSenha() {
-        var inputPass = document.getElementById('senha');
-        var showPass = document.getElementById('mostrar');
+    function mostrarSenha(inputSenha, icone) {
+        var inputPass = document.getElementById(inputSenha);
+        var showPass = document.getElementById(icone);
 
         if (inputPass.type === 'password') {
             inputPass.setAttribute('type', 'text');
@@ -63,3 +67,36 @@
         });
     });
 
+    
+
+function errorChecker(idErrorName, idErrorEmail, idErrorSenha, idFormEdit, idInputName, idInputMail, idInputSenha){
+    event.preventDefault();
+
+    const name = document.getElementById(idInputName).value;
+    const email = document.getElementById(idInputMail).value;
+    const senha = document.getElementById(idInputSenha).value;
+
+    let valid = true;
+
+    if(!name){
+        document.getElementById(idErrorName).display = 'block';
+        document.getElementById(idErrorName).innerText = 'Nome É Obrigatório.';
+        valid = false;
+    }
+
+    if(!email){
+        document.getElementById(idErrorEmail).display = 'block';
+        document.getElementById(idErrorEmail).innerText = 'Email É Obrigatório.';
+        valid = false;
+    }
+
+    if(!senha){
+        document.getElementById(idErrorSenha).display = 'block';
+        document.getElementById(idErrorSenha).innerText = 'Senha É Obrigatória';
+        valid = false;
+    }
+
+    if(!valid) return;
+
+    document.getElementById(idFormEdit).submit();
+}

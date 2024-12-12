@@ -15,7 +15,6 @@ body{
     max-height: 100vh;
     font-family: 'Satoshi', sans-serif;
     display: flex;
-    background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
 }
 
 #sideBar{
@@ -28,7 +27,7 @@ body{
     color: var(--white);
     transition: all .5s;
     min-width: 82px;
-    z-index: 3;
+    z-index: 1;
 }
 #sideBar a,
 #sideBar a:link,
@@ -67,6 +66,7 @@ body{
     flex-direction: column;
     gap: 8px;
     list-style: none;
+    padding: 0;
 }
 .sideItems--sideItem{
     padding: 14px;
@@ -100,10 +100,12 @@ body{
     color: var(--firstBlue);
 }
 #sideBar--logout{
+    height: 80px;
     border-top: 1px solid rgba(245,245,245, 0.2);
-    padding: 17px;
     display: flex;
-    justify-content: center
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
 }
 #logoutBtn{
     width: 100%;
@@ -112,7 +114,6 @@ body{
     align-items: center;
     justify-content: right;
     border: none;
-    padding: 12px;
     font-size: 14px;
     gap: 20px;
     align-items: center;

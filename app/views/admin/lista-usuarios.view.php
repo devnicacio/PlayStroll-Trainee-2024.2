@@ -72,17 +72,20 @@
 
                 <div class="fundo" id="cx">
                     <div class="edit">
-                        <form method="post" action="/users/edit" enctype="multipart/form-data">
+                        <form method="post" action="/users/edit" enctype="multipart/form-data" class="formEdit" id="formEdit<?= $user->id ?>">
                             <input type="hidden" value="<?= $user->id ?>" name="id">
                             <div class="editname">
-
-                                <input type="text" name="name" value="<?= $user->name ?>" placeholder="Username">
+                                <input type="text" name="name" value="<?= $user->name ?>" placeholder="Username" class="nameEdit" id="nameEdit<?= $user->id ?>" >
+                                <span class="erroEdit" id="erroNameEdit<?= $user->id ?>" ></span>
                             </div>
                             <div class="inputmail">
-                                <input type="text" name="email" value="<?= $user->email ?>" placeholder="Email">
+                                <input type="text" name="email" value="<?= $user->email ?>" placeholder="Email"  class="mailEdit" id="mailEdit<?= $user->id ?>" >
+                                <span class="erroEdit" id="erroMailEdit<?= $user->id ?>" ></span>
                             </div>
                             <div class="inputsenha">
-                                <input id="senha" type="password" name="password" value="<?= $user->password ?>" placeholder="Senha">
+                                <input id="senhaEdit<?= $user->id ?>" type="password" name="password" value="<?= $user->password ?>" placeholder="Senha" class="senhaEdit"   >
+                                <i class="bi bi-eye" id="iconeSenha<?= $user->id ?>" onclick="mostrarSenha('senhaEdit<?= $user->id ?>', 'iconeSenha<?= $user->id ?>')" ></i>
+                                <span class="erroEdit" id="erroSenhaEdit<?= $user->id ?>" ></span>
                             </div>
                             <div class="imagem">
                                 <img id="imgEdit<?= $user->id ?>" src="<?= $user->image ?>">
@@ -94,7 +97,7 @@
                                     <button type="button" class="botn" onclick="editar2('editarUsuario<?= $user->id ?>')">Fechar</button>
                                 </div>
                                 <div class="conf">
-                                    <button type="submit" class="boty">Confirmar</button>
+                                    <button type="button" id="confEdit" onclick="errorChecker('erroNameEdit<?= $user->id ?>', 'erroMailEdit<?= $user->id ?>', 'erroSenhaEdit<?= $user->id ?>', 'formEdit<?= $user->id ?>', 'nameEdit<?= $user->id ?>', 'mailEdit<?= $user->id ?>', 'senhaEdit<?= $user->id ?>')" class="boty">Confirmar</button>
                                 </div>
                             </div>
                         </form>

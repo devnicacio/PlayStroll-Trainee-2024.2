@@ -32,6 +32,6 @@ use App\Controllers\IntegracaoController;
     $router->get('post-individual', 'IntegracaoController@exibirPostIndividual');
 
     //Landing page
-    $router->get('landing-page', 'IntegracaoController@paginaInicial');
+    $router->get('', 'IntegracaoController@paginaInicial');
 
 ?>

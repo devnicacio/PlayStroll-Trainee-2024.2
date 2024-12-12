@@ -1,18 +1,31 @@
-@import "reset.css";
+:root{
+    --firstBlue: #080B1E;
+    --secoundBlue: #237ECD;
+    --white: #F5F5F5;
+    --principalFont: 'Satoshi';
+}
 
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
 body{
+    min-width: 100vw;
+    max-height: 100vh;
+    font-family: 'Satoshi', sans-serif;
     display: flex;
-    background: linear-gradient(to right, rgba(var(--gray), 0.5), rgba(var(--cyan), 0.5));
+    background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
 }
 
 #sideBar{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgb(var(--firstBlue));
+    background-color: var(--firstBlue);
     height: 100vh;
     border-radius: 0 18px 18px 0;
-    color: rgb(var(--white));
+    color: var(--white);
     transition: all .5s;
     min-width: 82px;
     z-index: 3;
@@ -30,14 +43,13 @@ body{
 .itensMenu{
     width: 30px;
     height: 30px;
-    color: rgb(var(--white));
+    color: var(--white);
 }
 
 .sideBar--user{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0;
+    gap: 8px;
     margin-bottom: 20px;
 }
 #user--avatar{
@@ -45,6 +57,10 @@ body{
     height: 60px;
     object-fit: cover;
     border-radius: 50px;
+}
+#user--infos{
+    display: flex;
+    flex-direction: column;
 }
 #sideBar--sideItems{
     display: flex;
@@ -58,17 +74,17 @@ body{
     cursor: pointer;
 }
 .sideItems--sideItem.active{
-    background-color: rgb(var(--white));
+    background-color: var(--white);
 }
 .sideItems--sideItem:hover:not(.active),
 #logoutBtn:hover{
-    background-color: rgb(var(--secoundBlue));
+    background-color: var(--secoundBlue);
 }
 .sideItems--sideItem a{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(var(--white));
+    color: var(--white);
 }
 .sideItems--sideItem a svg{
     display: flex;
@@ -78,21 +94,22 @@ body{
     height: 20px;
 }
 .sideItems--sideItem.active a{
-    color: rgb(var(--firstBlue));
+    color: var(--firstBlue);
 }
 .sideItems--sideItem.active svg{
-    color: rgb(var(--firstBlue));
+    color: var(--firstBlue);
 }
 #sideBar--logout{
-    border-top: 1px solid rgba(var(--white), 0.2);
+    border-top: 1px solid rgba(245,245,245, 0.2);
     padding: 17px;
     display: flex;
-    align-self: center;
+    justify-content: center
 }
 #logoutBtn{
     width: 100%;
     height:3rem;
     display: flex;
+    align-items: center;
     justify-content: right;
     border: none;
     padding: 12px;
@@ -103,28 +120,25 @@ body{
     text-align: start;
     cursor: pointer;
     background-color: transparent;
-    color: rgb(var(--white));
+    color: var(--white);
 }
 .infos--itemDescription{
     width: 0;
-    height: 0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     font-size: 14px;
     transition: width .6s;
+    height: 0;
 }
 #sideBar.open-sideBar{
     min-width: 15%;
 }
 #sideBar.open-sideBar .infos--itemDescription{
     width: 150px;
-    height: 18px;
+    height: auto;
 }
 #sideBar.open-sideBar .sideItems--sideItem a{
     justify-content: flex-start;
     gap: 14px;
-}
-#sideBar.open-sideBar .sideBar--user{
-    gap: 20px;
 }

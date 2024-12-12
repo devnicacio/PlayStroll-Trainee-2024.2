@@ -23,7 +23,7 @@
             <div class="buttons">
                 <div class="botoes">
                     <div class="button square">
-                        <div class="posts">
+                        <div class="posts" onclick="location.href='/admin/tabela-de-posts'" >
                             <div class="quadrado">
                                 <i class="bi bi-triangle"></i>
                             </div>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="botoes">
                     <div class="button square">
-                        <div class="posts">
+                        <div class="posts" onclick="location.href='/'" >
                             <div class="quadrado">
                                 <i class="bi bi-circle"></i>
                             </div>

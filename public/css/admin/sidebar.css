@@ -34,7 +34,7 @@ body{
 #sideBar a:link,
 #sideBar a:visited,
 #sideBar a:hover,
-#sideBar a:active{
+#sideBar a:action{
     text-decoration: none;
 }
 #sideBarContent{
@@ -73,10 +73,10 @@ body{
     border-radius: 8px;
     cursor: pointer;
 }
-.sideItems--sideItem.active{
+.sideItems--sideItem.action{
     background-color: var(--white);
 }
-.sideItems--sideItem:hover:not(.active),
+.sideItems--sideItem:hover:not(.action),
 #logoutBtn:hover{
     background-color: var(--secoundBlue);
 }
@@ -93,10 +93,10 @@ body{
     width: 20px;
     height: 20px;
 }
-.sideItems--sideItem.active a{
+.sideItems--sideItem.action a{
     color: var(--firstBlue);
 }
-.sideItems--sideItem.active svg{
+.sideItems--sideItem.action svg{
     color: var(--firstBlue);
 }
 #sideBar--logout{

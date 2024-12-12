@@ -22,7 +22,7 @@ use App\Controllers\IntegracaoController;
     $router->get('', 'Controller@getIndex');
 
     //Post
-    $router->get('admin/tabela-de-posts', 'Controller@getTabelaDePosts');
+    $router->get('tabela-de-posts', 'Controller@getTabelaDePosts');
     $router->post('editar-post', 'Controller@updatePost');
     $router->post('criar-post', 'Controller@create');
     $router->post('deletar-post', 'Controller@delete_post');
@@ -32,6 +32,6 @@ use App\Controllers\IntegracaoController;
     $router->get('post-individual', 'IntegracaoController@exibirPostIndividual');
 
     //Landing page
-    $router->get('landing-page', 'IntegracaoController@paginaInicial');
+    $router->get('', 'IntegracaoController@paginaInicial');
 
 ?>

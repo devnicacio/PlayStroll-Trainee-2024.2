@@ -206,6 +206,7 @@ class QueryBuilder
             ]);
 
             $user = $stmt->fetch(PDO::FETCH_OBJ);
+            
 
             return $user;
 

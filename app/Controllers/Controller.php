@@ -61,12 +61,13 @@ class Controller{
     }
 
     public function create() {
+        session_start();
         $parameters = [
             'title' => $_POST['title'],
             'avaliation' => $_POST['avaliation'],
             'create_at' => $_POST['create-at'],
             'content' => $_POST['content'],
-            'id_user' => 1,
+            'id_user' => $_SESSION['id'],
         ];
         
         App::get("database")->inserePost("posts", $parameters, $_FILES['image_capa'], $_FILES['image_retrato']);

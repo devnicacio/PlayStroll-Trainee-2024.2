@@ -54,8 +54,8 @@ function updateFileName() {
 document.getElementById('btn-criar').onclick = function(event) {
      event.preventDefault();
 
-     const capa = document.getElementById('file-capa').value;
-     const retrato = document.getElementById('file-retrato').value;
+     const capa = document.getElementById('create-file-capa').value;
+     const retrato = document.getElementById('create-file-retrato').value;
      const data = document.getElementById('data').value;
      const titulo = document.getElementById('titulo').value;
      const avaliacao = document.getElementById('avaliacao').value;
@@ -103,14 +103,14 @@ document.getElementById('btn-criar').onclick = function(event) {
      }
 
      if (valid) {
-        document.querySelector('form').submit();
+        document.getElementById('criarForm').submit();
     }
  };
 
 // Remove os erros quando os componentes são preenchidos
 const inputs = [
-    { field: 'file-capa', error: 'erro-capa' },
-    { field: 'file-retrato', error: 'erro-retrato' },
+    { field: 'create-file-capa', error: 'erro-capa' },
+    { field: 'create-file-retrato', error: 'erro-retrato' },
     { field: 'data', error: 'erro-data' },
     { field: 'titulo', error: 'erro-titulo' },
     { field: 'avaliacao', error: 'erro-avaliacao' }

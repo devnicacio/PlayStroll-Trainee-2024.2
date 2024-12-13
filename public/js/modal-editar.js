@@ -100,3 +100,10 @@ function errorChecker(idErrorName, idErrorEmail, idErrorSenha, idFormEdit, idInp
 
     document.getElementById(idFormEdit).submit();
 }
+
+
+
+document.getElementById(`nameEdit${userId}`).addEventListener('input', () => {
+    document.getElementById(`erroNameEdit${userId}`).style.display = 'none';
+});
+

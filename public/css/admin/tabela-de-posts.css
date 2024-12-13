@@ -151,9 +151,8 @@ tbody {
     border: 1px solid black;
     color: white;
     cursor: pointer;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
+    height: 36px;
+    width: 36px;
     text-align: center;
     font-size: 16px;
 }
@@ -164,9 +163,8 @@ tbody {
     border: 1px solid black;
     color: white;
     cursor: pointer;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
+    height: 36px;
+    width: 36px;
     text-align: center;
     font-size: 16px;
 }
@@ -224,6 +222,10 @@ tbody {
         height: 25px;
         width: 25px;
     }
+}
+
+.none{
+    display: none;
 }
 
 

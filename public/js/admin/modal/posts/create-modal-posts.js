@@ -4,34 +4,33 @@ function previewImage(inputId, imgId) {
     const input = document.getElementById(inputId);
     const imagePreview = document.getElementById(imgId);
 
-    if (input.files && input.files[0]) {
+    if (input.files && input.files[0]) {        
         const reader = new FileReader();
 
-        reader.onload = function (e) {
+        reader.onload = function(e) {
             imagePreview.src = e.target.result;
             imagePreview.style.display = 'block';
 
         };
-
         reader.readAsDataURL(input.files[0]);
     }
 }
 
 
 // Função para remover a imagem de perfil
-function removerImagem(tipo, id = null) {
+function removerImagem(tipo, tipoImage, id = null) {
     let imgPerfil, inputFoto, btnRemoverImagemCapa, btnRemoverImagemRetrato;
 
     if (id) {
         // Modal de edição (IDs dinâmicos)
-        imgPerfil = document.getElementById(`file-name-${tipo}${id}`);
-        inputFoto = document.getElementById(`file-${tipo}${id}`);
-        btnRemoverImagem = document.getElementById(`btn-remover-imagem-${tipo}${id}`);
+        imgPerfil = document.getElementById(`${tipo}-file-name-${tipoImage}${id}`);
+        inputFoto = document.getElementById(`${tipo}-file-${tipoImage}${id}`);
+        btnRemoverImagem = document.getElementById(`btn-remover-imagem-${tipoImage}${id}`);
     } else {
         // Modal de criação (IDs fixos)
-        imgPerfil = document.getElementById(`file-name-${tipo}`);
-        inputFoto = document.getElementById(`file-${tipo}`);
-        btnRemoverImagem = document.getElementById(`btn-remover-imagem-${tipo}`);
+        imgPerfil = document.getElementById(`${tipo}-file-name-${tipoImage}`);
+        inputFoto = document.getElementById(`${tipo}-file-${tipoImage}`);
+        btnRemoverImagem = document.getElementById(`btn-remover-imagem-${tipoImage}`);
     }
 
     // Limpa os campos

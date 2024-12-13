@@ -59,27 +59,27 @@
                         <div class="capa">
                             <div class="container-image">
                                 <label for="file">Foto modo paisagem</label>
-                                <label class="custom-file-label" for="file-capa">Escolha uma imagem</label>
+                                <label class="custom-file-label" for="create-file-capa">Escolha uma imagem</label>
                                 <span id="erro-capa" class="erro-img"></span>
                             </div>
                             <div class="parte-capa">
-                                <img id="file-name-capa" class="capaCreate-preview" alt="Preview da Capa" />
-                                <input type="file" class="image-capa" id="file-capa" accept="image/*" name="image-capa"
-                                onchange="previewImage('file-capa', 'file-name-capa', 'capa')" />
-                                <button class="btn-remove-imagem-capa" id="btn-remover-imagem-capa" onclick="removerImagem('capa')" type="button">X</button>
+                                <img id="create-file-name-capa" class="capaCreate-preview" alt="Preview da Capa" />
+                                <input type="file" class="image-capa" id="create-file-capa" accept="image/*" name="image-capa"
+                                onchange="previewImage('create-file-capa', 'create-file-name-capa')" />
+                                <button class="btn-remove-imagem-capa" id="btn-remover-imagem-capa" onclick="removerImagem('create', 'capa')" type="button">X</button>
                             </div>
                         </div>
                         <div class="retrato">
                             <div class="container-image">
                                 <label for="file">Foto modo retrato</label>
-                                <label class="custom-file-label" for="file-retrato">Escolha uma imagem</label>
+                                <label class="custom-file-label" for="create-file-retrato">Escolha uma imagem</label>
                                 <span id="erro-retrato" class="erro-img"></span>
                             </div>
                             <div class="parte-retrato">
-                                <img id="file-name-retrato" class="retratoCreate-preview" alt="Preview do Retrato" />
-                                <input type="file" class="image-retrato" id="file-retrato" accept="image/*" name="image-retrato"
-                                onchange="previewImage('file-retrato', 'file-name-retrato', 'retrato')" />
-                                <button class="btn-remove-imagem-retrato" id="btn-remover-imagem-retrato" onclick="removerImagem('retrato')" type="button">X</button>
+                                <img id="create-file-name-retrato" class="retratoCreate-preview" alt="Preview do Retrato" />
+                                <input type="file" class="image-retrato" id="create-file-retrato" accept="image/*" name="image-retrato"
+                                onchange="previewImage('create-file-retrato', 'create-file-name-retrato')" />
+                                <button class="btn-remove-imagem-retrato" id="btn-remover-imagem-retrato" onclick="removerImagem('create', 'retrato')" type="button">X</button>
                             </div>
                         </div>
                     </div>
@@ -258,14 +258,14 @@
                         <div class="capa">
                             <div class="container-image">
                                 <label for="file">Foto modo paisagem</label>
-                                <label class="custom-file-label" for="edit-capa">Escolher imagem</label>
+                                <label class="custom-file-label" for="edit-file-capa">Escolher imagem</label>
                                 <span id="erro-capa" class="erro-img"></span>
                             </div>
                             <div class="parte-capa">
-                                <img id="file-name-capa<?= $post->id ?>" class="capa-preview" alt="Preview da Capa" src="/<?= $post->image_capa ?>"/>
-                                <input type="file" class="image-capa" id="file-capa<?= $post->id ?>" accept="image/*" name="image-capa"
-                                       onchange="previewImage('file-capa<?= $post->id ?>', 'file-name-capa<?= $post->id ?>')" />
-                                <button class="btn-remove-imagem-capa" id="btn-remover-imagem-capa<?= $post->id ?>" onclick="removerImagem('capa', <?= $post->id ?>)" type="button">
+                                <img id="edit-file-name-capa<?= $post->id ?>" class="capa-preview" alt="Preview da Capa" src="/<?= $post->image_capa ?>"/>
+                                <input type="file" class="image-capa" id="edit-file-capa<?= $post->id ?>" accept="image/*" name="image-capa"
+                                       onchange="previewImage('edit-file-capa<?= $post->id ?>', 'edit-file-name-capa<?= $post->id ?>')" />
+                                <button class="btn-remove-imagem-capa" id="btn-remover-imagem-capa<?= $post->id ?>" onclick="removerImagem('edit', 'capa', <?= $post->id ?>)" type="button">
                                     X
                                 </button>
                             </div>
@@ -273,14 +273,14 @@
                         <div class="retrato">
                             <div class="container-image">
                                 <label for="file">Foto modo retrato</label>
-                                <label class="custom-file-label" for="edit-retrato">Escolher imagem</label>
+                                <label class="custom-file-label" for="edit-file-retrato">Escolher imagem</label>
                                 <span id="erro-retrato" class="erro-img"></span>
                             </div>
                             <div class="parte-retrato">
-                                <img id="file-name-retrato<?= $post->id ?>" class="retrato-preview" alt="Preview do Retrato" src="/<?= $post->image_retrato ?>"/>
-                                <input type="file" class="image-retrato" id="file-retrato<?= $post->id ?>" accept="image/*" name="image-retrato"
-                                       onchange="previewImage('file-retrato<?= $post->id ?>', 'file-name-retrato<?= $post->id ?>')" />
-                                <button class="btn-remove-imagem-retrato" id="btn-remover-imagem-retrato<?= $post->id ?>" onclick="removerImagem('retrato', <?= $post->id ?>)" type="button">
+                                <img id="edit-file-name-retrato<?= $post->id ?>" class="retrato-preview" alt="Preview do Retrato" src="/<?= $post->image_retrato ?>"/>
+                                <input type="file" class="image-retrato" id="edit-file-retrato<?= $post->id ?>" accept="image/*" name="image-retrato"
+                                       onchange="previewImage('edit-file-retrato<?= $post->id ?>', 'edit-file-name-retrato<?= $post->id ?>')" />
+                                <button class="btn-remove-imagem-retrato" id="btn-remover-imagem-retrato<?= $post->id ?>" onclick="removerImagem('edit','retrato', <?= $post->id ?>)" type="button">
                                     X
                                 </button>
                             </div>

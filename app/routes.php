@@ -22,7 +22,7 @@ use App\Controllers\IntegracaoController;
     $router->get('', 'Controller@getIndex');
 
     //Post
-    $router->get('tabela-de-posts', 'Controller@getTabelaDePosts');
+    $router->get('admin/tabela-de-posts', 'Controller@getTabelaDePosts');
     $router->post('editar-post', 'Controller@updatePost');
     $router->post('criar-post', 'Controller@create');
     $router->post('deletar-post', 'Controller@delete_post');

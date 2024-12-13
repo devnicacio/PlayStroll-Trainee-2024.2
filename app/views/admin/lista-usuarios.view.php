@@ -58,7 +58,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="paginas">
+        <div class="paginas<?= $total_pages <= 1 ? " none" : "" ?>">
             <button class="anterior<?= $page <= 1 ? " disabled" : "" ?>"  onclick="location.href='?paginacaoNumero=<?= $page - 1 ?>'">
                 < </button>
                     <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
@@ -108,7 +108,7 @@
         <?php endforeach ?>
 
         <?php foreach ($users as $user): ?>
-            <div class="modal-view" id="modal-view<?= $user->id ?>">
+            <div class="modal-view" id="modal-view<?= $user->id ?>" onclick="fecharModalVer('<?= $user->id ?>')" >
                 <div class="visualisar" id="ver<?= $user->id ?>">
                     <div class="caixa">
                         <div class="id">

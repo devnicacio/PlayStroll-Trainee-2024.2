@@ -4,6 +4,8 @@
     if(!isset($_SESSION['id'])){
         header('Location: /login');
     }
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -373,7 +375,7 @@
             <div class="tela" id="tela"></div>
         </table>    
         <!-- Paginação -->
-        <div class="navegacao">
+        <div class="navegacao<?= $total_pages <= 1 ? " none" : "" ?>">
             <button class="nav1<?= $page <= 1 ? " disabled" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page - 1 ?>'" >&lt;</button>
 
             <?php for($page_number = 1; $page_number<=$total_pages; $page_number++): ?>

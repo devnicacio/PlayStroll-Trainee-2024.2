@@ -3,9 +3,6 @@ const tela = document.querySelector('#tela');
 function previewImage(inputId, imgId) {
     const input = document.getElementById(inputId);
     const imagePreview = document.getElementById(imgId);
-    // const btnRemoverImagem = document.getElementById(`btn-remover-imagem-${imgId.includes('capa') ? 'capa' : 'retrato'}`);
-    const btnRemoverImagemCapa = document.getElementById('btn-remover-imagem-capa');
-    const btnRemoverImagemRetrato = document.getElementById('btn-remover-imagem-retrato');
 
     if (input.files && input.files[0]) {
         const reader = new FileReader();
@@ -14,9 +11,6 @@ function previewImage(inputId, imgId) {
             imagePreview.src = e.target.result;
             imagePreview.style.display = 'block';
 
-            // Exibe o botão de remover imagem
-            if (btnRemoverImagemCapa) btnRemoverImagemCapa.style.display = 'inline-block';
-            if (btnRemoverImagemRetrato) btnRemoverImagemRetrato.style.display = 'inline-block';
         };
 
         reader.readAsDataURL(input.files[0]);

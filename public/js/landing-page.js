@@ -2,6 +2,10 @@
 const swiper1 = new Swiper('#swiper-principal', { 
     direction: 'horizontal',
     loop: true,
+    autoplay: {
+        delay: 3000, 
+        disableOnInteraction: false, 
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -37,3 +41,49 @@ const swiper2 = new Swiper('#swiper-secundario', {
         }
     },
 });
+
+
+const swiperTerceiro = new Swiper('#swiper-terceiro', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: '#terceiro-next',
+        prevEl: '#terceiro-prev',
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        },
+    },
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var swiper = new Swiper('#swiper-terceiro', {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 3000, 
+            disableOnInteraction: false, 
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+});
+
+
+
+
+
+

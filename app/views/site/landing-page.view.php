@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/public/css/landing-page.css">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <title>Play Stroll</title>
 </head>
 <body>
@@ -42,6 +43,40 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div> 
         </div>
+
+        <div id="carrossel-container">
+    <div class="swiper" id="swiper-terceiro">
+        <div class="swiper-wrapper" id="wrapper-terceiro">
+            <!-- Slides aqui -->
+            <?php foreach ($posts as $post): ?>
+            <div class="swiper-slide" id="slide-terceiro">
+                <div class="post-terceiro">
+                    <div class="imagem-container">
+                        <img class="capa-terceiro" src="<?= $post->image_retrato ?>" alt="Capa do post 3">
+                        <div class="conteudo-terceiro">
+                            <h3 class="titulo-terceiro"><span><?= $post->title ?></span></h3>
+                            <div class="nota-terceiro">
+                                <span><?= $post->avaliation ?></span>
+                                <div class="avaliacao-estrelas-terceiro">
+                                    <?php renderizarEstrelas($post->id, 30, $post->avaliation); ?>
+                                </div>
+                            </div>
+                            <p class="autor-terceiro"><img src="<?= $post->image ?>" alt="usuario"> <span><?= $post->name ?></span></p>
+                            <?php $limitedContent = limitText($post->content, 30); ?>
+                            <p class="descricao-terceiro"><?= $limitedContent ?></p>
+                            <button class="botao-veja-mais-terceiro" onclick="location.href = '/post-individual?id=<?= $post->id ?>'">Veja mais</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+
+
 
         <div class="comunidade">
             <h2>Comunidade<span style="color: #C70E37;"> engajada</span> e <span style="color: #C70E37;">diversificada</span> em diferentes tipos de jogos</h2>
@@ -92,11 +127,11 @@
             </div>
     </main>
 
-    <?php include 'footer.view.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/public/js/landing-page.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </body>
 </html>

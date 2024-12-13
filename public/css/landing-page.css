@@ -300,6 +300,10 @@ main{
     z-index: 10;
 }
 
+#swiper-terceiro{
+    display: none;
+}
+
 .imagem-sobre {
     width: 400px;
     border-radius: 100%;
@@ -518,6 +522,151 @@ main{
 
 @media (max-width: 480px) {
 
+    #swiper-principal{
+        display: none;
+    }
+
+    #carrossel-container {
+        display: flex;
+        flex-direction: column; /* Alinhar elementos em coluna */
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        height: 100%;
+    }
+    
+    #swiper-terceiro {
+        background-color: transparent;
+        padding: 1%;
+        color: #0B0B0B;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 300px;
+        height: 400px;
+        margin: 0;
+    }
+    
+    .swiper-wrapper {
+        display: flex;
+    }
+    
+    .swiper-slide {
+        width: 100%; /* Garante que cada slide ocupe 100% da largura do contêiner */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .imagem-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden; /* Garantir que o conteúdo não ultrapasse os limites */
+    }
+    
+    .imagem-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombreamento suave */
+        z-index: -1; /* Colocar o sombreamento atrás da imagem */
+    }
+    
+    .capa-terceiro {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px; /* Garante que a imagem tenha bordas arredondadas também */
+    }
+    
+    
+    .post-terceiro {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .conteudo-terceiro {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para o texto */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 10px; /* Bordas arredondadas para o conteúdo também */
+    }
+    
+    .titulo-terceiro {
+        font-size: 16px;
+        line-height: 1.5; /* Aumenta a altura da linha */
+        padding: 5px 0; /* Adiciona preenchimento acima e abaixo */
+    }
+    
+    .nota-terceiro {
+        font-size: 16px;
+        line-height: 1.5; /* Aumenta a altura da linha */
+    }
+    
+    .avaliacao-estrelas-terceiro {
+        font-size: 16px;
+    }
+    
+    .autor-terceiro {
+        display: flex;
+        align-items: center; /* Centraliza verticalmente o conteúdo */
+        justify-content: center; /* Centraliza horizontalmente o conteúdo */
+        line-height: 1.5; /* Aumenta a altura da linha */
+    }
+    
+    .autor-terceiro img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 5px; /* Espaço entre a imagem e o nome */
+    }
+    
+    .descricao-terceiro {
+        font-size: 14px;
+        line-height: 1.5; /* Aumenta a altura da linha */
+        padding: 5px 0; /* Adiciona preenchimento acima e abaixo */
+    }
+    
+    .swiper-pagination {
+        margin-top: 10px; /* Adiciona espaço acima da paginação para separá-la da imagem */
+        text-align: center;
+        color:#fff;
+    }
+    
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: #d3d3d3; /* Cor das bolinhas não ativas */
+        opacity: 0.7;
+    }
+    
+    .swiper-pagination-bullet-active {
+        background-color: #007bff; /* Cor da bolinha ativa */
+        opacity: 1;
+    }
+    
+    
+    .botao-veja-mais-terceiro{
+        display: none;
+    }
+
     #swiper-secundario {
     max-width: 100%;
     overflow: hidden; 
@@ -631,6 +780,11 @@ main{
 }
 
 @media (max-width: 320px) {
+
+    #carrossel-container{
+        width: 80%;
+        margin-left: 10% !important;
+    }
 
     #swiper-secundario {
         margin-left: 10% !important;

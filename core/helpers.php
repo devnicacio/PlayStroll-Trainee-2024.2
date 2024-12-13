@@ -53,6 +53,49 @@ function limitText($content, $maxWords = 30, $allowedTags = '<p><strong>') {
 
     return $limitedContent;
 }
+
+
+function limitTextToLines($content, $maxLines = 3, $maxCharsPerLine = 40, $allowedTags = '<p><strong>') {
+    // Remove tags HTML indesejadas, mantendo as permitidas
+    $filteredContent = strip_tags($content, $allowedTags);
+
+    // Dividir o texto em palavras
+    $words = explode(' ', $filteredContent);
+    $lines = [];
+    $currentLine = '';
+
+    foreach ($words as $word) {
+        // Adicionar a palavra à linha atual, se não ultrapassar o limite de caracteres
+        if (strlen($currentLine . ' ' . $word) <= $maxCharsPerLine) {
+            $currentLine .= ($currentLine === '' ? '' : ' ') . $word;
+        } else {
+            // Se ultrapassar o limite, mover para a próxima linha
+            $lines[] = $currentLine;
+            $currentLine = $word;
+
+            // Parar se atingir o número máximo de linhas
+            if (count($lines) >= $maxLines) {
+                break;
+            }
+        }
+    }
+
+    // Adicionar a última linha ao array, se não estiver vazia
+    if (!empty($currentLine) && count($lines) < $maxLines) {
+        $lines[] = $currentLine;
+    }
+
+    // Montar o texto limitado
+    $limitedContent = implode("\n", $lines);
+
+    // Adicionar reticências se o texto foi truncado
+    if (count($lines) >= $maxLines && strlen($currentLine) >= $maxCharsPerLine) {
+        $limitedContent .= '...';
+    }
+
+    return $limitedContent;
+}
+
 ?>
 
 

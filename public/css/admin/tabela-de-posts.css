@@ -22,7 +22,6 @@
     max-width: 73%;
     width: 100%;
     margin-right: 10%;
-    margin-bottom: 1%;
 }
 
 .table-container {
@@ -33,22 +32,24 @@
     color: white;
     background-color: #080b3c;
     padding: 1% 10%;
+    max-width: 225px;
+    width: 100%;
     border-radius: 20px;
+    margin-bottom: 20px;
+    white-space: nowrap;
 }
 
 .more {
-    padding: 3%;
+    padding: 1%;
     font-size: 50px;
+    line-height: 30px;
+    display: flex;
     background-color: #080b3c;
+    border-radius: 20%;
     border: 1px solid #080b3c;
-    border-radius: 20px;
-    height: 30px;
-    width: 30px;
+    margin-bottom: 20px;
     color: white;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .informacoes {
@@ -136,7 +137,6 @@ tbody {
     transition: opacity 0.5s;
 }
 .navegacao {
-    max-width: 850px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -180,22 +180,8 @@ tbody {
         padding: 10px 5px;
     }
 
-    .table-title, .autor-post {
-        max-width: 100px;
-    }
-
     .cabecalho {
         width: 70%;
-    }
-
-    .titulo-post {
-        padding: 8px 25px;
-        font-size: 20px;
-    }
-
-    .more {
-        padding: 20px;
-        font-size: 45px;
     }
 
     .table-container {
@@ -211,16 +197,6 @@ tbody {
     th, td {
         text-align: center; 
         padding: 1px 8px;
-    }
-
-    .navegacao {
-        width: 70%;
-        margin-right: 30px;
-    }
-
-    .navegacao button {
-        height: 25px;
-        width: 25px;
     }
 }
 
@@ -244,13 +220,13 @@ tbody {
     }
 
     .table-title {
-        padding: 8px 25px;
         font-size: 17px;
+        width: 120px;
     }
 
     .more {
-        padding: 20px;
-        font-size: 45px;
+        font-size: 25px;
+        line-height: 15px;
     }
 
     .table-container {
@@ -267,10 +243,6 @@ tbody {
     th, td {
         text-align: center; 
         padding: 1px 8px;
-    }
-
-    .navegacao{
-        width: 70%;
     }
 
     .navegacao button {

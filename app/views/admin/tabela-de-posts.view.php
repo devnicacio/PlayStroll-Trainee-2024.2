@@ -39,14 +39,6 @@
    
 </head>
 <body>
-    <!-- Padronização dos seletores de CSS feita pelo Vítor:
-    Classe: serão usadas, se forem reutilizadas em outros lugares obrigatoriamente. 
-    Usarei, quando quero padronizar algo;
-    id: serão usadas em elementos únicos.
-    Ademais, usei a metodologia BEM(Block, Element, Modifier). Os elementos são identificados com --, e
-    os modificadores por __.
-    -->
-
     <?php include 'sidebar.view.php'; ?>
 
     <main class="container">
@@ -176,17 +168,18 @@
                                 <img src="/<?= $post->image ?>" alt="" class="icon1">
                                 <p><?= $post->name ?></p>
                             </div>
-                            <div class="capa-edit">
+                            <div class="capa-read">
                                 <div class="container-image">
                                     </div>
                                     <div class="parte-capa">
                                     <label for="file">Foto modo paisagem</label>
-                                    <img id="read-name-capa" class="capa-preview-edit" alt="Preview da Capa" src="/<?= $post->image_capa ?>"/>
+                                    <img id="read-name-capa" class="capa-preview" alt="Preview da Capa"
+                                    src="/<?= $post->image_capa ?>"/>
                                     <input type="file" class="image-capa" id="read-capa" accept="image/*" name="image-capa"
                                     onchange="previewImage('read-capa', 'read-name-capa', 'capa')" />
                                 </div>
                             </div>
-                            <div class="retrato-edit">
+                            <div class="retrato-read">
                                 <div class="container-image">
                                     </div>
                                     <div class="parte-retrato">
@@ -348,26 +341,26 @@
             </form>
         </div>
 
-<script>
-	$('#summernote').summernote({
-		placeholder: 'Coloque sua descrição',
-		tabsize: 2,
-		height: 120,
-		toolbar: [
-		["style", ["style"]],
-		["font", ["bold", "underline"]],
-		["color", ["color"]],
-		["para", ["ul", "ol", "paragraph"]],
-		["table", ["table"]],
-		["insert", ["link", "picture"]],
-		],
-		callbacks: {
-			onChange: function(contents) {
-				$('#content').val(contents);
-			}
-		}
-	});
-</script>
+            <script>
+                $('#summernote').summernote({
+                    placeholder: 'Coloque sua descrição',
+                    tabsize: 2,
+                    height: 120,
+                    toolbar: [
+                    ["style", ["style"]],
+                    ["font", ["bold", "underline"]],
+                    ["color", ["color"]],
+                    ["para", ["ul", "ol", "paragraph"]],
+                    ["table", ["table"]],
+                    ["insert", ["link", "picture"]],
+                    ],
+                    callbacks: {
+                        onChange: function(contents) {
+                            $('#content').val(contents);
+                        }
+                    }
+                });
+            </script>
 
                 <div class="tela-read" id="tela-read<?= $post->id ?>" onclick="fecharModalVer('read<?= $post->id?>')"></div>
                 <?php endforeach?>

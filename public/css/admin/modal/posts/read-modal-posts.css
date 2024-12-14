@@ -69,24 +69,24 @@
     flex-direction: column;
 }
 
-.capa-edit, .retrato-edit {
+.capa-read, .retrato-read {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.capa-edit {
+.capa-read {
     max-width: 165px;
     width: 100%;
 }
 
-.retrato-edit {
+.retrato-read {
     max-width: 127px;
     width: 100%;
 }
 
-.capa-preview-edit {    
+.capa-preview {    
     width: 140px;
     height: 90px;
     object-fit: cover;
@@ -269,10 +269,6 @@
         width: 65%;
     }
 
-    .capa, .retrato {
-        margin-bottom: 0;
-    }
-
     .placeholders-criar {      
         margin-bottom: 16px;
         row-gap: 8px;
@@ -318,9 +314,10 @@
         font-size: 12px;
     }
 
-    #btn-remover-imagem-capa, #btn-remover-imagem-retrato {
-        font-size: 12px;    
-    }   
+    .imagens-edit {
+        flex-direction: column;
+        gap: 20px;
+    }
 
     .titulo, .avaliacao {
         font-size: 12px;
@@ -337,12 +334,7 @@
         height: 75px;
     }
 
-    .capa, .retrato {
-        margin-bottom: 0 auto;
-        flex-direction: column-reverse;
-    }
-
-    .capa {
+    .capa-read {
         margin-bottom: 10px;
     }
 

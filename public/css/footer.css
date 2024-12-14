@@ -11,9 +11,11 @@
     padding: 0;
     font-family: Satoshi, sans-serif;
 }
-body{
+
+footer{
     width: 100vw;
 }
+
 a,
 a:link,
 a:visited,

@@ -8,6 +8,7 @@ body {
 
 main{
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 
@@ -667,5 +668,17 @@ main{
         width: auto; 
         padding: 5px 10px; 
         font-size: 15px; 
+    }
+}
+
+@media only screen and (min-width: 1780px){
+    main{
+        margin-bottom: 200px;
+    }
+}
+
+@media only screen and (min-width: 2380px){
+    main{
+        margin-bottom: 250px;
     }
 }

@@ -10,7 +10,7 @@
     padding: 0;
     border: none;
 }
-main{
+body{
     min-width: 100vw;
     max-height: 100vh;
     font-family: 'Satoshi', sans-serif;

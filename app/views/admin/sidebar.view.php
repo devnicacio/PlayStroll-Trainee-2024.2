@@ -14,7 +14,7 @@
 <nav id="sideBar">
     <div id="sideBarContent">
         <div class="sideBar--user">
-            <img src="<?= $_SESSION['user']->image ?>" id="user--avatar" alt="Avatar">
+            <img src="<?= $_SESSION['user']->image ?>">
             <span class="infos--itemDescription">
                 <?= $_SESSION['user']->name ?>
             </span>

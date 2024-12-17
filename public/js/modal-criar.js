@@ -45,30 +45,39 @@ document.getElementById('btn-adicionarcr').addEventListener('click', function(ev
         erro.style.display = 'none';
     });
 
+    // Validação do nome - máximo de 30 caracteres
     if (!nome) {
         document.getElementById('erro-nomecr').innerText = 'Nome é obrigatório.';
         document.getElementById('erro-nomecr').style.display = 'block';
         valid = false;
+    } else if (nome.length > 30) {
+        document.getElementById('erro-nomecr').innerText = 'Nome não pode ter mais de 30 caracteres.';
+        document.getElementById('erro-nomecr').style.display = 'block';
+        valid = false;
     }
 
+    // Validação do email
     if (!email) {
         document.getElementById('erro-emailcr').innerText = 'Email é obrigatório.';
         document.getElementById('erro-emailcr').style.display = 'block';
         valid = false;
     }
 
+    // Validação da senha
     if (!senha) {
         document.getElementById('erro-senhacr').innerText = 'Senha é obrigatória.';
         document.getElementById('erro-senhacr').style.display = 'block';
         valid = false;
     }
 
+    // Validação de confirmação de senha
     if (senha !== confirmarSenha) {
         document.getElementById('erro-confirmar-senhacr').innerText = 'As senhas não coincidem.';
         document.getElementById('erro-confirmar-senhacr').style.display = 'block';
         valid = false;
     }
 
+    // Validação da foto
     if (!inputFoto) {
         document.getElementById('erro-imagemcr').innerText = 'A imagem de perfil é obrigatória.';
         document.getElementById('erro-imagemcr').style.display = 'block';

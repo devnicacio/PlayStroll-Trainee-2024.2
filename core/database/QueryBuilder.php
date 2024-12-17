@@ -91,28 +91,43 @@ class QueryBuilder
     
 
     public function selectAllUsers($table, $inicio = null, $rows_count = null, $search)
-    {
-        if($search){
-            $sql = "SELECT * FROM {$table} WHERE title LIKE '%$search%' ORDER BY posts.id DESC";
-        }else{
-            $sql = "SELECT * FROM {$table}";
-        }
-
-
-        if($inicio >= 0 && $rows_count >0){
-            $sql .= " LIMIT {$inicio}, {$rows_count}";
-        }
-
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
-
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
-
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
+{
+    // Verifica se há uma busca
+    if ($search) {
+        $sql = "SELECT * FROM {$table} WHERE title LIKE :search ORDER BY id DESC";
+    } else {
+        // Ordena os usuários mais recentes primeiro por ID, ou por data_criacao se preferir
+        $sql = "SELECT * FROM {$table} ORDER BY id DESC";
     }
+
+    // Aplica o limite de registros para a paginação
+    if ($inicio >= 0 && $rows_count > 0) {
+        $sql .= " LIMIT :inicio, :rows_count";
+    }
+
+    try {
+        // Preparando a consulta
+        $stmt = $this->pdo->prepare($sql);
+
+        // Bind dos parâmetros para evitar SQL injection
+        if ($search) {
+            $stmt->bindValue(':search', "%$search%");
+        }
+        if ($inicio >= 0 && $rows_count > 0) {
+            $stmt->bindValue(':inicio', $inicio, PDO::PARAM_INT);
+            $stmt->bindValue(':rows_count', $rows_count, PDO::PARAM_INT);
+        }
+
+        // Executa a consulta
+        $stmt->execute();
+
+        // Retorna os resultados como um array de objetos
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+    } catch (Exception $e) {
+        die($e->getMessage());
+    }
+}
 
     public function select($table, $search): mixed
     {

@@ -26,7 +26,9 @@ body{
     align-items: center;
     justify-content: start;
     cursor: text;
+    margin-bottom: 20px;
 }
+
 
 .caixa:focus{
     outline: none;
@@ -56,7 +58,7 @@ body{
 
 .inicialização-dos-posts H4{
     font-size: 24px;
-    margin-bottom: 0;
+    margin-bottom: 15px;
     margin-left: 12.5%;
 }
 

@@ -286,7 +286,7 @@ main{
     padding-left: 30px;
     padding-right: 30px;
     font-size: 20px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 #segundo-next,
@@ -397,8 +397,13 @@ main{
         padding: 20px; 
     }
 
+    .div-sobre{
+        margin-top: -40px;
+    }
+
     .texto-sobre {
         font-size: 25px; 
+        margin-top: 40px;
     }
 
     .comunidade {
@@ -411,6 +416,10 @@ main{
 
 @media (max-width: 768px) {
 
+
+    .post-individual3{
+        height: 650px;
+    }
     #swiper-secundario {
         margin-left: 15% !important;
     }
@@ -475,7 +484,7 @@ main{
         border-radius: 8px;
         object-fit: cover; 
     }
-    
+
 
     .descricao{
         font-size: 15px;
@@ -494,6 +503,10 @@ main{
     .post-individual2 {
         display: block;
         display: none;
+    }
+
+    .botao-veja-mais{
+        margin-bottom: 40px ;
     }
 
 
@@ -731,8 +744,8 @@ main{
 
 
     .capa-jogo {
-        width: 100px;
-        height: 150px;
+        width: 150px;
+        height: 200px;
         max-height: 250px;
         border-radius: 8px;
         object-fit: cover; 

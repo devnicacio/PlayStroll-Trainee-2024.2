@@ -15,9 +15,9 @@ body{
     width: 100%;
 }
 
-.pesquisa-input{
-    width: 230px;
-    height: 36px;
+.pesquisa-input {
+    width: 300px;
+    height: 50px;
     margin-left: 12.5%;
     background-color: #00aea0;
     border-radius: 20px;
@@ -27,34 +27,65 @@ body{
     justify-content: start;
     cursor: text;
     margin-bottom: 20px;
+    position: relative; /* Adiciona posição relativa ao form */
 }
 
-
-.caixa:focus{
+.caixa:focus {
     outline: none;
 }
 
-.pesquisa{
+.pesquisa {
     margin-top: 20px;
     width: 100%;
 }
 
-.caixa{
+.caixa {
     background: none;
     border: none;
-    margin-left: 5px;
+    width: 100%; /* Ocupa todo o espaço disponível */
+    font-size: 16px;
+    padding-right: 40px; /* Espaço para o ícone */
+    text-align: start;
+    padding-left: 10px; /* Ajuste o preenchimento à esquerda */
 }
 
-.caixa::placeholder{
+.caixa::placeholder {
     color: black;
     opacity: 0.7;
+    font-size: 16px; /* Ajuste do tamanho da fonte */
 }
 
-.bi{
-    font-size: 14px;
+.bi {
+    font-size: 20px;
     cursor: default;
-    margin-left: 5px;
+    position: absolute; /* Faz o ícone ficar fora do fluxo normal */
+    right: 10px; /* Coloca o ícone no final com um pouco de margem */
 }
+
+.caixa {
+    background: none;
+    border: none;
+    width: 100%; /* Ocupa todo o espaço disponível */
+    font-size: 16px;
+    padding-right: 40px; /* Espaço para o ícone sem sair do input */
+    text-align: start;
+    padding-left: 10px; /* Ajuste o preenchimento à esquerda */
+}
+
+.caixa::placeholder {
+    color: black;
+    opacity: 0.7;
+    font-size: 16px; /* Ajuste do tamanho da fonte */
+}
+
+.bi {
+    font-size: 20px;
+    cursor: default;
+    right: 10px; /* Posiciona o ícone no final do input com um pouco de margem */
+}
+
+
+
 
 .inicialização-dos-posts H4{
     font-size: 24px;

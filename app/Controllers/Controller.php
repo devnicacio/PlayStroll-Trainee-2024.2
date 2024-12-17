@@ -57,7 +57,7 @@ class Controller{
         $imageRetrato = isset($_FILES['image_retrato']) && $_FILES['image_retrato']['size'] > 0 ? $_FILES['image_retrato'] : null;
 
         App::get("database")->updatePost("posts", $id, $parameters, $imageCapa, $imageRetrato, $fotoAtualCapa, $fotoAtualRetrato);
-        header('Location: /admin/tabela-de-posts');
+        header('Location: /tabela-de-posts');
     }
 
     public function create() {
@@ -71,7 +71,7 @@ class Controller{
         ];
         
         App::get("database")->inserePost("posts", $parameters, $_FILES['image_capa'], $_FILES['image_retrato']);
-        header('Location: /admin/tabela-de-posts');
+        header('Location: /tabela-de-posts');
     }
 
     public function delete_post(){
@@ -81,7 +81,7 @@ class Controller{
 
         App::get("database")->deletaPost('posts', $id);
 
-        header('Location: /admin/tabela-de-posts');
+        header('Location: /tabela-de-posts');
     }
     
 }

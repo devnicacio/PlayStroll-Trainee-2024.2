@@ -216,6 +216,7 @@
                                         placeholder: 'Coloque sua descrição',
                                         tabsize: 2,
                                         height: 120,
+                                        lang: 'pt-BR',
                                         toolbar: [
                                             ["style", ["style"]],
                                             ["font", ["bold", "underline"]],
@@ -312,6 +313,7 @@
                                 placeholder: 'Coloque sua descrição',
                                 tabsize: 2,
                                 height: 120,
+                                lang: 'pt-BR',
                                 toolbar: [
                                     ["style", ["style"]],
                                     ["font", ["bold", "underline"]],
@@ -347,6 +349,7 @@
                     placeholder: 'Coloque sua descrição',
                     tabsize: 2,
                     height: 120,
+                    lang: 'pt-BR',
                     toolbar: [
                     ["style", ["style"]],
                     ["font", ["bold", "underline"]],

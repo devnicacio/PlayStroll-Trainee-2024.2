@@ -246,6 +246,7 @@ tbody {
     }
 
     .navegacao button {
+        border-radius: 6px;
         height: 25px;
         width: 25px;
     }

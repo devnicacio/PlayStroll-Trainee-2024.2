@@ -217,6 +217,10 @@
     overflow: hidden;
 }
 
+.note-editable {
+    text-align: start !important;
+}
+
 .note-editing-area {
     background-color: white;
     padding-bottom: 20px;

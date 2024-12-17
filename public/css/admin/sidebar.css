@@ -10,15 +10,11 @@
     padding: 0;
     border: none;
 }
-body{
-    min-width: 100vw;
-    max-height: 100vh;
-    font-family: 'Satoshi', sans-serif;
-    display: flex;
-}
+
 
 #sideBar{
-    position: relative;
+    position: absolute;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

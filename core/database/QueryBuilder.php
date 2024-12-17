@@ -509,4 +509,8 @@ public function updatePost($table, $id, $parameters, $imageCapa, $imageRetrato, 
         }
 
     }
+
+   
+
+
 }

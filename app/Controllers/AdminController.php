@@ -78,11 +78,36 @@ class AdminController
     $id = $_POST['iddelete'];
     $image = $_POST['imagedelete'];
 
+    // Chama a função para deletar os posts do usuário
+    $this->deletaPostsPorUsuario($id);
+
     unlink($image);
     App::get('database')->delete('users', $id);
 
     header('Location: /users');
 }
+
+public function deletaPostsPorUsuario($userId)
+{
+    // Busca os posts associados ao usuário
+    $posts = App::get("database")->select('posts', ['user_id' => $userId]);
+
+    // Para cada post encontrado, exclui as imagens (capa e retrato)
+    foreach ($posts as $post) {
+        if (file_exists($post['capa'])) {
+            unlink($post['capa']);
+        }
+        if (file_exists($post['retrato'])) {
+            unlink($post['retrato']);
+        }
+    }
+
+    // Deleta os posts do usuário
+    App::get("database")->delete('posts', ['user_id' => $userId]);
+}
+
+
+
 
 }
 ?>

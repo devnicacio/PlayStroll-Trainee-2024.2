@@ -12,7 +12,7 @@
 </head>
 <body>
     <nav id="navigationBar">
-        <a id="navigationBar--home" title="Home" href="landing-page" >
+        <a id="navigationBar--home" title="Home" href="/" >
             <p>PLAY STROLL</p>
             <img src="/public/assets/logo-escura-sem-fundo.png" alt="Logo da Playstroll">
         </a>

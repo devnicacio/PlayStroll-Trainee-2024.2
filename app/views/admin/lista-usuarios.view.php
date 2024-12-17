@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/public/css/lista-usuarios.css">
     <link rel="stylesheet" type="text/css" href="/public/css/modal-criar.css">
+    <link rel="icon" href="/public/assets/logo-clara.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="/public/css/modal-excluir.css">
     <link rel="stylesheet" type="text/css" href="../../../public/css/modal-visualizar.css">
     <link rel="stylesheet" type="text/css" href="../../../public/css/modal-editar.css">

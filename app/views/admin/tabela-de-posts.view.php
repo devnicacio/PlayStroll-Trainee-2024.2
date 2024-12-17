@@ -36,6 +36,7 @@
     <script defer src="/public/js/admin/modal/base-modal.js"></script>
     <script defer scr="/public/js/admin/modal/posts/read-modal-posts.js"></script>
     <script defer src="/public/js/admin/modal/posts/create-modal-posts.js"></script>
+    <link rel="icon" href="/public/assets/logo-clara.png" type="image/png">
    
 </head>
 <body>

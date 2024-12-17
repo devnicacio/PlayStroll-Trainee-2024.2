@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../../../public/css/footer.css">
     <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="icon" href="/public/assets/logo-clara.png" type="image/png">
+    
     <title>Play Stroll</title>
 </head>
 <body>

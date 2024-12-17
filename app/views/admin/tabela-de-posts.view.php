@@ -132,7 +132,7 @@
                     <td><?= $post->id ?></td>
                     <td class="titulo-post"><?= $post->title ?></td>
                     <td class="autor-post"><?= $post->name ?></td>
-                    <td><?= $post->create_at ?></td>
+                    <td><?= formatarDataBrasileira($post->create_at) ?></td>
                     <td><button class="btn-acao btn-visualizar" onclick="abrirModalVer('read<?= $post->id?>')"><i class="fa-regular fa-eye"></i></button></td>
                     <td><button class="btn-acao btn-editar" onclick="abrirModal('update<?= $post->id?>')"><i class="fas fa-edit"></i></button></td>
                     <td><button class="btn-acao btn-excluir" onclick="abrirModal('excluir<?= $post->id ?>')"><i class="fas fa-trash"></i></button></td>

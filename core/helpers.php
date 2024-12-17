@@ -61,6 +61,18 @@ function formatarDataBrasileira($data) {
     }
     return null; // Retorna nulo se a data for vazia ou inválida
 }
+function limitTextTwo($text, $maxWidthPercentage = 70, $maxLines = 5, $charsPerLine = 50) {
+    // Calcula o número máximo de caracteres com base no número de linhas e caracteres por linha
+    $maxChars = $maxLines * $charsPerLine;
+
+    // Trunca o texto se exceder o número máximo de caracteres
+    if (strlen($text) > $maxChars) {
+        $text = substr($text, 0, $maxChars) . '...'; // Adiciona "..." no final
+    }
+
+    return $text;
+}
+
 
 ?>
 

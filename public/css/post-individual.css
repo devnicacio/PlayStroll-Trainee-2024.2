@@ -21,7 +21,8 @@ body{
 
 .image1{
     width: 900px;
-    height: 440px;         
+    height: 440px;        
+    border-radius: 10px; 
 }
 
 .main {
@@ -46,6 +47,11 @@ body{
 .icon1 {
     height: 60px;
     width: 60px;
+    border-radius: 50%;
+}
+
+.titulo-post-indiv{
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -62,10 +68,23 @@ h3 {
 }
 
 .classificacao {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
+    display: flex;            /* Ativa Flexbox */
+    flex-direction: row;      /* Coloca os elementos lado a lado */
+    justify-content: center;  /* Centraliza os elementos horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    gap: 10px;                /* Espaço entre a nota e as estrelas */
 }
+
+.classificacao .star {
+    margin: 0;                /* Remove margens padrão do H3 */
+    font-size: 1.5em;         /* Ajusta o tamanho da nota */
+}
+
+.avaliacao-estrelas {
+    display: flex;            /* Garantia de alinhamento das estrelas */
+    align-items: center;      /* Alinha as estrelas verticalmente */
+}
+
 
 .star {
     color: #FFC739;

@@ -53,6 +53,15 @@ function limitText($content, $maxWords = 30, $allowedTags = '<p><strong>') {
 
     return $limitedContent;
 }
+
+// Função para formatar a data no padrão brasileiro (dd/mm/yyyy)
+function formatarDataBrasileira($data) {
+    if ($data) {
+        return (new DateTime($data))->format('d-m-Y');
+    }
+    return null; // Retorna nulo se a data for vazia ou inválida
+}
+
 ?>
 
 

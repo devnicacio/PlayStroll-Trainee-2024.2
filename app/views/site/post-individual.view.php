@@ -24,14 +24,20 @@
                             <img src="<?= $post[0]->image ?>" alt="" class="icon1">
                             <div>
                                 <h2><?= $post[0]->name ?></h2>
-                                <h3><?= $post[0]->create_at ?></h3>
+                                <h3><?= formatarDataBrasileira($post[0]->create_at) ?></h3>
+
                             </div>
                         </div>
                         <div class="classificacao">
-                            <h3 class="star"><?= $post[0]->avaliation ?></h3>
+                                <h3 class="star">
+                                    <?= $post[0]->avaliation ?>
+                                </h3>
+                                    <div class="avaliacao-estrelas">
+                                    <?php renderizarEstrelas($post[0]->id, 30, $post[0]->avaliation); ?>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <h1><?= $post[0]->title ?></h1>
+                    <h1 class="titulo-post-indiv"><?= $post[0]->title ?></h1>
                     <p><?= $post[0]->content ?></p>
                 </div>
             </div>

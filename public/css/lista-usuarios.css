@@ -172,7 +172,7 @@ tbody {
     }
 
     .more {
-        padding: 20px;
+        padding: 10px;
         font-size: 45px;
     }
 
@@ -202,7 +202,7 @@ tbody {
     }
 }
 
-@media (max-width: 767px){
+@media (min-width: 492px) and (max-width: 767px) {
 
     .lista tbody td {
         padding: 8px 1px;
@@ -217,12 +217,12 @@ tbody {
     }
 
     .titulo {
-        padding: 8px;
-        font-size: 17px;
+        padding: 5px;
+        font-size: 12px;
     }
 
     .more {
-        padding: 20px;
+        padding: 5px;
         font-size: 45px;
     }
 
@@ -251,9 +251,22 @@ tbody {
     }
 }
 
+@media (min-width: 426px) and (max-width: 491px) {
+    .titulo{
+        width: 200px;
+    }
+    .more{
+        padding: 20px;
+    }
+}
+
 @media (max-width: 425px){
 .titulo{
-    padding-left: 10px;
+    padding: 5px;
+    padding-left: 20px;
     width: 65%;
+}
+.more{
+    padding: 20px;
 }
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Posts</title>
     <link rel="stylesheet" href="/public/css/lista-de-posts.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="icon" href="/public/assets/logo-clara.png" type="image/png">
@@ -12,6 +13,7 @@
 <body>
 
     <?php include 'navbar.view.php'; ?>
+
 
     <div class="pesquisa">
     <form method="GET" action="/lista-de-posts" class="pesquisa-input" onclick="inputFocus('busca')">
@@ -72,4 +74,5 @@
 
 </body>
 <script src="/public/js/lista-de-posts.js"></script>
+<script src="/public/js/navbar.js" ></script>
 </html>

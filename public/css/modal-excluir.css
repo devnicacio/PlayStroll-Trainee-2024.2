@@ -32,10 +32,12 @@ body {
     z-index: 2; /* Fica abaixo do modal */
   }
 
-  
+
 h4 {
     margin: 0;
     padding-bottom: 10px;
+    font-size: 16px !important;
+    font-weight: bold !important;
 }
 
 
@@ -63,8 +65,9 @@ h4 {
     width: 100px;
     border: none;
     border-radius: 10px;
-    padding: 0px;
+    padding: 11px;
     cursor: pointer;
+    font-size: 13.333px !important;
 }
 
 .button-cancelarex {

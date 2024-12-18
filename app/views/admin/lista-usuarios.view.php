@@ -109,8 +109,8 @@
         <?php endforeach ?>
 
         <?php foreach ($users as $user): ?>
-            <div class="modal-view" id="modal-view<?= $user->id ?>" onclick="fecharModalVer('<?= $user->id ?>')" >
-                <div class="visualisar" id="ver<?= $user->id ?>">
+            <div class="modal-view" id="modal-view<?= $user->id ?>" onclick="fecharModalVer('modal-view<?= $user->id ?>')">
+                <div class="visualisar" id="ver<?= $user->id ?>" onclick="event.stopPropagation();">
                     <div class="caixa">
                         <div class="id">
                             <p class="tit">ID</p>
@@ -127,15 +127,11 @@
                         <div class="imagem-view" id="imgdiv">
                             <input id="img" type="image" src="<?= $user->image ?>">
                         </div>
-                        <div class="sair">
-                            <div class="botsair" onclick="fecharModalView('modal-view<?= $user->id ?>')">
-                                <p>Fechar</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         <?php endforeach ?>
+
 
 
 

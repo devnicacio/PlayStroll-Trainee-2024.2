@@ -83,9 +83,10 @@ body {
 .autor-post, .email-post {
     max-width: 70px;
     overflow: hidden;
-    white-space: hidden;
-    text-overflow: ellipsis;
+    white-space: nowrap; /* Impede a quebra de linha */
+    text-overflow: ellipsis; /* Exibe "..." quando o texto ultrapassa a largura */
 }
+
 
 thead{
     background-color: #237ecd;

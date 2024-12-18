@@ -121,7 +121,6 @@ tbody {
 }
 
 .paginas {
-    max-width: 850px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -131,30 +130,33 @@ tbody {
 }
 
 .anterior, .pag1, .proximo{
-    width: 36px;
-    height: 36px;
     border-radius: 12px;
     background-color: #237ecd;
     border: 1px solid black;
-    color: black;
+    color: white;
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+    text-align: center;
+    font-size: 16px;
 }
 
-.pag1 {
-    background-color: #237ecd;
+.active{
+    border-radius: 12px;
+    background-color: #080b3c;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+    text-align: center;
+    font-size: 16px;
 }
 
 .disabled{
     display: none;
 }
 
-.active{
-    background-color: #080b3c;
-    color: white;
-}
-
-.none{
-    display: none;
-}
 
 @media (min-width: 768px) and (max-width: 1023px) {
 
@@ -194,16 +196,6 @@ tbody {
         padding: 1px 18px;
     }
 
-    .paginas {
-        width: 70%;
-        margin-right: 30px;
-    }
-
-    .paginas button {
-        border-radius: 6px;
-        height: 25px;
-        width: 25px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -237,11 +229,8 @@ tbody {
         padding: 1px 8px;
     }
 
-    .paginas {
-        width: 70%;
-    }
-
     .paginas button {
+        border-radius: 6px;
         height: 25px;
         width: 25px;
     }

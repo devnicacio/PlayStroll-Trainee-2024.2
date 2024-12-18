@@ -10,6 +10,7 @@
 }
 
 .visualisar{
+    width: 380px;
     padding: 20px;
     border-radius: 10px;
     background-color: #00aea0;
@@ -29,7 +30,7 @@
 }
 
 .caixa{
-    width: 350px;
+    width: 98%;
     padding: 10px;
     border-radius: 10px;
     background-color: #0b0b3c;
@@ -131,7 +132,30 @@
 }
 
 @media only screen and (max-width: 500px){
+    .visualisar{
+        width: 80%;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .caixa{
         width: 90%;
+    }
+    
+}
+
+@media only screen and (max-width: 375px){
+    .visualisar{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 340px){
+    .visualisar{
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }

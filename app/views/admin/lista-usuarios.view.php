@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/public/css/lista-usuarios.css">
     <link rel="stylesheet" type="text/css" href="/public/css/modal-criar.css">
-    <link rel="icon" href="/public/assets/logo-escura-sem-fundo.png" type="image/png">
+    <link rel="icon" href="/public/assets/Logo escura quadrada.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="/public/css/modal-excluir.css">
     <link rel="stylesheet" type="text/css" href="../../../public/css/modal-visualizar.css">
     <link rel="stylesheet" type="text/css" href="../../../public/css/modal-editar.css">
@@ -101,7 +101,7 @@
         <?php endforeach ?>
 
         <?php foreach ($users as $user): ?>
-            <div class="modal-view" id="modal-view<?= $user->id ?>" onclick="fecharModalVer('<?= $user->id ?>')" >
+            <div class="modal-view" id="modal-view<?= $user->id ?>" onclick="fecharModalVer('modal-view<?= $user->id ?>')" >
                 <div class="visualisar" id="ver<?= $user->id ?>">
                     <div class="caixa">
                         <div class="id">

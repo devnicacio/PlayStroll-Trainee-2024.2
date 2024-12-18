@@ -181,6 +181,10 @@
 
 
         <!-- Modal Excluir Usuário -->
+
+        <!-- Camada escurecida -->
+            <div id="tela"></div>
+            
         <?php foreach ($users as $user): ?>
             <!-- Modal Excluir Usuário (Exclusivo para cada usuário) -->
             <div class="modalex" id="modal-excluirex<?= $user->id ?>" style="display: none;">

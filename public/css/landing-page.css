@@ -220,6 +220,7 @@ main{
 
 .titulo-jogo{
     margin-top: 10px;
+    width: 80%;
 }
 
 .nome-jogo {
@@ -239,6 +240,7 @@ main{
     font-weight: 500;
     margin: 25px;
     margin-top: -10px;
+    width: 80%;
 }
 
 .capa-jogo {

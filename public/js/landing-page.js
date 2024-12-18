@@ -12,6 +12,19 @@ const swiper1 = new Swiper('#swiper-principal', {
     },
 });
 
+// Seleciona o elemento do Swiper
+const swiperContainer = document.querySelector('#swiper-principal');
+
+// Pausa o autoplay quando o mouse entra
+swiperContainer.addEventListener('mouseenter', () => {
+    swiper1.autoplay.stop(); // Pausa o autoplay
+});
+
+// Retoma o autoplay quando o mouse sai
+swiperContainer.addEventListener('mouseleave', () => {
+    swiper1.autoplay.start(); // Retoma o autoplay
+});
+
 
 // Configuração para o segundo Swiper
 const swiper2 = new Swiper('#swiper-secundario', {

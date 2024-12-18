@@ -364,6 +364,22 @@ body{
     .texto{
         width: 100%;
     }
+
+    .navegação {
+        display: flex; /* Alinha os botões horizontalmente */
+        justify-content: center;
+    }
+    
+    .navegação button {
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        display: flex; /* Ativa o flexbox dentro de cada botão */
+        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        align-items: center; /* Centraliza o conteúdo verticalmente */
+        font-size: 14px; /* Ajuste do tamanho da fonte, se necessário */
+    }
+    
 }
 
 @media only screen and (max-width: 321px)

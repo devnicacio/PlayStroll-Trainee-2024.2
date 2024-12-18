@@ -50,8 +50,8 @@
     margin-bottom: 0;
     margin-top: 0;
     display: flex;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     justify-content: center;
     color: gray;
 }
@@ -85,7 +85,11 @@
 }
 
 .id .box{
-    width: 95%;
+    width: 90%;
+}
+
+.email .box, .username .box {
+    width: 90%; /* Garantir que esses inputs também tenham 90% */
 }
 
 .box p{

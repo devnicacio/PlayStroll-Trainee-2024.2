@@ -174,7 +174,7 @@ a:active{
 }
 @media screen and (min-width: 577px) and (max-width: 768px){
     #rodape{
-        height: 80vh;
+        height: 60vh;
         flex-direction: column;
     }
     #rodape--logoParaPequenasTelas{
@@ -199,7 +199,10 @@ a:active{
     #rodape--informacoesDeRodape div:not(:last-child) {
         margin-right: 0; 
     }
-
+    #rodape--informacoesDeRodape hr{
+        height: 30vh;
+        margin: 0 3vw;
+    }
     #rodape--informacoesDeRodape hr:last-child{
         display: none;
     }
@@ -220,6 +223,7 @@ a:active{
     }
     #codeLogo{
         width: 150px !important;
+        object-fit: contain !important;
     }
     #rodape--informacoesDeRodape p{
         font-size: 1.55vw;

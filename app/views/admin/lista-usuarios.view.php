@@ -245,6 +245,8 @@
         <!-- Modal Editar Usuário -->
 
 
+        <!-- Camada escurecida -->
+        <div id="tela"></div>
         <!-- Modal Excluir Usuário -->
         <?php foreach ($users as $user): ?>
             <!-- Modal Excluir Usuário (Exclusivo para cada usuário) -->

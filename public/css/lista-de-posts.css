@@ -115,6 +115,16 @@ body{
     justify-content: center;
 }
 
+.post.um {
+    cursor: pointer; /* Faz com que o cursor mude para um ponteiro ao passar por cima */
+    transition: all 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.post.um:hover {
+    transform: scale(1.05); /* Aumenta um pouco o tamanho do elemento */
+    opacity: 0.9; /* Diminui a opacidade para um efeito de destaque */
+}
+
 
 .post img {
     width: 160px;

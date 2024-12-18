@@ -252,30 +252,23 @@
                             <div class="container-image">
                                 <label for="file">Foto modo paisagem</label>
                                 <label class="custom-file-label" for="edit-file-capa<?= $post->id ?>">Escolher imagem</label>
-                                <span id="erro-capa" class="erro-img"></span>
                             </div>
                             <div class="parte-capa">
                                 <img id="edit-file-name-capa<?= $post->id ?>" class="capa-preview" alt="Preview da Capa" src="/<?= $post->image_capa ?>"/>
                                 <input type="file" class="image-capa" id="edit-file-capa<?= $post->id ?>" accept="image/*" name="image_capa"
                                        onchange="previewImage('edit-file-capa<?= $post->id ?>', 'edit-file-name-capa<?= $post->id ?>')" />
-                                <button class="btn-remove-imagem-capa" id="btn-remover-imagem-capa<?= $post->id ?>" onclick="removerImagem('edit', 'capa', <?= $post->id ?>)" type="button">
-                                    X
-                                </button>
+                                
                             </div>
                         </div>
                         <div class="retrato">
                             <div class="container-image">
                                 <label for="file">Foto modo retrato</label>
                                 <label class="custom-file-label" for="edit-file-retrato<?= $post->id ?>">Escolher imagem</label>
-                                <span id="erro-retrato" class="erro-img"></span>
                             </div>
                             <div class="parte-retrato">
                                 <img id="edit-file-name-retrato<?= $post->id ?>" class="retrato-preview" alt="Preview do Retrato" src="/<?= $post->image_retrato ?>"/>
                                 <input type="file" class="image-retrato" id="edit-file-retrato<?= $post->id ?>" accept="image/*" name="image_retrato"
                                        onchange="previewImage('edit-file-retrato<?= $post->id ?>', 'edit-file-name-retrato<?= $post->id ?>')" />
-                                <button class="btn-remove-imagem-retrato" id="btn-remover-imagem-retrato<?= $post->id ?>" onclick="removerImagem('edit','retrato', <?= $post->id ?>)" type="button">
-                                    X
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -286,13 +279,13 @@
                             <div class="second-line">
                                 <div class="parte-titulo">
                                     <label for="text">Título</label>
-                                    <input type="text" value="<?= $post->title ?>" id="titulo" class="titulo" placeholder="Coloque seu título" name="title"/>
-                                    <span id="erro-titulo" class="erro"></span>
+                                    <input type="text" value="<?= $post->title ?>" id="titulo<?= $post->id ?>" class="titulo" placeholder="Coloque seu título" name="title"/>
+                                    <span id="erro-titulo<?= $post->id ?>" class="erro"></span>
                                 </div>
                                 <div class="parte-avaliacao">
                                     <label for="number">Avaliação</label>
-                                    <input type="number" value="<?= $post->avaliation ?>" id="avaliacao" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota" name="avaliation"/>
-                                    <span id="erro-avaliacao" class="erro"></span>
+                                    <input type="number" value="<?= $post->avaliation ?>" id="avaliacao<?= $post->id ?>" class="avaliacao" step="0.5" min="0" max="5" placeholder="Nota" name="avaliation"/>
+                                    <span id="erro-avaliacao<?= $post->id ?>" class="erro"></span>
                                 </div>
                                 <input type="hidden" name="content" id="content<?= $post->id ?>">
                             </div>

@@ -178,6 +178,15 @@ input[type="search"]::-webkit-search-decoration{
     width: auto;
 }
 
+li{
+    font-size: 18px;
+}
+
+#links--searchPosts ::placeholder,
+    #links--searchPosts ::-webkit-input-placeholder{
+        font-size: 18px;
+    }
+
 
 
 /*//////////////////////// RESPONSIVIDADE ////////////////////////*/
@@ -281,10 +290,7 @@ input[type="search"]::-webkit-search-decoration{
     .navigationBar--links{
         font-size: calc(1.2rem + 0.7vw);
     }
-    #links--searchPosts ::placeholder,
-    #links--searchPosts ::-webkit-input-placeholder{
-        font-size: calc(1.2rem + 0.5vw);
-    }
+    
     #tabletAndMobileSubSection{
         display: none !important;
     }

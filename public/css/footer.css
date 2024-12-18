@@ -127,13 +127,14 @@ a:active{
         align-items: center;
         align-self: center;
         flex-direction: column;
+        gap: 3vh; 
     }
     #rodape--informacoesDeRodape hr{
         display: none;
     }
-    #rodape--informacoesDeRodape div{
+    #rodape--informacoesDeRodape div {
         width: auto;
-        height: 28vh;
+        height: auto;
     }
     #rodape--informacoesDeRodape div:has(span){
         width: auto;
@@ -155,6 +156,7 @@ a:active{
         align-self: center;
     }
     #codeLogo{
+        object-fit: contain;
         width: 200px !important;
         height: 10vh !important;
     }
@@ -181,6 +183,7 @@ a:active{
     #rodape--informacoesDeRodape{
         align-self: center;
     }
+
     #rodape--informacoesDeRodape hr:last-child{
         display: none;
     }

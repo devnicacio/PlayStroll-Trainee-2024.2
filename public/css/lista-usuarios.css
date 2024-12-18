@@ -28,7 +28,9 @@ body {
 
 .table-container {
     margin-right: 10%;
-    width: auto;
+    max-width: 100%; /* Garantir que o container não ultrapasse a tela */
+    width: 73%; /* Permite que o container se ajuste conforme o tamanho da tela */
+    overflow-x: auto; /* Aplica overflow apenas se necessário */
 }
 
 .lista{
@@ -69,10 +71,6 @@ body {
     font-size: 16px;
 }
 
-.table-container {
-    max-width: 73%;
-    width: 100%;
-}
 
 .lista {
     width: 100%;
@@ -80,6 +78,7 @@ body {
     color: white;    
     border-radius: 10px;
     border-collapse: collapse;
+    table-layout: fixed;
 }
 
 .autor-post, .email-post {
@@ -182,7 +181,7 @@ tbody {
     }
 
     .table-container {
-        overflow: auto;
+        overflow-x: auto;
         width: 70%;
     }
 

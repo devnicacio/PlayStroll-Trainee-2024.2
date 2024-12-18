@@ -344,6 +344,35 @@ main{
     display: none;
 }
 
+@media (max-width: 1543px) {
+    .imagem-sobre {
+        float: none; 
+        display: block; 
+        margin: 0 auto; 
+    }
+
+    .sobre-playstroll {
+        padding: 20px; 
+    }
+
+    .div-sobre{
+        margin-top: -40px;
+    }
+
+    .texto-sobre {
+        font-size: 25px; 
+        margin-top: 40px;
+    }
+
+    .comunidade {
+        width: 70%;
+        padding: 10px 20px; 
+        font-size: 15px;
+    }
+
+
+}
+
 /* Responsividade */
 @media (max-width: 1024px) {
 

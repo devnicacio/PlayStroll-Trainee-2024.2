@@ -120,7 +120,7 @@
                 <div class="div-sobre">
                     <img src="/public/assets/logo-escura.png" alt="Imagem sobre PlayStroll" class="imagem-sobre">
                     <div class="texto-sobre">
-                        <p>Conectar pessoas apaixonadas por jogos, oferecendo um espaço para descobrir novas experiências e compartilhar opiniões sinceras sobre diversos títulos. O Play Stroll convida os usuários a embarcarem em uma jornada imersiva e diversificada pelo universo dos games, onde cada  review vai além da análise técnica,capturando as emoções e vivências únicas de cada jogador. Além disso, o site busca mostrar como os jogos podem impactar profundamente nossa forma de ver o mundo, criando memórias valiosas que nos acompanham ao longo da vida. Aqui, os usuários podem compartilhar críticas, elogios ou simplesmente relatar momentos marcantes de suas gameplays.</p>
+                        Conectar pessoas apaixonadas por jogos, oferecendo um espaço para descobrir novas experiências e compartilhar opiniões sinceras sobre diversos títulos. O Play Stroll convida os usuários a embarcarem em uma jornada imersiva e diversificada pelo universo dos games, onde cada  review vai além da análise técnica,capturando as emoções e vivências únicas de cada jogador. Além disso, o site busca mostrar como os jogos podem impactar profundamente nossa forma de ver o mundo, criando memórias valiosas que nos acompanham ao longo da vida. Aqui, os usuários podem compartilhar críticas, elogios ou simplesmente relatar momentos marcantes de suas gameplays.
                     </div>
                 </div>
             </div>

@@ -25,6 +25,9 @@
         <form action="/login" method="POST">
 
           <div class="parte-de-baixo">
+          <a id="navigationBar--home" title="Home" href="/" >
+            <img src="/public/assets/logo-escura-sem-fundo.png" alt="Logo da Playstroll" width="130px" height="85px">
+        </a>
           <div class="mensagem-erro">
           <p>
             <?php

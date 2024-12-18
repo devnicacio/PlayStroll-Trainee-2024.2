@@ -27,17 +27,14 @@ h3 {
 }
 
 .parte-de-cima{
-    /* background-image: linear-gradient(to right, #237ECD,#080B3C);  */
-    background-color: #080B3C;
+    background-color: #237ecd;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     text-align: center;
 }
 
 .parte-de-baixo{
-    /* background-color: rgba(255, 255, 255, 0.2); 
-    backdrop-filter: blur(10px); */
-    background-color: rgba(8, 11, 60, 0.8);  
+    background-color: #080b3c;  
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     padding-top: 25px;

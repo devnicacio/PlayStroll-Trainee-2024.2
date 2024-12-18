@@ -56,7 +56,6 @@ document.getElementById('btn-criar').onclick = function(event) {
 
      const capa = document.getElementById('create-file-capa').value;
      const retrato = document.getElementById('create-file-retrato').value;
-     const data = document.getElementById('data').value;
      const titulo = document.getElementById('titulo').value;
      const avaliacao = document.getElementById('avaliacao').value;
      const descricao = $('#summernote-criar').summernote('code'); 
@@ -66,7 +65,6 @@ document.getElementById('btn-criar').onclick = function(event) {
      // Limpar mensagens de erro anteriores
      document.getElementById('erro-capa').innerText = '';
      document.getElementById('erro-retrato').innerText = '';
-     document.getElementById('erro-data').innerText = '';
      document.getElementById('erro-titulo').innerText = '';
      document.getElementById('erro-avaliacao').innerText = '';
      document.getElementById('erro-descricao').innerText = '';
@@ -80,11 +78,6 @@ document.getElementById('btn-criar').onclick = function(event) {
         document.getElementById('erro-retrato').innerText = 'Imagem retrato é obrigatório';
         valid = false;
     }
-    
-    if (!data) {
-         document.getElementById('erro-data').innerText = 'Data é obrigatória';
-         valid = false;
-     }
        
     if (!titulo) {
          document.getElementById('erro-titulo').innerText = 'Título é obrigatório';
@@ -111,7 +104,6 @@ document.getElementById('btn-criar').onclick = function(event) {
 const inputs = [
     { field: 'create-file-capa', error: 'erro-capa' },
     { field: 'create-file-retrato', error: 'erro-retrato' },
-    { field: 'data', error: 'erro-data' },
     { field: 'titulo', error: 'erro-titulo' },
     { field: 'avaliacao', error: 'erro-avaliacao' }
 ];

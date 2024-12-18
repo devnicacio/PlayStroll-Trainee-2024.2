@@ -150,22 +150,6 @@
     row-gap: 10px;
 }
 
-.parte-data {
-    display: flex;
-    flex-direction: column;
-    width: 28%;
-}
-
-.data {
-    outline: none;
-    width: 100%;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
 .second-line {
     display: flex;
     justify-content: space-between;
@@ -325,10 +309,6 @@
         margin-bottom: 16px;
         row-gap: 8px;
     }
-    
-    .data {
-        width: 100%;
-    }
 
     .parte-avaliacao {
         margin-bottom: 0 auto;
@@ -410,11 +390,6 @@
         max-width: 210px;
         width: 100%;
     }    
-
-    .parte-data {
-        margin-bottom: 0 auto;
-        width: 100%;
-    }
 
     .second-line {
         flex-direction: column-reverse;

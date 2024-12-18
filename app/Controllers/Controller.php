@@ -65,7 +65,7 @@ class Controller{
         $parameters = [
             'title' => $_POST['title'],
             'avaliation' => $_POST['avaliation'],
-            'create_at' => $_POST['create-at'],
+            'create_at' => date('Y-m-d'),
             'content' => $_POST['content'],
             'id_user' => $_SESSION['id'],
         ];

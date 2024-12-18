@@ -81,11 +81,6 @@
                     </div>
                     <div class="abc"><!-- poggers -->
                         <div class="placeholders-criar">
-                            <div class="parte-data">
-                                <label for="date">Data</label>
-                                <input type="date" id="data" class="data" name="create-at">
-                                <span id="erro-data" class="erro"></span>
-                            </div>
                             <div class="second-line">
                                 <div class="parte-titulo">
                                     <label for="text">Título</label>
@@ -196,7 +191,7 @@
                             <div class="placeholders-criar">
                                 <div class="parte-data">
                                     <label for="date">Data</label>
-                                    <input type="date" value="<?= $post->create_at ?>" id="data" class="data" name="create-at" readonly>
+                                    <input value="<?= $post->create_at ?>" id="data" class="data" name="create-at" readonly>
                                 </div>
                                 <div class="second-line">
                                     <div class="parte-titulo">
@@ -288,11 +283,6 @@
                     <input type="hidden" name="fotoAtualRetrato" value="<?= $post->image_retrato ?>">
                     <div class="abc"><!-- poggers -->
                         <div class="placeholders-criar">
-                            <div class="parte-data">
-                                <label for="date">Data</label>
-                                <input type="date" value="<?= $post->create_at ?>" id="data" class="data" name="create-at">
-                                <span id="erro-data" class="erro"></span>
-                            </div>
                             <div class="second-line">
                                 <div class="parte-titulo">
                                     <label for="text">Título</label>

@@ -24,18 +24,18 @@
 
                 <div class="swiper-slide" id="slide-principal">
                     <div class="fade-swipper">
-                            <p class="nome-swipper"><?= $post->title ?></p>
+                            <div class="nome-swipper"><?= $post->title ?></div>
                             <div class="nota-e-estrelas-swipper">
                                 <p class="nota-swipper">
                                     <span style="color: #FFC739;"><?= $post->avaliation ?></span>
                                 </p>
                                 <div class="avaliacao-estrelas">
-                                    <?php renderizarEstrelas($post->id, 30, $post->avaliation); ?>
+                                    <?php renderizarEstrelas($post->id, 25, $post->avaliation); ?>
                                 </div>
                             </div>
                             <p class="autor-swipper"> <img src="<?= $post->image ?>" alt="usuario"><?= $post->name ?></p>
-
-                            <p class="descricao-swipper"><?= $post->content ?></p>
+                            
+                            <div class="descricao-swipper"><?= substr(strip_tags ($post->content),0,302) . '...'  ?></div>
                             <button class="botao-swipper" onclick="location.href = '/post-individual?id=<?= $post->id?>'">Veja mais</button>
                     </div>
                     <img src="<?= $post->image_capa ?>" alt="imagem">
@@ -66,7 +66,7 @@
                             </div>
                             <p class="autor-terceiro"><img src="<?= $post->image ?>" alt="usuario"> <span><?= $post->name ?></span></p>
                             <?php $limitedContent = limitText($post->content, 30); ?>
-                            <p class="descricao-terceiro"><?= $post->content ?></p>
+                            <div class="descricao-terceiro"><?= substr(strip_tags ($post->content),0,100) . '...'  ?></div>
                             <button class="botao-veja-mais-terceiro" onclick="location.href = '/post-individual?id=<?= $post->id ?>'">Veja mais</button>
                         </div>
                     </div>
@@ -103,7 +103,7 @@
                     </div>
                     <p class="autor"> <img src="<?= $post->image ?>" alt="usuario"> <span><?= $post->name ?></span></p>
                     
-                    <p class="descricao"><?= $post->content ?></p>
+                    <div class="descricao"><?= substr(strip_tags ($post->content),0,100) . '...'  ?></div>
                         <button class="botao-veja-mais" onclick="location.href = '/post-individual?id=<?= $post->id?>'">Veja mais</button>
                 </div>
             </div>

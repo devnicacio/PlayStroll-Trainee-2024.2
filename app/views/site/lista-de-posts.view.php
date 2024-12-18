@@ -52,7 +52,7 @@
             </div>
 
             <div class="conteúdo um">
-                <p class="descricao"><?= strlen($post->content) > 250 ? substr($post->content, 0, 250) . '...' : $post->content ?> </p>
+                <div class="descricao"><?= substr(strip_tags ($post->content),0,300) . '...'  ?></div>
             </div>
         </div>
     </div>

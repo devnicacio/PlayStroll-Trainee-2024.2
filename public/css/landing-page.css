@@ -43,12 +43,12 @@ main{
     position: absolute;
     opacity: 0;
     padding-bottom: 120px;
-    padding-left: 90px;
     color: white;
     background: rgba(0, 0, 0, 0.4); 
     box-shadow: inset 0 0 500px rgba(0, 0, 0, 1.0);
     transition: opacity 0.5s ease-in-out;
     overflow: hidden; 
+    padding-left: 90px ;
 }
 
 #slide-principal:hover .fade-swipper {
@@ -110,11 +110,13 @@ main{
 }
 
 .descricao-swipper {
-    max-width: 50vw; 
+    display: flex;
+    width: 50% !important; 
     font-size: 25px;
-    font-weight: bold;
     margin: 10px 0;
+    text-overflow: ellipsis;
 }
+
 
 .botao-swipper {
     margin-top: 40px; 
@@ -189,7 +191,7 @@ main{
     display: flex; 
     flex-direction: column; 
     align-items: center; 
-    justify-content: center; 
+    justify-content: space-evenly; 
     max-width: 400px !important;
     height: 600px;
     margin: 0; 
@@ -206,13 +208,14 @@ main{
     display: flex; 
     align-items: center; 
     gap: 8px; 
-    margin: 10px;
+    margin-bottom: 20px;
 }
 
 .autor img{
     height: 40px;
     width: 40px;
     border-radius: 100%;
+
 }
 
 .titulo-jogo{
@@ -226,7 +229,7 @@ main{
 
 .nota {
     font-size: 1em; 
-    margin-top: 5px; 
+    margin-top: px; 
     color: #FFC739;
 }
 
@@ -335,6 +338,10 @@ main{
     color: #000;
 }
 
+.avaliacao-estrelas-mobile{
+    display: none;
+}
+
 /* Responsividade */
 @media (max-width: 1024px) {
 
@@ -416,17 +423,33 @@ main{
 
 @media (max-width: 768px) {
 
+    .avaliacao-estrelas {
+        display: none; /* Oculta a versão padrão para telas menores que 768px */
+    }
+
+    .avaliacao-estrelas-mobile {
+        display: block; /* Exibe a versão mobile para telas menores que 768px */
+    }
+
 
     .post-individual3{
         height: 650px;
     }
+    
     #swiper-secundario {
         margin-left: 15% !important;
     }
-
+    
+    .nome-swipper{
+        margin-top: 0px;
+    }
 
     .nota-swipper {
-        font-size: 15px; 
+        font-size: 20px; 
+    }
+
+    .avaliacao-estrelas{
+        display: block;
     }
     
     .autor-swipper {
@@ -435,7 +458,7 @@ main{
         justify-items: center;
         width: 30px;
         height: 30px;          
-    
+        margin-top: 10px;
     }
     
     .autor-swipper img {
@@ -444,17 +467,13 @@ main{
     }
     
     .nome-swipper{
-        padding: -50px;
         font-weight: bold;
-        font-size: 30px;
-        margin: 10px 0px 10px; 
+        font-size: 20px;
+        width: 75%;
     }
     
     .descricao-swipper {
-        max-width: 30vw; 
-        font-size: 20px;
-        font-weight: bold;
-        margin: 10px 0;
+        display: none;
     }
     
     .botao-swipper {
@@ -465,9 +484,9 @@ main{
         border: none;
         cursor: pointer;
         border-radius: 50px;
-        height: 40px;
-        padding-left: 30px;
-        padding-right: 30px;
+        height: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
         font-size: 20px;
     }
 

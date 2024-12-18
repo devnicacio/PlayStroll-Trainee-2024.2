@@ -34,10 +34,8 @@
                                 </div>
                             </div>
                             <p class="autor-swipper"> <img src="<?= $post->image ?>" alt="usuario"><?= $post->name ?></p>
-                                <?php
-                                    $limitedContent = limitText($post->content, 30);
-                                ?>
-                            <p class="descricao-swipper"><?= $limitedContent ?></p>
+
+                            <p class="descricao-swipper"><?= $post->content ?></p>
                             <button class="botao-swipper" onclick="location.href = '/post-individual?id=<?= $post->id?>'">Veja mais</button>
                     </div>
                     <img src="<?= $post->image_capa ?>" alt="imagem">
@@ -68,7 +66,7 @@
                             </div>
                             <p class="autor-terceiro"><img src="<?= $post->image ?>" alt="usuario"> <span><?= $post->name ?></span></p>
                             <?php $limitedContent = limitText($post->content, 30); ?>
-                            <p class="descricao-terceiro"><?= limitTextTwo($post->content) ?></p>
+                            <p class="descricao-terceiro"><?= $post->content ?></p>
                             <button class="botao-veja-mais-terceiro" onclick="location.href = '/post-individual?id=<?= $post->id ?>'">Veja mais</button>
                         </div>
                     </div>
@@ -104,10 +102,8 @@
                         </div>
                     </div>
                     <p class="autor"> <img src="<?= $post->image ?>" alt="usuario"> <span><?= $post->name ?></span></p>
-                        <?php
-                            $limitedContent = limitText($post->content, 30);
-                        ?>
-                    <p class="descricao"><?= $limitedContent ?></p>
+                    
+                    <p class="descricao"><?= $post->content ?></p>
                         <button class="botao-veja-mais" onclick="location.href = '/post-individual?id=<?= $post->id?>'">Veja mais</button>
                 </div>
             </div>

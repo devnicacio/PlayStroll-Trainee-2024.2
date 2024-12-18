@@ -37,6 +37,7 @@
     <script defer src="/public/js/admin/modal/base-modal.js"></script>
     <script defer scr="/public/js/admin/modal/posts/read-modal-posts.js"></script>
     <script defer src="/public/js/admin/modal/posts/create-modal-posts.js"></script>
+    <script defer src="/public/js/admin/modal/posts/update-modal-posts.js"></script>
     <link rel="icon" href="/public/assets/logo-clara.png" type="image/png">
    
 </head>
@@ -242,7 +243,7 @@
 
             <!-- Modal editar -->
             <div class="modal-editar" id="update<?= $post->id ?>">
-            <form action="/editar-post" method="post" enctype="multipart/form-data">
+            <form action="/editar-post" method="post" enctype="multipart/form-data" id="formEdit<?= $post->id ?>" >
                 <div class="modal-container">
                     <div class="parte-autor">
                         <input type="hidden" value="<?= $post->id ?>" name="id">
@@ -315,13 +316,13 @@
 
                             $("#summernote-editar<?= $post->id ?>").summernote('code', `<?= $post->content?>`);
                             </script>    
-                            <span id="erro-descricao" class="erro"></span>
+                            <span id="erro-descricao<?= $post->id ?>" class="erro"></span>
                         </div>
                         <div class="modal-buttons">
                             <button id="btn-cancelar" class="button-cancelar" onclick="fecharModal('update<?= $post->id?>')" type="button">
                                 Cancelar
                             </button>
-                            <button id="btn-criar" class="button-postar" type="submit">Editar</button>
+                            <button id="btn-criar" class="button-postar" type="button" onclick="verificaErro('titulo<?= $post->id ?>', 'erro-titulo<?= $post->id ?>', 'avaliacao<?= $post->id ?>', 'erro-avaliacao<?= $post->id ?>', 'formEdit<?= $post->id ?>')" >Editar</button>
                         </div>
                     </div>
                 </div>

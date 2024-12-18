@@ -116,11 +116,13 @@ body{
 }
 
 
-.post img{
+.post img {
     width: 160px;
     height: 200px;
     margin-right: 50px;
+    object-fit: cover; 
 }
+
 
 .imagem-mobile img{
     display: none;

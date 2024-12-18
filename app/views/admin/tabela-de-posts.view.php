@@ -61,7 +61,7 @@
                             </div>
                             <div class="parte-capa">
                                 <img id="create-file-name-capa" class="capaCreate-preview" alt="Preview da Capa" />
-                                <input type="file" class="image-capa" id="create-file-capa" accept="image/*" name="image_capa"
+                                <input type="file" class="image-capa" id="create-file-capa" accept=".jpg, .jpeg, .png" name="image_capa"
                                 onchange="previewImage('create-file-capa', 'create-file-name-capa')" />
                                 <button class="btn-remove-imagem-capa" id="btn-remover-imagem-capa" onclick="removerImagem('create', 'capa')" type="button">X</button>
                             </div>
@@ -74,7 +74,7 @@
                             </div>
                             <div class="parte-retrato">
                                 <img id="create-file-name-retrato" class="retratoCreate-preview" alt="Preview do Retrato" />
-                                <input type="file" class="image-retrato" id="create-file-retrato" accept="image/*" name="image_retrato"
+                                <input type="file" class="image-retrato" id="create-file-retrato" accept=".jpg, .jpeg, .png" name="image_retrato"
                                 onchange="previewImage('create-file-retrato', 'create-file-name-retrato')" />
                                 <button class="btn-remove-imagem-retrato" id="btn-remover-imagem-retrato" onclick="removerImagem('create', 'retrato')" type="button">X</button>
                             </div>
@@ -256,7 +256,7 @@
                             </div>
                             <div class="parte-capa">
                                 <img id="edit-file-name-capa<?= $post->id ?>" class="capa-preview" alt="Preview da Capa" src="/<?= $post->image_capa ?>"/>
-                                <input type="file" class="image-capa" id="edit-file-capa<?= $post->id ?>" accept="image/*" name="image_capa"
+                                <input type="file" class="image-capa" id="edit-file-capa<?= $post->id ?>" accept=".jpg, .jpeg, .png" name="image_capa"
                                        onchange="previewImage('edit-file-capa<?= $post->id ?>', 'edit-file-name-capa<?= $post->id ?>')" />
                                 
                             </div>
@@ -268,7 +268,7 @@
                             </div>
                             <div class="parte-retrato">
                                 <img id="edit-file-name-retrato<?= $post->id ?>" class="retrato-preview" alt="Preview do Retrato" src="/<?= $post->image_retrato ?>"/>
-                                <input type="file" class="image-retrato" id="edit-file-retrato<?= $post->id ?>" accept="image/*" name="image_retrato"
+                                <input type="file" class="image-retrato" id="edit-file-retrato<?= $post->id ?>" accept=".jpg, .jpeg, .png" name="image_retrato"
                                        onchange="previewImage('edit-file-retrato<?= $post->id ?>', 'edit-file-name-retrato<?= $post->id ?>')" />
                             </div>
                         </div>

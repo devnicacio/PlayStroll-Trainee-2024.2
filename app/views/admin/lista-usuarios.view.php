@@ -156,7 +156,7 @@
                             </div>
                             <div class="imagem">
                                 <img id="imgEdit<?= $user->id ?>" src="<?= $user->image ?>">
-                                <input type="file" id="inputImage<?= $user->id ?>" name="image" accept="image/png, image/jpeg">
+                                <input type="file" id="inputImage<?= $user->id ?>" name="image" accept=".jpg, .jpeg, .png">
                                 <button type="button" id="btnImage<?= $user->id ?>" onclick="document.getElementById('inputImage<?= $user->id ?>').click()">Escolher imagem</button>
                             </div>
                             <div class="confirma">
@@ -226,7 +226,7 @@
                         <span id="erro-imagemcr" class="errocr"></span>
                         <div class="foto-perfilcr">
                             <img id="img-perfilcr" class="imagem-perfilcr" alt="Imagem de Perfil" style="display: none;" />
-                            <input name="image" type="file" id="fotocr" accept="image/png, image/jpeg" onchange="mostrarImagem(event)" style="display: none;">
+                            <input name="image" type="file" id="fotocr" accept=".jpg, .jpeg, .png" onchange="mostrarImagem(event)" style="display: none;">
                             <span id="remover-imagemcr" class="remover-imagemcr">X</span>
 
                         </div>

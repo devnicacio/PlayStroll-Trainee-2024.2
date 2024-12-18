@@ -182,11 +182,30 @@ a:active{
     }
     #rodape--informacoesDeRodape{
         align-self: center;
+        max-width: 500px;
+        width: 100%;
+        flex-direction: row;
+        gap: 5vw; 
+        margin-bottom: 20px;
+    }
+
+    #rodape--informacoesDeRodape div {
+        width: 60%; 
+        height: auto;
+    }
+
+    #rodape--informacoesDeRodape div:not(:last-child) {
+        margin-right: 0; 
+    }
+
+    #rodape--informacoesDeRodape p {
+        font-size: 1.55vw; 
     }
 
     #rodape--informacoesDeRodape hr:last-child{
         display: none;
     }
+
     #rodape div:last-child img[alt="Logo da PlayStrool"]{
         display: none !important;
     }

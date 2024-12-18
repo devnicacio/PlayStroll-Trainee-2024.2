@@ -25,9 +25,7 @@ body{
     border-radius: 10px; 
 }
 
-.main {
-    padding-top: 8px;
-}
+
 
 .section-description { 
     max-width: 900px;       
@@ -51,6 +49,7 @@ body{
 }
 
 .titulo-post-indiv{
+    padding-top: 20px;
     margin-bottom: 20px;
 }
 

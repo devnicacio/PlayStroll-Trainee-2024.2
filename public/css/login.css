@@ -71,7 +71,7 @@ input{
     border: #11518a;
     width: 100%;   
     box-sizing: border-box;
-    padding: 3px; 
+    padding: 6px 3px; 
     outline: none;
 }
 
@@ -96,7 +96,7 @@ label {
     padding: 0;
 }
 
-.sessao-login{     
+.sessao-login{   
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;  

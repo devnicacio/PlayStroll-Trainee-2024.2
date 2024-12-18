@@ -152,7 +152,7 @@ input[type="search"]::-webkit-search-decoration{
 }
 #tabletAndMobileSubSection{
     width: auto;
-    height: calc(300px - 0.2vw);
+    height: calc(250px - 0.2vw);
     display: none;
     justify-content: center;
     background-color: var(--firstBlue);
@@ -229,6 +229,11 @@ li{
     }
     #navigationBar ul{
         display: none;
+    }
+
+    #navigationBar--home{
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     #navigationBar--home p{
         font-size: 1.5rem;

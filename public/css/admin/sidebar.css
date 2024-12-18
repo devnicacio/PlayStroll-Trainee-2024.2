@@ -14,7 +14,7 @@
 
 #sideBar{
     position: absolute;
-    z-index: 2;
+    z-index: 3 !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

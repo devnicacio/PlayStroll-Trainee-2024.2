@@ -179,6 +179,7 @@ input[type="search"]::-webkit-search-decoration{
 }
 
 
+
 /*//////////////////////// RESPONSIVIDADE ////////////////////////*/
 @media screen and (max-width: 576px) {
     #navigationBar{
@@ -241,6 +242,8 @@ input[type="search"]::-webkit-search-decoration{
     
 }
 
+
+
 @media screen and (max-width: 1440px) {
     #navigationBar{
         height: 24%;
@@ -262,6 +265,10 @@ input[type="search"]::-webkit-search-decoration{
     }
 }
 @media screen and (min-width: 1440px) and (max-width: 2559px){
+    .inputSearch input{
+        padding-top: 7px;
+    }
+    
     #navigationBar{
         height: 25vh;
     }

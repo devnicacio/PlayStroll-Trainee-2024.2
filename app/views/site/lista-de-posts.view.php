@@ -26,8 +26,8 @@
     </div>
     <div class="posts">
     <?php foreach ($posts as $post): ?>
-        <div class="barra"></div>
-        
+    <div class="barra"></div>
+
     <div class="post um" id="<?= $post->id ?>" onclick="location.href = '/post-individual?id=<?= $post->id?>'">
         <div class="imagem um"><img src="<?= $post->image_retrato ?>"></div>
         <div class="imagem-mobile um"><img src="<?= $post->image_capa ?>"></div>
@@ -35,17 +35,27 @@
             <div class="titulo um">
                 <h3><?= $post->title ?></h3>
             </div>
-            <div class="nota um"><h4><?= $post->avaliation ?></h4></div>
-                <div class="dados um">
-                    <div class="perfil um"><img src="<?= $post->image ?>"></div>
-                    <div class="user um"><p><?= $post->name ?></p></div>
+
+            <!-- Adicionando a avaliação com estrelas -->
+            <div class="nota um">
+                <h4><?= $post->avaliation ?></h4>
+                <div class="avaliacao-estrelas">
+                    <?php renderizarEstrelas($post->id, 30, $post->avaliation); ?>
                 </div>
-                <div class="conteúdo um">
+            </div>
+
+            <div class="dados um">
+                <div class="perfil um"><img src="<?= $post->image ?>"></div>
+                <div class="user um"><p><?= $post->name ?></p></div>
+            </div>
+
+            <div class="conteúdo um">
                 <p class="descricao"><?= strlen($post->content) > 250 ? substr($post->content, 0, 250) . '...' : $post->content ?> </p>
-                </div>
+            </div>
         </div>
     </div>
-    <?php endforeach ?>
+<?php endforeach ?>
+
     <div class="barra"></div>
     </div>
    

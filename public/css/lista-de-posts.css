@@ -141,6 +141,24 @@ body{
     margin: 0;
 }
 
+.nota.um {
+    display: flex;  /* Flexbox para alinhar os itens na mesma linha */
+    align-items: center;  /* Alinha verticalmente os itens no centro */
+    gap: 10px;  /* Espaço entre o valor da avaliação e as estrelas */
+}
+
+.nota.um h4 {
+    margin: 0;  /* Remove margem para o título */
+    color: #FFC739;  /* Cor amarela para o texto da avaliação */
+    font-size: 30px;  /* Ajuste de tamanho da fonte (se necessário) */
+}
+
+.avaliacao-estrelas {
+    color: #FFC739;  /* Cor amarela para as estrelas */
+    font-size: 16px;  /* Ajuste do tamanho das estrelas (se necessário) */
+}
+
+
 .nota{
     margin: 0;
 }

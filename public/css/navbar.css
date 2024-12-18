@@ -177,9 +177,6 @@ input[type="search"]::-webkit-search-decoration{
     width: auto;
 }
 
-.lista-posts2{
-    display: none;
-}
 
 /*//////////////////////// RESPONSIVIDADE ////////////////////////*/
 @media screen and (max-width: 576px) {
@@ -236,18 +233,19 @@ input[type="search"]::-webkit-search-decoration{
     .navigationBar--links li{
         font-size: 16px;
     }
+
+    .inputSearch{
+        order: -1;
+    }
     
 }
 
-@media only screen and (max-width: 768px) {
-    .lista-posts1{
-        display: none;
+@media screen and (max-width: 1440px) {
+    #navigationBar{
+        height: 24%;
     }
-    .lista-posts2{
-        display: block;
-    }
-    
 }
+
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
     #navigationBar{

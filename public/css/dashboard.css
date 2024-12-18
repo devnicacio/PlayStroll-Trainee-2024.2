@@ -29,7 +29,7 @@ body{
 }
 
 .buttons{
-    width: 50%;
+    width: 40%;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@ body{
 }
 
 .posts{
-    width: 80%;
+    width: 100%;
     height: 50px;
     background-color: #237ecd;
     border-radius: 30px;
@@ -138,7 +138,7 @@ form{
 
 .imagem{
     display: flex;
-    width: 50%;
+    width: 60%;
     justify-content: center;
     align-items: center;
 }
@@ -232,6 +232,24 @@ form{
     .square{
         align-items: center;
         margin: 0;
+    }
+}
+
+@media only screen and (min-width: 1800px){
+    .imagem img{
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 2150px){
+    .imagem img{
+        width: 65%;
+    }
+}
+
+@media only screen and (min-width: 2400px){
+    .imagem img{
+        width: 60%;
     }
 }
 

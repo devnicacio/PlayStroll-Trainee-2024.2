@@ -28,7 +28,6 @@
 
 <body>
 
-    <?php include 'sidebar.view.php'; ?>
 
     <div class="gradient">
         <div class="parte-de-cima">
@@ -59,14 +58,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="paginas<?= $total_pages <= 1 ? " none" : "" ?>">
-            <button class="anterior<?= $page <= 1 ? " disabled" : "" ?>"  onclick="location.href='?paginacaoNumero=<?= $page - 1 ?>'">
-                < </button>
-                    <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
-                        <button class="pag1<?= $page_number == $page ? " active" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page_number ?>'"><?= $page_number ?></button>
-                    <?php endfor ?>
-                    <button class="proximo<?= $page >= $total_pages ? " disabled" : "" ?>"  onclick="location.href='?paginacaoNumero=<?= $page + 1 ?>'">></button>
-        </div>
+        
 
         <?php foreach ($users as $user): ?>
             <div class="tela" id="editarUsuario<?= $user->id ?>" data-user-id="<?= $user->id ?>">
@@ -109,8 +101,8 @@
         <?php endforeach ?>
 
         <?php foreach ($users as $user): ?>
-            <div class="modal-view" id="modal-view<?= $user->id ?>" onclick="fecharModalVer('modal-view<?= $user->id ?>')">
-                <div class="visualisar" id="ver<?= $user->id ?>" onclick="event.stopPropagation();">
+            <div class="modal-view" id="modal-view<?= $user->id ?>" onclick="fecharModalVer('<?= $user->id ?>')" >
+                <div class="visualisar" id="ver<?= $user->id ?>">
                     <div class="caixa">
                         <div class="id">
                             <p class="tit">ID</p>
@@ -127,11 +119,15 @@
                         <div class="imagem-view" id="imgdiv">
                             <input id="img" type="image" src="<?= $user->image ?>">
                         </div>
+                        <div class="sair">
+                            <div class="botsair" onclick="fecharModalView('modal-view<?= $user->id ?>')">
+                                <p>Fechar</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         <?php endforeach ?>
-
 
 
 
@@ -181,10 +177,6 @@
 
 
         <!-- Modal Excluir Usuário -->
-
-        <!-- Camada escurecida -->
-            <div id="tela"></div>
-            
         <?php foreach ($users as $user): ?>
             <!-- Modal Excluir Usuário (Exclusivo para cada usuário) -->
             <div class="modalex" id="modal-excluirex<?= $user->id ?>" style="display: none;">
@@ -206,6 +198,16 @@
             </div>
         <?php endforeach; ?>
 
+        <div class="paginas<?= $total_pages <= 1 ? " none" : "" ?>">
+            <button class="anterior<?= $page <= 1 ? " disabled" : "" ?>"  onclick="location.href='?paginacaoNumero=<?= $page - 1 ?>'">
+                < </button>
+                    <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
+                        <button class="pag1<?= $page_number == $page ? " active" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page_number ?>'"><?= $page_number ?></button>
+                    <?php endfor ?>
+                    <button class="proximo<?= $page >= $total_pages ? " disabled" : "" ?>"  onclick="location.href='?paginacaoNumero=<?= $page + 1 ?>'">></button>
+        </div>
+    </div>
+    
 
         <script src="/public/js/modal-criar.js"></script>
         <script src="/public/js/modal-excluir.js"></script>

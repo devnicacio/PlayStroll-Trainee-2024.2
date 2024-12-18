@@ -6,7 +6,7 @@
     position: absolute;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    z-index: 2000;
     font-family: 'Satoshi', sans-serif;
 }
 
@@ -140,7 +140,7 @@ form{
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #d5d6e3;
+    background-color: white;
 }
 
 

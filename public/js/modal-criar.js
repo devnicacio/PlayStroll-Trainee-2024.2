@@ -8,6 +8,7 @@ function abrirModalCriar() {
 function fecharModalCriar() {
     const modal = document.getElementById('modal-criar-usuariocr');
     modal.style.display = 'none'; // Modal desaparece
+    limparModalCriar();
 }
 
 // Função para mostrar ou ocultar a senha e a confirmação da senha, alternando os ícones
@@ -140,3 +141,14 @@ document.getElementById('confirmar-senhacr').addEventListener('input', () => {
 document.getElementById('fotocr').addEventListener('change', () => {
     document.getElementById('erro-imagemcr').style.display = 'none';
 });
+
+function limparModalCriar() {
+    document.getElementById('nomecr').value = '';
+    document.getElementById('emailcr').value = '';
+    document.getElementById('senhacr').value = '';
+    document.getElementById('confirmar-senhacr').value = '';
+    removerImagem(); // Remove a imagem de perfil escolhida
+    document.querySelectorAll('.errocr').forEach((erro) => {
+        erro.style.display = 'none'; // Oculta mensagens de erro
+    });
+}

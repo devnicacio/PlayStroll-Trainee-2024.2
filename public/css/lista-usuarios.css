@@ -35,6 +35,7 @@ body {
 }
 
 .titulo {
+    font-size: 32px;
     color: white;
     background-color: #080b3c;
     padding: 1% 10%;
@@ -253,6 +254,10 @@ tbody {
     .table-container {
         overflow-x: auto;
         width: 70%;        
+    }
+
+    .titulo h1{
+        font-size: 14px;
     }
 }
 

@@ -45,7 +45,7 @@ class Controller{
             "title" => $_POST["title"],
             "content" => $_POST["content"],
             "avaliation" => $_POST["avaliation"],
-            "create_at" => $_POST["create-at"],
+            "create_at" => date('Y-m-d'),
         ];
 
         $id = $_POST["id"];

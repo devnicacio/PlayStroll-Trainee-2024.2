@@ -361,7 +361,8 @@
                 <?php endforeach?>
             </tbody>
             <div class="tela" id="tela"></div>
-        </table>    
+        </table> 
+        </div>   
         <!-- Paginação -->
         <div class="navegacao<?= $total_pages <= 1 ? " none" : "" ?>">
             <button class="nav1<?= $page <= 1 ? " disabled" : "" ?>" onclick="location.href='?paginacaoNumero=<?= $page - 1 ?>'" >&lt;</button>

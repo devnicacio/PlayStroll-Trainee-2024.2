@@ -48,19 +48,5 @@
 
 </body>
 
-<script>
-    function handleScreenResize() {
-    if (window.innerWidth = 767) {
-        document.getElementById('imgPost').style.width = "500px"
-        // Adicione aqui o código que você deseja executar
-    }
-}
-
-// Chama a função ao carregar a página
-handleScreenResize();
-
-// Adiciona um listener para monitorar mudanças no tamanho da janela
-window.addEventListener('resize', handleScreenResize);
-</script>
 
 </html>

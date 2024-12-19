@@ -143,6 +143,8 @@ body{
     margin-left: 12.5%;
     margin-right: 12.5%;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
 }
 
 .titulo h3{
@@ -227,8 +229,8 @@ body{
 
 
 
-.conteúdo p{
-    font-size: 20px;
+.conteúdo .descricao{
+    font-size: 16px;
     margin-bottom: 0;
     margin-top: 0;
     text-align: justify;
@@ -276,15 +278,15 @@ body{
     display: none;
 }
 
-@media only screen and (max-width:1300px){
-    .conteúdo p{
-        font-size: 16px;
+@media only screen and (max-width:1100px){
+    .descricao{
+        font-size: 14px !important;
     }
 }
 
-@media only screen and (max-width:900px){
-    .conteúdo p{
-        font-size: 14px;
+@media only screen and (max-width:980px){
+    .descricao{
+        font-size: 12px !important;
     }
 }
 
@@ -330,6 +332,10 @@ body{
 
     .post img{
         height: fit-content;
+    }
+
+    .post{
+        flex-direction: column;
     }
 
     .imagem img{

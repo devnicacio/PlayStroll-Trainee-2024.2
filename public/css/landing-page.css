@@ -468,7 +468,7 @@ main{
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
 
     .avaliacao-estrelas {
         display: none; /* Oculta a versão padrão para telas menores que 768px */

@@ -38,7 +38,7 @@
     <script defer scr="/public/js/admin/modal/posts/read-modal-posts.js"></script>
     <script defer src="/public/js/admin/modal/posts/create-modal-posts.js"></script>
     <script defer src="/public/js/admin/modal/posts/update-modal-posts.js"></script>
-    <link rel="icon" href="/public/assets/logo-clara.png" type="image/png">
+    <link rel="icon" href="/public/assets/Logo escura quadrada.png" type="image/png">
    
 </head>
 <body>

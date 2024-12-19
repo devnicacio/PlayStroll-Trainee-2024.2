@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/public/css/post-individual.css" />
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401&display=swap" rel="stylesheet">
-    <link rel="icon" href="/public/assets/logo-clara.png" type="image/png">
+    <link rel="icon" href="/public/assets/Logo escura quadrada.png" type="image/png">
     <title>Post-individual</title>
 </head>
 

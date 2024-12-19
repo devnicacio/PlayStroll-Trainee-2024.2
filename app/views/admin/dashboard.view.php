@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/public/css/dashboard.css">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon" href="/public/assets/logo-clara.png" type="image/png">
+    <link rel="icon" href="/public/assets/Logo escura quadrada.png" type="image/png">
 </head>
 <body>
     <div class="container">

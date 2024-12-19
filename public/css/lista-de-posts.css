@@ -235,6 +235,13 @@ body{
     margin-top: 0;
     text-align: justify;
     hyphens: auto;
+    /* Limitação de linhas */
+    display: -webkit-box; /* Fallback para WebKit */
+    -webkit-box-orient: vertical; /* Fallback para WebKit */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3; /* Limitação para WebKit */
+    line-clamp: 3; /* Limitação padrão */
 }
 
 .barra{
@@ -248,30 +255,49 @@ body{
 }
 
 .navegação{
-    margin-bottom: 20px;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    margin-right: 10%;
+    padding-bottom: 50px;
+    margin-top: -30px !important;
 }
 
 .nav1, .nav2, .nav7{
-    display: inline;
-    width: 36px;
-    height: 36px;
     border-radius: 12px;
-    font-size: 24px;
-    margin-right: 10px;
-    color: white;
-    background-color: #237ECD;
+    background-color: #237ecd;
     border: 1px solid black;
+    color: white;
     cursor: pointer;
+    height: 36px;
+    width: 36px;
+    text-align: center;
+    font-size: 16px;
 }
 
 .active{
-    background-color: #0b0b3c;
+    border-radius: 12px;
+    background-color: #080b3c;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+    text-align: center;
+    font-size: 16px;
 }
 
 .navegação .nav4 {
-    background-color: #0b0b3c;
+    display: none;
+}
+
+.navegação{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+
 }
 
 .disabled{
@@ -302,6 +328,9 @@ body{
     font-size: 12px;
     }
 
+    .titulo h3{
+        font-size: 20px !important;
+    }    
     .pesquisa-input{
         width: 75%;
     }

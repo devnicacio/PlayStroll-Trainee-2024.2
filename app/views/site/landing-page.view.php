@@ -61,7 +61,7 @@
                             <div class="nota-terceiro">
                                 <span><?= $post->avaliation ?></span>
                                 <div class="avaliacao-estrelas-terceiro">
-                                    <?php renderizarEstrelas($post->id, 30, $post->avaliation); ?>
+                                    <?php renderizarEstrelas($post->id, 20, $post->avaliation); ?>
                                 </div>
                             </div>
                             <p class="autor-terceiro"><img src="<?= $post->image ?>" alt="usuario"> <span><?= $post->name ?></span></p>

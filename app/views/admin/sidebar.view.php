@@ -19,7 +19,7 @@
         <div class="sideBar--user">
             <img src="<?= $_SESSION['user']->image ?>" id="user--avatar" alt="Avatar">
             <span class="infos--itemDescription">
-                <?= substr($_SESSION['user']->name,0,10) ?>...
+                <?= substr($_SESSION['user']->name,0,30) ?>
             </span>
         </div>
         <ul id="sideBar--sideItems">

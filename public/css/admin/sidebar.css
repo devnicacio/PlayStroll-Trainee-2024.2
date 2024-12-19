@@ -22,8 +22,7 @@
     height: 100vh;
     border-radius: 0 18px 18px 0;
     color: var(--white);
-    transition: all .5s;
-    min-width: 82px;
+    transition: all .5s;    
 }
 #sideBar a,
 #sideBar a:link,
@@ -138,4 +137,25 @@
 #sideBar.open-sideBar .sideItems--sideItem a{
     justify-content: flex-start;
     gap: 14px;
+}
+
+@media only screen and (max-width: 500px){
+    #sideBar{
+        max-width: 50px;
+    }
+
+    a{
+        width: 20px;
+    }
+    li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #sideBar img{
+        height: 30px;
+        width: 30px;
+        border-radius: 30px;
+    }
 }

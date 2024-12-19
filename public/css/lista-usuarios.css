@@ -156,6 +156,10 @@ tbody {
     display: none;
 }
 
+#logoutBtn{
+    margin-right: 10px;
+}
+
 
 @media (min-width: 768px) and (max-width: 1023px) {
 

@@ -86,6 +86,19 @@
             </form>
         </div>
     </nav>
+    <style>
+        svg{
+            width: 20px;
+        }
+
+        #sideBar--logout{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            
+        }
+    </style>
 </body>
 
 </html>

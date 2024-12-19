@@ -103,7 +103,7 @@
                     </div>
                     <p class="autor"> <img src="<?= $post->image ?>" alt="usuario"> <span><?= $post->name ?></span></p>
                     
-                    <div class="descricao"><?= substr(strip_tags ($post->content),0,100) . '...'  ?></div>
+                    <div class="descricao"><?= $post->content ?></div>
                         <button class="botao-veja-mais" onclick="location.href = '/post-individual?id=<?= $post->id?>'">Veja mais</button>
                 </div>
             </div>

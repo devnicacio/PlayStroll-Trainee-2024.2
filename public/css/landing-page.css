@@ -112,7 +112,7 @@ main{
 .descricao-swipper {
     display: flex;
     width: 50% !important; 
-    font-size: 25px;
+    font-size: 20px;
     margin: 10px 0;
     text-overflow: ellipsis;
 }
@@ -221,6 +221,13 @@ main{
 .titulo-jogo{
     margin-top: 10px;
     width: 80%;
+    /* Limitação de linhas */
+    display: -webkit-box; /* Fallback para WebKit */
+    -webkit-box-orient: vertical; /* Fallback para WebKit */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1; /* Limitação para WebKit */
+    line-clamp: 1; /* Limitação padrão */
 }
 
 .nome-jogo {
@@ -241,7 +248,16 @@ main{
     margin: 25px;
     margin-top: -10px;
     width: 80%;
+    /* Limitação de linhas */
+    display: -webkit-box; /* Fallback para WebKit */
+    -webkit-box-orient: vertical; /* Fallback para WebKit */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3; /* Limitação para WebKit */
+    line-clamp: 3; /* Limitação padrão */
 }
+
+
 
 .capa-jogo {
     margin-top: 10px;

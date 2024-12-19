@@ -221,7 +221,6 @@ input[type="file"] {
   input[type="file"] {
       width: 100%; 
       padding-right: 35px; 
-      margin: 15px 0;
   }
 
   .botao-containercr {

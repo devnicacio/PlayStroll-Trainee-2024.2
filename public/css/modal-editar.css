@@ -6,7 +6,7 @@
     position: absolute;
     align-items: center;
     justify-content: center;
-    z-index: 2000;
+    z-index: 10000;
     font-family: 'Satoshi', sans-serif;
 }
 
@@ -18,9 +18,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
     z-index: 3;
-    position: absolute;
+    position: relative;
 }
 
 

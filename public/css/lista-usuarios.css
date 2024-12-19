@@ -3,6 +3,8 @@ body {
     margin: 0;
     font-family: 'Satoshi', sans-serif;
     display: flex;
+    position: absolute;
+    z-index: 0;
 }
 
 .gradient {
@@ -10,11 +12,9 @@ body {
     background: linear-gradient(to right, rgba(213, 214, 227, 0.5), rgba(0, 174, 160, 0.5));
     width: 100%;
     display: flex;
-    position: absolute;
     flex-direction: column;
     justify-content: center;
     align-items: end;
-    z-index: 2;
 }
 
 .parte-de-cima {

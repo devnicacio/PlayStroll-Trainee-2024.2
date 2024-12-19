@@ -160,6 +160,14 @@ tbody {
     margin-right: 10px;
 }
 
+.paginas{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-top: 20px;
+}
+
 
 @media (min-width: 768px) and (max-width: 1023px) {
 

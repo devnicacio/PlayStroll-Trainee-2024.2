@@ -62,6 +62,7 @@
                 leitor.onload = () => {
                     previewImg.src = leitor.result;
                 };
+                
                 leitor.readAsDataURL(arquivo);
             }
         });
